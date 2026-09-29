@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aroma Coffee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Figtree:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 1. Header -->
+  <header class="site-header">
+    <nav class="site-header__nav site-header__nav--left">
+      <a class="site-header__link" href="#home">HOME</a>
+    </nav>
+    <div class="site-header__brand">AROMA</div>
+    <nav class="site-header__nav site-header__nav--right">
+      <a class="site-header__link" href="#about">ABOUT</a>
+      <a class="site-header__link" href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- 2. Category tabs -->
+  <nav class="tabs" aria-label="Menu categories">
+    <a class="tabs__tab" href="#food">FOOD</a>
+    <a class="tabs__tab" href="#coffee" aria-current="page">COFFEE</a>
+    <a class="tabs__tab" href="#tea">TEA</a>
+  </nav>
+
+  <!-- 3. Content -->
+  <main class="content">
+    <div class="content__grid">
+
+      <section class="product product--left" id="coffee">
+        <h2 class="product__title">AROMA COFFEE</h2>
+        <p class="product__body">
+        Lorum Epsum de tori<br>
+        Lorum Lorum Lorum Epsum de tori<br>
+        Lorum Epsum de tori<br>
+        Lorum Lorum Epsum de tori<br>
+        Lorum Epsum de tori
+        </p>
+      </section>
+
+      <div class="product-media">
+        <img class="product-media__img" src="assets/product.jpg" alt="Aroma Coffee product photograph">
+      </div>
+
+      <section class="product product--right" id="matcha">
+        <h2 class="product__title">AROMA MATCHA</h2>
+        <p class="product__body">
+        Lorum Epsum de tori<br>
+        Lorum Lorum Lorum Epsum de tori<br>
+        Lorum Epsum de tori<br>
+        Lorum Lorum Epsum de tori<br>
+        Lorum Epsum de tori
+        </p>
+      </section>
+
+    </div>
+
+    <!-- 4. Leaf decoration -->
+    <div class="leaves" aria-hidden="true">
+      <svg viewBox="0 0 320 200" width="100%" fill="none" aria-hidden="true">
+        <g stroke="#8FA173" stroke-width="2.75" stroke-linecap="round">
+          <path d="M300 196C286 170 262 148 232 138"></path>
+          <path d="M252 150C246 132 250 116 262 104"></path>
+          <path d="M214 176C204 166 196 152 194 138"></path>
+        </g>
+        <g fill="#8FA173">
+          <ellipse cx="276" cy="120" rx="26" ry="14" transform="rotate(-38 276 120)"></ellipse>
+          <ellipse cx="240" cy="96" rx="24" ry="13" transform="rotate(-14 240 96)" opacity="0.72"></ellipse>
+          <ellipse cx="300" cy="158" rx="22" ry="12" transform="rotate(30 300 158)" opacity="0.9"></ellipse>
+          <ellipse cx="206" cy="128" rx="20" ry="11" transform="rotate(-52 206 128)" opacity="0.55"></ellipse>
+          <ellipse cx="186" cy="64" rx="17" ry="9" transform="rotate(24 186 64)" opacity="0.4"></ellipse>
+          <ellipse cx="148" cy="96" rx="14" ry="8" transform="rotate(-20 148 96)" opacity="0.3"></ellipse>
+          <ellipse cx="248" cy="186" rx="14" ry="8" transform="rotate(-8 248 186)" opacity="0.6"></ellipse>
+        </g>
+      </svg>
+    </div>
+  </main>
+
+  <!-- 5. Footer -->
+  <footer class="site-footer" id="contact">
+    <a class="pill pill--filled" href="mailto:aroma128d@gmail.com">aroma128d@gmail.com</a>
+    <a class="pill pill--outline" href="tel:+64274809896">(+64)27 4809896</a>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/organic-fd9ed955-8de8-41c0-8fe3-9707f3937f41/styles.css">
+<script src="_ds/organic-fd9ed955-8de8-41c0-8fe3-9707f3937f41/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Figtree:wght@400;500&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  html, body { margin: 0; padding: 0; background: #FAF1E7; }
+  a { color: #FAF1E7; text-decoration: none; }
+  a:hover { color: #E4C9A8; }
+  a:focus-visible { outline: 2px solid #8FA173; outline-offset: 3px; }
+</style>
+</helmet>
+
+<div style="min-height: 100vh; display: flex; flex-direction: column; background: #FAF1E7; color: #2B2320; font-family: 'Figtree', sans-serif;">
+
+  <header style="background: #402A1C; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: clamp(8px, 2vw, 24px); padding: 22px clamp(14px, 3vw, 40px);">
+    <nav style="display: flex; gap: 28px; flex: 1 1 70px; min-width: 0;">
+      <a href="#home" style="font-family: 'Cormorant Garamond', serif; font-size: clamp(11px, 1.5vw, 19px); letter-spacing: 0.12em; color: #FAF1E7; white-space: nowrap;">HOME</a>
+    </nav>
+    <div style="font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 4vw, 46px); letter-spacing: 0.14em; color: #FDF6EC; line-height: 1; text-align: center; flex: 0 1 auto; min-width: 0;">AROMA</div>
+    <nav style="display: flex; gap: clamp(10px, 2vw, 28px); justify-content: flex-end; flex: 1 1 70px; min-width: 0;">
+      <a href="#about" style="font-family: 'Cormorant Garamond', serif; font-size: clamp(11px, 1.5vw, 19px); letter-spacing: 0.12em; color: #FAF1E7; white-space: nowrap;">ABOUT</a>
+      <a href="#contact" style="font-family: 'Cormorant Garamond', serif; font-size: clamp(11px, 1.5vw, 19px); letter-spacing: 0.12em; color: #FAF1E7; white-space: nowrap;">CONTACT</a>
+    </nav>
+  </header>
+
+  <nav style="display: flex; justify-content: center; gap: clamp(28px, 5vw, 64px); padding: 34px 20px 0;">
+    <a href="#food" style="font-family: 'Cormorant Garamond', serif; font-size: clamp(19px, 2vw, 25px); letter-spacing: 0.08em; color: #2B2320; padding-bottom: 10px;">FOOD</a>
+    <a href="#coffee" aria-current="page" style="font-family: 'Cormorant Garamond', serif; font-size: clamp(19px, 2vw, 25px); letter-spacing: 0.08em; color: #2B2320; padding-bottom: 10px; border-bottom: 1.5px solid #2B2320;">COFFEE</a>
+    <a href="#tea" style="font-family: 'Cormorant Garamond', serif; font-size: clamp(19px, 2vw, 25px); letter-spacing: 0.08em; color: #2B2320; padding-bottom: 10px;">TEA</a>
+  </nav>
+
+  <main style="position: relative; flex: 1 1 auto; padding: clamp(40px, 7vw, 92px) clamp(18px, 4vw, 56px) clamp(60px, 9vw, 120px); overflow: hidden;">
+    <div style="max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(24px, 3vw, 40px); align-items: stretch;">
+
+      <section id="coffee" style="display: flex; flex-direction: column; justify-content: flex-start; text-align: right;">
+        <h2 style="margin: 0 0 22px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(16px, 1.5vw, 19px); letter-spacing: 0.12em; color: #2B2320;">AROMA COFFEE</h2>
+        <p style="margin: 0; font-size: clamp(13px, 1.1vw, 15px); line-height: 1.95; color: #4A3B32; text-wrap: pretty;">Lorum Epsum de tori<br>Lorum Lorum Lorum Epsum de tori<br>Lorum Epsum de tori<br>Lorum Lorum Epsum de tori<br>Lorum Epsum de tori</p>
+      </section>
+
+      <div style="min-height: 300px; display: flex;">
+        <image-slot id="aroma-feature" shape="rect" style="width: 100%; height: 100%; min-height: 300px;" placeholder="Drop the product photo"></image-slot>
+      </div>
+
+      <section id="matcha" style="display: flex; flex-direction: column; justify-content: flex-end; text-align: left;">
+        <h2 style="margin: 0 0 22px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(16px, 1.5vw, 19px); letter-spacing: 0.12em; color: #2B2320;">AROMA MATCHA</h2>
+        <p style="margin: 0; font-size: clamp(13px, 1.1vw, 15px); line-height: 1.95; color: #4A3B32; text-wrap: pretty;">Lorum Epsum de tori<br>Lorum Lorum Lorum Epsum de tori<br>Lorum Epsum de tori<br>Lorum Lorum Epsum de tori<br>Lorum Epsum de tori</p>
+      </section>
+
+    </div>
+
+    <div aria-hidden="true" style="position: absolute; right: -10px; bottom: -6px; width: clamp(180px, 26vw, 320px); pointer-events: none; opacity: 0.85;">
+      <svg viewBox="0 0 320 200" width="100%" fill="none">
+        <g stroke="#8FA173" stroke-width="2.75" stroke-linecap="round">
+          <path d="M300 196C286 170 262 148 232 138"></path>
+          <path d="M252 150C246 132 250 116 262 104"></path>
+          <path d="M214 176C204 166 196 152 194 138"></path>
+        </g>
+        <g fill="#8FA173">
+          <ellipse cx="276" cy="120" rx="26" ry="14" transform="rotate(-38 276 120)"></ellipse>
+          <ellipse cx="240" cy="96" rx="24" ry="13" transform="rotate(-14 240 96)" opacity="0.72"></ellipse>
+          <ellipse cx="300" cy="158" rx="22" ry="12" transform="rotate(30 300 158)" opacity="0.9"></ellipse>
+          <ellipse cx="206" cy="128" rx="20" ry="11" transform="rotate(-52 206 128)" opacity="0.55"></ellipse>
+          <ellipse cx="186" cy="64" rx="17" ry="9" transform="rotate(24 186 64)" opacity="0.4"></ellipse>
+          <ellipse cx="148" cy="96" rx="14" ry="8" transform="rotate(-20 148 96)" opacity="0.3"></ellipse>
+          <ellipse cx="248" cy="186" rx="14" ry="8" transform="rotate(-8 248 186)" opacity="0.6"></ellipse>
+        </g>
+      </svg>
+    </div>
+  </main>
+
+  <footer id="contact" style="background: #8FA173; padding: 12px clamp(14px, 2vw, 24px); display: flex; flex-wrap: wrap; gap: 12px;">
+    <a href="mailto:aroma128d@gmail.com" style="border: 1px solid #FAF1E7; border-radius: 999px; padding: 6px 14px; background: #FAF1E7; color: #2B2320; font-size: 12px; letter-spacing: 0.02em;" style-hover="background: #FDF9F1; color: #402A1C">aroma128d@gmail.com</a>
+    <a href="tel:+64274809896" style="border: 1px solid #FAF1E7; border-radius: 999px; padding: 6px 14px; color: #2B2320; font-size: 12px; letter-spacing: 0.02em;" style-hover="background: #FAF1E7; color: #402A1C;">(+64)27 4809896</a>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}"></script>
+</body>
+</html>

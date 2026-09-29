@@ -1,0 +1,234 @@
+/* ============================================================
+   Aroma Coffee — homepage stylesheet (static HTML + CSS)
+   Palette:
+     --brown        #402A1C   nav bar
+     --brown-ink    #FDF6EC   logo wordmark
+     --cream        #FAF1E7   page ground, nav link colour
+     --cream-hi     #FDF9F1   pill hover fill
+     --cream-hover  #E4C9A8   nav link hover
+     --ink          #2B2320   headings, tabs, pill text
+     --ink-body     #4A3B32   body copy
+     --sage         #8FA173   footer bar, leaf art, focus ring
+     --placeholder  #D8D8D8   image placeholder fill
+   ============================================================ */
+
+:root {
+  --brown: #402A1C;
+  --brown-ink: #FDF6EC;
+  --cream: #FAF1E7;
+  --cream-hi: #FDF9F1;
+  --cream-hover: #E4C9A8;
+  --ink: #2B2320;
+  --ink-body: #4A3B32;
+  --sage: #8FA173;
+  --placeholder: #D8D8D8;
+
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--cream);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none; }
+a:focus-visible { outline: 2px solid var(--sage); outline-offset: 3px; }
+::selection { background: #D9C7AE; color: var(--ink); }
+
+/* ---------- 1. Header (dark brown bar) ---------- */
+
+.site-header {
+  background: var(--brown);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(8px, 2vw, 24px);            /* 8px ≤600px · 24px ≥1200px */
+  padding: 22px clamp(14px, 3vw, 40px);  /* 22px vertical, 14–40px horizontal */
+}
+
+.site-header__nav {
+  display: flex;
+  flex: 1 1 70px;
+  min-width: 0;                          /* required: lets the columns shrink */
+  gap: 28px;
+}
+
+.site-header__nav--right {
+  justify-content: flex-end;
+  gap: clamp(10px, 2vw, 28px);
+}
+
+.site-header__link {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(11px, 1.5vw, 19px);   /* 11px ≤733px · 19px ≥1267px */
+  letter-spacing: 0.12em;
+  line-height: 1;
+  color: var(--cream);
+  white-space: nowrap;
+  transition: color 200ms ease;
+}
+.site-header__link:hover { color: var(--cream-hover); }
+
+.site-header__brand {
+  flex: 0 1 auto;
+  min-width: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(22px, 4vw, 46px);     /* 22px ≤550px · 46px ≥1150px */
+  letter-spacing: 0.14em;
+  line-height: 1;
+  color: var(--brown-ink);
+  text-align: center;
+}
+
+/* ---------- 2. Category tabs (FOOD · COFFEE · TEA) ---------- */
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: clamp(28px, 5vw, 64px);           /* 28px ≤560px · 64px ≥1280px */
+  padding: 34px 20px 0;
+}
+
+.tabs__tab {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(19px, 2vw, 25px);     /* 19px ≤950px · 25px ≥1250px */
+  letter-spacing: 0.08em;
+  line-height: 1;
+  color: var(--ink);
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 200ms ease, opacity 200ms ease;
+}
+.tabs__tab:hover { opacity: 0.65; }
+.tabs__tab[aria-current="page"] { border-bottom-color: var(--ink); }
+
+/* ---------- 3. Content area ---------- */
+
+.content {
+  position: relative;
+  flex: 1 1 auto;
+  padding: clamp(40px, 7vw, 92px) clamp(18px, 4vw, 56px) clamp(60px, 9vw, 120px);
+  overflow: hidden;                      /* clips the leaf art */
+}
+
+.content__grid {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(24px, 3vw, 40px);
+  align-items: stretch;
+}
+/* 3 columns ≥ ~792px of inner width · 2 columns ~528–791px · 1 column below */
+
+.product {
+  display: flex;
+  flex-direction: column;
+}
+.product--left  { justify-content: flex-start; text-align: right; } /* AROMA COFFEE */
+.product--right { justify-content: flex-end;   text-align: left;  } /* AROMA MATCHA */
+
+.product__title {
+  margin: 0 0 22px;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(16px, 1.5vw, 19px);
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.product__body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: clamp(13px, 1.1vw, 15px);
+  line-height: 1.95;
+  color: var(--ink-body);
+  text-wrap: pretty;
+}
+
+.product-media {
+  min-height: 300px;
+  display: flex;
+}
+.product-media__img {
+  width: 100%;
+  min-height: 300px;
+  background: var(--placeholder);
+  border-radius: 0;          /* square corners, as in the mockup */
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- 4. Leaf decoration ---------- */
+
+.leaves {
+  position: absolute;
+  right: -10px;
+  bottom: -6px;
+  width: clamp(180px, 26vw, 320px);
+  opacity: 0.85;
+  pointer-events: none;
+}
+.leaves svg { width: 100%; height: auto; display: block; }
+
+/* ---------- 5. Footer (sage bar with contact pills) ---------- */
+
+.site-footer {
+  background: var(--sage);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px clamp(14px, 2vw, 24px);
+}
+
+.pill {
+  border: 1px solid var(--cream);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  transition: background-color 200ms ease, color 200ms ease;
+}
+.pill--filled { background: var(--cream); }
+.pill--filled:hover { background: var(--cream-hi); color: var(--brown); }
+.pill--outline { background: transparent; }
+.pill--outline:hover { background: var(--cream); color: var(--brown); }
+
+/* ---------- 6. Responsive ---------- */
+
+@media (max-width: 640px) {
+  .site-header { padding: 16px 14px; }
+  .tabs { padding-top: 24px; }
+}
+@media (max-width: 420px) {
+  /* the header wraps: HOME | AROMA | ABOUT CONTACT drop to two rows */
+  .site-header { justify-content: center; row-gap: 14px; }
+  .site-header__brand { order: -1; flex-basis: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

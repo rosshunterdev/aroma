@@ -4,19 +4,40 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Website rebuild for **Aroma Coffee** — a Vietnamese-owned cafe in Wellington, NZ with three locations: Miramar, Cuba Mall (Te Aro), and Island Bay. This is a client project.
+Website rebuild for **Aroma Coffee** (also trades as **Aroma Café**) — a Vietnamese-owned cafe in Miramar, Wellington, NZ. This is a client project.
 
-The old site (aromacoffee.nz) runs **Laravel + Vite + Tailwind CSS + Alpine.js** (confirmed via `/build/manifest.json` and asset analysis). The `/audit` directory contains scraped content and analysis from the old site. Several pages on the old site have placeholder content rather than real product information — see `/audit/structural-issues.md`.
+- **Location:** 128D Park Road, Miramar, Wellington 6022 (single location)
+- **Hours:** Mon–Fri 7am–3pm, Sat–Sun 9am–3pm
+- **Vietnamese heritage** is part of the brand identity (egg coffee, pho, tom yum on menu)
+
+The old site (aromacoffee.nz) runs Laravel + Vite + Tailwind CSS + Alpine.js. The `/audit` directory contains scraped content and analysis. The old site's audit listed 3 locations but the client confirmed only 1 (Miramar).
 
 ## Project Status
 
-**Pre-framework stage.** No build system, framework, or package.json exists yet. The stack will be chosen in a future session — do not scaffold a framework without explicit instruction.
+**Static HTML + CSS.** No framework, no build system, no package.json. Homepage, menu, and contact pages are built. Layout and structure are first-pass and need design review — see `TODO.md`.
+
+### Pages
+
+| File | Status | Notes |
+|------|--------|-------|
+| `index.html` | Built | Homepage — hero with coffee/matcha blurbs, category tabs |
+| `menu.html` | Built | Full menu transcribed from physical menu photos |
+| `contact.html` | Built | Address, hours, booking CTA |
+| `about.html` | Not started | Needs client story content |
 
 ### Directory Structure
 
 - `/audit` — scraped content, assets, and notes from the old aromacoffee.nz site
-- `/design-system` — brand tokens, typography, and color decisions
-- `aroma-leaf-cluster.svg` — decorative leaf cluster SVG (brand asset)
+- `/assets` — images (menu photos from client, product photo placeholder)
+- `/design-system` — brand tokens (currently empty, tokens are in `styles.css :root`)
+- `Aroma Coffee Homepage/` — Claude Design handoff files (reference, not shipped)
+
+## Tech Stack
+
+- Static HTML + CSS, no framework
+- Google Fonts: Cormorant Garamond (serif, headings), Figtree (sans, body)
+- Design tokens defined as CSS custom properties in `styles.css`
+- Responsive via `clamp()` and two breakpoints (640px, 420px)
 
 ## Client Content Rules
 
@@ -24,7 +45,9 @@ This is client work. Never write text that asserts a fact about Aroma Coffee (th
 
 ## Key Constraints
 
-- Three physical locations: Miramar, Cuba Mall/Te Aro, Island Bay
+- Single location: 128D Park Road, Miramar, Wellington 6022
 - Vietnamese heritage is part of the brand identity
-- The old site's product pages (/coffee, /tea, /fresh, /accessories) had only placeholder text — real product content needs to come from the client
-- The reservation system on the old site should be evaluated before rebuilding
+- No online ordering — dine-in only
+- No online reservations — phone/email CTA only
+- Menu content transcribed from physical menu photos (see `/assets`)
+- Phone number discrepancy is unresolved — see `TODO.md`
