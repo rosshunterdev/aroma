@@ -1,6 +1,6 @@
-# Aroma Coffee Works website
+# Aroma Coffee website
 
-Static website rebuild for Aroma Coffee Works / Aroma Café at 128D Park Road, Miramar, Wellington. This is client work maintained jointly by Ross/Claude Code and Ben/Codex.
+Static website rebuild for Aroma Coffee / Aroma Café at 128D Park Road, Miramar, Wellington. This is client work maintained jointly by Ross/Claude Code and Ben/Codex.
 
 ## Current state
 

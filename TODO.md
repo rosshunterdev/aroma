@@ -6,6 +6,7 @@
 - [ ] **About page content:** The Vietnamese heritage story, how the cafe started, team info — none of this exists on the old site. Needs to come from the client.
 - [ ] **Product photo:** Homepage references missing `assets/product.jpg` on all three slides. Obtain approved imagery and replace the broken references.
 - [ ] **Menu accuracy:** Menu was transcribed from physical photos (W23.2024 dated). Confirm current items and prices before launch.
+- [ ] **Trading name:** Is it "Aroma Coffee", "Aroma Café" or "Aroma Coffee Works"? Using "Aroma Coffee" until confirmed.
 - [ ] **Email address:** Is `aroma128d@gmail.com` still the preferred contact email?
 - [ ] **Opening hours:** Resolve the provenance conflict (`session-log.md` says client-provided; `content-status.md` previously said Google Maps) and confirm hours for each day before launch.
 - [ ] **Social media:** Facebook and Instagram links existed on the old site but actual profile URLs weren't captured. Get the links.
