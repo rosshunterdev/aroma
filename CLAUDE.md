@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Website rebuild for **Aroma Coffee** (also trades as **Aroma Café**) — a Vietnamese-owned cafe in Miramar, Wellington, NZ. This is a client project.
 
 - **Location:** 128D Park Road, Miramar, Wellington 6022 (single location)
-- **Hours:** Mon–Fri 7am–3pm, Sat–Sun 9am–3pm
+- **Hours:** The site currently shows Mon–Fri 7am–3pm and Sat–Sun 9am–3pm, but the source records conflict; treat these as unconfirmed until the client resolves the provenance noted in `content-status.md`.
 - **Vietnamese heritage** is part of the brand identity (egg coffee, pho, tom yum on menu)
 
 The old site (aromacoffee.nz) runs Laravel + Vite + Tailwind CSS + Alpine.js. The `/audit` directory contains scraped content and analysis. The old site's audit listed 3 locations but the client confirmed only 1 (Miramar).
@@ -20,7 +20,7 @@ The old site (aromacoffee.nz) runs Laravel + Vite + Tailwind CSS + Alpine.js. Th
 
 | File | Status | Notes |
 |------|--------|-------|
-| `index.html` | Built | Homepage — hero with coffee/matcha blurbs, category tabs |
+| `index.html` | Built | Homepage — Food/Coffee/Tea carousel, menu CTA and Visit Us block; references a missing product image |
 | `menu.html` | Built | Full menu transcribed from physical menu photos |
 | `contact.html` | Built | Address, hours, booking CTA |
 | `about.html` | Not started | Needs client story content |
@@ -28,7 +28,7 @@ The old site (aromacoffee.nz) runs Laravel + Vite + Tailwind CSS + Alpine.js. Th
 ### Directory Structure
 
 - `/audit` — scraped content, assets, and notes from the old aromacoffee.nz site
-- `/assets` — images (menu photos from client, product photo placeholder)
+- `/assets` — menu photos; the product-photo placeholder referenced by the homepage is currently missing
 - `/design-system` — brand tokens (currently empty, tokens are in `styles.css :root`)
 - `Aroma Coffee Homepage/` — Claude Design handoff files (reference, not shipped)
 
@@ -41,7 +41,7 @@ The old site (aromacoffee.nz) runs Laravel + Vite + Tailwind CSS + Alpine.js. Th
 
 ## Client Content Rules
 
-This is client work. Never write text that asserts a fact about Aroma Coffee (their services, process, pricing, availability, credentials, or location) unless the client said it. Use the `client-copy` skill for any customer-facing text. Leave a short question for unconfirmed facts rather than inventing content.
+This is client work. Never write text that asserts a fact about Aroma Coffee (their services, process, pricing, availability, credentials, or location) unless the client said it. Use the `client-copy` skill for any customer-facing text. Consult `content-status.md` for what is confirmed, and leave a short question for unconfirmed facts rather than inventing content.
 
 ## Key Constraints
 
@@ -51,3 +51,13 @@ This is client work. Never write text that asserts a fact about Aroma Coffee (th
 - No online reservations — phone/email CTA only
 - Menu content transcribed from physical menu photos (see `/assets`)
 - Phone number discrepancy is unresolved — see `TODO.md`
+
+## Agent skills
+
+### Issue tracker
+
+Specs and implementation tickets are local Markdown under `.scratch/`. See `docs/agents/issue-tracker.md`.
+
+### Domain docs
+
+This is a single-context repository; domain terms and consequential decisions are documented lazily. See `docs/agents/domain.md`.

@@ -1,30 +1,39 @@
-# Aroma Coffee — Website Rebuild
+# Aroma Coffee website
 
-Website rebuild for Aroma Coffee, a Vietnamese-owned cafe and restaurant in Wellington, NZ.
+Static website rebuild for Aroma Coffee / Aroma Café at 128D Park Road, Miramar, Wellington. This is client work maintained jointly by Ross/Claude Code and Ben/Codex.
 
-## Locations
+## Current state
 
-- **Miramar** — 128D Park Road, Miramar, Wellington 6022
-- **Cuba Mall** — 126A Cuba Mall, Te Aro
-- **Island Bay** — 121A The Parade, Island Bay
+- Plain HTML, CSS and a small inline vanilla-JavaScript carousel; no framework or build step.
+- `index.html`, `menu.html` and `contact.html` are implemented.
+- `about.html` is blocked on client-supplied story content, but the current navigation already links to it and therefore 404s.
+- The homepage references a missing `assets/product.jpg`; production photography has not been supplied.
+- Phone, email, opening hours and the 2024 menu transcription require confirmation before launch. Treat values currently rendered in the pages as provisional.
 
-## Current Status
+## Run locally
 
-**Pre-framework** — auditing the existing site before selecting a stack.
+Serve the repository root with any static HTTP server, for example:
 
-- [x] Audit of existing site (aromacoffee.nz) — content, structure, platform
-- [ ] Stack selection
-- [ ] Design system / brand tokens
-- [ ] Build
-
-## Project Structure
-
-```
-/audit            Scraped content and analysis from the old site
-/design-system    Brand decisions, tokens, typography (pending)
-aroma-leaf-cluster.svg   Decorative leaf cluster (brand asset)
+```powershell
+npx serve .
 ```
 
-## Old Site
+Open the localhost URL printed by the server. There is no project install, build or test command yet.
 
-The current site at [aromacoffee.nz](https://aromacoffee.nz) runs **Laravel + Vite + Tailwind CSS + Alpine.js**. See `/audit/platform-analysis.md` for full details and `/audit/structural-issues.md` for known problems.
+## Project map
+
+- `HANDOVER.md` — current implementation state, blockers and next work
+- `decisions.md` — accepted and proposed product/technical decisions; status labels matter
+- `content-status.md` — content provenance and confirmation state
+- `TODO.md` — outstanding work and client questions
+- `CLAUDE.md` / `AGENTS.md` — harness-specific navigation
+- `Aroma Coffee Homepage/design_handoff_aroma_homepage/` and `NEW-DESIGN.png` — design evidence, not a replacement for current source
+- `assets/` — client/developer-supplied menu photographs
+- `audit/` — historical research from the inconsistent old website; not current client truth
+- `docs/agents/` — shared agent workflow configuration
+
+## Source-of-truth rule
+
+Direct client confirmation outranks repository records, supplied source material, current implementation, the old website and public listings, in that order. When records conflict, preserve the uncertainty in `content-status.md` or `TODO.md` and ask the client rather than choosing a plausible value.
+
+The only confirmed operating location recorded by the project is 128D Park Road, Miramar. Do not reintroduce Cuba/Te Aro, Island Bay, warehouse, e-commerce or online-reservation claims from old-site research.

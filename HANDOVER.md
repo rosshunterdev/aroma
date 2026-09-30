@@ -1,8 +1,14 @@
 # Handover — Aroma Coffee Rebuild
 
+## Onboarding reconciliation — Codex/Ben side, 2026-09-30
+
+Work is on `codex/onboarding-continuity`. Commit `59f51ff` contains the substantive onboarding/configuration changes; `9ad489d` records the final handoff metadata. The pass corrected shared documentation, added the concise Codex map in `AGENTS.md`, and configured the focused project-local Matt Pocock skills with local Markdown tickets under `.scratch/`. No client-facing HTML/CSS/JavaScript was changed. Validation included `git diff --check`, local-reference checks, source review, and browser inspection at default and desktop viewport sizes.
+
+The confirmed broken local references are `about.html` from all three pages and `assets/product.jpg` from the homepage. Treat these as recorded launch blockers, not newly introduced regressions. The incoming developer should avoid editing the shared continuity files simultaneously until this branch is reviewed or merged.
+
 ## Current State
 
-Static HTML + CSS site. Homepage rebuilt with a carousel and single-screen layout. Menu and contact pages functional. About page not started.
+Static HTML + CSS site with a small inline vanilla-JavaScript carousel. Homepage, menu and contact pages are implemented. About is blocked on client story content. Contact details and hours rendered in the current pages are provisional, not launch-confirmed.
 
 | Page | Status |
 |------|--------|
@@ -32,18 +38,22 @@ Footer phone number on homepage was using the old site number `(+64)27 4809896`.
 4. **Mobile layout** — carousel swipe gestures and responsive layout deferred. Desktop-first.
 5. **Phone number** — still needs client confirmation.
 6. **About page** — blocked on client content.
-7. **Product photos** — all three carousel slides use the same `assets/product.jpg` placeholder.
+7. **Product photos** — all three carousel slides reference `assets/product.jpg`, but that file is absent, so the images are broken.
+8. **Opening hours and email** — both need client confirmation; repository records conflict about the source of the displayed hours.
+9. **About navigation** — all pages currently link to missing `about.html`; choose an intentional pre-content state before launch.
 
 ## Blockers
 
 - Visual confirmation of Visit Us positioning (may need further CSS tweaks)
 - Tea slide content is weak — needs client input or a design decision
 - About page content and product hero images both need client input
+- Phone, email, opening hours and menu accuracy need explicit launch confirmation
+- The About link and missing homepage image produce user-visible broken states
 
 ## Key Files
 
 - `CLAUDE.md` — project context and constraints
 - `decisions.md` — 8 decisions + open phone number issue
-- `TODO.md` — full task list (not updated this session — may be stale on structure items)
+- `TODO.md` — current backlog and client-input questions
 - `content-status.md` — content tracking by source and confirmation status
 - `Aroma Coffee Homepage/design_handoff_aroma_homepage/` — original Claude Design reference
