@@ -99,6 +99,15 @@ Ross has an artistic structure in mind that may take a different approach. This 
 
 ---
 
+## 009 — Temporary root page while the final site is developed
+
+**Date:** 2026-09-30
+**Decision:** Use `index.html` for a standalone temporary landing page and preserve the early homepage draft at `draft.html` with its existing Menu and Contact pages.
+**Why:** The temporary page can be removed cleanly without deleting, duplicating or substantially restructuring the unfinished site. Draft-page Home links point to `draft.html`, while the temporary page exposes no navigation into provisional content.
+**Impact:** The temporary page is an interim public entry point, not an approved final homepage. Restoring the draft as the root later requires deleting the temporary page and stylesheet, renaming `draft.html` to `index.html`, and restoring its internal Home links.
+
+---
+
 ## Open — Phone number discrepancy
 
 **Status:** UNRESOLVED — needs client confirmation
