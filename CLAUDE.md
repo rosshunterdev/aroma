@@ -41,7 +41,7 @@ The old site (aromacoffee.nz) runs Laravel + Vite + Tailwind CSS + Alpine.js. Th
 
 ## Client Content Rules
 
-This is client work. Never write text that asserts a fact about Aroma Coffee (their services, process, pricing, availability, credentials, or location) unless the client said it. Use the `client-copy` skill for any customer-facing text. Leave a short question for unconfirmed facts rather than inventing content.
+This is client work. For customer-facing copy, consult `content-status.md`, assert only client-confirmed facts, and record a short question for missing facts rather than inventing content.
 
 ## Key Constraints
 

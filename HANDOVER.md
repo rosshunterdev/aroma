@@ -2,7 +2,7 @@
 
 ## Onboarding reconciliation — Codex/Ben side, 2026-09-30
 
-Work is on `codex/onboarding-continuity`; the reviewed onboarding changes are in commit `59f51ff`. The pass corrected shared documentation, added the concise Codex map in `AGENTS.md`, and configured the focused project-local Matt Pocock skills with local Markdown tickets under `.scratch/`. No client-facing HTML/CSS/JavaScript was changed. Validation included `git diff --check`, local-reference checks, source review, and browser inspection at default and desktop viewport sizes.
+Work is on `codex/onboarding-continuity`. Commit `59f51ff` contains the substantive onboarding/configuration changes; `9ad489d` records the final handoff metadata. The pass corrected shared documentation, added the concise Codex map in `AGENTS.md`, and configured the focused project-local Matt Pocock skills with local Markdown tickets under `.scratch/`. No client-facing HTML/CSS/JavaScript was changed. Validation included `git diff --check`, local-reference checks, source review, and browser inspection at default and desktop viewport sizes.
 
 The confirmed broken local references are `about.html` from all three pages and `assets/product.jpg` from the homepage. Treat these as recorded launch blockers, not newly introduced regressions. The incoming developer should avoid editing the shared continuity files simultaneously until this branch is reviewed or merged.
 
