@@ -15,7 +15,7 @@ Provide a polished temporary root page while keeping the early full-site draft e
 ## Acceptance criteria
 
 - Responsive, semantic page using the established palette, typography and leaf asset.
-- No JavaScript, dependencies, broken local references or fabricated client facts.
+- The temporary public page has no JavaScript, dependencies, broken local references or fabricated client facts.
 - Early Home/Menu/Contact draft remains recoverable and internally navigable.
 - Browser-reviewed at representative mobile and desktop sizes.
 
