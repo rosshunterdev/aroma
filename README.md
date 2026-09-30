@@ -7,7 +7,7 @@ Static website rebuild for Aroma Coffee / Aroma Café at 128D Park Road, Miramar
 - `index.html` is a standalone temporary landing page; it is not the approved final homepage.
 - The early website draft remains at `draft.html`, with `menu.html`, `contact.html`, `styles.css` and its small inline vanilla-JavaScript carousel preserved for continued development.
 - The temporary page uses `temporary.css`; there is no framework or build step.
-- `about.html` is blocked on client-supplied story content, but the current navigation already links to it and therefore 404s.
+- `about.html` is blocked on client-supplied story content, but the preserved draft navigation already links to it and therefore 404s.
 - The draft homepage references a missing `assets/product.jpg`; production photography has not been supplied.
 - Phone, email, opening hours and the 2024 menu transcription require confirmation before launch. Treat values currently rendered in the pages as provisional.
 

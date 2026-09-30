@@ -14,13 +14,14 @@ The old site (aromacoffee.nz) runs Laravel + Vite + Tailwind CSS + Alpine.js. Th
 
 ## Project Status
 
-**Static HTML + CSS.** No framework, no build system, no package.json. Homepage, menu, and contact pages are built. Layout and structure are first-pass and need design review — see `TODO.md`.
+**Static HTML + CSS.** No framework, no build system, no package.json. `index.html` is a temporary public-facing page while the early site draft remains under development at `draft.html`, with Menu and Contact. The draft layout and structure need design review — see `TODO.md`.
 
 ### Pages
 
 | File | Status | Notes |
 |------|--------|-------|
-| `index.html` | Built | Homepage — Food/Coffee/Tea carousel, menu CTA and Visit Us block; references a missing product image |
+| `index.html` | Built | Temporary landing page; not the approved final homepage |
+| `draft.html` | Early draft | Food/Coffee/Tea carousel, menu CTA and Visit Us block; references a missing product image |
 | `menu.html` | Built | Full menu transcribed from physical menu photos |
 | `contact.html` | Built | Address, hours, booking CTA |
 | `about.html` | Not started | Needs client story content |
@@ -28,7 +29,7 @@ The old site (aromacoffee.nz) runs Laravel + Vite + Tailwind CSS + Alpine.js. Th
 ### Directory Structure
 
 - `/audit` — scraped content, assets, and notes from the old aromacoffee.nz site
-- `/assets` — menu photos; the product-photo placeholder referenced by the homepage is currently missing
+- `/assets` — menu photos; the product-photo placeholder referenced by the draft homepage is currently missing
 - `/design-system` — brand tokens (currently empty, tokens are in `styles.css :root`)
 - `Aroma Coffee Homepage/` — Claude Design handoff files (reference, not shipped)
 

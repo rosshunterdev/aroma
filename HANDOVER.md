@@ -14,8 +14,8 @@ Branch `codex/under-construction-page` adds a standalone temporary landing page 
 |------|--------|
 | `index.html` | Temporary public-facing landing page. No draft navigation, provisional contact details or JavaScript. |
 | `draft.html` | Preserved early homepage draft — carousel with 3 slides (Food/Coffee/Tea), defaults to Coffee. |
-| `menu.html` | Built. Full menu. Added "← Back" link in the tabs bar to return to homepage. |
-| `contact.html` | Built. Address, hours, phone/email CTA. No changes this session. |
+| `menu.html` | Built. Full menu. Home, brand and "← Back" links now return to `draft.html`. |
+| `contact.html` | Built. Address, hours, phone/email CTA. Home and brand links now return to `draft.html`. |
 | `about.html` | Not started — blocked on client content. Nav links to it (will 404). |
 
 ### Homepage carousel detail

@@ -14,7 +14,7 @@ Tracks what content is real, placeholder, or missing across the site.
 | Phone: (+64)27 480 9896 | Old site footer | **Unconfirmed** — may be outdated |
 | Email: aroma128d@gmail.com | Old site footer | **Needs confirmation** |
 | About / story | — | **Missing** — no content exists anywhere |
-| Product hero image | — | **Missing** — `index.html` references nonexistent `assets/product.jpg`, producing broken images |
+| Product hero image | — | **Missing** — `draft.html` references nonexistent `assets/product.jpg`, producing broken images in the early draft |
 | Social media URLs | — | **Missing** — old site had icons but no URLs scraped |
 | Privacy policy | Old site (boilerplate) | **Not carried over** — requirements depend on shipped forms, analytics, embeds and legal advice |
 | Terms & conditions | Old site (boilerplate) | **Not carried over** — requirements depend on shipped functionality and legal advice |
