@@ -65,3 +65,10 @@ Note: Codex/Ben work on 2026-09-30 (PR #1 onboarding, PR #2 temporary page) was 
 - **Verified:** Playwright/Chromium at 1440px and 390px on all three draft pages: one h1, no skipped heading levels, no failed requests, no horizontal scroll; tab keyboard behaviour and no autoplay confirmed; screenshots reviewed. Not verified: real devices, screen reader.
 - **Shipped:** Branch pushed and PR #3 opened against `main` for Ben/Codex review (not merged).
 - **Continued (review assumed accepted, per Ross):** ticket 07 head metadata and favicon, contact hours and titles without em dashes, removed unused `.pill--lg`. Verified with Playwright (metadata present, favicon 200, page checks unchanged). Found: `NEW-DESIGN.png` comp staggers the highlight columns deliberately; current build does not. Raised with Ross.
+
+## Session 6 — 2026-10-02 — Pre-visit safety check and pricing
+
+- **Did:** Oriented (`/start`). Advised on pricing for the client offer: small one-off build fee plus low monthly care plan (suggested about $600 + $20/month; not decided). Checked the pages Ross will show the client. Added `.playwright-mcp/` to `.gitignore` (`fb6b035`).
+- **Decided:** none recorded (pricing is a suggestion pending Ross and Ben).
+- **Broke or found:** Production `/draft.html` is the old `main` draft (broken images, ABOUT 404, autoplay); show the PR #3 preview instead. "Powered by Netlify" badge is on production, not only previews. Netlify preview toolbar overlaps the homepage tabs on mobile. Raised: agree pricing and who offers the work with Ben before quoting.
+- **Verified:** Playwright at 390px: live temporary page and preview `draft.html` screenshots reviewed; preview `menu.html` and `contact.html` return 200; console errors only from blocked Netlify toolbar scripts. Not verified: real devices.
