@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aroma Structure Mock</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Aroma brand tokens (copied from styles.css) */
+    --brown: #402A1C;
+    --brown-ink: #FDF6EC;
+    --cream: #FAF1E7;
+    --cream-hover: #E4C9A8;
+    --ink: #2B2320;
+    --ink-body: #4A3B32;
+    --sage: #8FA173;
+    --sage-text: #5E6E45; /* proposed darker sage for text: 5.2:1 on cream */
+    --placeholder: #E6DCCF;
+
+    /* Diagram chrome: deliberately not Aroma, so markup never reads as design */
+    --board: #E9ECEF;
+    --board-ink: #1F2A36;
+    --board-muted: #5B6875;
+    --pin: #2357A0;
+    --frame: #FFFFFF;
+
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Figtree', -apple-system, 'Segoe UI', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--board);
+    color: var(--board-ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  :focus-visible { outline: 2px solid var(--pin); outline-offset: 3px; }
+
+  /* ---------- Board layout ---------- */
+  .board { max-width: 1440px; margin: 0 auto; padding: 32px 24px 80px; }
+  .board__intro { max-width: 70ch; margin-bottom: 32px; }
+  .board__intro h1 { font-size: 26px; margin: 0 0 6px; font-weight: 600; }
+  .board__intro p { margin: 0; color: var(--board-muted); }
+  .board h2 { font-size: 19px; font-weight: 600; margin: 56px 0 16px; }
+
+  .split { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 28px; align-items: start; }
+  @media (max-width: 1080px) { .split { grid-template-columns: 1fr; } }
+
+  .browser {
+    background: var(--frame);
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(31,42,54,.08), 0 8px 24px rgba(31,42,54,.08);
+    overflow: hidden;
+  }
+  .browser__bar {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px; background: #F6F7F8; border-bottom: 1px solid #DDE1E5;
+    font-size: 13px; color: var(--board-muted);
+  }
+  .browser__dots { display: flex; gap: 6px; }
+  .browser__dots i { width: 10px; height: 10px; border-radius: 50%; background: #CBD1D7; }
+  .browser__url { background: #fff; border: 1px solid #DDE1E5; border-radius: 6px; padding: 2px 10px; }
+
+  /* ---------- Notes rail ---------- */
+  .notes { position: sticky; top: 16px; display: flex; flex-direction: column; gap: 12px; }
+  .note {
+    background: var(--frame); border-radius: 8px; padding: 14px 16px;
+    font-size: 14.5px;
+  }
+  .note h3 { margin: 0 0 4px; font-size: 15px; display: flex; gap: 10px; align-items: center; }
+  .note p { margin: 0; color: #3A4652; }
+  .note .fix { display: block; margin-top: 6px; color: var(--board-muted); font-size: 13.5px; }
+  .note:target, .note.is-lit { box-shadow: 0 0 0 2px var(--pin); }
+
+  .pin {
+    display: inline-grid; place-items: center;
+    width: 24px; height: 24px; border-radius: 50%;
+    background: var(--pin); color: #fff;
+    font: 600 12px/1 var(--sans);
+    flex-shrink: 0;
+  }
+  a.pin { text-decoration: none; }
+  .mock .pin { color: #fff; position: absolute; z-index: 3; box-shadow: 0 0 0 3px rgba(255,255,255,.85); }
+
+  /* ---------- The mock (Aroma brand world) ---------- */
+  .mock {
+    container-type: inline-size;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans);
+  }
+  .mock a { color: inherit; }
+  .mock :focus-visible { outline: 2px solid var(--brown); outline-offset: 3px; }
+
+  .m-header {
+    position: relative;
+    background: var(--brown);
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    padding: 20px clamp(16px, 4cqi, 40px);
+  }
+  .mock .m-brand {
+    font-family: var(--serif); font-size: clamp(26px, 4cqi, 40px);
+    letter-spacing: .14em; color: var(--brown-ink); text-decoration: none;
+  }
+  .m-nav { display: flex; gap: clamp(14px, 3cqi, 32px); }
+  .m-nav a {
+    font-family: var(--serif); font-size: clamp(15px, 1.7cqi, 19px); letter-spacing: .12em;
+    color: var(--cream); text-decoration: none; padding: 6px 0;
+  }
+  .m-nav a[aria-current="page"] { border-bottom: 1.5px solid var(--cream); }
+  .m-nav .is-held { opacity: .45; text-decoration: line-through; }
+  .m-header .pin { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+  .m-hero {
+    position: relative;
+    display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(20px, 4cqi, 56px);
+    padding: clamp(32px, 6cqi, 72px) clamp(16px, 4cqi, 56px);
+    align-items: center;
+  }
+  .m-hero .pin { top: 12px; left: 12px; }
+  .slot {
+    border: 1.5px dashed #B9A48C; border-radius: 4px;
+    background: repeating-linear-gradient(-45deg, transparent 0 10px, rgba(185,164,140,.12) 10px 20px);
+    color: #6B5644; padding: 18px; font-size: 14px;
+  }
+  .slot strong { display: block; font-family: var(--serif); font-size: clamp(24px, 3.4cqi, 36px); font-weight: 500; color: var(--ink); line-height: 1.15; margin-bottom: 6px; }
+  .m-facts {
+    list-style: none; margin: 24px 0 0; padding: 0;
+    display: flex; flex-wrap: wrap; gap: 10px;
+  }
+  .m-facts li, .m-facts a {
+    font-size: 15px; padding: 10px 16px; border-radius: 999px;
+    border: 1px solid var(--brown); color: var(--brown); text-decoration: none;
+    min-height: 44px; display: inline-flex; align-items: center;
+  }
+  .m-facts li:has(a) { border: 0; padding: 0; }
+  .m-facts a.is-primary { background: var(--brown); color: var(--cream); }
+  .tbc { font-size: 12px; color: #8A6A4E; margin-left: 6px; }
+  .m-photo { aspect-ratio: 4 / 3.4; display: grid; place-items: center; text-align: center; }
+
+  .m-sig { position: relative; padding: clamp(28px, 5cqi, 56px) clamp(16px, 4cqi, 56px); border-top: 1px solid #E8DCCB; }
+  .m-sig .pin { top: 12px; left: 12px; }
+  .m-sig h2, .m-visit h2 {
+    font-family: var(--serif); font-weight: 500; font-size: clamp(26px, 3cqi, 32px);
+    margin: 0 0 20px; text-align: center; letter-spacing: .02em;
+  }
+  .m-tabs { display: flex; justify-content: center; gap: clamp(24px, 5cqi, 64px); margin-bottom: 28px; }
+  .m-tabs button {
+    appearance: none; background: none; border: 0; cursor: pointer;
+    font-family: var(--serif); font-size: clamp(19px, 2.2cqi, 24px); letter-spacing: .08em;
+    color: var(--ink); padding: 6px 2px 10px; border-bottom: 1.5px solid transparent;
+  }
+  .m-tabs button[aria-selected="true"] { border-bottom-color: var(--ink); }
+  .m-tabs button:hover { color: var(--brown); }
+  .m-panel { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: clamp(20px, 3cqi, 40px); align-items: start; max-width: 1040px; margin: 0 auto; }
+  .m-panel[hidden] { display: none; }
+  .m-item h3 { font-family: var(--serif); font-weight: 500; font-size: 20px; letter-spacing: .06em; margin: 0 0 8px; }
+  .m-item p { margin: 0; font-size: 16px; line-height: 1.75; color: var(--ink-body); }
+  .m-item:first-child { text-align: right; }
+  .m-img { aspect-ratio: 1; display: grid; place-items: center; text-align: center; }
+  .m-more { text-align: center; margin-top: 28px; }
+  .m-more a {
+    display: inline-block; background: var(--brown); color: var(--cream); text-decoration: none;
+    font-family: var(--serif); font-size: 18px; letter-spacing: .1em; padding: 14px 40px;
+  }
+
+  .m-visit { position: relative; background: #F3E6D6; padding: clamp(28px, 5cqi, 56px) clamp(16px, 4cqi, 56px); }
+  .m-visit .pin { top: 12px; left: 12px; }
+  .m-visit__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1040px; margin: 0 auto; }
+  .m-visit h3 { font-family: var(--serif); font-weight: 600; font-size: 20px; margin: 0 0 8px; }
+  .m-visit p, .m-visit dl { margin: 0; font-size: 16px; color: var(--ink-body); }
+  .m-visit dl div { display: flex; justify-content: space-between; max-width: 260px; }
+  .m-visit dd { margin: 0; color: var(--ink); font-weight: 500; }
+  .m-visit a { text-decoration: underline; text-underline-offset: 3px; }
+
+  .m-footer { position: relative; background: var(--sage); padding: 18px clamp(16px, 4cqi, 40px); display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; font-size: 15px; }
+  .m-footer .pin { top: -12px; right: 12px; }
+  .m-footer span { color: var(--ink); }
+  .leaf { position: absolute; right: 0; bottom: 0; width: clamp(120px, 20cqi, 220px); opacity: .8; pointer-events: none; }
+
+  /* Mock: narrow container behaviour */
+  @container (max-width: 640px) {
+    .m-hero { grid-template-columns: 1fr; }
+    .m-photo { order: -1; aspect-ratio: 16 / 10; }
+    .m-panel { grid-template-columns: 1fr; }
+    .m-item:first-child { text-align: left; }
+    .m-img { aspect-ratio: 16 / 10; order: -1; }
+    .m-visit__grid { grid-template-columns: 1fr; gap: 20px; }
+    .m-header { flex-wrap: wrap; justify-content: center; }
+    .leaf { display: none; }
+  }
+
+  /* ---------- Sitemap diagram ---------- */
+  .maps { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 900px) { .maps { grid-template-columns: 1fr; } }
+  .map { background: var(--frame); border-radius: 10px; padding: 20px; }
+  .map h3 { margin: 0 0 14px; font-size: 16px; }
+  .map svg { width: 100%; height: auto; display: block; }
+  .map svg text { font-family: var(--sans); }
+  .map p { margin: 12px 0 0; font-size: 14px; color: var(--board-muted); }
+
+  /* ---------- Mobile frame ---------- */
+  .phone-row { display: flex; gap: 32px; flex-wrap: wrap; align-items: flex-start; }
+  .phone {
+    width: 375px; max-width: 100%; height: 760px; overflow-y: auto;
+    border: 10px solid #1F2A36; border-radius: 36px; background: var(--cream);
+  }
+  .phone-notes { max-width: 52ch; font-size: 15px; color: #3A4652; }
+  .phone-notes li { margin-bottom: 10px; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .note { transition: box-shadow 160ms ease; }
+  }
+</style>
+</head>
+<body>
+<main class="board">
+
+  <header class="board__intro">
+    <h1>Aroma Coffee: proposed homepage structure</h1>
+    <p>Wireframe mock using the existing Aroma palette and fonts. Blue pins are review markup, not design. Dashed boxes are content the client still needs to supply. Click a pin to highlight its note.</p>
+  </header>
+
+  <div class="split">
+    <div class="browser">
+      <div class="browser__bar"><span class="browser__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser__url">aromacoffee.nz</span></div>
+
+      <div class="mock" id="mock">
+        <header class="m-header">
+          <a class="m-brand" href="#mock" aria-current="page">AROMA</a>
+          <nav class="m-nav" aria-label="Main">
+            <a href="#">MENU</a>
+            <a href="#" class="is-held" title="Hidden until client supplies story">ABOUT</a>
+            <a href="#">VISIT</a>
+          </nav>
+          <a class="pin" href="#n1" data-note="n1">1</a>
+        </header>
+
+        <section class="m-hero" aria-label="Introduction">
+          <div>
+            <div class="slot">
+              <strong>Heritage line in the client's own words</strong>
+              Who Aroma is in one sentence: the Vietnamese identity, egg coffee, pho. Client to supply.
+            </div>
+            <ul class="m-facts">
+              <li>Open today, hours <span class="tbc">TBC</span></li>
+              <li>128D Park Road, Miramar</li>
+              <li><a class="is-primary" href="#">Call (020) 456 7837<span class="tbc" style="color:var(--cream-hover)">TBC</span></a></li>
+            </ul>
+          </div>
+          <div class="slot m-photo">Hero photo<br>client to supply</div>
+          <a class="pin" href="#n2" data-note="n2">2</a>
+        </section>
+
+        <section class="m-sig" aria-labelledby="sig-h">
+          <h2 id="sig-h">From the menu</h2>
+          <div class="m-tabs" role="tablist" aria-label="Menu highlights">
+            <button role="tab" id="t-food" aria-controls="p-food" aria-selected="false" tabindex="-1">FOOD</button>
+            <button role="tab" id="t-coffee" aria-controls="p-coffee" aria-selected="true">COFFEE</button>
+            <button role="tab" id="t-tea" aria-controls="p-tea" aria-selected="false" tabindex="-1">TEA</button>
+          </div>
+
+          <div class="m-panel" role="tabpanel" id="p-food" aria-labelledby="t-food" hidden>
+            <div class="m-item"><h3>CHICKEN PHO</h3><p>Rice broth with star anise, cinnamon, ginger, coriander, onion, cloves, fennel, pepper, chilli.</p></div>
+            <div class="slot m-img">Pho photo</div>
+            <div class="m-item"><h3>SEAFOOD TOM YUM</h3><p>Spicy Tom Yum soup with prawn, octopus, mussels, fish ball, mushroom.</p></div>
+          </div>
+          <div class="m-panel" role="tabpanel" id="p-coffee" aria-labelledby="t-coffee">
+            <div class="m-item"><h3>AROMA COFFEE</h3><p>Existing blurb from the old site, approval unknown.</p></div>
+            <div class="slot m-img">Coffee photo</div>
+            <div class="m-item"><h3>EGG COFFEE</h3><p>Moved here from the Tea slide. Description needed from client.</p></div>
+          </div>
+          <div class="m-panel" role="tabpanel" id="p-tea" aria-labelledby="t-tea" hidden>
+            <div class="m-item"><h3>AROMA MATCHA</h3><p>Thai Nguyen matcha blurb from the old site, approval unknown.</p></div>
+            <div class="slot m-img">Tea photo</div>
+            <div class="m-item"><h3>TEA POT</h3><p>English Breakfast, Earl Grey, Green Tea, Peppermint.</p></div>
+          </div>
+
+          <p class="m-more"><a href="#" id="more-link">See all coffee</a></p>
+          <a class="pin" href="#n3" data-note="n3">3</a>
+          <a class="pin" href="#n4" data-note="n4" style="top:auto;bottom:24px;left:auto;right:24px">4</a>
+        </section>
+
+        <section class="m-visit" aria-labelledby="visit-h">
+          <h2 id="visit-h">Visit us</h2>
+          <div class="m-visit__grid">
+            <div><h3>Find us</h3><p>128D Park Road<br>Miramar, Wellington 6022<br><a href="#">Open in Maps</a></p></div>
+            <div><h3>Hours <span class="tbc">TBC</span></h3>
+              <dl><div><dt>Mon to Fri</dt><dd>7am to 3pm</dd></div><div><dt>Sat and Sun</dt><dd>9am to 3pm</dd></div></dl></div>
+            <div><h3>Bookings</h3><p>Phone or email, no online booking.<br><a href="#">(020) 456 7837</a><br><a href="#">aroma128d@gmail.com</a></p></div>
+          </div>
+          <a class="pin" href="#n5" data-note="n5">5</a>
+        </section>
+
+        <footer class="m-footer">
+          <span>128D Park Road, Miramar</span>
+          <span>(020) 456 7837 · aroma128d@gmail.com · socials TBC</span>
+          <a class="pin" href="#n6" data-note="n6">6</a>
+          <svg class="leaf" viewBox="0 0 320 200" fill="none" aria-hidden="true" style="bottom:100%"><g stroke="#8FA173" stroke-width="2.75" stroke-linecap="round"><path d="M300 196C286 170 262 148 232 138"/><path d="M252 150C246 132 250 116 262 104"/></g><g fill="#8FA173"><ellipse cx="276" cy="120" rx="26" ry="14" transform="rotate(-38 276 120)"/><ellipse cx="240" cy="96" rx="24" ry="13" transform="rotate(-14 240 96)" opacity=".72"/><ellipse cx="300" cy="158" rx="22" ry="12" transform="rotate(30 300 158)" opacity=".9"/><ellipse cx="206" cy="128" rx="20" ry="11" transform="rotate(-52 206 128)" opacity=".55"/></g></svg>
+        </footer>
+      </div>
+    </div>
+
+    <aside class="notes" aria-label="Review notes">
+      <div class="note" id="n1"><h3><span class="pin">1</span>Header: wordmark, Menu, About, Visit</h3>
+        <p>The wordmark links home, so the separate HOME link goes. MENU joins the header, and Contact is renamed Visit. About stays hidden until the client sends their story.</p>
+        <span class="fix">Fixes: Menu isn't in the nav, ABOUT 404s, two links both go home.</span></div>
+      <div class="note" id="n2"><h3><span class="pin">2</span>Hero: who Aroma is and how to get there</h3>
+        <p>The page's single h1 sits here: the client's heritage line. The three facts visitors need most sit right under it, and Call is the main action.</p>
+        <span class="fix">Fixes: no h1, and nothing above the fold says what kind of cafe this is.</span></div>
+      <div class="note" id="n3"><h3><span class="pin">3</span>Your tabs, kept, with no autoplay</h3>
+        <p>Food, Coffee and Tea stay, as decided in 008. They change only on click or arrow keys. Egg Coffee moves to Coffee and Matcha to Tea. Try them in the mock.</p>
+        <span class="fix">Fixes: WCAG 2.2.2 (auto-rotation), the broken tabs pattern, Egg Coffee sitting under Tea.</span></div>
+      <div class="note" id="n4"><h3><span class="pin">4</span>The button follows the selected tab</h3>
+        <p>"See all coffee" opens menu.html#coffee. The menu page uses the same three sections, so the home tabs work as a preview of it.</p>
+        <span class="fix">Fixes: home and menu categories don't match.</span></div>
+      <div class="note" id="n5"><h3><span class="pin">5</span>Visit is a real section</h3>
+        <p>It sits in the normal page flow, not pinned to a corner, so it can't overlap other content on mobile. Hours show am and pm.</p>
+        <span class="fix">Fixes: the absolutely positioned Visit block, and "7–3" being ambiguous.</span></div>
+      <div class="note" id="n6"><h3><span class="pin">6</span>Footer repeats the essentials</h3>
+        <p>Address, phone, email and socials, so anyone who scrolls to the bottom finds them.</p>
+        <span class="fix">All contact details are provisional until the client confirms them.</span></div>
+    </aside>
+  </div>
+
+  <h2>Site map: current vs proposed</h2>
+  <div class="maps">
+    <figure class="map" style="margin:0">
+      <h3>Current draft</h3>
+      <svg viewBox="0 0 460 250" role="img" aria-label="Current: Home links to About (missing), Contact, and Menu only through a button">
+        <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5B6875"/></marker></defs>
+        <rect x="170" y="14" width="120" height="48" rx="6" fill="#402A1C"/><text x="230" y="43" text-anchor="middle" fill="#FAF1E7" font-size="15">Home</text>
+        <rect x="20" y="168" width="120" height="48" rx="6" fill="#fff" stroke="#B42318" stroke-width="2" stroke-dasharray="6 4"/><text x="80" y="191" text-anchor="middle" fill="#B42318" font-size="14">About</text><text x="80" y="208" text-anchor="middle" fill="#B42318" font-size="12">404</text>
+        <rect x="170" y="168" width="120" height="48" rx="6" fill="#fff" stroke="#5B6875" stroke-width="1.5"/><text x="230" y="197" text-anchor="middle" fill="#1F2A36" font-size="14">Contact</text>
+        <rect x="320" y="168" width="120" height="48" rx="6" fill="#fff" stroke="#5B6875" stroke-width="1.5"/><text x="380" y="197" text-anchor="middle" fill="#1F2A36" font-size="14">Menu</text>
+        <path d="M200 62L95 164" stroke="#5B6875" stroke-width="1.5" marker-end="url(#ah)"/>
+        <path d="M230 62L230 164" stroke="#5B6875" stroke-width="1.5" marker-end="url(#ah)"/>
+        <path d="M260 62L365 164" stroke="#5B6875" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#ah)"/>
+        <text x="330" y="106" fill="#5B6875" font-size="12">only via View Menu</text>
+        <text x="20" y="106" fill="#5B6875" font-size="12">header nav</text>
+      </svg>
+      <p>Menu, the page most visitors want, can only be reached through a button. About is in the nav but doesn't exist yet.</p>
+    </figure>
+    <figure class="map" style="margin:0">
+      <h3>Proposed</h3>
+      <svg viewBox="0 0 460 250" role="img" aria-label="Proposed: Home links to Menu with food, coffee and tea sections, and Visit. About added later.">
+        <defs><marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2357A0"/></marker></defs>
+        <rect x="170" y="14" width="120" height="48" rx="6" fill="#402A1C"/><text x="230" y="43" text-anchor="middle" fill="#FAF1E7" font-size="15">Home</text>
+        <rect x="40" y="130" width="150" height="48" rx="6" fill="#fff" stroke="#2357A0" stroke-width="2"/><text x="115" y="159" text-anchor="middle" fill="#1F2A36" font-size="14">Menu</text>
+        <rect x="270" y="130" width="150" height="48" rx="6" fill="#fff" stroke="#2357A0" stroke-width="2"/><text x="345" y="159" text-anchor="middle" fill="#1F2A36" font-size="14">Visit</text>
+        <g font-size="12" fill="#1F2A36"><rect x="10" y="200" width="60" height="30" rx="15" fill="#E9ECEF"/><text x="40" y="219" text-anchor="middle">#food</text>
+        <rect x="80" y="200" width="70" height="30" rx="15" fill="#E9ECEF"/><text x="115" y="219" text-anchor="middle">#coffee</text>
+        <rect x="160" y="200" width="56" height="30" rx="15" fill="#E9ECEF"/><text x="188" y="219" text-anchor="middle">#tea</text></g>
+        <rect x="300" y="200" width="120" height="34" rx="6" fill="#fff" stroke="#9AA4AE" stroke-dasharray="5 4"/><text x="360" y="222" text-anchor="middle" fill="#5B6875" font-size="13">About (later)</text>
+        <path d="M205 62L130 126" stroke="#2357A0" stroke-width="1.5" marker-end="url(#ah2)"/>
+        <path d="M255 62L330 126" stroke="#2357A0" stroke-width="1.5" marker-end="url(#ah2)"/>
+        <path d="M115 178L115 196" stroke="#9AA4AE" stroke-width="1.5"/>
+        <text x="40" y="96" fill="#2357A0" font-size="12">header + tabs</text>
+      </svg>
+      <p>Every page is one click from the header. Each home tab links straight to the matching menu section.</p>
+    </figure>
+  </div>
+
+  <h2>Same structure on a phone</h2>
+  <div class="phone-row">
+    <div class="phone" id="phone" aria-label="Mobile preview of the same mock"></div>
+    <ul class="phone-notes">
+      <li>Photos move above the text, and the three columns stack.</li>
+      <li>The fact pills are at least 44px tall, so they're easy to tap. Call is the filled one, within thumb reach after the photo.</li>
+      <li>Visit is in the normal flow, so nothing overlaps.</li>
+      <li>The header wraps under the wordmark. At this width it still fits three links, which is another reason to drop HOME.</li>
+    </ul>
+  </div>
+</main>
+
+<script>
+(function () {
+  // Light up a note when its pin is clicked
+  document.addEventListener('click', function (e) {
+    var pin = e.target.closest('[data-note]');
+    if (!pin) return;
+    e.preventDefault();
+    document.querySelectorAll('.note').forEach(function (n) { n.classList.remove('is-lit'); });
+    var note = document.getElementById(pin.dataset.note);
+    note.classList.add('is-lit');
+    note.scrollIntoView({ block: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  });
+
+  // Tabs: click or arrow keys, no autoplay
+  function wireTabs(root) {
+    var tabs = Array.prototype.slice.call(root.querySelectorAll('[role="tab"]'));
+    var more = root.querySelector('.m-more a');
+    function select(i, focus) {
+      tabs.forEach(function (t, j) {
+        var on = i === j;
+        t.setAttribute('aria-selected', on);
+        t.tabIndex = on ? 0 : -1;
+        root.querySelector('#' + t.getAttribute('aria-controls')).hidden = !on;
+      });
+      if (focus) tabs[i].focus();
+      if (more) more.textContent = 'See all ' + tabs[i].textContent.toLowerCase();
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(i); });
+      t.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight') select((i + 1) % tabs.length, true);
+        if (e.key === 'ArrowLeft') select((i - 1 + tabs.length) % tabs.length, true);
+      });
+    });
+  }
+
+  // Clone the mock into the phone frame (ids suffixed to stay unique)
+  var clone = document.getElementById('mock').cloneNode(true);
+  clone.querySelectorAll('.pin').forEach(function (p) { p.remove(); });
+  clone.querySelectorAll('[id]').forEach(function (el) { el.id += '-m'; });
+  clone.querySelectorAll('[aria-controls],[aria-labelledby]').forEach(function (el) {
+    ['aria-controls', 'aria-labelledby'].forEach(function (a) { if (el.hasAttribute(a)) el.setAttribute(a, el.getAttribute(a) + '-m'); });
+  });
+  document.getElementById('phone').appendChild(clone);
+
+  wireTabs(document.getElementById('mock'));
+  wireTabs(clone);
+})();
+</script>
+</body>
+</html>
