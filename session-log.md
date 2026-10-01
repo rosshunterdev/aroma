@@ -64,3 +64,4 @@ Note: Codex/Ben work on 2026-09-30 (PR #1 onboarding, PR #2 temporary page) was 
 - **Broke or found:** Contact page booking buttons were cream on cream (pre-existing); fixed. Sage text on cream was 2.5:1; replaced by `--sage-text`.
 - **Verified:** Playwright/Chromium at 1440px and 390px on all three draft pages: one h1, no skipped heading levels, no failed requests, no horizontal scroll; tab keyboard behaviour and no autoplay confirmed; screenshots reviewed. Not verified: real devices, screen reader.
 - **Shipped:** Branch pushed and PR #3 opened against `main` for Ben/Codex review (not merged).
+- **Continued (review assumed accepted, per Ross):** ticket 07 head metadata and favicon, contact hours and titles without em dashes, removed unused `.pill--lg`. Verified with Playwright (metadata present, favicon 200, page checks unchanged). Found: `NEW-DESIGN.png` comp staggers the highlight columns deliberately; current build does not. Raised with Ross.

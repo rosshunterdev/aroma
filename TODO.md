@@ -25,7 +25,8 @@
 - [ ] **`about.html`:** Create once client provides content
 - [ ] **Legal/privacy assessment:** Decide based on the actual launch functionality (analytics, forms, embeds and tracking); obtain appropriate client/legal advice if documents are required.
 - [ ] **Domain / hosting:** Decide where the new site will be hosted. Static HTML can go anywhere.
-- [ ] **Meta tags:** No `<meta description>`, Open Graph tags, or structured data yet.
+- [ ] **Meta tags:** Description, Open Graph and favicon added to draft pages (ticket 07). Still to do: `og:image` (needs photos), the page address tag (needs domain), structured data (needs confirmed phone and hours).
+- [ ] **Self-host fonts:** Decide with Ben (privacy and performance); not started.
 - [ ] **Accessibility audit:** Run through with a screen reader / axe. Basic a11y is in place (aria labels, focus styles, semantic HTML) but needs a proper check.
 - [ ] **Performance:** Fonts are loaded from Google Fonts. Consider self-hosting for speed.
 
