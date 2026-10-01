@@ -367,10 +367,6 @@ button:focus-visible { outline: 2px solid var(--brown); outline-offset: 3px; }
 .pill--outline { background: transparent; }
 .pill--outline:hover { background: var(--cream); color: var(--brown); }
 
-.pill--lg {
-  padding: 10px 22px;
-  font-size: 14px;
-}
 
 /* Menu page */
 
