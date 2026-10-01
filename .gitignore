@@ -31,3 +31,6 @@ npm-debug.log*
 # Misc
 *.tgz
 .cache/
+
+# Personal notes (not shared)
+NEXT-ACTIONS.md

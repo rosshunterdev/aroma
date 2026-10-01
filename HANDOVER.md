@@ -35,7 +35,7 @@ Not verified: real devices, a screen reader pass, browsers other than Chromium.
 
 ## Next steps
 
-1. Ben/Codex review of the PR; resolve the two open questions in the spec.
+1. Send Ben the PR #3 link; Codex reviews and answers the two open questions in the spec.
 2. Send client the copy-slot questions plus the existing list in `TODO.md` (phone, email, hours, socials, menu accuracy, trading name).
 3. Merge after review; then decide when `draft.html` replaces the temporary `index.html` (decision 009 describes the swap).
 4. Screen reader pass (NVDA) once content is in.
@@ -49,7 +49,8 @@ Not verified: real devices, a screen reader pass, browsers other than Chromium.
 ## Git state
 
 - `main`: unchanged since PR #2 merge (`4f84c62`).
-- `feature/site-structure-proposal`: proposal docs, Playwright MCP config (`.mcp.json`), implementation, session docs. Not yet pushed at time of writing.
+- `feature/site-structure-proposal`: proposal docs, Playwright MCP config (`.mcp.json`), implementation, session docs. Pushed; open as PR #3 (https://github.com/rosshunterdev/aroma/pull/3), not merged.
+- Local only: this HANDOVER update and the session-log PR line (uncommitted). Commit with the first review follow-up.
 
 ## Key files
 

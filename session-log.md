@@ -63,3 +63,4 @@ Note: Codex/Ben work on 2026-09-30 (PR #1 onboarding, PR #2 temporary page) was 
 - **Decided:** 010 (BUILT, awaiting Ben/Codex review). 008 auto-rotation and 007 marked SUPERSEDED by 010.
 - **Broke or found:** Contact page booking buttons were cream on cream (pre-existing); fixed. Sage text on cream was 2.5:1; replaced by `--sage-text`.
 - **Verified:** Playwright/Chromium at 1440px and 390px on all three draft pages: one h1, no skipped heading levels, no failed requests, no horizontal scroll; tab keyboard behaviour and no autoplay confirmed; screenshots reviewed. Not verified: real devices, screen reader.
+- **Shipped:** Branch pushed and PR #3 opened against `main` for Ben/Codex review (not merged).
