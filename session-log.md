@@ -54,3 +54,12 @@ Chronological record of work done on the Aroma Coffee rebuild.
 - Header nav structure still deferred (MENU link not yet added to header)
 - Mobile carousel layout deferred
 - TODO.md not updated — structure-related items may be stale
+
+## Session 5 — 2026-10-01 — Site structure and homepage accessibility
+
+Note: Codex/Ben work on 2026-09-30 (PR #1 onboarding, PR #2 temporary page) was recorded in HANDOVER.md at the time, not here.
+
+- **Did:** Design critique and audit of `draft.html` (16/32 on applicable heuristics; four P1 accessibility issues). Built annotated mock of a new structure; Ross agreed it. Implemented it on `feature/site-structure-proposal`: header (wordmark + MENU + VISIT), hero with copy slots, tabs without autoplay, in-flow Visit section, menu anchors and heading order, focus and contrast fixes. Added Playwright MCP (`.mcp.json`).
+- **Decided:** 010 (BUILT, awaiting Ben/Codex review). 008 auto-rotation and 007 marked SUPERSEDED by 010.
+- **Broke or found:** Contact page booking buttons were cream on cream (pre-existing); fixed. Sage text on cream was 2.5:1; replaced by `--sage-text`.
+- **Verified:** Playwright/Chromium at 1440px and 390px on all three draft pages: one h1, no skipped heading levels, no failed requests, no horizontal scroll; tab keyboard behaviour and no autoplay confirmed; screenshots reviewed. Not verified: real devices, screen reader.

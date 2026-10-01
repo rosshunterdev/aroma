@@ -4,7 +4,8 @@
 
 - [ ] **Phone number:** Which is the current booking number? `(020) 456 7837` (on physical menu) or `(+64)27 480 9896` (on old website)? Are both active?
 - [ ] **About page content:** The Vietnamese heritage story, how the cafe started, team info — none of this exists on the old site. Needs to come from the client.
-- [ ] **Product photo:** Draft homepage references missing `assets/product.jpg` on all three slides. Obtain approved imagery and replace the broken references.
+- [ ] **Photos:** Hero photo plus one photo each for the Food, Coffee and Tea highlights. Shown as copy slots on `draft.html` until supplied.
+- [ ] **Homepage copy slots:** Hero sentence in the client's words; Egg Coffee description; whether Tea stays a highlighted category.
 - [ ] **Menu accuracy:** Menu was transcribed from physical photos (W23.2024 dated). Confirm current items and prices before launch.
 - [ ] **Trading name:** Is it "Aroma Coffee", "Aroma Café" or "Aroma Coffee Works"? Using "Aroma Coffee" until confirmed.
 - [ ] **Email address:** Is `aroma128d@gmail.com` still the preferred contact email?
@@ -13,7 +14,8 @@
 
 ## Design & Layout
 
-- [ ] **Header navigation decision:** Decision 008 implemented Ross's carousel direction and superseded decision 007's critique of navigate-away category tabs. Whether MENU belongs in the header remains deferred.
+- [ ] **Review decision 010:** Ben/Codex review of `feature/site-structure-proposal` (header, homepage, menu anchors, accessibility fixes).
+- [ ] **Screen reader pass:** NVDA check of the draft pages once client content is in.
 - [ ] **Menu + contact page design review:** These draft pages were built to match the draft homepage design system but without a dedicated design comp. They need a proper layout and visual hierarchy pass — spacing, typography scale, how items flow on different screen sizes. Consider taking them through Claude Design for a comp before refining.
 - [ ] **Mobile testing:** Responsive breakpoints exist but haven't been tested on real devices.
 - [ ] **Final-site favicon:** The temporary page uses the existing leaf SVG; choose and validate the final-site favicon later.
@@ -34,4 +36,5 @@
 - [x] Contact page (`contact.html`) with address, hours, CTA
 - [x] Design tokens and CSS custom properties established
 - [x] Responsive layout with clamp() and breakpoints
-- [ ] Draft primary navigation is not final-launch-ready: all three draft pages link to missing `about.html`; resolve deliberately before final-site launch.
+- [x] Draft navigation no longer links to missing `about.html` (decision 010)
+- [x] Homepage carousel replaced with accessible tabs; focus and contrast fixes (decision 010)
