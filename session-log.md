@@ -54,3 +54,21 @@ Chronological record of work done on the Aroma Coffee rebuild.
 - Header nav structure still deferred (MENU link not yet added to header)
 - Mobile carousel layout deferred
 - TODO.md not updated — structure-related items may be stale
+
+## Session 5 — 2026-10-01 — Site structure and homepage accessibility
+
+Note: Codex/Ben work on 2026-09-30 (PR #1 onboarding, PR #2 temporary page) was recorded in HANDOVER.md at the time, not here.
+
+- **Did:** Design critique and audit of `draft.html` (16/32 on applicable heuristics; four P1 accessibility issues). Built annotated mock of a new structure; Ross agreed it. Implemented it on `feature/site-structure-proposal`: header (wordmark + MENU + VISIT), hero with copy slots, tabs without autoplay, in-flow Visit section, menu anchors and heading order, focus and contrast fixes. Added Playwright MCP (`.mcp.json`).
+- **Decided:** 010 (BUILT, awaiting Ben/Codex review). 008 auto-rotation and 007 marked SUPERSEDED by 010.
+- **Broke or found:** Contact page booking buttons were cream on cream (pre-existing); fixed. Sage text on cream was 2.5:1; replaced by `--sage-text`.
+- **Verified:** Playwright/Chromium at 1440px and 390px on all three draft pages: one h1, no skipped heading levels, no failed requests, no horizontal scroll; tab keyboard behaviour and no autoplay confirmed; screenshots reviewed. Not verified: real devices, screen reader.
+- **Shipped:** Branch pushed and PR #3 opened against `main` for Ben/Codex review (not merged).
+- **Continued (review assumed accepted, per Ross):** ticket 07 head metadata and favicon, contact hours and titles without em dashes, removed unused `.pill--lg`. Verified with Playwright (metadata present, favicon 200, page checks unchanged). Found: `NEW-DESIGN.png` comp staggers the highlight columns deliberately; current build does not. Raised with Ross.
+
+## Session 6 — 2026-10-02 — Pre-visit safety check and pricing
+
+- **Did:** Oriented (`/start`). Advised on pricing for the client offer: small one-off build fee plus low monthly care plan (suggested about $600 + $20/month; not decided). Checked the pages Ross will show the client. Added `.playwright-mcp/` to `.gitignore` (`fb6b035`).
+- **Decided:** none recorded (pricing is a suggestion pending Ross and Ben).
+- **Broke or found:** Production `/draft.html` is the old `main` draft (broken images, ABOUT 404, autoplay); show the PR #3 preview instead. "Powered by Netlify" badge is on production, not only previews. Netlify preview toolbar overlaps the homepage tabs on mobile. Raised: agree pricing and who offers the work with Ben before quoting.
+- **Verified:** Playwright at 390px: live temporary page and preview `draft.html` screenshots reviewed; preview `menu.html` and `contact.html` return 200; console errors only from blocked Netlify toolbar scripts. Not verified: real devices.

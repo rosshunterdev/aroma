@@ -44,7 +44,7 @@ Architectural, design, and content decisions made during the Aroma Coffee rebuil
 ## 007 — Site structure and navigation redesign (PROPOSED)
 
 **Date:** 2026-09-18
-**Status:** PROPOSED — not yet implemented. Ross has an alternative artistic direction in mind; this proposal should be compared against that before either is built.
+**Status:** SUPERSEDED by 010 — MENU in header adopted; 008's homepage tabs retained instead of removing them.
 
 ### Current structure (problems)
 
@@ -93,6 +93,7 @@ Ross has an artistic structure in mind that may take a different approach. This 
 ## 008 — Homepage carousel instead of static layout
 
 **Date:** 2026-09-18
+**Status:** SUPERSEDED by 010 — auto-rotation only; the Food/Coffee/Tea tab direction carries into 010.
 **Decision:** Replace the static three-column homepage content with a tab-controlled carousel (Food / Coffee / Tea), defaulting to the Coffee slide.
 **Why:** Ross's artistic direction. The tabs become real in-page controls instead of confusing navigation links to menu.html. Each slide highlights two signature items from that category. The homepage becomes a single-screen landing page with a "VIEW MENU" CTA and a compact "Visit Us" block in the bottom-left.
 **Impact:** Homepage now uses vanilla JS (~40 lines inline). The structure decision from 007 (MENU in header) is partially addressed — the CTA handles menu access for now, header nav change deferred.
@@ -105,6 +106,20 @@ Ross has an artistic structure in mind that may take a different approach. This 
 **Decision:** Use `index.html` for a standalone temporary landing page and preserve the early homepage draft at `draft.html` with its existing Menu and Contact pages.
 **Why:** The temporary page can be removed cleanly without deleting, duplicating or substantially restructuring the unfinished site. Draft-page Home links point to `draft.html`, while the temporary page exposes no navigation into provisional content.
 **Impact:** The temporary page is an interim public entry point, not an approved final homepage. Restoring the draft as the root later requires deleting the temporary page and stylesheet, renaming `draft.html` to `index.html`, and restoring its internal Home links.
+
+---
+
+## 010 — Header with Menu and Visit, homepage tabs without autoplay
+
+**Date:** 2026-10-01
+**Status:** BUILT — agreed by Ross in Session 5, implemented on `feature/site-structure-proposal`, awaiting Ben/Codex review. Spec: `.scratch/site-structure/spec.md`; visual reference: `.scratch/site-structure/mock.html`.
+**Decision:**
+- Header becomes wordmark (home) + MENU + VISIT. HOME is dropped because the wordmark already links home. ABOUT is removed until client story content exists. `contact.html` keeps its file name and is labelled "Visit".
+- Homepage keeps 008's Food / Coffee / Tea tabs but drops auto-rotation. Tabs follow the WAI-ARIA tabs pattern and the "See all" link targets the matching `menu.html` anchor.
+- Homepage gains a hero (one `h1`, client copy slot, hours, Call / Find us) and an in-flow Visit section replacing the absolutely positioned block.
+- Menu anchors match the homepage tabs one-to-one.
+**Why:** 2026-10-01 design review: the carousel failed WCAG 2.2.2 (no pause control), MENU was unreachable from the header, ABOUT linked to a missing page, and the Visit block could overlap content on mobile.
+**Supersedes:** 008's auto-rotation and 007's deferred header question (MENU now in header). 008's tab direction stands.
 
 ---
 

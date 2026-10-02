@@ -3,7 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Menu — Aroma Coffee</title>
+  <title>Menu | Aroma Coffee</title>
+  <meta name="description" content="Aroma Coffee, 128D Park Road, Miramar, Wellington.">
+  <meta name="theme-color" content="#402A1C">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_NZ">
+  <meta property="og:site_name" content="Aroma Coffee">
+  <meta property="og:title" content="Menu | Aroma Coffee">
+  <meta property="og:description" content="Aroma Coffee, 128D Park Road, Miramar, Wellington.">
+  <link rel="icon" href="aroma-leaf-cluster.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Figtree:wght@400;500&display=swap" rel="stylesheet">
@@ -12,35 +20,32 @@
 <body>
 
   <header class="site-header">
-    <nav class="site-header__nav site-header__nav--left">
-      <a class="site-header__link" href="draft.html">HOME</a>
-    </nav>
     <a class="site-header__brand" href="draft.html">AROMA</a>
-    <nav class="site-header__nav site-header__nav--right">
-      <a class="site-header__link" href="about.html">ABOUT</a>
-      <a class="site-header__link" href="contact.html">CONTACT</a>
+    <nav class="site-header__nav" aria-label="Main">
+      <a class="site-header__link" href="menu.html" aria-current="page">MENU</a>
+      <a class="site-header__link" href="contact.html">VISIT</a>
     </nav>
   </header>
 
   <nav class="tabs" aria-label="Menu categories">
-    <a class="tabs__tab tabs__tab--back" href="draft.html">&larr; Back</a>
-    <a class="tabs__tab" href="#food" aria-current="page">FOOD</a>
+    <a class="tabs__tab" href="#food">FOOD</a>
     <a class="tabs__tab" href="#coffee">COFFEE</a>
     <a class="tabs__tab" href="#tea">TEA</a>
   </nav>
 
   <main class="content">
+    <h1 class="visually-hidden">Menu</h1>
 
     <!-- BREAKFAST & LUNCH -->
     <section class="menu-section" id="food">
-      <h1 class="menu-section__title">Breakfast & Lunch</h1>
+      <h2 class="menu-section__title">Breakfast & Lunch</h2>
 
       <div class="menu-grid">
         <div class="menu-col">
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Toast & Eggs</h2>
+              <h3 class="menu-item__name">Toast & Eggs</h3>
               <span class="menu-item__price">$12</span>
             </div>
             <p class="menu-item__desc">Free range eggs poached, fried or scrambled. Served on your choice of toasted sourdough, 5 grain or gluten free.</p>
@@ -58,7 +63,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Pancakes</h2>
+              <h3 class="menu-item__name">Pancakes</h3>
               <span class="menu-item__price">$16.5</span>
             </div>
             <p class="menu-item__desc">Bacon or blueberries w house berries compote in banana, cream, almond & maple syrup.</p>
@@ -66,7 +71,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">French Toast</h2>
+              <h3 class="menu-item__name">French Toast</h3>
               <span class="menu-item__price">$16.5</span>
             </div>
             <p class="menu-item__desc">Bacon or house berries compote in banana, cream, almond & maple syrup.</p>
@@ -74,7 +79,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Bacon Eggs</h2>
+              <h3 class="menu-item__name">Bacon Eggs</h3>
               <span class="menu-item__price">$18</span>
             </div>
             <p class="menu-item__desc">Crispy hash/hangi hash, creamy garlic mushroom, bacon and two free range eggs poached/fried/scrambled on 2 toasted.</p>
@@ -82,7 +87,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Big Brekkie <span class="menu-item__tag">half/full</span></h2>
+              <h3 class="menu-item__name">Big Brekkie <span class="menu-item__tag">half/full</span></h3>
               <span class="menu-item__price">$18 / $23</span>
             </div>
             <p class="menu-item__desc">Bacon, creamy garlic mushroom/salted mushroom, slow roast tomato, crispy hash/house hangi hash, sausage, free range eggs, hollandaise.</p>
@@ -90,7 +95,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Lady Breakfast <span class="menu-item__tag">gf</span></h2>
+              <h3 class="menu-item__name">Lady Breakfast <span class="menu-item__tag">gf</span></h3>
               <span class="menu-item__price">$18</span>
             </div>
             <p class="menu-item__desc">Wilted baby spinach, slow roast tomato, fresh avocado, 2 poached eggs, toasted sourdough or 5 grain or gluten free bread.</p>
@@ -98,7 +103,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Smashed Avocado <span class="menu-item__tag">gf</span></h2>
+              <h3 class="menu-item__name">Smashed Avocado <span class="menu-item__tag">gf</span></h3>
               <span class="menu-item__price">$17</span>
             </div>
             <p class="menu-item__desc">Caramelised onion, feta, thyme, honey & Italian balsamic dressing w. your choice of toasted bread or crispy hash (w. poached egg).</p>
@@ -106,7 +111,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Mushroom on Toast <span class="menu-item__tag">gf</span></h2>
+              <h3 class="menu-item__name">Mushroom on Toast <span class="menu-item__tag">gf</span></h3>
               <span class="menu-item__price">$15</span>
             </div>
             <p class="menu-item__desc">Creamy garlic mushroom w wilted baby spinach, caramelised onions.</p>
@@ -114,7 +119,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Egg Benedict</h2>
+              <h3 class="menu-item__name">Egg Benedict</h3>
               <span class="menu-item__price">$16.5</span>
             </div>
             <p class="menu-item__desc">Poached free range eggs on English muffin w/ lemon hollandaise, hash and your choice of: bacon, salmon, spinach, mushroom, avocado.</p>
@@ -125,7 +130,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Hash Stack <span class="menu-item__tag">gf</span></h2>
+              <h3 class="menu-item__name">Hash Stack <span class="menu-item__tag">gf</span></h3>
               <span class="menu-item__price">$19.5</span>
             </div>
             <p class="menu-item__desc">Crispy or hangi hash w/ your choice bacon or salmon on wilted baby spinach, topped w/ 2 poached eggs.</p>
@@ -133,7 +138,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Vege Hash Stack <span class="menu-item__tag">gf, v</span></h2>
+              <h3 class="menu-item__name">Vege Hash Stack <span class="menu-item__tag">gf, v</span></h3>
               <span class="menu-item__price">$17</span>
             </div>
             <p class="menu-item__desc">Crispy or hangi hash w/ creamy or salted mushroom, wilted baby spinach, avocado, crispy shallots, house lemon hollandaise. With 2 poached eggs $19.5.</p>
@@ -141,7 +146,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Mish Mash Hash <span class="menu-item__tag">gf, df</span></h2>
+              <h3 class="menu-item__name">Mish Mash Hash <span class="menu-item__tag">gf, df</span></h3>
               <span class="menu-item__price">$20.5</span>
             </div>
             <p class="menu-item__desc">House slow-cooked beef with smashed gourmet fried potatoes, rocket/mesclun, capsicum, cherry tomato, feta, topped off with two poached eggs.</p>
@@ -149,7 +154,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Omelette <span class="menu-item__tag">gf</span></h2>
+              <h3 class="menu-item__name">Omelette <span class="menu-item__tag">gf</span></h3>
               <span class="menu-item__price">$19</span>
             </div>
             <p class="menu-item__desc">Your choice of 3 fillings (ham, cheese, tomato, spinach, salmon, bacon, mushroom, feta) w toasts/salad.</p>
@@ -157,7 +162,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Crispy Chicken Burger</h2>
+              <h3 class="menu-item__name">Crispy Chicken Burger</h3>
               <span class="menu-item__price">$17</span>
             </div>
             <p class="menu-item__desc">Crispy chicken, avocado, cheese, onion, tomato, lettuce. With fries $22.</p>
@@ -165,7 +170,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Balsamic Salad <span class="menu-item__tag">gf, df, v</span></h2>
+              <h3 class="menu-item__name">Balsamic Salad <span class="menu-item__tag">gf, df, v</span></h3>
               <span class="menu-item__price">$18</span>
             </div>
             <p class="menu-item__desc">Pan fried chicken or halloumi, cherry tomato, mint, house balsamic dressing on rocket/mesclun salad.</p>
@@ -173,7 +178,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Salmon Salad <span class="menu-item__tag">gf, df, v</span></h2>
+              <h3 class="menu-item__name">Salmon Salad <span class="menu-item__tag">gf, df, v</span></h3>
               <span class="menu-item__price">$20</span>
             </div>
             <p class="menu-item__desc">Hot smoked salmon, walnut, cherry tomato, mint, house salad dressing on rocket/mesclun salad.</p>
@@ -181,7 +186,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Thai Beef Noodle <span class="menu-item__tag">gf, df</span></h2>
+              <h3 class="menu-item__name">Thai Beef Noodle <span class="menu-item__tag">gf, df</span></h3>
               <span class="menu-item__price">$18</span>
             </div>
             <p class="menu-item__desc">Beef, bok choy, bean sprouts, coriander, rice noodle & beef broth.</p>
@@ -189,7 +194,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Seafood Tom Yum <span class="menu-item__tag">gf, df</span></h2>
+              <h3 class="menu-item__name">Seafood Tom Yum <span class="menu-item__tag">gf, df</span></h3>
               <span class="menu-item__price">$16</span>
             </div>
             <p class="menu-item__desc">Spicy Tom Yum soup w prawn, octopus, mussels, fish ball, mushroom. Served w rice noodles or rice.</p>
@@ -197,7 +202,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Chicken Pho <span class="menu-item__tag">gf, df</span></h2>
+              <h3 class="menu-item__name">Chicken Pho <span class="menu-item__tag">gf, df</span></h3>
               <span class="menu-item__price">$17</span>
             </div>
             <p class="menu-item__desc">Rice broth with star anise, cinnamon, ginger, coriander, onion, cloves, fennel, pepper, chilli, simmered until the flavours combine.</p>
@@ -205,21 +210,21 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Bowl of Fries</h2>
+              <h3 class="menu-item__name">Bowl of Fries</h3>
               <span class="menu-item__price">$7</span>
             </div>
           </div>
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">3 Spring Rolls w Salad</h2>
+              <h3 class="menu-item__name">3 Spring Rolls w Salad</h3>
               <span class="menu-item__price">$9</span>
             </div>
           </div>
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Only for Children</h2>
+              <h3 class="menu-item__name">Only for Children</h3>
               <span class="menu-item__price">$7</span>
             </div>
             <p class="menu-item__desc">Your choice of 1: ham n' cheese toasted / nuggets & fries / berries or bacon pancakes.</p>
@@ -230,17 +235,17 @@
     </section>
 
     <!-- DRINKS -->
-    <section class="menu-section" id="coffee">
-      <h1 class="menu-section__title">Drinks</h1>
+    <section class="menu-section" id="drinks">
+      <h2 class="menu-section__title">Drinks</h2>
 
       <div class="menu-grid">
         <div class="menu-col">
 
-          <h3 class="menu-category">Coffee & Chocolate</h3>
+          <h3 class="menu-category" id="coffee">Coffee & Chocolate</h3>
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Black Coffee</h2>
+              <h4 class="menu-item__name">Black Coffee</h4>
               <span class="menu-item__price">$4</span>
             </div>
             <p class="menu-item__desc">Espresso, Americano, Long Black, Short Black, Filter Coffee.</p>
@@ -248,7 +253,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">White Coffee</h2>
+              <h4 class="menu-item__name">White Coffee</h4>
               <span class="menu-item__price">$4.5 / $5 / $5.5 / $7</span>
             </div>
             <p class="menu-item__desc">Small / Regular / Large / Bowl. Cappuccino, Flat White, Latte, Mocha, Macchiato, Caramel Macchiato, Affogato, Salt Coffee.</p>
@@ -256,21 +261,21 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Fluffy</h2>
+              <h4 class="menu-item__name">Fluffy</h4>
               <span class="menu-item__price">$3</span>
             </div>
           </div>
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Egg Coffee</h2>
+              <h4 class="menu-item__name">Egg Coffee</h4>
               <span class="menu-item__price">$8</span>
             </div>
           </div>
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Hot Chocolate, Matcha, Chai, Turmeric Latte</h2>
+              <h4 class="menu-item__name">Hot Chocolate, Matcha, Chai, Turmeric Latte</h4>
               <span class="menu-item__price">$4.5 / $5 / $5.5 / $7</span>
             </div>
             <p class="menu-item__desc">Small / Regular / Large / Bowl.</p>
@@ -278,28 +283,28 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Iced Coffee, Mocha, Chai, Chocolate, Caramel, Matcha</h2>
+              <h4 class="menu-item__name">Iced Coffee, Mocha, Chai, Chocolate, Caramel, Matcha</h4>
               <span class="menu-item__price">$8</span>
             </div>
           </div>
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Shaking Coffee</h2>
+              <h4 class="menu-item__name">Shaking Coffee</h4>
               <span class="menu-item__price">$6.5</span>
             </div>
           </div>
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Matcha Latte</h2>
+              <h4 class="menu-item__name">Matcha Latte</h4>
               <span class="menu-item__price">$7</span>
             </div>
           </div>
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Ice Latte</h2>
+              <h4 class="menu-item__name">Ice Latte</h4>
               <span class="menu-item__price">$5.5</span>
             </div>
           </div>
@@ -311,7 +316,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Tea Pot</h2>
+              <h4 class="menu-item__name">Tea Pot</h4>
               <span class="menu-item__price">$5</span>
             </div>
             <p class="menu-item__desc">English Breakfast, Earl Grey, Green Tea, Peppermint.</p>
@@ -319,14 +324,14 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">LHG</h2>
+              <h4 class="menu-item__name">LHG</h4>
               <span class="menu-item__price">$5</span>
             </div>
           </div>
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Fresh LHG</h2>
+              <h4 class="menu-item__name">Fresh LHG</h4>
               <span class="menu-item__price">$6</span>
             </div>
           </div>
@@ -335,7 +340,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Milkshake</h2>
+              <h4 class="menu-item__name">Milkshake</h4>
               <span class="menu-item__price">$6.5</span>
             </div>
             <p class="menu-item__desc">Vanilla, Banana, Chocolate, Caramel, Lime, Strawberries, Raspberries.</p>
@@ -345,7 +350,7 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Smoothie</h2>
+              <h4 class="menu-item__name">Smoothie</h4>
               <span class="menu-item__price">$8</span>
             </div>
             <p class="menu-item__desc">Banana, Tropical, Mango, Berries.</p>
@@ -353,14 +358,14 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Green Smoothie</h2>
+              <h4 class="menu-item__name">Green Smoothie</h4>
               <span class="menu-item__price">$8.5</span>
             </div>
           </div>
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Yummy Ice Cream</h2>
+              <h4 class="menu-item__name">Yummy Ice Cream</h4>
               <span class="menu-item__price">$8</span>
             </div>
           </div>
@@ -369,14 +374,14 @@
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Organic Bottle Juice</h2>
+              <h4 class="menu-item__name">Organic Bottle Juice</h4>
               <span class="menu-item__price">$5</span>
             </div>
           </div>
 
           <div class="menu-item">
             <div class="menu-item__header">
-              <h2 class="menu-item__name">Pump Water</h2>
+              <h4 class="menu-item__name">Pump Water</h4>
               <span class="menu-item__price">$3</span>
             </div>
           </div>

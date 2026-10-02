@@ -1,60 +1,75 @@
 # Handover — Aroma Coffee Rebuild
 
-## Onboarding reconciliation — Codex/Ben side, 2026-09-30
+As of Session 6 (2026-10-02).
 
-Work is on `codex/onboarding-continuity`. Commit `59f51ff` contains the substantive onboarding/configuration changes; `9ad489d` records the final handoff metadata. The pass corrected shared documentation, added the concise Codex map in `AGENTS.md`, and configured the focused project-local Matt Pocock skills with local Markdown tickets under `.scratch/`. No client-facing HTML/CSS/JavaScript was changed. Validation included `git diff --check`, local-reference checks, source review, and browser inspection at default and desktop viewport sizes.
+## For Ben / Codex: review requested
 
-The preserved draft has confirmed broken references: `draft.html`, `menu.html` and `contact.html` link to missing `about.html`, while `draft.html` references missing `assets/product.jpg`. Treat these as recorded final-site blockers, not regressions in the temporary public page.
+Branch `feature/site-structure-proposal` implements decision 010 (`decisions.md`). Please review:
 
-## Current State
+1. **Structure** — `.scratch/site-structure/spec.md` (acceptance criteria, open questions) and `.scratch/site-structure/mock.html` (open in a browser; numbered pins explain each change).
+2. **Implementation** — `draft.html`, `menu.html`, `contact.html`, `styles.css`. Tickets with verify steps: `.scratch/site-structure/issues/01–07`.
+3. **Open questions** — keep `contact.html` file name with a "Visit" label, or rename? Is dropping 008's auto-rotation acceptable?
 
-Branch `codex/under-construction-page` adds a standalone temporary landing page at `index.html`. It uses only the confirmed Miramar address and is not the approved final homepage. The early static-site draft remains available at `draft.html`; menu and contact remain part of that draft. About is blocked on client story content, and the draft's contact details and hours remain provisional.
+Working assumption (Session 5, Ross): review treated as accepted so work continues on this branch. Acceptance is **not yet confirmed**; do not merge until Ben confirms.
+
+## Current state
 
 | Page | Status |
 |------|--------|
-| `index.html` | Temporary public-facing landing page. No draft navigation, provisional contact details or JavaScript. |
-| `draft.html` | Preserved early homepage draft — carousel with 3 slides (Food/Coffee/Tea), defaults to Coffee. |
-| `menu.html` | Built. Full menu. Home, brand and "← Back" links now return to `draft.html`. |
-| `contact.html` | Built. Address, hours, phone/email CTA. Home and brand links now return to `draft.html`. |
-| `about.html` | Not started — blocked on client content. Nav links to it (will 404). |
+| `index.html` | Temporary public landing page. Unchanged. |
+| `draft.html` | Restructured (010): hero with copy slots, Food/Coffee/Tea tabs without autoplay, in-flow Visit section. |
+| `menu.html` | FOOD/COFFEE/TEA anchors match home tabs; heading order fixed. |
+| `contact.html` | Labelled VISIT in nav; booking buttons fixed. |
+| `about.html` | Not started, not linked. |
 
-### Draft homepage carousel detail
+Copy slots (`.copy-slot`) mark every place awaiting client words or photos.
 
-- 3 slides controlled by FOOD / COFFEE / TEA tab buttons (`role="tab"`, `aria-selected`)
-- **Food:** Chicken Pho (left) + Seafood Tom Yum (right) — descriptions from menu
-- **Coffee:** Aroma Coffee blurb (left) + Aroma Matcha blurb (right) — original homepage content restored here
-- **Tea:** Egg Coffee/$8 (left) + Tea Pot/varieties/$5 (right) — weakest slide, needs better content
-- Auto-rotates every 6s, pauses on hover/focus, respects `prefers-reduced-motion`
-- Inline `<script>` at bottom of `draft.html`, ~40 lines vanilla JS
+**Live vs preview (checked Session 6):**
+- `https://aromacoffeemiramar.netlify.app/` serves `main`: temporary page, fine to show.
+- `https://aromacoffeemiramar.netlify.app/draft.html` is the **old** draft from `main`: 3 broken images, ABOUT link to missing page, autoplay. Do not show.
+- `https://deploy-preview-3--aromacoffeemiramar.netlify.app/draft.html` is the new draft (built from `927f727`, before ticket 07). Safe to show; close Netlify's "Collaborate" toolbar first.
+- "Powered by Netlify" badge appears on the **production** temporary page, not only previews.
 
-### Phone number fix
+## Verified
 
-The draft homepage footer was using the old site number `(+64)27 4809896`. It was changed to `(020) 456 7837` to match the contact page and physical menu, but remains unconfirmed with the client.
+- Session 5: Playwright (Chromium) at 1440px and 390px on all three draft pages: one `h1`, no skipped headings, no failed requests, no horizontal scroll, tab keyboard behaviour, no autoplay. Ticket 07 metadata and favicon confirmed.
+- Session 6: Playwright at 390px on the live temporary page and the preview draft (screenshots in `.playwright-mcp/`, gitignored); preview `menu.html` and `contact.html` return 200. Source read through: no leftover notes, no unsourced client facts.
+- Not verified: real devices, screen reader, non-Chromium browsers.
 
-## What's Next
+## Next steps
 
-1. **Visual review of draft homepage** — carousel, CTA, and Visit Us positioning need to be checked in browser. The Visit Us block was repositioned to bottom-left of `.content` area per Ross's direction but hasn't been confirmed visually yet.
-2. **Tea slide content** — Egg Coffee on the Tea slide doesn't make categorical sense. Needs either better tea highlights from the client or reduction to 2 slides (Food + Coffee).
-3. **Header nav decision** — whether "MENU" goes in the header nav is still deferred. The "VIEW MENU" CTA below the carousel handles it for now.
-4. **Mobile layout** — carousel swipe gestures and responsive layout deferred. Desktop-first.
-5. **Phone number** — still needs client confirmation.
-6. **About page** — blocked on client content.
-7. **Product photos** — all three draft carousel slides reference `assets/product.jpg`, but that file is absent, so the images are broken.
-8. **Opening hours and email** — both need client confirmation; repository records conflict about the source of the displayed hours.
-9. **About navigation** — all three preserved draft pages link to missing `about.html`; choose an intentional pre-content state before final-site launch.
+1. Ross: agree with Ben who is offering the work and how payment is split, before quoting the client.
+2. Ross: set build fee and monthly care fee (Session 6 suggestion: about $600 + $20/month; not decided).
+3. Ross: visit the cafe; show temporary page and preview draft; ask the question list (`NEXT-ACTIONS.md`) plus "who controls aromacoffee.nz / what do you pay now?" and permission to take photos.
+4. Give Claude the client's answers and photos: fill copy slots, update `content-status.md` (2–3 h).
+5. Ben confirms PR #3, then merge, then swap `draft.html` in as `index.html` (decision 009, about 20 min).
+6. Point aromacoffee.nz at Netlify once domain control is known.
 
-## Blockers
+## Blockers / waiting on
 
-- Visual confirmation of Visit Us positioning (may need further CSS tweaks)
-- Tea slide content is weak — needs client input or a design decision
-- About page content and product hero images both need client input
-- Phone, email, opening hours and menu accuracy need explicit launch confirmation
-- The About link and missing draft-homepage image remain broken states within the early draft
+- Ben: confirm PR #3 acceptance (currently assumed); pricing and who-offers-the-work arrangement.
+- Ross: highlight column stagger from `NEW-DESIGN.png`: restore, or keep top-aligned?
+- Client: hero sentence, photos, Egg Coffee description, Tea category, About story, phone, email, hours, socials, menu accuracy, trading name, domain control.
+- Netlify badge on production: decide whether to remove it (how is unchecked; may need a setting or paid plan).
 
-## Key Files
+## Concerns
 
-- `CLAUDE.md` — project context and constraints
-- `decisions.md` — 8 decisions + open phone number issue
-- `TODO.md` — current backlog and client-input questions
-- `content-status.md` — content tracking by source and confirmation status
-- `Aroma Coffee Homepage/design_handoff_aroma_homepage/` — original Claude Design reference
+- Production `/draft.html` is a public, broken old draft (broken images, 404 link). Anyone with the URL sees it until PR #3 merges.
+- Hours, phone and email are shown publicly on preview pages but unconfirmed (`content-status.md`).
+- Pricing advice was given quickly without NZ market research; treat the numbers as a starting point.
+- Docs drift (minor): decision 007 heading still says "(PROPOSED)"; phone entry uses "UNRESOLVED" (not in the status set); Session 1–4 headings lack titles.
+
+## Git state
+
+- `main`: unchanged since PR #2 merge (`4f84c62`).
+- `feature/site-structure-proposal`: open as PR #3 (https://github.com/rosshunterdev/aroma/pull/3), not merged.
+- 4 local commits not pushed: `18897a9`, `9650e29`, `e23ba2e`, `fb6b035` (gitignore `.playwright-mcp/`). Push pending Ross's approval.
+- Uncommitted: `HANDOVER.md`, `session-log.md` (Session 6 docs).
+- `NEXT-ACTIONS.md` (gitignored) holds Ross's personal checklist; partly stale (Playwright restart and meta tags are done).
+
+## Key files
+
+- `decisions.md` — decisions 001–010 and the open phone-number issue
+- `TODO.md` — backlog and client questions
+- `content-status.md` — content provenance and confirmation state
+- `.scratch/site-structure/` — spec, tickets, mock for decision 010
