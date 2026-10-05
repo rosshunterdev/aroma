@@ -1,0 +1,4 @@
+# Publish only the website. Project docs, audit notes and references stay in
+# the repo for the team but are never served.
+[build]
+  publish = "site"

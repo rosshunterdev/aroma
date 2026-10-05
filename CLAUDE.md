@@ -18,6 +18,8 @@ The old site (aromacoffee.nz) runs Laravel + Vite + Tailwind CSS + Alpine.js. Th
 
 ### Pages
 
+All website files live in `site/`, the only folder Netlify publishes (`netlify.toml`). Docs outside `site/` are never served.
+
 | File | Status | Notes |
 |------|--------|-------|
 | `index.html` | Built | Temporary landing page; not the approved final homepage |
@@ -28,9 +30,10 @@ The old site (aromacoffee.nz) runs Laravel + Vite + Tailwind CSS + Alpine.js. Th
 
 ### Directory Structure
 
+- `/site` — the published website (pages, CSS, favicon, `redesign/` comps)
 - `/audit` — scraped content, assets, and notes from the old aromacoffee.nz site
 - `/assets` — menu photos; no product photography yet
-- `/design-system` — brand tokens (currently empty, tokens are in `styles.css :root`)
+- `/design-system` — brand tokens (currently empty, tokens are in `site/styles.css :root`)
 - `Aroma Coffee Homepage/` — Claude Design handoff files (reference, not shipped)
 
 ## Tech Stack

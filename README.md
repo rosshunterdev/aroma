@@ -13,10 +13,10 @@ Static website rebuild for Aroma Coffee / Aroma Café at 128D Park Road, Miramar
 
 ## Run locally
 
-Serve the repository root with any static HTTP server, for example:
+The website lives in `site/` (the only folder Netlify publishes; see `netlify.toml`). Serve it with any static HTTP server, for example:
 
 ```powershell
-npx serve .
+npx serve site
 ```
 
 Open the localhost URL printed by the server. There is no project install, build or test command yet.
