@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Option B | Aroma Coffee design comp</title>
+  <link rel="icon" href="../aroma-leaf-cluster.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #1F5C3A;
+      --green-dark: #16452B;
+      --red: #C8372D;
+      --white: #FFFFFF;
+      --ink: #1E1E1E;
+      --ink-soft: #4A4A4A;
+      --line: #DCE3DE;
+      --slot-line: #7D8F83;
+      --font-serif: 'Fraunces', Georgia, serif;
+      --font-sans: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; background: var(--white); color: var(--ink); font-family: var(--font-sans); font-size: 17px; line-height: 1.6; }
+    a { color: var(--green); }
+    a:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+    h1, h2, h3 { font-family: var(--font-serif); }
+
+    .switcher { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 18px; padding: 8px 16px; background: var(--ink); color: var(--white); font-size: 13px; }
+    .switcher a { color: var(--white); }
+    .switcher a[aria-current="page"] { font-weight: 600; text-decoration: none; }
+    .switcher a:focus-visible { outline-color: var(--white); }
+
+    .site-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 24px; padding: 20px clamp(16px, 4vw, 48px); background: var(--green); }
+    .brand { color: var(--white); font-family: var(--font-serif); font-size: 28px; font-weight: 600; letter-spacing: 0.12em; text-decoration: none; }
+    .site-header nav { display: flex; gap: 28px; }
+    .site-header nav a { padding: 10px 0; color: var(--white); font-size: 14px; font-weight: 500; letter-spacing: 0.12em; text-decoration: none; }
+    .site-header nav a:hover { text-decoration: underline; text-underline-offset: 6px; }
+    .site-header a:focus-visible { outline-color: var(--white); }
+
+    main > section { max-width: 1120px; margin: 0 auto; padding: clamp(48px, 8vw, 96px) 16px; }
+    .section-title { margin: 0 0 32px; font-size: clamp(30px, 4vw, 40px); font-weight: 600; line-height: 1.15; }
+
+    .hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(32px, 5vw, 64px); }
+    .hero__title { margin: 0 0 24px; color: var(--green); font-size: clamp(44px, 7vw, 76px); font-weight: 600; line-height: 1.02; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 32px 0 0; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 26px; border: 2px solid var(--green); border-radius: 999px; background: var(--white); color: var(--green); font-size: 15px; font-weight: 600; text-decoration: none; transition: background-color 150ms ease, color 150ms ease; }
+    .btn:hover, .btn--primary { background: var(--green); color: var(--white); }
+    .btn--primary:hover { border-color: var(--green-dark); background: var(--green-dark); }
+
+    .copy-slot { margin: 0; padding: 14px 18px; border: 1.5px dashed var(--slot-line); border-radius: 8px; color: var(--ink-soft); font-size: 15px; }
+    .copy-slot__label { display: block; color: var(--green); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+    .copy-slot--photo { display: grid; place-content: center; aspect-ratio: 1; text-align: center; }
+    .copy-slot--wide { aspect-ratio: 4 / 3; }
+
+    .menus__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .menu-panel { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; padding: 36px 32px; border: 2px solid var(--green); border-radius: 12px; }
+    .eyebrow { margin: 0; color: var(--green); font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
+    .menu-panel__title { margin: 0; font-size: clamp(28px, 4vw, 36px); font-weight: 600; }
+    .menu-panel__hours { margin: 0; color: var(--ink-soft); }
+
+    .highlights__grid { display: grid; grid-template-columns: repeat(3, 1fr); align-items: start; gap: 28px; }
+    .item { padding: 0 0 8px; }
+    .item--featured { padding: 20px; border: 1px solid var(--line); border-top: 6px solid var(--red); border-radius: 12px; }
+    .tag { display: inline-block; margin: 16px 0 0; padding: 4px 12px; border-radius: 999px; background: var(--red); color: var(--white); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+    .item__title { margin: 10px 0 8px; font-size: 24px; font-weight: 600; }
+    .item__price { margin: 0 0 8px; color: var(--green); font-weight: 600; }
+    .item__body { margin: 0; color: var(--ink-soft); font-size: 15px; }
+    .more { margin: 40px 0 0; }
+
+    .visit__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .visit__heading { margin: 0 0 10px; color: var(--green); font-size: 22px; font-weight: 600; }
+    .visit__body { margin: 0; font-style: normal; }
+    .hours { margin: 0; }
+    .hours__row { display: flex; gap: 12px; }
+    .hours dd { margin: 0; }
+
+    .site-footer { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 32px; padding: 40px 16px; background: var(--green); }
+    .site-footer a { color: var(--white); font-weight: 500; overflow-wrap: anywhere; }
+    .site-footer a:focus-visible { outline-color: var(--white); }
+
+    @media (max-width: 640px) {
+      .hero, .menus__grid, .highlights__grid, .visit__grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 420px) {
+      .site-header { justify-content: center; }
+      .actions .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="switcher">
+    <span>Design option B, for review</span>
+    <a href="option-a.html">Option A</a>
+    <a href="option-b.html" aria-current="page">Option B</a>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="option-b.html">AROMA</a>
+    <nav aria-label="Main">
+      <a href="#day">MENU</a>
+      <a href="#visit">VISIT</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__text">
+        <h1 class="hero__title" id="hero-title">Aroma Coffee</h1>
+        <p class="copy-slot"><span class="copy-slot__label">Your words / 1 sentence</span>How would you describe Aroma to someone walking past?</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="tel:+64204567837">Call (020) 456 7837</a>
+          <a class="btn" href="#visit">Find us</a>
+        </div>
+      </div>
+      <p class="copy-slot copy-slot--photo copy-slot--wide"><span class="copy-slot__label">Photo / 1 landscape image</span>Which photo best shows the cafe?</p>
+    </section>
+
+    <section class="menus" aria-labelledby="menus-title">
+      <h2 class="section-title" id="menus-title">Menus</h2>
+      <div class="menus__grid">
+        <article class="menu-panel" id="day" aria-labelledby="day-title">
+          <p class="eyebrow">Cafe</p>
+          <h3 class="menu-panel__title" id="day-title">Day menu</h3>
+          <p class="menu-panel__hours">Mon–Fri 7am–3pm<br>Sat–Sun 9am–3pm</p>
+          <a class="btn btn--primary" href="../menu.html">See the day menu</a>
+        </article>
+        <article class="menu-panel" id="evening" aria-labelledby="evening-title">
+          <p class="eyebrow">Restaurant</p>
+          <h3 class="menu-panel__title" id="evening-title">Evening menu</h3>
+          <p class="copy-slot"><span class="copy-slot__label">Your words / menu and hours</span>Will the restaurant have its own menu? What days and hours will it open?</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="highlights" aria-labelledby="highlights-title">
+      <h2 class="section-title" id="highlights-title">From the menu</h2>
+      <div class="highlights__grid">
+        <article class="item">
+          <p class="copy-slot copy-slot--photo"><span class="copy-slot__label">Photo / square</span>Can you send a photo of the chicken pho?</p>
+          <p class="tag tag--viet">Vietnamese special</p>
+          <h3 class="item__title">Chicken Pho</h3>
+          <p class="item__body">Rice broth with star anise, cinnamon, ginger, coriander, onion, cloves, fennel, pepper, chilli, simmered until the flavours combine.</p>
+        </article>
+        <article class="item item--featured">
+          <p class="copy-slot copy-slot--photo"><span class="copy-slot__label">Photo / square</span>Can you send a photo of your coffee?</p>
+          <p class="tag tag--viet">Vietnamese special</p>
+          <h3 class="item__title">Egg Coffee</h3>
+          <p class="item__price">$8</p>
+          <p class="copy-slot"><span class="copy-slot__label">Your words / 1 sentence</span>How would you describe your egg coffee?</p>
+        </article>
+        <article class="item">
+          <p class="copy-slot copy-slot--photo"><span class="copy-slot__label">Photo / square</span>Can you send a photo of your matcha or tea?</p>
+          <h3 class="item__title">Aroma Matcha</h3>
+          <p class="item__body">The fresh young tea leaves harvested from the high mountain of Thai Nguyen (Vietnam) have been meticulously processed to keep the chlorophyll and the specific flavor of the premium tea leaves will give customers a feeling of freshness and provide a great energy for creativity and dynamic.</p>
+        </article>
+      </div>
+      <p class="more"><a class="btn" href="../menu.html">See the full menu</a></p>
+    </section>
+
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <h2 class="section-title" id="visit-title">Visit us</h2>
+      <div class="visit__grid">
+        <div>
+          <h3 class="visit__heading">Find us</h3>
+          <address class="visit__body">
+            128D Park Road<br>
+            Miramar, Wellington 6022<br>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=128D+Park+Road+Miramar+Wellington+6022">Open in Google Maps</a>
+          </address>
+        </div>
+        <div>
+          <h3 class="visit__heading">Hours</h3>
+          <dl class="hours">
+            <div class="hours__row"><dt>Mon–Fri</dt><dd>7am–3pm</dd></div>
+            <div class="hours__row"><dt>Sat–Sun</dt><dd>9am–3pm</dd></div>
+          </dl>
+        </div>
+        <div>
+          <h3 class="visit__heading">Book a table</h3>
+          <p class="visit__body">Give us a call or send an email to reserve your spot.<br>
+            <a href="tel:+64204567837">(020) 456 7837</a><br>
+            <a href="mailto:aroma128d@gmail.com">aroma128d@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="mailto:aroma128d@gmail.com">aroma128d@gmail.com</a>
+    <a href="tel:+64204567837">(020) 456 7837</a>
+  </footer>
+
+</body>
+</html>
