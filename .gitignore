@@ -37,3 +37,6 @@ NEXT-ACTIONS.md
 
 # Playwright MCP screenshots and logs
 .playwright-mcp/
+
+# Third-party reference screenshots (kept locally, not published)
+docs/park-kitchen-reference.png
