@@ -18,6 +18,13 @@ async () => {
   const tags = [...document.querySelectorAll('.tag--viet')];
   r.vietTagCount = tags.length;
   r.vietTagsHaveText = tags.every(t => t.textContent.trim().toLowerCase() === 'vietnamese special');
+  // Option A only: every tagged card carries a visible red outline.
+  r.vietCardsOutlined = !location.pathname.endsWith('option-a.html') || tags.every(t => {
+    const cs = getComputedStyle(t.closest('.item'));
+    return ['Top', 'Right', 'Bottom', 'Left'].every(side =>
+      cs['border' + side + 'Style'] === 'solid' && parseFloat(cs['border' + side + 'Width']) >= 1 &&
+      cs['border' + side + 'Color'] === 'rgb(200, 55, 45)');
+  });
   r.hasDayEvening = !!document.getElementById('day') && !!document.getElementById('evening');
   r.noindexPresent = !!document.querySelector('meta[name="robots"][content*="noindex"]');
   r.emDash = document.body.textContent.includes('—');
@@ -36,7 +43,7 @@ async () => {
 
   r.pass = r.h1Count === 1 && !r.skippedHeading && !r.horizontalScroll &&
     r.brokenImages === 0 && r.switcherLinks.length === 2 &&
-    r.vietTagCount > 0 && r.vietTagsHaveText && r.hasDayEvening &&
+    r.vietTagCount > 0 && r.vietTagsHaveText && r.vietCardsOutlined && r.hasDayEvening &&
     r.noindexPresent && !r.emDash && !r.transitionAll && r.unknownText.length === 0;
   return r;
 }

@@ -62,6 +62,8 @@
     .menu-panel__hours { margin: 0; color: var(--ink-soft); }
 
     .highlights__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .item { padding: 16px; border: 1.5px solid transparent; }
+    .item--viet { border-color: var(--red); }
     .tag { display: inline-block; margin: 16px 0 0; padding: 4px 10px; background: var(--red); color: var(--white); font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
     .item__title { margin: 12px 0 8px; font-size: 18px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
     .item__price { margin: 0 0 8px; color: var(--green); font-weight: 600; }
@@ -137,13 +139,13 @@
     <section class="highlights" aria-labelledby="highlights-title">
       <h2 class="section-title" id="highlights-title">From the menu</h2>
       <div class="highlights__grid">
-        <article class="item">
+        <article class="item item--viet">
           <p class="copy-slot copy-slot--photo"><span class="copy-slot__label">Photo / square</span>Can you send a photo of the chicken pho?</p>
           <p class="tag tag--viet">Vietnamese special</p>
           <h3 class="item__title">CHICKEN PHO</h3>
           <p class="item__body">Rice broth with star anise, cinnamon, ginger, coriander, onion, cloves, fennel, pepper, chilli, simmered until the flavours combine.</p>
         </article>
-        <article class="item item--featured">
+        <article class="item item--viet">
           <p class="copy-slot copy-slot--photo"><span class="copy-slot__label">Photo / square</span>Can you send a photo of your coffee?</p>
           <p class="tag tag--viet">Vietnamese special</p>
           <h3 class="item__title">EGG COFFEE</h3>
