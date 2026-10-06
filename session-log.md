@@ -72,3 +72,12 @@ Note: Codex/Ben work on 2026-09-30 (PR #1 onboarding, PR #2 temporary page) was 
 - **Decided:** none recorded (pricing is a suggestion pending Ross and Ben).
 - **Broke or found:** Production `/draft.html` is the old `main` draft (broken images, ABOUT 404, autoplay); show the PR #3 preview instead. "Powered by Netlify" badge is on production, not only previews. Netlify preview toolbar overlaps the homepage tabs on mobile. Raised: agree pricing and who offers the work with Ben before quoting.
 - **Verified:** Playwright at 390px: live temporary page and preview `draft.html` screenshots reviewed; preview `menu.html` and `contact.html` return 200; console errors only from blocked Netlify toolbar scripts. Not verified: real devices.
+- **Shipped:** Session docs committed (`65206b5`) and branch pushed (`927f727..65206b5`); PR #3 still open, not merged.
+
+## Session 7 — 2026-10-05 — Kiwi redesign comps and publishing fix
+
+- **Did:** Ross met Phillip (owner): new "Kiwi" brief and evening restaurant plan. Created `phillip.md` (client question list). Brainstormed, spec'd and planned (`.scratch/redesign/`), then built two homepage comps (`redesign/option-a.html`, `option-b.html`) plus `check.js` browser test; added red outline to Vietnamese cards on A at Ross's request. Recorded meeting in `content-status.md`. Moved website into `site/` with `netlify.toml`; untracked Park Kitchen screenshot; made repo private. Drafted a message for Ben.
+- **Decided:** 011 (BUILT, awaiting Phillip), 012 (VERIFIED on preview). 010 visual direction SUPERSEDED by 011.
+- **Broke or found:** Netlify published the repo root, so all docs (including pricing notes in `HANDOVER.md`) were public by URL on previews and production; GitHub repo was public. Fixed on PR #4 branch; production and PR #3 preview still serve docs until merge. Pricing remains in git history (repo now private).
+- **Verified:** Playwright (Chromium) `check.js` pass at 1440/390/320 px for both comps; Option B focus rings visible on green; switcher round trip; PR #4 preview: pages 200, all docs 404, Fraunces loads. Final whole-branch review (fresh Opus reviewer): 0 critical, 0 important, 5 minor. Not verified: real devices, screen readers, non-Chromium.
+- **Shipped:** `feature/redesign-options` pushed through `62b86ae`; draft PR #4 opened (do not merge, stacked on PR #3).
