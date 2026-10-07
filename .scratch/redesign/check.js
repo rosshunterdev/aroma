@@ -1,9 +1,9 @@
 // Paste into Playwright MCP browser_evaluate as `function`.
-// Run on redesign/option-a.html and option-b.html at 1440, 390 and 320 px wide.
+// Run on redesign/option-a.html, option-b.html and option-c.html at 1440, 390 and 320 px wide.
 async () => {
   const ALLOW = [
-    'design option a, for review', 'design option b, for review',
-    'option a', 'option b', 'menus', 'cafe', 'restaurant',
+    'design option a, for review', 'design option b, for review', 'design option c, for review',
+    'option a', 'option b', 'option c', 'menus', 'cafe', 'restaurant',
     'day menu', 'evening menu', 'see the day menu', 'see the full menu',
     'vietnamese special', 'your words / menu and hours',
     'will the restaurant have its own menu? what days and hours will it open?'
@@ -42,7 +42,7 @@ async () => {
   }
 
   r.pass = r.h1Count === 1 && !r.skippedHeading && !r.horizontalScroll &&
-    r.brokenImages === 0 && r.switcherLinks.length === 2 &&
+    r.brokenImages === 0 && r.switcherLinks.length === (location.pathname.includes('option-c') ? 3 : 2) &&
     r.vietTagCount > 0 && r.vietTagsHaveText && r.vietCardsOutlined && r.hasDayEvening &&
     r.noindexPresent && !r.emDash && !r.transitionAll && r.unknownText.length === 0;
   return r;
