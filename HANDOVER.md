@@ -6,7 +6,7 @@ As of Session 8 (2026-10-07).
 
 ### Phase A Ticket 01 — shared concept content pack
 
-Ticket 01 is complete on `codex/concept-content-pack`. The builder-facing baseline is `.scratch/final-site/concept-content-pack.md`; Tickets 02–04 must use its fixed four-section Home order, comparable content slots, provenance labels, CTA/image intent, mobile priorities and accessibility constraints. It introduces no new client facts and leaves proposed navigation/product details explicitly pending Ross's approval. No concept pages or existing site artifacts were changed.
+Ticket 01 is complete on `codex/concept-content-pack` and revised after Ross/Claude review. The builder-facing baseline is `.scratch/final-site/concept-content-pack.md`; Tickets 02–04 must use its fixed four-section Home order, exact client-question slots, Decision 033 `Aroma · Menu · Visit` header, single-notice/dashed-slot convention, CTA/image intent, mobile priorities and accessibility constraints. It introduces no new client facts. No concept pages or existing site artifacts were changed. Tickets 02–04 remain gated until PR #6 is approved.
 
 PR #5 is merged into `main`. Product discovery, the specification as a planning baseline and the phased ticket plan have been reviewed; individual product choices retain their approved/proposed statuses in `decisions.md`. The specification is at `.scratch/final-site/spec.md` and the 26 tickets are under `.scratch/final-site/issues/`. Concept design remains gated until the Ticket 01 PR is reviewed.
 
@@ -50,7 +50,7 @@ Three "Kiwi" homepage comps exist for Phillip's 2026-10-05 brief (decisions 011,
 
 ## Next steps
 
-1. Review and merge Ticket 01's shared Home concept content/structure pack.
+1. Re-review and merge revised PR #6 for Ticket 01's shared Home concept content/structure pack.
 2. After Ticket 01 approval, begin Tickets 02–04 independently from the shared pack; new concept artifacts belong under `site/concepts/`.
 3. Branch cleanup: delete merged `codex/under-construction-page`, `codex/onboarding-continuity`, `feature/site-structure-proposal`, and `feature/redesign-options` only with Ross's explicit go-ahead.
 4. Ross: deeper review of Option C (and A), noting what to change. (30 min)
@@ -82,7 +82,7 @@ Three "Kiwi" homepage comps exist for Phillip's 2026-10-05 brief (decisions 011,
 
 ## Key files
 
-- `decisions.md`: shared decisions 001–013, Codex planning decisions 014–031 and the open phone-number issue
+- `decisions.md`: shared decisions 001–013, final-site planning decisions 014–031, approved Decision 033 header/Menu structure and the open phone-number issue
 - `.scratch/redesign/`: spec, plan, `check.js` (A/B/C)
 - `phillip.md`: client questions; answers go to `content-status.md`
 - `content-status.md`: content provenance, including the 2026-10-05 meeting

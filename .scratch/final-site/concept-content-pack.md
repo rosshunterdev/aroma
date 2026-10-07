@@ -2,109 +2,117 @@
 
 **Status:** Ticket 01 implementation baseline awaiting review; use for Tickets 02–04 only after approval
 
-**Scope:** Home-page concept review only; not production copy or final information-architecture approval
+**Scope:** Home-page concept review only; not production copy
 
 **Concepts:** Refined minimal, Warm neighbourhood and Day-to-night Aroma
 
-Use this pack unchanged across all three concepts. The concepts should compete through visual hierarchy, composition, typography, colour, image treatment and atmosphere—not through different sections, facts, promises or content volume.
+Use this pack unchanged across all three concepts. The concepts should compete through visual hierarchy, composition, typography, colour, image treatment and atmosphere, not through different sections, facts, prompts or content volume.
 
 ## Fixed comparison contract
 
-- Build one Home page only under `site/concepts/`; do not design the Café, Restaurant, About or Visit pages yet.
-- Use the same four sections, in the order below, with the same named slots and broadly comparable text length.
-- Use “Aroma Coffee” as the provisional display name. Do not present it as confirmed.
-- Keep Café slightly primary through ordering and emphasis. Give Restaurant a clear, first-screen path and comparable legitimacy; do not imply that its launch, hours, menu or booking route is confirmed.
-- Include a persistent visible label such as **Concept review — representative content, not final customer information** and add `noindex` metadata.
-- Navigation labels and destinations are a shared **proposal for evaluation**, not an approved final sitemap.
+- Build one Home page only under `site/concepts/`. Do not design the Menu, Visit, Café, Restaurant or About pages yet.
+- Use the same four sections, in the order below, with the same named slots and comparable visual lengths.
+- Use “Aroma Coffee” as the provisional display name. The review notice must say that the name is provisional.
+- Keep Café slightly primary through ordering and emphasis. Keep Restaurant clearly visible without implying that its launch, hours, menu or booking route is confirmed.
+- Use the Decision 033 header in every concept: **Aroma · Menu · Visit**.
+- Include `noindex` metadata and one concise review notice. Use consistent dashed styling for unresolved copy, fact and image slots instead of repeated status labels.
 - Do not modify or derive markup from `site/redesign/`, the accepted `site/index.html`, or the preserved draft pages.
 
-## Canonical representative copy deck
+## Review and placeholder convention
 
-Use this exact copy in all three concepts so writing quality or content density cannot advantage one direction. A concept may change capitalisation or punctuation for its typographic system, but not meaning, wording or content length. The persistent review label must make clear that this is representative copy awaiting approval.
+Each concept has one visible notice near the top:
 
-| Slot | Shared representative copy |
+> **Concept review. “Aroma Coffee” is provisional. Questions and placeholder images are not final customer content.**
+
+All unresolved content appears as a visually consistent dashed slot. The slot contains the short client question or image request from this pack, without brackets, technical status language or repeated warnings. The single notice supplies the context for every dashed slot.
+
+Do not show `[REPRESENTATIVE COPY]`, `[PLACEHOLDER]`, “details to be confirmed”, “future page”, or similar annotations on individual cards and actions. Do not use plausible dummy facts or lorem ipsum. Dashed styling must have sufficient contrast and cannot be the only indication that a field is unresolved; the slot wording itself must be a question or request.
+
+## Canonical client-question deck
+
+Use these exact prompts in all three concepts so wording and density cannot advantage one direction. A concept may change capitalisation or terminal punctuation for its typographic system, but must not replace a question with invented brand copy.
+
+| Slot | Shared visible content |
 |---|---|
-| Hero headline | **A neighbourhood place, from coffee onward.** |
-| Hero body | **A shared direction for a relaxed Café and a more considered Restaurant, together at one Miramar address.** |
-| Café headline | **Easygoing by nature.** |
-| Café body | **The intended Café experience is warm, casual and coffee-led—a simple place to pause, meet and settle in.** |
-| Restaurant headline | **A different pace at Aroma.** |
-| Restaurant body | **The intended Restaurant experience brings a more considered mood to the same Aroma welcome. Details and availability are still to be confirmed.** |
-| Highlight 1 title | **Made for the neighbourhood** |
-| Highlight 1 body | **A representative glimpse of the people, place and everyday Café atmosphere.** |
-| Highlight 2 title | **A selected highlight** |
-| Highlight 2 body | **Representative menu content only; the item, description, price and availability require approval.** |
-| Highlight 3 title | **The Restaurant direction** |
-| Highlight 3 body | **A representative view of the intended experience; launch, menu, hours and booking remain unconfirmed.** |
+| Hero kicker | **Your words** |
+| Hero headline/body question | **How would you describe Aroma to someone walking past?** |
+| Café kicker | **The Café, in your words** |
+| Café question | **What should people know about the Café before they visit?** |
+| Restaurant kicker | **The Restaurant, in your words** |
+| Restaurant question | **How should the Restaurant feel different from the Café?** |
+| Highlight 1 title | **The place** |
+| Highlight 1 question | **What do you want people to notice about Aroma?** |
+| Highlight 2 title | **A Café favourite** |
+| Highlight 2 question | **Which Café item should we highlight here?** |
+| Highlight 3 title | **The Restaurant** |
+| Highlight 3 question | **What should guests expect from the Restaurant?** |
 
-The Vietnamese-highlight label may be demonstrated on Highlight 2, but the card title/body above stay generic so no particular dish is presented as approved.
+These are questions for Phillip, not proposed answers. They remain dashed content slots in the concepts.
 
-## Shared navigation
+## Shared header navigation
 
-Use these destinations consistently so each concept tests the same proposed information architecture without creating broken links to pages outside Phase A:
+Decision 033 is authoritative. Every concept uses the same header structure:
 
-| Label | Proposed production destination | Phase A concept behaviour and state |
-|---|---|---|
-| Aroma Coffee wordmark | Home | Link to the current concept's top; trading name and Home behaviour remain provisional |
-| Café | Dedicated Café page | Link to `#cafe`, which represents that future destination in the Home concept |
-| Restaurant | Dedicated Restaurant page | Link to `#restaurant`, which represents that future destination in the Home concept |
-| About | Dedicated About page | Visible **About — future page, not included in this Home concept** label with no `href`; do not imitate a working link or add an About section |
-| Visit | Dedicated Visit page | Link to `#visit`, which represents concise Home information rather than the future full page |
+| Header item | Phase A Home behaviour |
+|---|---|
+| Aroma | Link to the current concept's top. Display “Aroma Coffee” provisionally until the trading name is confirmed. |
+| Menu | Link to the Home page's `#menu` section, which contains the Café and Restaurant paths. Do not build or link an unfinished Menu page. |
+| Visit | Link to the Home page's `#visit` section. |
 
-Do not add a generic Menu navigation item. Its omission is a proposal awaiting Ross's explicit approval, so the review label or nearby annotation must make that status clear. On this Home-only artifact, existing in-page anchors stand in for future routes; out-of-scope destinations must be visibly labelled as such rather than linked to missing pages or fragments. Do not create incomplete offering or About pages.
+Do not add About, Café or Restaurant as header items. About is deferred.
+
+Decision 033 also establishes the later Menu-page structure: specials first, then a Café/Restaurant switch with Café first. That future page is out of scope for Phase A and must not be designed or implemented in Tickets 01–04.
 
 ## Shared section order and content slots
 
 ### 1. Café-led hero
 
-**Purpose:** Establish one local Aroma brand and its Miramar atmosphere, make Café the initial emphasis, and expose Restaurant without requiring scroll on representative mobile and desktop views.
+**Purpose:** Establish the proposed visual atmosphere, keep Café initially primary and expose the Restaurant path without relying on invented descriptions.
 
 Required slots:
 
 - Provisional wordmark: **Aroma Coffee**.
-- Eyebrow/location: **128D Park Road, Miramar** (confirmed fact).
-- Headline and body: use the canonical representative hero copy above, covered by the visible representative-copy label. It describes the intended relationship only and must not be presented as a claim about current Restaurant availability.
+- Confirmed location: **128D Park Road, Miramar**.
+- Dashed copy slot using the hero kicker and question from the canonical deck.
 - Primary action: **Explore the Café** → `#cafe`.
-- Secondary action: **Discover the Restaurant** → `#restaurant`, paired with the qualifier **Restaurant details to be confirmed**.
-- Dominant image slot: `[REPRESENTATIVE IMAGE — candid venue-and-people photography; final asset and usage permission required]`.
+- Secondary action: **Explore the Restaurant** → `#restaurant`.
+- Dashed image slot: **What should the main Aroma photo show?**
 
-Image intent: real-feeling neighbourhood hospitality, people in the venue, warm and intimate rather than glossy product advertising. Every implementation must preserve the same subject-matter brief even if crop, scale or art direction differs.
+The intended future hero subject remains candid venue-and-people photography with final selection and usage permission from Phillip. The question slot is what appears in the concept; implementation notes about mood and provenance stay in the pack, not in repeated on-page labels.
 
-### 2. Café and Restaurant paths
+### 2. Café and Restaurant paths (`#menu`)
 
-**Purpose:** Explain the two related offerings without turning either into a fully designed subpage.
+**Purpose:** Show how Home will lead into the single future Menu destination while allowing reviewers to compare the two offering paths. Do not design the Menu page or its switch.
 
 #### Café path (`#cafe`)
 
 - Label: **Café**.
-- Headline and body: use the canonical Café copy above.
-- CTA intent: **View the Café menu**. For Ticket 01/Phase A it remains a labelled future-route placeholder, not a link to the old `site/menu.html`.
-- Image slot: `[REPRESENTATIVE IMAGE — daytime venue/people or coffee service; final asset required]`.
+- Dashed copy slot using the canonical Café kicker and question.
+- CTA intent: **See the Café menu**. In Phase A this is styled as a non-interactive future action, not linked to the old `site/menu.html` or a missing page.
+- Dashed image slot: **Which Café photo should appear here?**
 
 #### Restaurant path (`#restaurant`)
 
-- Label: **Restaurant** plus **Details to be confirmed**.
-- Headline and body: use the canonical Restaurant copy above. Avoid calling it open, “evening” as an operating fact, romantic, fine dining or bookable.
-- CTA intents: **Explore the Restaurant** and **Booking method to be confirmed**. Both are labelled future-route/action placeholders.
-- Image slot: `[REPRESENTATIVE IMAGE — the same venue with a more intimate, lower-light mood; final asset required]`.
+- Label: **Restaurant**.
+- Dashed copy slot using the canonical Restaurant kicker and question.
+- CTA intents: **See the Restaurant menu** and a dashed question slot **How should guests book?** Neither links to an unfinished route or implies current availability.
+- Dashed image slot: **Which Restaurant photo should appear here?**
 
-The Café path comes first and may be modestly larger or more prominent. Restaurant must not be reduced to a teaser, badge or footnote.
+The Café path comes first and is slightly primary. Restaurant remains easy to find but should not receive equal billing or stronger prominence than Café. All three concepts use the same hierarchy so comparison remains fair.
 
 ### 3. Selected highlights
 
 **Purpose:** Test a small reusable content rhythm and the restrained Vietnamese-highlight principle without treating provisional menu data as current.
 
-Use exactly three comparable cards/items in every concept:
+Use exactly three comparable cards in every concept, using the canonical highlight titles and questions:
 
-1. Café atmosphere/service highlight.
-2. Representative menu highlight with no price or availability claim.
-3. Restaurant experience highlight labelled **Restaurant details to be confirmed**.
+1. Place/people question.
+2. Café-item question.
+3. Restaurant-experience question.
 
-Use the three canonical highlight titles and descriptions above. Titles and descriptions must carry `[REPRESENTATIVE COPY]` in an accessible, visible way (a shared section annotation is sufficient if it unambiguously covers all three).
+The second card may demonstrate a small visible **Vietnamese highlight** treatment beside the dashed question **Which item should carry the Vietnamese highlight?** Red may support the label but cannot be its only signal. Do not name a dish, assert that an item qualifies, or use flags, scripts, patterns, costume or ornamental Vietnamese motifs.
 
-One card may demonstrate the Vietnamese-highlight treatment, but it must use the visible text label **Vietnamese highlight — item selection and wording to be approved**. Red may support the label but cannot be its only signal. Do not use flags, scripts, patterns, costume, or ornamental “Vietnamese” motifs. Do not identify a specific item as approved.
-
-Supporting image slots, if used, keep the same roles across concepts: one people/venue image and up to two food/drink detail images. All must be marked representative and require final client-approved assets.
+If imagery is used, keep the same roles across concepts: one venue/people slot and up to two food/drink detail slots. Each uses dashed styling and a short question such as **Which photo belongs here?**
 
 ### 4. Concise Visit information (`#visit`)
 
@@ -112,18 +120,18 @@ Supporting image slots, if used, keep the same roles across concepts: one people
 
 Required slots:
 
-- Heading: **Visit Aroma Coffee** (trading name provisional).
+- Heading: **Visit Aroma Coffee**. The review notice already identifies the trading name as provisional.
 - Confirmed address: **128D Park Road, Miramar**.
-- Directions action: **Open in Google Maps**. A concept may use the confirmed address as the query/destination; do not embed a map.
-- Café hours: `[PLACEHOLDER — Café days and hours require client confirmation]`.
-- Restaurant hours: `[PLACEHOLDER — Restaurant days, hours and launch status require client confirmation]`.
-- Contact: `[PLACEHOLDER — current phone and email require client confirmation]`.
-- Booking: `[PLACEHOLDER — Restaurant booking method and approved wording require client confirmation]`.
-- Access/transport: `[PLACEHOLDER — include only if the client supplies useful access, parking or transport information]`.
+- Directions action: **Open in Google Maps** using the confirmed address. Do not embed a map.
+- Dashed question: **What are the Café days and hours?**
+- Dashed question: **What are the Restaurant days, hours and opening date?**
+- Dashed question: **Which phone number and email should customers use?**
+- Dashed question: **How should guests book the Restaurant?**
+- Dashed question: **Is there access, parking or transport information to include?**
 
 The Café and Restaurant hours must be separate even while both are placeholders. Do not reuse phone numbers, email, hours or booking language visible in old pages or benchmark concepts.
 
-## Provenance and placeholder rules
+## Provenance rules
 
 ### Confirmed content permitted as fact
 
@@ -131,66 +139,69 @@ The Café and Restaurant hours must be separate even while both are placeholders
 - The visual brief: minimalist and Kiwi-oriented, green primary, red secondary and white base.
 - Café and Restaurant are intended as distinct customer-facing offerings.
 - The Home opening is static and Café-led, followed by clear paths to both offerings.
-- Review concepts may use clearly marked representative copy and imagery.
+- The Decision 033 header is **Aroma · Menu · Visit**.
+- Review concepts may use clearly signalled questions and temporary imagery.
 
-“Kiwi-oriented” means approachable, unpretentious and locally grounded. It does not authorise literal national motifs or unverified claims about provenance, ingredients or community history.
+“Kiwi-oriented” is an internal direction, not customer-facing copy. It does not authorise literal national motifs or unverified claims about Aroma, provenance, ingredients or community history.
 
-### Must remain labelled
+### Must remain unresolved
 
-- “Aroma Coffee” as the provisional trading name.
-- All headlines, descriptions and calls to action beyond neutral navigation/action labels.
+- The public trading name.
+- Brand description, headlines and body copy.
 - Restaurant name, status, launch timing, menu, service period, days/hours and booking method.
 - Café menu content, current prices and hours.
 - Phone, email, social profiles, access/parking details and all photography.
 - Any specific Vietnamese-highlight item or description.
-- The five-destination navigation and omission of a generic Menu item.
 
-Use explicit labels such as `[PLACEHOLDER — reason]`, `[REPRESENTATIVE COPY — approval required]` and `[REPRESENTATIVE IMAGE — final asset required]`. Do not use plausible-looking dummy facts, hidden developer comments, lorem ipsum, or typography alone to indicate uncertainty.
+Use the single review notice plus the dashed question/image-slot convention. Do not add repeated annotations to each unresolved item.
 
 ## CTA intent
 
 | CTA | User intent | Phase A behaviour |
 |---|---|---|
-| Explore the Café | Understand the established offering | Scroll to `#cafe` |
-| Discover the Restaurant | Notice and understand the intended second offering | Scroll to `#restaurant`; show confirmation qualifier |
-| View the Café menu | Reach the future Café menu quickly | Visible labelled route placeholder; do not link the old menu |
-| Explore the Restaurant | Reach future atmosphere/menu information | Visible labelled route placeholder |
-| Restaurant booking | Act on a confirmed booking route | Placeholder only until the method is confirmed |
+| Explore the Café | Reach the Café part of the Home concept | Scroll to `#cafe` |
+| Explore the Restaurant | Reach the Restaurant part of the Home concept | Scroll to `#restaurant` |
+| See the Café menu | Preview the future menu journey | Non-interactive future action; do not link the old menu |
+| See the Restaurant menu | Preview the future menu journey | Non-interactive future action; do not imply availability |
+| Restaurant booking | Expose the unresolved booking journey | Dashed client-question slot, not an active action |
 | Open in Google Maps | Get directions to the confirmed address | External action based on 128D Park Road, Miramar; no embed |
 
-CTA labels may receive minor grammatical adjustment to suit a concept, but their intent, prominence and content state must stay equivalent.
+Keep these labels and behaviours equivalent across all concepts.
 
 ## Mobile priorities
 
-1. Show the provisional wordmark, compact access to the proposed destinations, the hero message and both Café/Restaurant paths without obscuring content.
-2. Keep Café menu intent near the top and Restaurant discovery clearly visible in or immediately after the opening view.
-3. Preserve the four-section order; do not remove content, hide Restaurant, or substitute a carousel on small screens.
+1. Show the provisional wordmark and the complete **Aroma · Menu · Visit** header without obscuring content.
+2. Keep Café slightly primary and Restaurant easy to find near the opening of the page.
+3. Preserve the four-section order. Do not remove content, hide Restaurant or substitute a carousel on small screens.
 4. Keep touch targets comfortably sized, body copy readable without zoom and content reflowing without horizontal scroll at 320 CSS pixels.
-5. Keep review and placeholder labels legible; they are not optional desktop-only annotations.
+5. Keep the single review notice and dashed question slots legible without adding repeated mobile-only annotations.
 
 ## Accessibility and content constraints
 
 - Use one `h1`, logical heading levels, semantic landmarks and ordinary links/buttons with accurate names.
+- Do not style non-interactive future actions as working controls without an accompanying non-interactive treatment that is clear to all users.
 - Provide visible keyboard focus and maintain meaningful source order when layouts rearrange.
 - Meet WCAG 2.2 AA contrast targets; red/green differences and Vietnamese-highlight meaning require text or another non-colour cue.
-- Write useful alternative text for meaningful representative images based on visible subject matter; use empty alternative text for decoration. Do not describe an unverified person, relationship or business fact.
-- Avoid autoplay, carousels, essential animation and motion-dependent comprehension; respect reduced-motion preferences where motion is decorative.
-- Keep copy warm, concise and straightforward. Avoid exaggerated claims, luxury language, forced Kiwi phrasing, invented heritage/story details and assertions that the Restaurant is operating.
+- Write useful alternative text for meaningful temporary images based only on visible subject matter. Use empty alternative text for decoration.
+- Avoid autoplay, carousels, essential animation and motion-dependent comprehension. Respect reduced-motion preferences where motion is decorative.
+- Do not invent customer-facing descriptions, claims, heritage details or Restaurant availability. Use the canonical questions instead.
+- Customer-facing concept wording must not contain em dashes.
 - Concept metadata must include `robots` value `noindex, nofollow` and describe the page as review material, not a live business offer.
 
 ## Ticket 02–04 builder checklist
 
 - [ ] Home-only artifact under `site/concepts/`; no changes to `site/redesign/`, `site/index.html` or the preserved draft.
-- [ ] Review label, `noindex, nofollow`, provisional-name cue and proposed-navigation cue are visible/available.
-- [ ] Same navigation labels/behaviour, four-section order, content slots, three-highlight count and Visit fields; no broken or misleading future-page link.
-- [ ] Café is slightly primary; Restaurant has a clear path and no unconfirmed operating claim.
-- [ ] All unresolved facts/copy/images use explicit visible labels.
+- [ ] One review notice, `noindex, nofollow` and consistent dashed styling for every unresolved slot.
+- [ ] Decision 033 header: **Aroma · Menu · Visit**. No About header item and no Menu-page implementation.
+- [ ] Same four-section order, exact client questions, three-highlight count and Visit fields.
+- [ ] Café is slightly primary; Restaurant is clearly findable without equal or stronger billing.
+- [ ] No invented brand copy, customer-facing em dashes, dummy facts or repeated status annotations.
 - [ ] Vietnamese highlight uses meaningful text and restrained treatment, with no specific item presented as approved.
 - [ ] Representative desktop and mobile layouts preserve content parity, keyboard access and no horizontal overflow.
 - [ ] Visual direction—not content advantage or extra functionality—is the material difference from the other concepts.
 
 ## Known dependencies that do not block concept design
 
-Client confirmation is still required for the trading name; Restaurant naming, launch status, menu, hours and booking; Café menu and hours; phone/email/socials; final copy and story; approved Vietnamese-highlight items; photography and usage permission; and any access/parking information. These remain production/refinement dependencies, but the labelled slots above let Tickets 02–04 proceed without inventing them.
+Client answers are still required for the trading name; brand description; Restaurant naming, launch status, menu, hours and booking; Café menu and hours; phone/email/socials; story; approved Vietnamese-highlight items; photography and usage permission; and any access/parking information. The shared questions above let Tickets 02–04 present those gaps honestly without inventing answers.
 
-Ross must still explicitly approve the proposed five-destination information architecture, Café/Restaurant mood relationship, Visit/booking details, mobile approach and omission of a generic Menu item before those become final product requirements.
+Decision 033 resolves the Phase A header. It does not authorise design or implementation of the future Menu page, which remains outside Ticket 01 and Tickets 02–04.
