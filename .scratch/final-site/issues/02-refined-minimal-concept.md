@@ -21,3 +21,4 @@ The review artifact is `site/concepts/refined-minimal/index.html`, with concept-
 
 - 2026-10-07 — Browser-reviewed from the `site/` publish root at 1440px, 768px and 320px. The review pass added a visible dashed cue to the hero question and enlarged compact-header touch areas. No horizontal overflow was found at any checked width.
 - 2026-10-07 — Verified one review notice, `noindex, nofollow`, one `h1`, exact shared client questions, non-interactive future menu intents, working in-page navigation, local asset resolution, visible keyboard focus and AA contrast for the core palette. No live-home, redesign or sibling-concept files changed.
+- 2026-10-07 — Two-axis review against `origin/main` completed. Follow-up corrections strengthened dark-surface focus indicators, replaced an unapproved heading with “Menu”, reduced Restaurant emphasis below Café and clarified the future menu intents as non-interactive text.
