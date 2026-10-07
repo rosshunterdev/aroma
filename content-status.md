@@ -14,7 +14,13 @@ Tracks what content is real, placeholder, or missing across the site.
 | Phone: (+64)27 480 9896 | Old site footer | **Unconfirmed** — may be outdated |
 | Email: aroma128d@gmail.com | Old site footer | **Needs confirmation** |
 | About / story | — | **Missing** — no content exists anywhere |
-| Product hero image | — | **Missing** — `draft.html` references nonexistent `assets/product.jpg`, producing broken images in the early draft |
+| Hero sentence | — | **Missing** — copy slot on `draft.html` asks the client |
+| Hero and highlight photos | — | **Missing** — shown as copy slots on `draft.html` (no broken image references) |
+| Egg Coffee description | — | **Missing** — copy slot on `draft.html`; price $8 from physical menu |
 | Social media URLs | — | **Missing** — old site had icons but no URLs scraped |
+| Visual style: "Kiwi", green primary, red secondary, white background | Phillip, meeting 2026-10-05 | **Confirmed brief** — comps in `redesign/`; exact colours not specified |
+| Style reference: Park Kitchen (parkkitchen.co.nz), minimalist | Phillip, meeting 2026-10-05 | **Confirmed brief** — screenshot `docs/park-kitchen-reference.png` |
+| Vietnamese styling on certain highlighted items only | Phillip, meeting 2026-10-05 | **Confirmed brief** — which items is unconfirmed (`phillip.md`) |
+| Evening restaurant as well as cafe, as 2 separate categories | Phillip, meeting 2026-10-05 | **Intention only** — menu, hours, start date unconfirmed (`phillip.md`); shown as copy slot in comps |
 | Privacy policy | Old site (boilerplate) | **Not carried over** — requirements depend on shipped forms, analytics, embeds and legal advice |
 | Terms & conditions | Old site (boilerplate) | **Not carried over** — requirements depend on shipped functionality and legal advice |

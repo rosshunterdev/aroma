@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aroma Coffee | Miramar, Wellington</title>
+  <meta name="description" content="Aroma Coffee, 128D Park Road, Miramar, Wellington.">
+  <meta name="theme-color" content="#402A1C">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_NZ">
+  <meta property="og:site_name" content="Aroma Coffee">
+  <meta property="og:title" content="Aroma Coffee | Miramar, Wellington">
+  <meta property="og:description" content="Aroma Coffee, 128D Park Road, Miramar, Wellington.">
+  <link rel="icon" href="aroma-leaf-cluster.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Figtree:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="site-header__brand" href="draft.html" aria-current="page">AROMA</a>
+    <nav class="site-header__nav" aria-label="Main">
+      <a class="site-header__link" href="menu.html">MENU</a>
+      <a class="site-header__link" href="contact.html">VISIT</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <h1 class="hero__title" id="hero-title">Aroma Coffee</h1>
+        <p class="copy-slot"><span class="copy-slot__label">Your words / 1 sentence</span>How would you describe Aroma to someone walking past?</p>
+        <p class="hero__hours">Mon–Fri 7am–3pm<br>Sat–Sun 9am–3pm</p>
+        <div class="hero__actions">
+          <a class="action action--primary" href="tel:+64204567837">Call (020) 456 7837</a>
+          <a class="action" href="#visit">Find us</a>
+        </div>
+      </div>
+      <p class="copy-slot copy-slot--photo"><span class="copy-slot__label">Photo / 1 landscape image</span>Which photo best shows the cafe?</p>
+    </section>
+
+    <section class="highlights" aria-labelledby="highlights-title">
+      <h2 class="section-title" id="highlights-title">From the menu</h2>
+
+      <div class="tabs tabs--inline" role="tablist" aria-label="Menu highlights">
+        <button class="tabs__tab" role="tab" id="tab-food" aria-controls="panel-food" aria-selected="false" tabindex="-1" data-anchor="food">FOOD</button>
+        <button class="tabs__tab" role="tab" id="tab-coffee" aria-controls="panel-coffee" aria-selected="true" data-anchor="coffee">COFFEE</button>
+        <button class="tabs__tab" role="tab" id="tab-tea" aria-controls="panel-tea" aria-selected="false" tabindex="-1" data-anchor="tea">TEA</button>
+      </div>
+
+      <div class="panel" role="tabpanel" id="panel-food" aria-labelledby="tab-food" tabindex="0" hidden>
+        <div class="product product--left">
+          <h3 class="product__title">CHICKEN PHO</h3>
+          <p class="product__body">Rice broth with star anise, cinnamon, ginger, coriander, onion, cloves, fennel, pepper, chilli, simmered until the flavours combine.</p>
+        </div>
+        <p class="copy-slot copy-slot--photo"><span class="copy-slot__label">Photo / square</span>Can you send a photo of the chicken pho?</p>
+        <div class="product product--right">
+          <h3 class="product__title">SEAFOOD TOM YUM</h3>
+          <p class="product__body">Spicy Tom Yum soup with prawn, octopus, mussels, fish ball, mushroom. Served with rice noodles or rice.</p>
+        </div>
+      </div>
+
+      <div class="panel" role="tabpanel" id="panel-coffee" aria-labelledby="tab-coffee" tabindex="0">
+        <div class="product product--left">
+          <h3 class="product__title">AROMA COFFEE</h3>
+          <p class="product__body">Extracted from premium coffee beans combining with unique roasting technology, we have created a blend of fresh and delicious AROMA coffee with bitter taste and light fresh aroma giving customers an unique coffee taste, full of charm and inspiration.</p>
+        </div>
+        <p class="copy-slot copy-slot--photo"><span class="copy-slot__label">Photo / square</span>Can you send a photo of your coffee?</p>
+        <div class="product product--right">
+          <h3 class="product__title">EGG COFFEE</h3>
+          <p class="product__price">$8</p>
+          <p class="copy-slot"><span class="copy-slot__label">Your words / 1 sentence</span>How would you describe your egg coffee?</p>
+        </div>
+      </div>
+
+      <div class="panel" role="tabpanel" id="panel-tea" aria-labelledby="tab-tea" tabindex="0" hidden>
+        <div class="product product--left">
+          <h3 class="product__title">AROMA MATCHA</h3>
+          <p class="product__body">The fresh young tea leaves harvested from the high mountain of Thai Nguyen (Vietnam) have been meticulously processed to keep the chlorophyll and the specific flavor of the premium tea leaves will give customers a feeling of freshness and provide a great energy for creativity and dynamic.</p>
+        </div>
+        <p class="copy-slot copy-slot--photo"><span class="copy-slot__label">Photo / square</span>Can you send a photo of your matcha or tea?</p>
+        <div class="product product--right">
+          <h3 class="product__title">TEA POT</h3>
+          <p class="product__price">$5</p>
+          <p class="product__body">English Breakfast, Earl Grey, Green Tea, Peppermint.</p>
+        </div>
+      </div>
+
+      <p class="highlights__more"><a class="cta" id="highlights-more" href="menu.html">SEE ALL COFFEE</a></p>
+    </section>
+
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <h2 class="section-title" id="visit-title">Visit us</h2>
+      <div class="visit__grid">
+        <div>
+          <h3 class="visit__heading">Find us</h3>
+          <address class="visit__body">
+            128D Park Road<br>
+            Miramar, Wellington 6022<br>
+            <a class="visit__link" href="https://www.google.com/maps/search/?api=1&amp;query=128D+Park+Road+Miramar+Wellington+6022">Open in Google Maps</a>
+          </address>
+        </div>
+        <div>
+          <h3 class="visit__heading">Hours</h3>
+          <dl class="hours">
+            <div class="hours__row"><dt>Mon–Fri</dt><dd>7am–3pm</dd></div>
+            <div class="hours__row"><dt>Sat–Sun</dt><dd>9am–3pm</dd></div>
+          </dl>
+        </div>
+        <div>
+          <h3 class="visit__heading">Book a table</h3>
+          <p class="visit__body">Give us a call or send an email to reserve your spot.<br>
+            <a class="visit__link" href="tel:+64204567837">(020) 456 7837</a><br>
+            <a class="visit__link" href="mailto:aroma128d@gmail.com">aroma128d@gmail.com</a></p>
+        </div>
+      </div>
+
+      <div class="leaves" aria-hidden="true">
+        <svg viewBox="0 0 320 200" width="100%" fill="none" aria-hidden="true">
+          <g stroke="#8FA173" stroke-width="2.75" stroke-linecap="round">
+            <path d="M300 196C286 170 262 148 232 138"></path>
+            <path d="M252 150C246 132 250 116 262 104"></path>
+            <path d="M214 176C204 166 196 152 194 138"></path>
+          </g>
+          <g fill="#8FA173">
+            <ellipse cx="276" cy="120" rx="26" ry="14" transform="rotate(-38 276 120)"></ellipse>
+            <ellipse cx="240" cy="96" rx="24" ry="13" transform="rotate(-14 240 96)" opacity="0.72"></ellipse>
+            <ellipse cx="300" cy="158" rx="22" ry="12" transform="rotate(30 300 158)" opacity="0.9"></ellipse>
+            <ellipse cx="206" cy="128" rx="20" ry="11" transform="rotate(-52 206 128)" opacity="0.55"></ellipse>
+            <ellipse cx="186" cy="64" rx="17" ry="9" transform="rotate(24 186 64)" opacity="0.4"></ellipse>
+            <ellipse cx="148" cy="96" rx="14" ry="8" transform="rotate(-20 148 96)" opacity="0.3"></ellipse>
+            <ellipse cx="248" cy="186" rx="14" ry="8" transform="rotate(-8 248 186)" opacity="0.6"></ellipse>
+          </g>
+        </svg>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="pill pill--filled" href="mailto:aroma128d@gmail.com">aroma128d@gmail.com</a>
+    <a class="pill pill--outline" href="tel:+64204567837">(020) 456 7837</a>
+  </footer>
+
+  <script>
+  // Menu highlight tabs: WAI-ARIA tabs pattern, changes only on user input
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.highlights [role="tab"]'));
+    var more = document.getElementById('highlights-more');
+    if (tabs.length === 0) return;
+
+    function select(index, moveFocus) {
+      tabs.forEach(function (tab, i) {
+        var selected = i === index;
+        tab.setAttribute('aria-selected', selected ? 'true' : 'false');
+        tab.tabIndex = selected ? 0 : -1;
+        document.getElementById(tab.getAttribute('aria-controls')).hidden = !selected;
+      });
+      if (moveFocus) tabs[index].focus();
+      more.href = 'menu.html#' + tabs[index].dataset.anchor;
+      more.textContent = 'SEE ALL ' + tabs[index].textContent;
+    }
+
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener('click', function () { select(i, false); });
+      tab.addEventListener('keydown', function (e) {
+        var next = null;
+        if (e.key === 'ArrowRight') next = (i + 1) % tabs.length;
+        if (e.key === 'ArrowLeft') next = (i - 1 + tabs.length) % tabs.length;
+        if (e.key === 'Home') next = 0;
+        if (e.key === 'End') next = tabs.length - 1;
+        if (next !== null) { e.preventDefault(); select(next, true); }
+      });
+    });
+
+    select(1, false);
+  })();
+  </script>
+
+</body>
+</html>

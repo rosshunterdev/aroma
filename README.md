@@ -5,18 +5,18 @@ Static website rebuild for Aroma Coffee / Aroma Café at 128D Park Road, Miramar
 ## Current state
 
 - `index.html` is a standalone temporary landing page; it is not the approved final homepage.
-- The early website draft remains at `draft.html`, with `menu.html`, `contact.html`, `styles.css` and its small inline vanilla-JavaScript carousel preserved for continued development.
+- The early website draft remains at `draft.html`, with `menu.html`, `contact.html`, `styles.css` and a small inline vanilla-JavaScript tabs script.
 - The temporary page uses `temporary.css`; there is no framework or build step.
-- `about.html` is blocked on client-supplied story content, but the preserved draft navigation already links to it and therefore 404s.
-- The draft homepage references a missing `assets/product.jpg`; production photography has not been supplied.
+- `about.html` is blocked on client-supplied story content and is not linked from the draft navigation.
+- Missing client copy and photography are shown on the draft homepage as dashed copy slots.
 - Phone, email, opening hours and the 2024 menu transcription require confirmation before launch. Treat values currently rendered in the pages as provisional.
 
 ## Run locally
 
-Serve the repository root with any static HTTP server, for example:
+The website lives in `site/` (the only folder Netlify publishes; see `netlify.toml`). Serve it with any static HTTP server, for example:
 
 ```powershell
-npx serve .
+npx serve site
 ```
 
 Open the localhost URL printed by the server. There is no project install, build or test command yet.

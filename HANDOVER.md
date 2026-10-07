@@ -1,60 +1,78 @@
 # Handover — Aroma Coffee Rebuild
 
-## Onboarding reconciliation — Codex/Ben side, 2026-09-30
+As of Session 8 (2026-10-07).
 
-Work is on `codex/onboarding-continuity`. Commit `59f51ff` contains the substantive onboarding/configuration changes; `9ad489d` records the final handoff metadata. The pass corrected shared documentation, added the concise Codex map in `AGENTS.md`, and configured the focused project-local Matt Pocock skills with local Markdown tickets under `.scratch/`. No client-facing HTML/CSS/JavaScript was changed. Validation included `git diff --check`, local-reference checks, source review, and browser inspection at default and desktop viewport sizes.
+## Current state
 
-The preserved draft has confirmed broken references: `draft.html`, `menu.html` and `contact.html` link to missing `about.html`, while `draft.html` references missing `assets/product.jpg`. Treat these as recorded final-site blockers, not regressions in the temporary public page.
+Three "Kiwi" homepage comps exist for Phillip's 2026-10-05 brief (decisions 011, 013). Ross and Ben both prefer Option A. Ross will show Phillip in person next week, only once he is happy with the designs; a friend reviews the links afterwards.
 
-## Current State
-
-Branch `codex/under-construction-page` adds a standalone temporary landing page at `index.html`. It uses only the confirmed Miramar address and is not the approved final homepage. The early static-site draft remains available at `draft.html`; menu and contact remain part of that draft. About is blocked on client story content, and the draft's contact details and hours remain provisional.
-
-| Page | Status |
+| Item | Status |
 |------|--------|
-| `index.html` | Temporary public-facing landing page. No draft navigation, provisional contact details or JavaScript. |
-| `draft.html` | Preserved early homepage draft — carousel with 3 slides (Food/Coffee/Tea), defaults to Coffee. |
-| `menu.html` | Built. Full menu. Home, brand and "← Back" links now return to `draft.html`. |
-| `contact.html` | Built. Address, hours, phone/email CTA. Home and brand links now return to `draft.html`. |
-| `about.html` | Not started — blocked on client content. Nav links to it (will 404). |
+| `site/redesign/option-a.html` | Built. "Park Kitchen close". Preferred by Ross and Ben. |
+| `site/redesign/option-b.html` | Built. "Warmer Kiwi". Ross: not up to A's standard. |
+| `site/redesign/option-c.html` | Built Session 8. Swimsuit-inspired: split hero, dotted rules, giant AROMA footer. Ross: "looks good", deeper review pending. |
+| `site/draft.html`, `menu.html`, `contact.html` | Decision 010 structure, old brown/cream styling. Not restyled. |
+| `site/index.html` | Temporary public landing page. Unchanged. |
+| `phillip.md` | Questions to ask Phillip. |
 
-### Draft homepage carousel detail
+- A and B switchers do not link to C (kept untouched on purpose); C's switcher links to all three.
+- Serve locally with `npx serve site` (Session 8 used port 5179).
 
-- 3 slides controlled by FOOD / COFFEE / TEA tab buttons (`role="tab"`, `aria-selected`)
-- **Food:** Chicken Pho (left) + Seafood Tom Yum (right) — descriptions from menu
-- **Coffee:** Aroma Coffee blurb (left) + Aroma Matcha blurb (right) — original homepage content restored here
-- **Tea:** Egg Coffee/$8 (left) + Tea Pot/varieties/$5 (right) — weakest slide, needs better content
-- Auto-rotates every 6s, pauses on hover/focus, respects `prefers-reduced-motion`
-- Inline `<script>` at bottom of `draft.html`, ~40 lines vanilla JS
+**Preview links (PR #4):**
+- https://deploy-preview-4--aromacoffeemiramar.netlify.app/redesign/option-a.html
+- https://deploy-preview-4--aromacoffeemiramar.netlify.app/redesign/option-c.html
+- Tell viewers: "See the day menu" opens the old brown menu page; only the homepage is redesigned.
 
-### Phone number fix
+**PR #5 (Ben/Codex, `codex/product-discovery`):** final-site spec + 26 tickets. Ross's (edited) review: Codex may make its own three concepts, with A and C as the bar; Ross picks which 2–3 designs reach Phillip; Home-only first for timing. Before Phase A: build inside `site/`, number decisions from 014, mark unagreed items (e.g. no Menu nav) as proposals, `needs-human`/`blocked` statuses and owners on tickets, "Aroma Coffee" until trading name confirmed.
 
-The draft homepage footer was using the old site number `(+64)27 4809896`. It was changed to `(020) 456 7837` to match the contact page and physical menu, but remains unconfirmed with the client.
+**PR #3:** closed unmerged (old draft is being left behind). Its commits ride along inside #4, harmless.
 
-## What's Next
+**PR #4:** to be renamed and marked ready, then merged once Ben replies (message sent asking; he then rebases #5 onto `main`). Merging stops production serving docs.
 
-1. **Visual review of draft homepage** — carousel, CTA, and Visit Us positioning need to be checked in browser. The Visit Us block was repositioned to bottom-left of `.content` area per Ross's direction but hasn't been confirmed visually yet.
-2. **Tea slide content** — Egg Coffee on the Tea slide doesn't make categorical sense. Needs either better tea highlights from the client or reduction to 2 slides (Food + Coffee).
-3. **Header nav decision** — whether "MENU" goes in the header nav is still deferred. The "VIEW MENU" CTA below the carousel handles it for now.
-4. **Mobile layout** — carousel swipe gestures and responsive layout deferred. Desktop-first.
-5. **Phone number** — still needs client confirmation.
-6. **About page** — blocked on client content.
-7. **Product photos** — all three draft carousel slides reference `assets/product.jpg`, but that file is absent, so the images are broken.
-8. **Opening hours and email** — both need client confirmation; repository records conflict about the source of the displayed hours.
-9. **About navigation** — all three preserved draft pages link to missing `about.html`; choose an intentional pre-content state before final-site launch.
+## Verified
 
-## Blockers
+- Option C: Playwright (Chromium) `check.js` pass at 1440; headings/overflow/copy audit at 390; no overflow at 320; footer focus ring visible; screenshots reviewed.
+- PR #4 preview: A/B/C 200, every doc 404, Schibsted Grotesk loads.
+- PR #5 review: `gh pr review` exited cleanly; not visually confirmed on GitHub.
+- Not verified: real phones, screen readers, non-Chromium browsers.
 
-- Visual confirmation of Visit Us positioning (may need further CSS tweaks)
-- Tea slide content is weak — needs client input or a design decision
-- About page content and product hero images both need client input
-- Phone, email, opening hours and menu accuracy need explicit launch confirmation
-- The About link and missing draft-homepage image remain broken states within the early draft
+## Next steps
 
-## Key Files
+1. Ben replies yes → Ross merges PR #4 → verify production returns 404 for docs. Ben then rebases #5.
+2. Branch cleanup: delete merged `codex/under-construction-page`, `codex/onboarding-continuity`, `feature/site-structure-proposal`, and `feature/redesign-options` after #4 merges (needs Ross's explicit go-ahead).
+3. Ross: deeper review of Option C (and A), noting what to change. (30 min)
+4. Ross: send the friend the C (and A) preview links with the brown-menu note. (2 min)
+5. Claude: apply Ross's review changes; roll the chosen direction to `menu.html` and `contact.html` before the Phillip meeting (about 2–2.5 hrs after the pick).
+6. Ross: pick 2–3 designs (his and Codex's); show Phillip in person next week; ask the `phillip.md` questions.
 
-- `CLAUDE.md` — project context and constraints
-- `decisions.md` — 8 decisions + open phone number issue
-- `TODO.md` — current backlog and client-input questions
-- `content-status.md` — content tracking by source and confirmation status
-- `Aroma Coffee Homepage/design_handoff_aroma_homepage/` — original Claude Design reference
+## Blockers / waiting on
+
+- Ross: deeper review of C; which comp(s) go to Phillip.
+- Ben: OK to merge PR #4; reply to PR #5 review; pricing split with Ross.
+- Phillip: direction pick; restaurant menu, hours, start date; Vietnamese specials; hero sentence, photos, phone, email, hours, socials, domain control (all in `phillip.md`).
+- Production and PR #3 preview still serve docs publicly until `site/` reaches `main`.
+
+## Concerns
+
+- Decision numbering will clash when PR #5 merges (it uses 010–027; ours run to 013). Renumbering requested in review.
+- PR #5 and Claude's comps risk parallel, duplicated design work if ownership isn't agreed.
+- `check.js` Option A red-outline check is skipped when served by `npx serve` (URL has no `.html`); Session 7's pass may not have tested it. Use `includes('option-a')`.
+- Option C was built quickly in one pass; only Ross's quick look so far. "See the day menu" appears twice on C (hero and Menus).
+- Pricing notes are in git history (Session 6). Repo is private; keep pricing out of tracked files.
+- Deferred minors: `check.js` copy audit is substring-based; `headingFont` reads the declared stack; A/B announce the Vietnamese tag before the dish name (fixed in C).
+- Docs drift (minor, carried): decision 007 heading still says "(PROPOSED)"; phone entry uses "UNRESOLVED".
+
+## Git state
+
+- `main`: unchanged since PR #2 merge (`4f84c62`).
+- `feature/site-structure-proposal`: PR #3 closed unmerged; commits contained in #4.
+- `feature/redesign-options`: PR #4, includes Session 8 docs commit; awaiting Ben's OK to merge.
+- `codex/product-discovery`: Ben's PR #5, open; to rebase after #4.
+- Local only, gitignored: `NEXT-ACTIONS.md`, `docs/park-kitchen-reference.png`, `.playwright-mcp/` screenshots, `.superpowers/sdd/plan/` (stale, safe to delete).
+
+## Key files
+
+- `decisions.md`: 001–013 and the open phone-number issue
+- `.scratch/redesign/`: spec, plan, `check.js` (A/B/C)
+- `phillip.md`: client questions; answers go to `content-status.md`
+- `content-status.md`: content provenance, including the 2026-10-05 meeting

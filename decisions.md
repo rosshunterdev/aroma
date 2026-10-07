@@ -44,7 +44,7 @@ Architectural, design, and content decisions made during the Aroma Coffee rebuil
 ## 007 — Site structure and navigation redesign (PROPOSED)
 
 **Date:** 2026-09-18
-**Status:** PROPOSED — not yet implemented. Ross has an alternative artistic direction in mind; this proposal should be compared against that before either is built.
+**Status:** SUPERSEDED by 010 — MENU in header adopted; 008's homepage tabs retained instead of removing them.
 
 ### Current structure (problems)
 
@@ -93,6 +93,7 @@ Ross has an artistic structure in mind that may take a different approach. This 
 ## 008 — Homepage carousel instead of static layout
 
 **Date:** 2026-09-18
+**Status:** SUPERSEDED by 010 — auto-rotation only; the Food/Coffee/Tea tab direction carries into 010.
 **Decision:** Replace the static three-column homepage content with a tab-controlled carousel (Food / Coffee / Tea), defaulting to the Coffee slide.
 **Why:** Ross's artistic direction. The tabs become real in-page controls instead of confusing navigation links to menu.html. Each slide highlights two signature items from that category. The homepage becomes a single-screen landing page with a "VIEW MENU" CTA and a compact "Visit Us" block in the bottom-left.
 **Impact:** Homepage now uses vanilla JS (~40 lines inline). The structure decision from 007 (MENU in header) is partially addressed — the CTA handles menu access for now, header nav change deferred.
@@ -105,6 +106,49 @@ Ross has an artistic structure in mind that may take a different approach. This 
 **Decision:** Use `index.html` for a standalone temporary landing page and preserve the early homepage draft at `draft.html` with its existing Menu and Contact pages.
 **Why:** The temporary page can be removed cleanly without deleting, duplicating or substantially restructuring the unfinished site. Draft-page Home links point to `draft.html`, while the temporary page exposes no navigation into provisional content.
 **Impact:** The temporary page is an interim public entry point, not an approved final homepage. Restoring the draft as the root later requires deleting the temporary page and stylesheet, renaming `draft.html` to `index.html`, and restoring its internal Home links.
+
+---
+
+## 010 — Header with Menu and Visit, homepage tabs without autoplay
+
+**Date:** 2026-10-01
+**Status:** BUILT — agreed by Ross in Session 5, implemented on `feature/site-structure-proposal`, awaiting Ben/Codex review. Visual direction (brown/cream/sage) SUPERSEDED by 011 in Session 7; structure stands. Spec: `.scratch/site-structure/spec.md`; visual reference: `.scratch/site-structure/mock.html`.
+**Decision:**
+- Header becomes wordmark (home) + MENU + VISIT. HOME is dropped because the wordmark already links home. ABOUT is removed until client story content exists. `contact.html` keeps its file name and is labelled "Visit".
+- Homepage keeps 008's Food / Coffee / Tea tabs but drops auto-rotation. Tabs follow the WAI-ARIA tabs pattern and the "See all" link targets the matching `menu.html` anchor.
+- Homepage gains a hero (one `h1`, client copy slot, hours, Call / Find us) and an in-flow Visit section replacing the absolutely positioned block.
+- Menu anchors match the homepage tabs one-to-one.
+**Why:** 2026-10-01 design review: the carousel failed WCAG 2.2.2 (no pause control), MENU was unreachable from the header, ABOUT linked to a missing page, and the Visit block could overlap content on mobile.
+**Supersedes:** 008's auto-rotation and 007's deferred header question (MENU now in header). 008's tab direction stands.
+
+---
+
+## 011 — Kiwi redesign: two homepage comps for Phillip to choose
+
+**Date:** 2026-10-05
+**Status:** BUILT — Session 7, `site/redesign/option-a.html` and `option-b.html` on `feature/site-structure-proposal`'s child branch `feature/redesign-options` (PR #4, draft, do not merge). Awaiting Phillip's pick.
+**Decision:** Follow Phillip's 2026-10-05 brief (green primary `#1F5C3A`, red secondary `#C8372D`, white background, minimalist like Park Kitchen, Vietnamese styling only on highlighted items, Day/cafe and Evening/restaurant split). Present two self-contained homepage comps: A "Park Kitchen close" (Figtree, uppercase nav, red outline + tag on Vietnamese cards) and B "Warmer Kiwi" (Fraunces headings, green header/footer bands, red-edged featured card). Photos and restaurant details are copy slots.
+**Why:** Ross promised Phillip a couple of options; standalone comps let the options differ properly without touching live or draft pages.
+**Supersedes:** 010's visual direction only. Spec: `.scratch/redesign/spec.md`; plan: `.scratch/redesign/plan.md`.
+
+---
+
+## 012 — Publish only `site/`; repo private
+
+**Date:** 2026-10-05
+**Status:** VERIFIED — Session 7, on `feature/redesign-options`; PR #4 preview serves pages (200) and returns 404 for every doc. Production and PR #3 preview unchanged until this reaches `main`.
+**Decision:** Website files live in `site/`; `netlify.toml` sets `publish = "site"`. GitHub repo made private (Ben keeps write access).
+**Why:** Netlify was publishing the repo root, so `HANDOVER.md` (including pricing notes), `decisions.md`, `phillip.md`, `audit/` and `CLAUDE.md` were reachable by URL, and the public repo exposed them on GitHub too.
+**Impact:** Serve locally with `npx serve site`. Branches still holding root-level pages will see renames when merged.
+
+---
+
+## 013 — Option C: Swimsuit-inspired homepage comp
+
+**Date:** 2026-10-07
+**Status:** VERIFIED — Session 8, `site/redesign/option-c.html` on PR #4 preview (200). Ross's deeper review pending.
+**Decision:** Add a third homepage comp inspired by swimsuitcoffee.com (shown to Phillip, who liked it). Kiwi palette from 011 with Swimsuit's layout: centred wordmark with split nav, info-left/photo-right hero, dotted rules, red highlight links in place of yellow, green footer holding Find us/Hours/Book a table with a giant AROMA wordmark. Schibsted Grotesk. Same copy and slots as Option A. Options A and B left untouched.
+**Why:** Ross wants designs he is happy with before showing Phillip in person; Phillip responded well to Swimsuit. Ross and Ben currently prefer Option A.
 
 ---
 
