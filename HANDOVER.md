@@ -2,6 +2,14 @@
 
 As of Session 8 (2026-10-07).
 
+## Product discovery — 2026-10-03 onward
+
+Work is on `codex/product-discovery`. Product discovery, the specification as a planning baseline and the phased ticket plan have been reviewed; individual product choices retain their approved/proposed statuses in `decisions.md`. The specification is at `.scratch/final-site/spec.md` and the 26 tickets are under `.scratch/final-site/issues/`. Do not begin concept implementation until the reconciled planning PR is reviewed again.
+
+PR #4 is merged into `main`. Publishable website and browser-review concept artifacts live under `site/`, `netlify.toml` publishes only that folder, and documentation/specifications/tickets remain outside it. Options A, B and C remain unchanged under `site/redesign/`; new planning concepts will use `site/concepts/`. Shared decisions occupy IDs 010–013 and this branch's planning decisions start at 014.
+
+Phase A produces three equally mature, responsive, noindex Home-page concepts using one shared content structure. Ross's Options A and C are quality benchmarks rather than templates. Ross reviews the combined pool, curates the strongest two or three total concepts for Phillip, and only the selected direction proceeds to whole-site refinement. Use “Aroma Coffee” provisionally until Phillip confirms the trading name. See `docs/product-discovery.md` for the discovery record and `content-status.md` for provenance.
+
 ## Current state
 
 Three "Kiwi" homepage comps exist for Phillip's 2026-10-05 brief (decisions 011, 013). Ross and Ben both prefer Option A. Ross will show Phillip in person next week, only once he is happy with the designs; a friend reviews the links afterwards.
@@ -27,7 +35,7 @@ Three "Kiwi" homepage comps exist for Phillip's 2026-10-05 brief (decisions 011,
 
 **PR #3:** closed unmerged (old draft is being left behind). Its commits ride along inside #4, harmless.
 
-**PR #4:** to be renamed and marked ready, then merged once Ben replies (message sent asking; he then rebases #5 onto `main`). Merging stops production serving docs.
+**PR #4:** merged into `main` as `bdda5c1`; this planning branch has been rebased onto that baseline.
 
 ## Verified
 
@@ -38,24 +46,21 @@ Three "Kiwi" homepage comps exist for Phillip's 2026-10-05 brief (decisions 011,
 
 ## Next steps
 
-1. Ben replies yes → Ross merges PR #4 → verify production returns 404 for docs. Ben then rebases #5.
-2. Branch cleanup: delete merged `codex/under-construction-page`, `codex/onboarding-continuity`, `feature/site-structure-proposal`, and `feature/redesign-options` after #4 merges (needs Ross's explicit go-ahead).
-3. Ross: deeper review of Option C (and A), noting what to change. (30 min)
-4. Ross: send the friend the C (and A) preview links with the brown-menu note. (2 min)
-5. Claude: apply Ross's review changes; roll the chosen direction to `menu.html` and `contact.html` before the Phillip meeting (about 2–2.5 hrs after the pick).
-6. Ross: pick 2–3 designs (his and Codex's); show Phillip in person next week; ask the `phillip.md` questions.
+1. Ross/Claude: complete final review of rebased PR #5.
+2. After explicit approval, begin Ticket 01's shared Home concept content/structure pack; new concept artifacts belong under `site/concepts/`.
+3. Branch cleanup: delete merged `codex/under-construction-page`, `codex/onboarding-continuity`, `feature/site-structure-proposal`, and `feature/redesign-options` only with Ross's explicit go-ahead.
+4. Ross: deeper review of Option C (and A), noting what to change. (30 min)
+5. Ross: curate 2–3 designs from his and Codex's combined pool for Phillip; ask the `phillip.md` questions during client review.
 
 ## Blockers / waiting on
 
 - Ross: deeper review of C; which comp(s) go to Phillip.
-- Ben: OK to merge PR #4; reply to PR #5 review; pricing split with Ross.
+- Ben/Ross/Claude: final PR #5 review before Ticket 01 begins; pricing split remains a separate owner discussion.
 - Phillip: direction pick; restaurant menu, hours, start date; Vietnamese specials; hero sentence, photos, phone, email, hours, socials, domain control (all in `phillip.md`).
-- Production and PR #3 preview still serve docs publicly until `site/` reaches `main`.
 
 ## Concerns
 
-- Decision numbering will clash when PR #5 merges (it uses 010–027; ours run to 013). Renumbering requested in review.
-- PR #5 and Claude's comps risk parallel, duplicated design work if ownership isn't agreed.
+- Parallel-design ownership is resolved for Phase A: Codex creates three Home concepts under `site/concepts/`; Ross preserves and curates the combined pool with Options A/B/C.
 - `check.js` Option A red-outline check is skipped when served by `npx serve` (URL has no `.html`); Session 7's pass may not have tested it. Use `includes('option-a')`.
 - Option C was built quickly in one pass; only Ross's quick look so far. "See the day menu" appears twice on C (hero and Menus).
 - Pricing notes are in git history (Session 6). Repo is private; keep pricing out of tracked files.
@@ -64,15 +69,15 @@ Three "Kiwi" homepage comps exist for Phillip's 2026-10-05 brief (decisions 011,
 
 ## Git state
 
-- `main`: unchanged since PR #2 merge (`4f84c62`).
+- `main`: includes merged PR #4 at `bdda5c1`.
 - `feature/site-structure-proposal`: PR #3 closed unmerged; commits contained in #4.
-- `feature/redesign-options`: PR #4, includes Session 8 docs commit; awaiting Ben's OK to merge.
-- `codex/product-discovery`: Ben's PR #5, open; to rebase after #4.
+- `feature/redesign-options`: PR #4 merged; Options A/B/C now live under `site/redesign/` on `main`.
+- `codex/product-discovery`: Ben's PR #5, open and rebased onto merged PR #4; awaiting final review.
 - Local only, gitignored: `NEXT-ACTIONS.md`, `docs/park-kitchen-reference.png`, `.playwright-mcp/` screenshots, `.superpowers/sdd/plan/` (stale, safe to delete).
 
 ## Key files
 
-- `decisions.md`: 001–013 and the open phone-number issue
+- `decisions.md`: shared decisions 001–013, Codex planning decisions 014–031 and the open phone-number issue
 - `.scratch/redesign/`: spec, plan, `check.js` (A/B/C)
 - `phillip.md`: client questions; answers go to `content-status.md`
 - `content-status.md`: content provenance, including the 2026-10-05 meeting
