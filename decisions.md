@@ -418,6 +418,26 @@ Ross has an artistic structure in mind that may take a different approach. This 
 
 ---
 
+## 033 — Header navigation and future Menu structure
+
+**Date:** 2026-10-07
+**Status:** APPROVED — confirmed by Ross during PR #6 review with Claude.
+**Provenance:** Ross, following review of the shared Phase A concept content pack.
+
+**Decision:** Use **Aroma · Menu · Visit** as the header navigation. About is deferred until later.
+
+The future Menu destination will open one Menu page with:
+
+1. Specials first.
+2. A Café/Restaurant switch.
+3. Café first.
+
+**Phase A scope:** Home concepts implement only the shared header/navigation structure. They do not design or build the Menu page, its specials presentation or its Café/Restaurant switch.
+
+**Supersedes:** Decision 017's proposed five-destination header and proposed omission of a generic Menu item. Other parts of Decision 017 are not approved by this decision.
+
+---
+
 ## Open — Phone number discrepancy
 
 **Status:** UNRESOLVED — needs client confirmation
