@@ -212,7 +212,7 @@ Ross has an artistic structure in mind that may take a different approach. This 
 ## 017 — Offering-led final-site information architecture
 
 **Date:** 2026-10-07
-**Status:** PROPOSED — especially the removal of a generic Menu navigation item; requires explicit Ross confirmation.
+**Status:** PROPOSED — especially the removal of a generic Menu navigation item; requires explicit Ross confirmation. Header model SUPERSEDED by 033 (Session 8); rest still PROPOSED.
 **Provenance:** Ben during final-site product discovery.
 
 **Decision:** Use five top-level destinations: Home, Café, Restaurant, About and Visit. Café and Restaurant each receive a dedicated page for their atmosphere, menu and relevant primary actions.
