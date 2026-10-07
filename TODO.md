@@ -2,10 +2,15 @@
 
 ## Needs Client Input
 
+- [ ] **Restaurant offering:** Confirm its customer-facing name, menu relationship to the Café, operating days/hours, start date and whether it should appear before it opens.
+- [ ] **Restaurant booking journey:** Confirm whether the earlier phone/email-only direction still applies to Restaurant bookings.
+- [ ] **“Kiwi” direction:** Clarify which qualities Phillip valued in Park Kitchen and what “Kiwi” should make Aroma visitors feel; confirm any existing brand greens/reds that should anchor the palette.
+- [ ] **Selective Vietnamese highlights:** Confirm which specific items should receive this treatment and approve the way they are described.
 - [ ] **Phone number:** Which is the current booking number? `(020) 456 7837` (on physical menu) or `(+64)27 480 9896` (on old website)? Are both active?
 - [ ] **About page content:** The Vietnamese heritage story, how the cafe started, team info — none of this exists on the old site. Needs to come from the client.
 - [ ] **Photos:** Hero photo plus one photo each for the Food, Coffee and Tea highlights. Shown as copy slots on `draft.html` until supplied.
 - [ ] **Homepage copy slots:** Hero sentence in the client's words; Egg Coffee description; whether Tea stays a highlighted category.
+- [ ] **Photography:** Obtain Phillip-approved venue-and-people hero photography plus the supporting Café, Restaurant and menu imagery required by the chosen direction. The early draft's missing `assets/product.jpg` is historical, not the final brief.
 - [ ] **Menu accuracy:** Menu was transcribed from physical photos (W23.2024 dated). Confirm current items and prices before launch.
 - [ ] **Trading name:** Is it "Aroma Coffee", "Aroma Café" or "Aroma Coffee Works"? Using "Aroma Coffee" until confirmed.
 - [ ] **Email address:** Is `aroma128d@gmail.com` still the preferred contact email?
@@ -17,6 +22,8 @@
 - [ ] **Review decision 010:** Ben/Codex review of `feature/site-structure-proposal` (header, homepage, menu anchors, accessibility fixes).
 - [ ] **Screen reader pass:** NVDA check of the draft pages once client content is in.
 - [ ] **Menu + contact page design review:** These draft pages were built to match the draft homepage design system but without a dedicated design comp. They need a proper layout and visual hierarchy pass — spacing, typography scale, how items flow on different screen sizes. Consider taking them through Claude Design for a comp before refining.
+- [ ] **Final visual direction:** Decision 010 supersedes the early draft's brown/cream/sage visual assumptions. Review multiple distinct options with Phillip; Option A/B are evidence, not approval.
+- [ ] **Three design directions:** Produce equally mature Refined minimal, Warm neighbourhood and Day-to-night Aroma concepts using the resolved product structure; ask Phillip to choose an overall direction before refinement.
 - [ ] **Mobile testing:** Responsive breakpoints exist but haven't been tested on real devices.
 - [ ] **Final-site favicon:** The temporary page uses the existing leaf SVG; choose and validate the final-site favicon later.
 
@@ -27,6 +34,9 @@
 - [ ] **Domain / hosting:** Decide where the new site will be hosted. Static HTML can go anywhere.
 - [ ] **Meta tags:** Description, Open Graph and favicon added to draft pages (ticket 07). Still to do: `og:image` (needs photos), the page address tag (needs domain), structured data (needs confirmed phone and hours).
 - [ ] **Self-host fonts:** Decide with Ben (privacy and performance); not started.
+- [ ] **Domain / hosting:** Research and recommend the lowest-maintenance production model, including account/domain ownership, deployment workflow, cost, handover and recovery. Do not assume the Netlify design preview is the final arrangement.
+- [ ] **Maintenance model:** Research developer-managed, client-editable and hybrid options against the expected frequency of menu, price, hours and Restaurant updates before selecting technology.
+- [ ] **Meta tags:** No `<meta description>`, Open Graph tags, or structured data yet.
 - [ ] **Accessibility audit:** Run through with a screen reader / axe. Basic a11y is in place (aria labels, focus styles, semantic HTML) but needs a proper check.
 - [ ] **Performance:** Fonts are loaded from Google Fonts. Consider self-hosting for speed.
 
@@ -39,3 +49,6 @@
 - [x] Responsive layout with clamp() and breakpoints
 - [x] Draft navigation no longer links to missing `about.html` (decision 010)
 - [x] Homepage carousel replaced with accessible tabs; focus and contrast fixes (decision 010)
+- [x] Final information architecture resolved as Home, Café, Restaurant, About and Visit; one Aroma brand with two related moods.
+- [x] Final header model resolved as wordmark/home plus Café, Restaurant, About and Visit, without a generic Menu link.
+- [ ] Draft primary navigation is not final-launch-ready: all three draft pages link to missing `about.html`; resolve deliberately before final-site launch.
