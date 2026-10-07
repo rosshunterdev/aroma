@@ -1,22 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap');
-
 :root {
   --paper: #f7f6f0;
-  --paper-warm: #eeeade;
   --ink: #15382a;
-  --ink-soft: #496457;
   --green: #155c3b;
-  --green-mid: #1c6847;
   --green-deep: #0d3c2a;
   --green-night: #082c21;
   --red: #bd352d;
-  --gold: #d4a85d;
   --white: #ffffff;
   --line: rgba(21, 56, 42, 0.24);
   --line-light: rgba(255, 255, 255, 0.42);
   --gutter: clamp(1rem, 4vw, 4.5rem);
-  --display: 'Newsreader', Georgia, serif;
-  --utility: 'DM Sans', Arial, sans-serif;
+  --display: Georgia, 'Times New Roman', serif;
+  --utility: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 }
 
 *,
@@ -164,9 +158,6 @@ a:focus-visible {
 
 .location,
 .section-heading__index,
-.offering__label,
-.image-slot__time,
-.image-slot__note,
 .slot-kicker,
 .highlight-card__number {
   font-size: 0.7rem;
@@ -264,10 +255,6 @@ a:focus-visible {
   line-height: 1;
 }
 
-.image-slot__note {
-  align-self: flex-end;
-}
-
 .image-slot--hero {
   min-height: 36rem;
   color: var(--green-night);
@@ -288,19 +275,6 @@ a:focus-visible {
   border-radius: 50%;
   content: '';
   opacity: 0.35;
-}
-
-.hero__side-note {
-  position: absolute;
-  right: calc(var(--gutter) * 0.35);
-  bottom: 4.5rem;
-  margin: 0;
-  color: var(--green);
-  font-family: var(--display);
-  font-size: 1rem;
-  line-height: 1.2;
-  transform: rotate(-90deg);
-  transform-origin: bottom right;
 }
 
 .offerings {
@@ -350,11 +324,6 @@ a:focus-visible {
   align-items: flex-start;
 }
 
-.offering__label {
-  margin: 0 0 0.65rem;
-  color: var(--red);
-}
-
 .offering h3 {
   max-width: 12ch;
   margin: 0 0 auto;
@@ -377,13 +346,12 @@ a:focus-visible {
 }
 
 .future-action {
-  display: inline-flex;
-  justify-content: space-between;
-  gap: 3rem;
+  display: block;
   width: 100%;
-  padding: 1rem 0;
-  border-top: 1px solid currentColor;
-  border-bottom: 1px solid currentColor;
+  margin: 0;
+  padding: 0.65rem 0 0.25rem;
+  border-bottom: 1px dotted currentColor;
+  opacity: 0.72;
   font-size: 0.74rem;
   font-weight: 600;
   letter-spacing: 0.11em;
@@ -409,7 +377,6 @@ a:focus-visible {
   clip-path: inset(0 -100vmax);
 }
 
-.offering--restaurant .offering__label,
 .offering--restaurant .slot-kicker {
   color: #ff968b;
 }
@@ -624,10 +591,6 @@ a:focus-visible {
 
   .hero__copy {
     max-width: 44rem;
-  }
-
-  .hero__side-note {
-    display: none;
   }
 
   .offering {
