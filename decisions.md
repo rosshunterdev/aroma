@@ -143,6 +143,15 @@ Ross has an artistic structure in mind that may take a different approach. This 
 
 ---
 
+## 013 — Option C: Swimsuit-inspired homepage comp
+
+**Date:** 2026-10-07
+**Status:** VERIFIED — Session 8, `site/redesign/option-c.html` on PR #4 preview (200). Ross's deeper review pending.
+**Decision:** Add a third homepage comp inspired by swimsuitcoffee.com (shown to Phillip, who liked it). Kiwi palette from 011 with Swimsuit's layout: centred wordmark with split nav, info-left/photo-right hero, dotted rules, red highlight links in place of yellow, green footer holding Find us/Hours/Book a table with a giant AROMA wordmark. Schibsted Grotesk. Same copy and slots as Option A. Options A and B left untouched.
+**Why:** Ross wants designs he is happy with before showing Phillip in person; Phillip responded well to Swimsuit. Ross and Ben currently prefer Option A.
+
+---
+
 ## Open — Phone number discrepancy
 
 **Status:** UNRESOLVED — needs client confirmation
