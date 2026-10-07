@@ -6,7 +6,7 @@
 
 **Owner:** Ben/Codex
 
-**Status:** blocked
+**Status:** in-progress
 
 - [ ] The concept covers Home only and is equally mature with concepts 02 and 04 at representative desktop and mobile sizes.
 - [ ] Its atmosphere is materially distinct from Refined minimal without changing product scope or information architecture.
