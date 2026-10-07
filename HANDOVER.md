@@ -2,6 +2,10 @@
 
 As of Session 8 (2026-10-07).
 
+## Product discovery — 2026-10-03 onward
+
+Work is on `codex/product-discovery`. Product discovery and the finished-site specification are approved as a planning baseline; individual product choices retain their approved/proposed status in `decisions.md`. The specification is at `.scratch/final-site/spec.md` and the phase-gated ticket plan is under `.scratch/final-site/issues/`. Do not begin concept implementation until the rebased planning PR receives final review. Phillip's 2026-10-05 client direction supersedes the early draft's visual assumptions: minimalist Kiwi-oriented styling, green primary, red secondary, white background, selective Vietnamese accents, and distinct Café/Restaurant offerings. See `docs/product-discovery.md` for the discovery record and `content-status.md` for provenance. Options A, B and C are preserved under `site/redesign/` as design evidence.
+
 ## Current state
 
 Three "Kiwi" homepage comps exist for Phillip's 2026-10-05 brief (decisions 011, 013). Ross and Ben both prefer Option A. Ross will show Phillip in person next week, only once he is happy with the designs; a friend reviews the links afterwards.
