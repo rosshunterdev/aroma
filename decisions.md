@@ -137,7 +137,7 @@ Ross has an artistic structure in mind that may take a different approach. This 
 ## 012 — Publish only `site/`; repo private
 
 **Date:** 2026-10-05
-**Status:** VERIFIED — merged to `main` through PR #4. Its preview served website pages and returned 404 for repository documentation.
+**Status:** VERIFIED — Session 7 on PR #4 preview; Session 8 on production after PR #4 merged to `main` (pages 200, every doc 404). Repo-private part SUPERSEDED by 032; publish-only-`site/` stands.
 **Decision:** Website files live in `site/`; `netlify.toml` sets `publish = "site"`. GitHub repo made private (Ben keeps write access).
 **Why:** Netlify was publishing the repo root, so `HANDOVER.md` (including pricing notes), `decisions.md`, `phillip.md`, `audit/` and `CLAUDE.md` were reachable by URL, and the public repo exposed them on GitHub too.
 **Impact:** Serve locally with `npx serve site`. All future website work stays inside `site/`; internal records stay outside it.
@@ -212,7 +212,7 @@ Ross has an artistic structure in mind that may take a different approach. This 
 ## 017 — Offering-led final-site information architecture
 
 **Date:** 2026-10-07
-**Status:** PROPOSED — especially the removal of a generic Menu navigation item; requires explicit Ross confirmation.
+**Status:** PROPOSED — especially the removal of a generic Menu navigation item; requires explicit Ross confirmation. Header model SUPERSEDED by 033 (Session 8); rest still PROPOSED.
 **Provenance:** Ben during final-site product discovery.
 
 **Decision:** Use five top-level destinations: Home, Café, Restaurant, About and Visit. Café and Restaurant each receive a dedicated page for their atmosphere, menu and relevant primary actions.
@@ -415,6 +415,17 @@ Ross has an artistic structure in mind that may take a different approach. This 
 **Outcome:** The finished site should leave visitors with a clear impression that Aroma is a warm, local Miramar café with an inviting atmosphere and a credible, slightly more refined Restaurant experience. It should be effortless to reach the appropriate menu, plan a visit or follow the confirmed dinner-booking journey.
 
 **Review:** Ross reviewed the completed discovery direction and was broadly happy with it, approving progression into specification.
+
+---
+
+## 032 — Repo public again for Netlify previews
+
+**Date:** 2026-10-07
+**Status:** DECIDED — Session 8, Ross made the repo public "at least for the time being".
+**Decision:** The GitHub repo is public. Netlify still publishes only `site/` (012 stands).
+**Why:** Netlify's free plan builds only one contributor's commits on a private repo ("unrecognized Git contributor"), so PR #5's deploy preview failed for Ben's commits. Public repos have no such limit, so Codex concept PRs get preview links.
+**Trade-off:** Pricing notes (Session 6 history), `phillip.md`, `content-status.md` and other docs are readable on GitHub. Alternatives were local review or Netlify Pro.
+**Supersedes:** the repo-private part of 012.
 
 ---
 
