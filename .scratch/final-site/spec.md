@@ -22,7 +22,7 @@ The visual brief is minimalist and Kiwi-oriented: green primary, red secondary a
 
 Work proceeds through three blocking phases within this specification:
 
-1. **Phase A — Concept design:** Produce three original Home-page concepts—Refined minimal, Warm neighbourhood and Day-to-night Aroma—using the same structure/content pack and clearly marked placeholders. Publish browser-review artifacts under `site/`; keep specs, tickets and internal documentation outside that published folder. Ross reviews the combined pool of Codex concepts and his existing explorations, then selects the strongest 2–3 total concepts for Phillip.
+1. **Phase A — Concept design:** Produce three original Home-page concepts—Refined minimal, Warm neighbourhood and Day-to-night Aroma—using the same structure/content pack and clearly marked placeholders. Publish browser-review artifacts under `site/concepts/`; keep specs, tickets and internal documentation outside the published `site/` folder. Ross reviews the combined pool of Codex concepts and his existing explorations, then selects the strongest 2–3 total concepts for Phillip.
 2. **Phase B — Selected-direction refinement:** After Phillip responds to or selects from Ross's curated set, refine the preferred direction, confirm the remaining proposed product details with Ross, and expand the selected system across Café, Restaurant, About and Visit. This phase is blocked by the client response and Ross's direction-setting review.
 3. **Phase C — Production implementation:** Build only the approved direction when the client facts and assets required for production are sufficiently confirmed. This phase is blocked by approval of the refined direction and by the production dependencies identified below. The temporary under-construction page remains operationally separate until an intentional final-site release replaces it.
 
@@ -74,7 +74,7 @@ Work proceeds through three blocking phases within this specification:
 ## Implementation Decisions
 
 - Preserve the existing static HTML, CSS and minimal vanilla-JavaScript architecture as the approved planning default. Hosting/domain/maintenance research does not block ticket creation or work that stays within that architecture. The research and owner approval are required before changing the architecture, selecting production hosting/deployment ownership, introducing a CMS or materially different maintenance model, or releasing to production.
-- Respect the shared publish boundary established by PR #4: browser-review concepts and future production website files belong under `site/`; repository docs, specs, tickets and internal records remain outside it. `netlify.toml` publishes only `site/`, preventing internal documentation from becoming publicly reachable.
+- Respect the shared publish boundary established by merged PR #4: new browser-review concepts belong under `site/concepts/`, Ross/Claude's Options A/B/C remain under `site/redesign/`, and future production website files belong under `site/`. Repository docs, specs, tickets and internal records remain outside it. `netlify.toml` publishes only `site/`, preventing internal documentation from becoming publicly reachable.
 - Treat the temporary under-construction page inside `site/` as a separate accepted artifact. Concept work and final-site implementation must not repurpose or incrementally redesign it. Replacing the public root is a deliberate release step after final-site acceptance.
 - Treat five top-level destinations—Home, Café, Restaurant, About and Visit—and omission of a generic Menu item as a PROPOSED information architecture pending explicit Ross approval.
 - Give Café and Restaurant dedicated pages. Each offering page combines atmosphere, its own accessible web menu and its relevant primary action rather than splitting those journeys across extra pages.
@@ -179,7 +179,7 @@ This research does not block ticket creation or static-architecture planning. It
 ### Acceptance Criteria
 
 1. Ross and Ben approve this specification before ticket creation.
-2. Three equally mature, original Home concepts are produced from the same shared information structure/content pack under `site/`, remain noindex review artifacts, and do not copy Ross's Options A or C.
+2. Three equally mature, original Home concepts are produced from the same shared information structure/content pack under `site/concepts/`, remain noindex review artifacts, and do not copy or modify Ross's Options A, B or C under `site/redesign/`.
 3. Ross reviews the combined design pool and curates the strongest 2–3 total concepts for Phillip's in-person review.
 4. Phillip responds to or selects from the curated set before Phase B begins; Phase C starts only after the refined direction, proposed product details and required production dependencies are sufficiently approved or confirmed.
 5. The selected direction preserves one recognisable Aroma brand, a slightly primary Café and a clearly visible Restaurant with the agreed restrained mood difference if Ross approves that proposal.

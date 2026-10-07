@@ -83,7 +83,7 @@ See [`TODO.md`](../TODO.md) for the existing questions about trading name, conta
 - **Option A:** A close, restrained interpretation of the reference: centred wordmark/navigation, sans-serif typography, generous white space, square green actions and highly separated sections. Ross's “decent” assessment is provisional.
 - **Option C:** A Swimsuit-inspired benchmark using strong sans-serif type, asymmetric information/image composition, dotted rules, red marked actions and a large footer wordmark. It is not client-approved.
 - Options A and C are Ross's quality benchmarks. Their detailed labels, layouts, markup and visual systems are exploration, not requirements or templates.
-- `origin/feature/redesign-options` is not merged into `main`. It also contains content provenance and implementation notes that should not be mistaken for approval of the comps.
+- PR #4 merged the redesign evidence into `main`; Options A/B/C now live under `site/redesign/`. Their presence on the shared baseline does not imply product or client approval of the comps.
 
 ## Contradictions and cautions
 

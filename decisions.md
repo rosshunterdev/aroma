@@ -104,9 +104,9 @@ Ross has an artistic structure in mind that may take a different approach. This 
 ## 009 — Temporary root page while the final site is developed
 
 **Date:** 2026-09-30
-**Decision:** Use `index.html` for a standalone temporary landing page and preserve the early homepage draft at `draft.html` with its existing Menu and Contact pages.
+**Decision:** Use `site/index.html` for a standalone temporary landing page and preserve the early homepage draft at `site/draft.html` with its existing Menu and Contact pages.
 **Why:** The temporary page can be removed cleanly without deleting, duplicating or substantially restructuring the unfinished site. Draft-page Home links point to `draft.html`, while the temporary page exposes no navigation into provisional content.
-**Impact:** The temporary page is an interim public entry point, not an approved final homepage. Restoring the draft as the root later requires deleting the temporary page and stylesheet, renaming `draft.html` to `index.html`, and restoring its internal Home links.
+**Impact:** The temporary page is an interim public entry point, not an approved final homepage. Any release replacement occurs deliberately within the published `site/` directory.
 
 ---
 
@@ -127,7 +127,7 @@ Ross has an artistic structure in mind that may take a different approach. This 
 ## 011 — Kiwi redesign: two homepage comps for Phillip to choose
 
 **Date:** 2026-10-05
-**Status:** BUILT — Session 7, `site/redesign/option-a.html` and `option-b.html` on `feature/site-structure-proposal`'s child branch `feature/redesign-options` (PR #4, draft, do not merge). Awaiting Phillip's pick.
+**Status:** BUILT — merged to `main` through PR #4. `site/redesign/option-a.html` and `option-b.html` remain design evidence awaiting Ross's curation and Phillip's response.
 **Decision:** Follow Phillip's 2026-10-05 brief (green primary `#1F5C3A`, red secondary `#C8372D`, white background, minimalist like Park Kitchen, Vietnamese styling only on highlighted items, Day/cafe and Evening/restaurant split). Present two self-contained homepage comps: A "Park Kitchen close" (Figtree, uppercase nav, red outline + tag on Vietnamese cards) and B "Warmer Kiwi" (Fraunces headings, green header/footer bands, red-edged featured card). Photos and restaurant details are copy slots.
 **Why:** Ross promised Phillip a couple of options; standalone comps let the options differ properly without touching live or draft pages.
 **Supersedes:** 010's visual direction only. Spec: `.scratch/redesign/spec.md`; plan: `.scratch/redesign/plan.md`.
@@ -137,17 +137,17 @@ Ross has an artistic structure in mind that may take a different approach. This 
 ## 012 — Publish only `site/`; repo private
 
 **Date:** 2026-10-05
-**Status:** VERIFIED — Session 7, on `feature/redesign-options`; PR #4 preview serves pages (200) and returns 404 for every doc. Production and PR #3 preview unchanged until this reaches `main`.
+**Status:** VERIFIED — merged to `main` through PR #4. Its preview served website pages and returned 404 for repository documentation.
 **Decision:** Website files live in `site/`; `netlify.toml` sets `publish = "site"`. GitHub repo made private (Ben keeps write access).
 **Why:** Netlify was publishing the repo root, so `HANDOVER.md` (including pricing notes), `decisions.md`, `phillip.md`, `audit/` and `CLAUDE.md` were reachable by URL, and the public repo exposed them on GitHub too.
-**Impact:** Serve locally with `npx serve site`. Branches still holding root-level pages will see renames when merged.
+**Impact:** Serve locally with `npx serve site`. All future website work stays inside `site/`; internal records stay outside it.
 
 ---
 
 ## 013 — Option C: Swimsuit-inspired homepage comp
 
 **Date:** 2026-10-07
-**Status:** VERIFIED — Session 8, `site/redesign/option-c.html` on PR #4 preview (200). Ross's deeper review pending.
+**Status:** VERIFIED — merged to `main` through PR #4 at `site/redesign/option-c.html`. Ross's deeper review remains pending.
 **Decision:** Add a third homepage comp inspired by swimsuitcoffee.com (shown to Phillip, who liked it). Kiwi palette from 011 with Swimsuit's layout: centred wordmark with split nav, info-left/photo-right hero, dotted rules, red highlight links in place of yellow, green footer holding Find us/Hours/Book a table with a giant AROMA wordmark. Schibsted Grotesk. Same copy and slots as Option A. Options A and B left untouched.
 **Why:** Ross wants designs he is happy with before showing Phillip in person; Phillip responded well to Swimsuit. Ross and Ben currently prefer Option A.
 

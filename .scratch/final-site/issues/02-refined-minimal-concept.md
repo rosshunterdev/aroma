@@ -1,6 +1,6 @@
 # 02: Create the Refined minimal concept
 
-**What to build:** One original Home-page concept under `site/` that interprets Aroma through strong hospitality photography, crisp typography and generous whitespace while preserving the shared content pack and visible Café/Restaurant journeys. Ross's Options A and C are quality benchmarks, not templates.
+**What to build:** One original Home-page concept under `site/concepts/` that interprets Aroma through strong hospitality photography, crisp typography and generous whitespace while preserving the shared content pack and visible Café/Restaurant journeys. Ross's Options A and C are quality benchmarks, not templates; Options A/B/C under `site/redesign/` remain unchanged.
 
 **Blocked by:** 01: Prepare the shared concept content pack.
 

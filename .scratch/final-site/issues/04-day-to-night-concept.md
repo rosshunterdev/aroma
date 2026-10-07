@@ -1,6 +1,6 @@
 # 04: Create the Day-to-night Aroma concept
 
-**What to build:** One original Home-page concept under `site/` in which the controlled Café-to-Restaurant tonal transition is the defining visual idea while both offerings remain unmistakably Aroma. Ross's Options A and C are quality benchmarks, not templates.
+**What to build:** One original Home-page concept under `site/concepts/` in which the controlled Café-to-Restaurant tonal transition is the defining visual idea while both offerings remain unmistakably Aroma. Ross's Options A and C are quality benchmarks, not templates; Options A/B/C under `site/redesign/` remain unchanged.
 
 **Blocked by:** 01: Prepare the shared concept content pack.
 

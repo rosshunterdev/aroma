@@ -8,8 +8,7 @@
 - [ ] **Selective Vietnamese highlights:** Confirm which specific items should receive this treatment and approve the way they are described.
 - [ ] **Phone number:** Which is the current booking number? `(020) 456 7837` (on physical menu) or `(+64)27 480 9896` (on old website)? Are both active?
 - [ ] **About page content:** The Vietnamese heritage story, how the cafe started, team info — none of this exists on the old site. Needs to come from the client.
-- [ ] **Photos:** Hero photo plus one photo each for the Food, Coffee and Tea highlights. Shown as copy slots on `draft.html` until supplied.
-- [ ] **Homepage copy slots:** Hero sentence in the client's words; Egg Coffee description; whether Tea stays a highlighted category.
+- [ ] **Early-draft photo/copy slots:** The historical `site/draft.html` still contains slots for its hero, Food/Coffee/Tea highlights, hero sentence and Egg Coffee description. Preserve these as draft evidence; do not treat them as the final-site brief.
 - [ ] **Photography:** Obtain Phillip-approved venue-and-people hero photography plus the supporting Café, Restaurant and menu imagery required by the chosen direction. The early draft's missing `assets/product.jpg` is historical, not the final brief.
 - [ ] **Menu accuracy:** Menu was transcribed from physical photos (W23.2024 dated). Confirm current items and prices before launch.
 - [ ] **Trading name:** Is it "Aroma Coffee", "Aroma Café" or "Aroma Coffee Works"? Using "Aroma Coffee" until confirmed.
@@ -33,20 +32,18 @@
 
 - [ ] **Final About experience:** Design after concept selection and build under `site/` once client story content is approved.
 - [ ] **Legal/privacy assessment:** Decide based on the actual launch functionality (analytics, forms, embeds and tracking); obtain appropriate client/legal advice if documents are required.
-- [ ] **Domain / hosting:** Decide where the new site will be hosted. Static HTML can go anywhere.
-- [ ] **Meta tags:** Description, Open Graph and favicon added to draft pages (ticket 07). Still to do: `og:image` (needs photos), the page address tag (needs domain), structured data (needs confirmed phone and hours).
 - [ ] **Self-host fonts:** Decide with Ben (privacy and performance); not started.
 - [ ] **Domain / hosting:** Research and recommend the lowest-maintenance production model, including account/domain ownership, deployment workflow, cost, handover and recovery. Do not assume the Netlify design preview is the final arrangement.
 - [ ] **Maintenance model:** Research developer-managed, client-editable and hybrid options against the expected frequency of menu, price, hours and Restaurant updates before selecting technology.
-- [ ] **Meta tags:** No `<meta description>`, Open Graph tags, or structured data yet.
+- [ ] **Final-site metadata:** The draft has basic description/Open Graph/favicon work, but final `og:image`, canonical/domain values and structured data depend on approved assets and confirmed phone/hours.
 - [ ] **Accessibility audit:** Run through with a screen reader / axe. Basic a11y is in place (aria labels, focus styles, semantic HTML) but needs a proper check.
 - [ ] **Performance:** Fonts are loaded from Google Fonts. Consider self-hosting for speed.
 
 ## Done
 
-- [x] Draft homepage (`draft.html`) built from Claude Design handoff
-- [x] Menu page (`menu.html`) transcribed from physical menu photos
-- [x] Contact page (`contact.html`) with address, hours, CTA
+- [x] Draft homepage (`site/draft.html`) built from Claude Design handoff
+- [x] Menu page (`site/menu.html`) transcribed from physical menu photos
+- [x] Contact page (`site/contact.html`) with address, hours, CTA
 - [x] Design tokens and CSS custom properties established
 - [x] Responsive layout with clamp() and breakpoints
 - [x] Draft navigation no longer links to missing `about.html` (decision 010)

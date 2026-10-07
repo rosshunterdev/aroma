@@ -1,6 +1,6 @@
 # 01: Prepare the shared concept content pack
 
-**What to build:** A review-safe Home-page content and structure pack that all three Codex visual concepts use, including the same section order, content density, labelled placeholders and provenance boundaries. Repository records stay outside `site/`; browser-review artifacts belong under `site/`.
+**What to build:** A review-safe Home-page content and structure pack that all three Codex visual concepts use, including the same section order, content density, labelled placeholders and provenance boundaries. Repository records stay outside `site/`; browser-review artifacts belong under `site/concepts/`.
 
 **Blocked by:** None (can start immediately).
 

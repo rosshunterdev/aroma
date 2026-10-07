@@ -1,6 +1,6 @@
 # 03: Create the Warm neighbourhood concept
 
-**What to build:** One original Home-page concept under `site/` that emphasizes candid community warmth and tactile local hospitality while using the same content pack as the other concepts. Ross's Options A and C are quality benchmarks, not templates.
+**What to build:** One original Home-page concept under `site/concepts/` that emphasizes candid community warmth and tactile local hospitality while using the same content pack as the other concepts. Ross's Options A and C are quality benchmarks, not templates; Options A/B/C under `site/redesign/` remain unchanged.
 
 **Blocked by:** 01: Prepare the shared concept content pack.
 
