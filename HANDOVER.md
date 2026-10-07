@@ -4,7 +4,11 @@ As of Session 8 (2026-10-07).
 
 ## Product discovery — 2026-10-03 onward
 
-Work is on `codex/product-discovery`. Product discovery, the specification as a planning baseline and the phased ticket plan have been reviewed; individual product choices retain their approved/proposed statuses in `decisions.md`. The specification is at `.scratch/final-site/spec.md` and the 26 tickets are under `.scratch/final-site/issues/`. Do not begin concept implementation until the reconciled planning PR is reviewed again.
+### Phase A Ticket 01 — shared concept content pack
+
+Ticket 01 is complete on `codex/concept-content-pack`. The builder-facing baseline is `.scratch/final-site/concept-content-pack.md`; Tickets 02–04 must use its fixed four-section Home order, comparable content slots, provenance labels, CTA/image intent, mobile priorities and accessibility constraints. It introduces no new client facts and leaves proposed navigation/product details explicitly pending Ross's approval. No concept pages or existing site artifacts were changed.
+
+PR #5 is merged into `main`. Product discovery, the specification as a planning baseline and the phased ticket plan have been reviewed; individual product choices retain their approved/proposed statuses in `decisions.md`. The specification is at `.scratch/final-site/spec.md` and the 26 tickets are under `.scratch/final-site/issues/`. Concept design remains gated until the Ticket 01 PR is reviewed.
 
 PR #4 is merged into `main`. Publishable website and browser-review concept artifacts live under `site/`, `netlify.toml` publishes only that folder, and documentation/specifications/tickets remain outside it. Options A, B and C remain unchanged under `site/redesign/`; new planning concepts will use `site/concepts/`. Shared decisions occupy IDs 010–013 and this branch's planning decisions start at 014.
 
@@ -46,8 +50,8 @@ Three "Kiwi" homepage comps exist for Phillip's 2026-10-05 brief (decisions 011,
 
 ## Next steps
 
-1. Ross/Claude: complete final review of rebased PR #5.
-2. After explicit approval, begin Ticket 01's shared Home concept content/structure pack; new concept artifacts belong under `site/concepts/`.
+1. Review and merge Ticket 01's shared Home concept content/structure pack.
+2. After Ticket 01 approval, begin Tickets 02–04 independently from the shared pack; new concept artifacts belong under `site/concepts/`.
 3. Branch cleanup: delete merged `codex/under-construction-page`, `codex/onboarding-continuity`, `feature/site-structure-proposal`, and `feature/redesign-options` only with Ross's explicit go-ahead.
 4. Ross: deeper review of Option C (and A), noting what to change. (30 min)
 5. Ross: curate 2–3 designs from his and Codex's combined pool for Phillip; ask the `phillip.md` questions during client review.
@@ -55,7 +59,7 @@ Three "Kiwi" homepage comps exist for Phillip's 2026-10-05 brief (decisions 011,
 ## Blockers / waiting on
 
 - Ross: deeper review of C; which comp(s) go to Phillip.
-- Ben/Ross/Claude: final PR #5 review before Ticket 01 begins; pricing split remains a separate owner discussion.
+- Ross/Ben: Ticket 01 review before any concept design begins; pricing split remains a separate owner discussion.
 - Phillip: direction pick; restaurant menu, hours, start date; Vietnamese specials; hero sentence, photos, phone, email, hours, socials, domain control (all in `phillip.md`).
 
 ## Concerns
@@ -69,10 +73,11 @@ Three "Kiwi" homepage comps exist for Phillip's 2026-10-05 brief (decisions 011,
 
 ## Git state
 
-- `main`: includes merged PR #4 at `bdda5c1`.
+- `main`: includes merged PR #5 at `8ab5cc7` (and PR #4 at `bdda5c1`).
 - `feature/site-structure-proposal`: PR #3 closed unmerged; commits contained in #4.
 - `feature/redesign-options`: PR #4 merged; Options A/B/C now live under `site/redesign/` on `main`.
-- `codex/product-discovery`: Ben's PR #5, open and rebased onto merged PR #4; awaiting final review.
+- `codex/product-discovery`: PR #5 merged into `main`.
+- `codex/concept-content-pack`: Ticket 01 implementation branch; shared pack complete and awaiting review.
 - Local only, gitignored: `NEXT-ACTIONS.md`, `docs/park-kitchen-reference.png`, `.playwright-mcp/` screenshots, `.superpowers/sdd/plan/` (stale, safe to delete).
 
 ## Key files
