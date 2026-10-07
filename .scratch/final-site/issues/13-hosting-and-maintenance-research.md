@@ -4,6 +4,8 @@
 
 **Blocked by:** None (can start immediately).
 
+**Owner:** Ben/Codex
+
 **Status:** ready-for-agent
 
 - [ ] Options compare cost, ownership, deployment, rollback/recovery, handover and expected update frequency.

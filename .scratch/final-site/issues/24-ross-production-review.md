@@ -4,7 +4,9 @@
 
 **Blocked by:** 23: Complete performance, privacy and release readiness.
 
-**Status:** ready-for-agent
+**Owner:** Ross
+
+**Status:** needs-human
 
 - [ ] Ross reviews the complete site across representative mobile and desktop journeys.
 - [ ] Product hierarchy, visual fidelity, content provenance and Restaurant/Café relationship are explicitly assessed.

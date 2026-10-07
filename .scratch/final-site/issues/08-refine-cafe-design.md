@@ -4,7 +4,9 @@
 
 **Blocked by:** 07: Refine the selected system and Home experience.
 
-**Status:** ready-for-agent
+**Owner:** Ben/Codex
+
+**Status:** blocked
 
 - [ ] Café uses the shared Aroma system and the approved casual, coffee-oriented mood.
 - [ ] Menu hierarchy, categories, optional jump links and primary actions are resolved for mobile and desktop.

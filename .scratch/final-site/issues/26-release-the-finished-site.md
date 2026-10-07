@@ -1,10 +1,12 @@
 # 26: Release the finished site
 
-**What to build:** A deliberate, recoverable production release that replaces the temporary root page with the approved finished experience.
+**What to build:** A deliberate, recoverable production release from `site/` that replaces the temporary public page with the approved finished experience without publishing repository-internal records.
 
 **Blocked by:** 25: Obtain Phillip's production and launch approval; 13: Recommend hosting and maintenance ownership.
 
-**Status:** ready-for-agent
+**Owner:** shared/human
+
+**Status:** blocked
 
 - [ ] The approved release uses the documented production hosting, ownership and deployment workflow.
 - [ ] The temporary page remains recoverable and is replaced only as part of the approved cutover.

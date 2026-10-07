@@ -4,7 +4,9 @@
 
 **Blocked by:** 06: Obtain Phillip's concept selection (client input required).
 
-**Status:** ready-for-agent
+**Owner:** Phillip/client + Ross
+
+**Status:** needs-human
 
 - [ ] Required shots and aspect/orientation needs are derived from the selected direction.
 - [ ] Phillip approves the final assets and their intended use; usage permission is recorded.

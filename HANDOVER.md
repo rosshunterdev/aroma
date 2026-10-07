@@ -4,7 +4,11 @@ As of Session 8 (2026-10-07).
 
 ## Product discovery — 2026-10-03 onward
 
-Work is on `codex/product-discovery`. Product discovery and the finished-site specification are approved as a planning baseline; individual product choices retain their approved/proposed status in `decisions.md`. The specification is at `.scratch/final-site/spec.md` and the phase-gated ticket plan is under `.scratch/final-site/issues/`. Do not begin concept implementation until the rebased planning PR receives final review. Phillip's 2026-10-05 client direction supersedes the early draft's visual assumptions: minimalist Kiwi-oriented styling, green primary, red secondary, white background, selective Vietnamese accents, and distinct Café/Restaurant offerings. See `docs/product-discovery.md` for the discovery record and `content-status.md` for provenance. Options A, B and C are preserved under `site/redesign/` as design evidence.
+Work is on `codex/product-discovery`. Product discovery, the specification as a planning baseline and the phased ticket plan have been reviewed; individual product choices retain their approved/proposed statuses in `decisions.md`. The specification is at `.scratch/final-site/spec.md` and the 26 tickets are under `.scratch/final-site/issues/`. Do not begin concept implementation until the reconciled planning PR is reviewed again.
+
+PR #4 is merged into `main`. Publishable website and browser-review concept artifacts live under `site/`, `netlify.toml` publishes only that folder, and documentation/specifications/tickets remain outside it. Options A, B and C remain unchanged under `site/redesign/`; new planning concepts will use `site/concepts/`. Shared decisions occupy IDs 010–013 and this branch's planning decisions start at 014.
+
+Phase A produces three equally mature, responsive, noindex Home-page concepts using one shared content structure. Ross's Options A and C are quality benchmarks rather than templates. Ross reviews the combined pool, curates the strongest two or three total concepts for Phillip, and only the selected direction proceeds to whole-site refinement. Use “Aroma Coffee” provisionally until Phillip confirms the trading name. See `docs/product-discovery.md` for the discovery record and `content-status.md` for provenance.
 
 ## Current state
 

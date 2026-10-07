@@ -4,7 +4,9 @@
 
 **Blocked by:** 08: Refine the Café experience; 09: Refine the Restaurant experience; 10: Refine the About and Visit experiences.
 
-**Status:** ready-for-agent
+**Owner:** Ross
+
+**Status:** needs-human
 
 - [ ] Ross reviews the complete selected direction across all five destinations and representative viewports.
 - [ ] Shared-brand consistency, offering hierarchy and tonal differentiation are explicitly assessed.

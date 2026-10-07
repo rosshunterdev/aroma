@@ -22,14 +22,16 @@
 - [ ] **Review decision 010:** Ben/Codex review of `feature/site-structure-proposal` (header, homepage, menu anchors, accessibility fixes).
 - [ ] **Screen reader pass:** NVDA check of the draft pages once client content is in.
 - [ ] **Menu + contact page design review:** These draft pages were built to match the draft homepage design system but without a dedicated design comp. They need a proper layout and visual hierarchy pass — spacing, typography scale, how items flow on different screen sizes. Consider taking them through Claude Design for a comp before refining.
-- [ ] **Final visual direction:** Decision 010 supersedes the early draft's brown/cream/sage visual assumptions. Review multiple distinct options with Phillip; Option A/B are evidence, not approval.
-- [ ] **Three design directions:** Produce equally mature Refined minimal, Warm neighbourhood and Day-to-night Aroma concepts using the resolved product structure; ask Phillip to choose an overall direction before refinement.
+- [ ] **Final visual direction:** Decision 014 records the client brief that supersedes the early draft's brown/cream/sage assumptions. Ross's Options A and C are benchmarks, not approval or templates.
+- [ ] **Proposed product details:** Ross must explicitly approve the proposed Café/Restaurant hierarchy, information architecture and omission of a generic Menu item before they are treated as final requirements.
+- [ ] **Three Home design directions:** Under `site/concepts/`, produce equally mature, responsive, noindex Refined minimal, Warm neighbourhood and Day-to-night Aroma Home concepts using one shared structure/content pack and labelled placeholders.
+- [ ] **Concept curation and selection:** Ross reviews the combined Codex/Ross pool and selects the strongest two or three total concepts for Phillip; Phillip's response/selection gates whole-site refinement.
 - [ ] **Mobile testing:** Responsive breakpoints exist but haven't been tested on real devices.
 - [ ] **Final-site favicon:** The temporary page uses the existing leaf SVG; choose and validate the final-site favicon later.
 
 ## Build
 
-- [ ] **`about.html`:** Create once client provides content
+- [ ] **Final About experience:** Design after concept selection and build under `site/` once client story content is approved.
 - [ ] **Legal/privacy assessment:** Decide based on the actual launch functionality (analytics, forms, embeds and tracking); obtain appropriate client/legal advice if documents are required.
 - [ ] **Domain / hosting:** Decide where the new site will be hosted. Static HTML can go anywhere.
 - [ ] **Meta tags:** Description, Open Graph and favicon added to draft pages (ticket 07). Still to do: `og:image` (needs photos), the page address tag (needs domain), structured data (needs confirmed phone and hours).
@@ -49,6 +51,6 @@
 - [x] Responsive layout with clamp() and breakpoints
 - [x] Draft navigation no longer links to missing `about.html` (decision 010)
 - [x] Homepage carousel replaced with accessible tabs; focus and contrast fixes (decision 010)
-- [x] Final information architecture resolved as Home, Café, Restaurant, About and Visit; one Aroma brand with two related moods.
-- [x] Final header model resolved as wordmark/home plus Café, Restaurant, About and Visit, without a generic Menu link.
+- [ ] Proposed final information architecture is Home, Café, Restaurant, About and Visit; Ross approval is still required.
+- [ ] Proposed final header is wordmark/home plus Café, Restaurant, About and Visit without a generic Menu link; Ross approval is still required.
 - [ ] Draft primary navigation is not final-launch-ready: all three draft pages link to missing `about.html`; resolve deliberately before final-site launch.

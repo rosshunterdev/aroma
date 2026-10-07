@@ -4,7 +4,9 @@
 
 **Blocked by:** 07: Refine the selected system and Home experience.
 
-**Status:** ready-for-agent
+**Owner:** Ben/Codex
+
+**Status:** blocked
 
 - [ ] About is people-, place- and community-led with an authentic but non-dominant Vietnamese-heritage treatment.
 - [ ] Visit separates Café and Restaurant hours and provides clear directions, contact and booking areas.

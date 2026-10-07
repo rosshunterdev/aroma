@@ -4,7 +4,9 @@
 
 **Blocked by:** 11: Complete the Ross refinement gate.
 
-**Status:** ready-for-agent
+**Owner:** Ross + Phillip/client
+
+**Status:** needs-human
 
 - [ ] Phillip reviews the complete selected direction rather than isolated screens.
 - [ ] Approval or specific revision requests are recorded durably.

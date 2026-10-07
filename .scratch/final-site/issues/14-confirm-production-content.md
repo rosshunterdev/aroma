@@ -4,7 +4,9 @@
 
 **Blocked by:** None (can start immediately; client input required).
 
-**Status:** ready-for-agent
+**Owner:** Phillip/client (coordinated by Ross)
+
+**Status:** needs-human
 
 - [ ] Trading name, contact details, Café and Restaurant hours/status, booking method and access information are confirmed or explicitly marked unavailable.
 - [ ] Café and Restaurant menus, categories, descriptions, prices and availability are approved.

@@ -4,7 +4,9 @@
 
 **Blocked by:** 17: Build the Café experience and menu; 18: Build the Restaurant experience, menu and booking journey; 19: Build the About experience; 20: Build the Visit and directions experience.
 
-**Status:** ready-for-agent
+**Owner:** Ben/Codex
+
+**Status:** blocked
 
 - [ ] Automated accessibility checks pass across all production pages.
 - [ ] Manual keyboard, visible-focus, semantic landmark/heading and representative screen-reader journeys pass.

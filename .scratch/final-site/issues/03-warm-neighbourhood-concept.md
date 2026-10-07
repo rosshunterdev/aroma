@@ -1,12 +1,14 @@
 # 03: Create the Warm neighbourhood concept
 
-**What to build:** One complete client-review concept that emphasizes candid community warmth and tactile local hospitality while remaining minimalist and using the same approved structure as the other concepts.
+**What to build:** One original Home-page concept under `site/` that emphasizes candid community warmth and tactile local hospitality while using the same content pack as the other concepts. Ross's Options A and C are quality benchmarks, not templates.
 
 **Blocked by:** 01: Prepare the shared concept content pack.
 
-**Status:** ready-for-agent
+**Owner:** Ben/Codex
 
-- [ ] The concept covers representative Home, Café, Restaurant, About and Visit views at desktop and mobile sizes.
+**Status:** blocked
+
+- [ ] The concept covers Home only and is equally mature with concepts 02 and 04 at representative desktop and mobile sizes.
 - [ ] Its atmosphere is materially distinct from Refined minimal without changing product scope or information architecture.
 - [ ] The concept is clearly labelled non-production, is not indexed and uses only approved facts or labelled placeholders.
 - [ ] Browser review confirms usable navigation, no horizontal overflow and a credible WCAG 2.2 AA path.

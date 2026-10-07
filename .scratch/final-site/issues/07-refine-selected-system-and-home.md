@@ -4,9 +4,11 @@
 
 **Blocked by:** 06: Obtain Phillip's concept selection.
 
-**Status:** ready-for-agent
+**Owner:** Ben/Codex
+
+**Status:** blocked
 
 - [ ] Shared colour, typography, spacing, interaction and responsive rules are defined for both offering moods.
-- [ ] Home contains the four agreed sections and no Food/Coffee/Tea carousel.
+- [ ] Home contains the four planning-baseline sections and no Food/Coffee/Tea carousel; proposed product details are confirmed with Ross before being treated as final.
 - [ ] Mobile navigation and early offering actions are resolved in the design.
 - [ ] Review artifacts distinguish approved decisions from production content placeholders.

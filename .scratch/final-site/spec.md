@@ -1,6 +1,6 @@
-# Finished Aroma Coffee Works website
+# Finished Aroma Coffee website
 
-Status: approved
+Status: approved planning baseline; individual product choices retain their approved/proposed status from `decisions.md`
 
 ## Problem Statement
 
@@ -8,11 +8,11 @@ Aroma's public root is currently a completed temporary under-construction page. 
 
 Visitors need a finished site that quickly communicates Aroma as one warm, local Miramar brand with two related offerings: a slightly primary, casual Café and a clearly visible, somewhat more refined Restaurant. They must be able to understand each atmosphere, reach the appropriate menu, plan a visit and follow the confirmed booking route without ambiguity. The site must not publish provisional client facts as truth.
 
-Before production design begins, Phillip also needs three genuinely distinct, equally mature visual concepts based on the same approved product structure so he can select one coherent direction.
+Before production design begins, Codex must create three genuinely distinct, equally mature Home-page concepts based on one shared information structure/content pack. Ross will compare these with his existing explorations and curate the strongest 2–3 total concepts for Phillip's in-person review.
 
 ## Solution
 
-Create a finished, restrained five-page website with top-level destinations for Home, Café, Restaurant, About and Visit. The Aroma wordmark links home. Café and Restaurant each have a focused page containing their atmosphere, accessible web menu and relevant primary action; there is no ambiguous generic Menu destination.
+The proposed production direction is a finished, restrained five-page website with top-level destinations for Home, Café, Restaurant, About and Visit. The proposed navigation uses the Aroma wordmark as Home and omits a generic Menu destination; this and other details marked PROPOSED in `decisions.md` require explicit Ross approval before selected-direction refinement locks them in.
 
 The homepage is slightly Café-led while giving Restaurant deliberate visibility. It uses a strong, mostly static hero led by candid venue-and-people photography, clear Café and Restaurant paths, a small set of selected highlights and concise Visit information. The former Food/Coffee/Tea carousel is removed.
 
@@ -22,8 +22,8 @@ The visual brief is minimalist and Kiwi-oriented: green primary, red secondary a
 
 Work proceeds through three blocking phases within this specification:
 
-1. **Phase A — Concept design:** Produce three concept directions—Refined minimal, Warm neighbourhood and Day-to-night Aroma—using the same structure and clearly marked placeholder material where necessary. Phillip selects one overall direction.
-2. **Phase B — Selected-direction refinement:** Refine the selected direction and resolve its design details. This phase is blocked by Phillip's concept selection.
+1. **Phase A — Concept design:** Produce three original Home-page concepts—Refined minimal, Warm neighbourhood and Day-to-night Aroma—using the same structure/content pack and clearly marked placeholders. Publish browser-review artifacts under `site/`; keep specs, tickets and internal documentation outside that published folder. Ross reviews the combined pool of Codex concepts and his existing explorations, then selects the strongest 2–3 total concepts for Phillip.
+2. **Phase B — Selected-direction refinement:** After Phillip responds to or selects from Ross's curated set, refine the preferred direction, confirm the remaining proposed product details with Ross, and expand the selected system across Café, Restaurant, About and Visit. This phase is blocked by the client response and Ross's direction-setting review.
 3. **Phase C — Production implementation:** Build only the approved direction when the client facts and assets required for production are sufficiently confirmed. This phase is blocked by approval of the refined direction and by the production dependencies identified below. The temporary under-construction page remains operationally separate until an intentional final-site release replaces it.
 
 ## User Stories
@@ -63,9 +63,9 @@ Work proceeds through three blocking phases within this specification:
 33. As a motion-sensitive visitor, I want nonessential motion reduced or absent, so that the experience remains comfortable.
 34. As a screen-reader user, I want semantic headings, landmarks, link names and meaningful image alternatives, so that each page is understandable without its visual presentation.
 35. As a visitor on a slow mobile connection, I want a fast, restrained site, so that large photography and fonts do not block the primary journeys.
-36. As Phillip, I want three distinct concepts built on the same product structure, so that I can compare brand directions rather than incompatible site plans.
+36. As Ross, I want three original Home concepts built on the same information structure, so that I can compare them fairly with my existing design pool.
 37. As Phillip, I want placeholders and provisional facts clearly labelled in concepts, so that I do not mistake them for approved launch content.
-38. As Phillip, I want to select one overall visual direction before refinement, so that the final identity remains coherent.
+38. As Phillip, I want to review only the strongest 2–3 concepts curated by Ross, so that the in-person comparison remains focused.
 39. As the Aroma team, I want unconfirmed facts excluded from production, so that customers are not given incorrect menus, hours, prices, contact details or booking instructions.
 40. As the site maintainer, I want a restrained architecture with minimal operational burden, so that routine changes remain safe and affordable.
 41. As the site owner, I want hosting, domain and recovery ownership documented before release, so that Aroma is not dependent on inaccessible accounts.
@@ -74,8 +74,9 @@ Work proceeds through three blocking phases within this specification:
 ## Implementation Decisions
 
 - Preserve the existing static HTML, CSS and minimal vanilla-JavaScript architecture as the approved planning default. Hosting/domain/maintenance research does not block ticket creation or work that stays within that architecture. The research and owner approval are required before changing the architecture, selecting production hosting/deployment ownership, introducing a CMS or materially different maintenance model, or releasing to production.
-- Treat the temporary under-construction page as a separate accepted artifact. Concept work and final-site implementation must not repurpose or incrementally redesign it. Replacing the public root is a deliberate release step after final-site acceptance.
-- Use five top-level destinations: Home, Café, Restaurant, About and Visit. The Aroma wordmark acts as the Home link. Do not add a generic Menu item.
+- Respect the shared publish boundary established by PR #4: browser-review concepts and future production website files belong under `site/`; repository docs, specs, tickets and internal records remain outside it. `netlify.toml` publishes only `site/`, preventing internal documentation from becoming publicly reachable.
+- Treat the temporary under-construction page inside `site/` as a separate accepted artifact. Concept work and final-site implementation must not repurpose or incrementally redesign it. Replacing the public root is a deliberate release step after final-site acceptance.
+- Treat five top-level destinations—Home, Café, Restaurant, About and Visit—and omission of a generic Menu item as a PROPOSED information architecture pending explicit Ross approval.
 - Give Café and Restaurant dedicated pages. Each offering page combines atmosphere, its own accessible web menu and its relevant primary action rather than splitting those journeys across extra pages.
 - Keep offering pages simple: direct hierarchy, no nested navigation requirement, no menu filtering and no carousel. Use category jump links only when content length justifies them.
 - Keep the homepage to four core sections: a Café-led photographic hero, clear Café/Restaurant paths, a small set of selected highlights and concise Visit information.
@@ -93,10 +94,10 @@ Work proceeds through three blocking phases within this specification:
 - Do not embed an interactive map by default. The address and external Maps link are the functional journey.
 - Reserve an optional place for a future colour-matched Miramar illustration, but do not design or ship it until a visual direction is selected and accuracy, accessibility and source-data licensing are resolved.
 - Use warm, concise and straightforward copy. Keep it locally grounded without forced Kiwi phrasing, exaggerated claims, generic luxury language or long brand manifestos. Restaurant wording may be slightly more polished while retaining Aroma's voice.
-- Create three separate concept artifacts for Phillip: Refined minimal, Warm neighbourhood and Day-to-night Aroma. They must use identical product scope and comparable content states, be equally mature and differ materially in atmosphere and brand expression.
-- Use existing Option A/B, the early draft, Park Kitchen and other handoff materials as evidence only. Do not treat their exact layouts, fonts, tokens, copy, contact facts or components as approved requirements.
+- Create three separate Home-only concept artifacts: Refined minimal, Warm neighbourhood and Day-to-night Aroma. They must use identical information structure and comparable content states, be equally mature, work at representative desktop/mobile sizes and differ materially in atmosphere and brand expression.
+- Use Ross's existing Options A and C as quality/reference benchmarks only. Codex must create original concepts competitive with or stronger than those references without copying their markup, layout or exact visual system.
 - Mark concept-only pages clearly as review material and prevent them from being indexed. Placeholder copy, content slots and representative temporary imagery are permitted only when unmistakably labelled.
-- Ask Phillip to choose one overall concept before refinement. Borrow elements from other concepts only selectively and only when they preserve the chosen direction's coherence.
+- Ross reviews the combined design pool and curates the strongest 2–3 total concepts for Phillip. Phillip responds to or selects from that curated set before refinement. Borrow elements only selectively where they preserve the chosen direction's coherence.
 - Treat direct client confirmation as the highest content authority. Preserve unresolved facts as named dependencies and never convert plausible values, old-site content, public listings or comp copy into confirmed production content.
 - Keep metadata and structured data offering-specific and factually conservative. Do not claim the Restaurant is available until its status, name, hours and launch timing are confirmed.
 - Meet WCAG 2.2 AA at launch. Accessibility is part of design and implementation acceptance, not a later audit-only enhancement.
@@ -108,7 +109,7 @@ Work proceeds through three blocking phases within this specification:
 
 - Use one primary behavioural test seam: the fully rendered static site served over HTTP and exercised through observable browser journeys. Tests should verify what visitors can see, reach and operate rather than private markup organization or CSS implementation details.
 - Supplement that seam with narrow static or automated checks for content provenance, metadata and structured data, internal routes and assets, accessibility automation, and other contracts that browser journeys alone diagnose poorly. Do not couple tests to internal markup or CSS organization unless a genuine reusable behaviour seam requires it.
-- Concept-phase checks cover all three review options at representative desktop and mobile widths: identical required structure, clear review labelling, no indexing, no horizontal overflow, working option navigation and no unlabelled provisional facts.
+- Concept-phase checks cover all three Codex Home concepts at representative desktop and mobile widths: identical required information structure/content state, clear review labelling, no indexing, no horizontal overflow, working review navigation and no unlabelled provisional facts.
 - Final-site journey checks cover: wordmark-to-Home navigation; every top-level destination; Home-to-Café and Home-to-Restaurant paths; Café menu discovery; Restaurant menu discovery; Restaurant booking action; Visit directions; and return navigation.
 - Menu checks verify semantic, visible web content; correct category navigation where present; keyboard reachability; no PDF-only dependency; and no filtering/carousel requirement.
 - Content-provenance checks compare every production business fact against the approved content record. Tests must fail or launch must remain blocked when required client facts are unresolved, rather than accepting placeholder text.
@@ -126,7 +127,8 @@ Work proceeds through three blocking phases within this specification:
 
 - Redesigning or replacing the accepted temporary under-construction page before final-site release.
 - Implementing the production site during specification or concept selection.
-- Treating all three design concepts as production sites; only one direction proceeds after Phillip's selection.
+- Building Café, Restaurant, About or Visit concept pages during Phase A; those follow only after Ross's curation and Phillip's response/selection.
+- Treating any design concept as a production site; only the selected and refined direction proceeds.
 - Carrying forward the Food/Coffee/Tea carousel, autoplay behavior or homepage category tabs.
 - A generic shared Menu destination, menu filtering or a PDF-only menu.
 - Online ordering, unless Phillip explicitly changes the confirmed direction in a later decision.
@@ -177,27 +179,29 @@ This research does not block ticket creation or static-architecture planning. It
 ### Acceptance Criteria
 
 1. Ross and Ben approve this specification before ticket creation.
-2. Three equally mature concept directions are produced from the same approved structure and are clearly labelled as non-production review artifacts.
-3. Phillip selects one overall visual direction before Phase B refinement begins; Phase C production implementation begins only after the refined direction is approved and required production dependencies are sufficiently confirmed.
-4. The selected direction preserves one recognisable Aroma brand, a slightly primary Café and a clearly visible Restaurant with the agreed restrained mood difference.
-5. The final information architecture contains Home, Café, Restaurant, About and Visit, with the wordmark linking Home and no generic Menu destination.
-6. The homepage contains the four agreed sections and no Food/Coffee/Tea carousel.
-7. Café and Restaurant each provide a prominent, accessible web menu and their relevant primary actions.
-8. Restaurant booking uses only the client-confirmed method and is prominent on the Restaurant page and available through Visit.
-9. Visit distinguishes confirmed Café and Restaurant hours and provides the confirmed address, contact routes and Open in Google Maps link.
-10. About and Vietnamese highlights use only Phillip-approved facts and items, with the restrained red label/accent treatment.
-11. No unresolved client fact or design placeholder is published as production truth.
-12. All five pages meet the agreed mobile navigation and responsive-behavior requirements without horizontal overflow.
-13. The complete production experience meets WCAG 2.2 AA through automated and manual verification.
-14. Production pages have accurate, unique metadata and factually safe local-business structured data appropriate to the confirmed offering status.
-15. Production assets and dependencies meet the performance budgets established before implementation, with no unnecessary carousel, embed or third-party script.
-16. All internal routes, assets and external action links pass automated checks and browser review.
-17. Hosting/domain ownership, deployment/recovery and ongoing maintenance responsibilities are documented before release.
-18. The temporary page remains unchanged until the deliberate final-site release step.
+2. Three equally mature, original Home concepts are produced from the same shared information structure/content pack under `site/`, remain noindex review artifacts, and do not copy Ross's Options A or C.
+3. Ross reviews the combined design pool and curates the strongest 2–3 total concepts for Phillip's in-person review.
+4. Phillip responds to or selects from the curated set before Phase B begins; Phase C starts only after the refined direction, proposed product details and required production dependencies are sufficiently approved or confirmed.
+5. The selected direction preserves one recognisable Aroma brand, a slightly primary Café and a clearly visible Restaurant with the agreed restrained mood difference if Ross approves that proposal.
+6. The final information architecture and navigation reflect Ross's explicit decision on the proposed five destinations and generic Menu item.
+7. The homepage contains the planning-baseline sections, as confirmed during refinement, and no Food/Coffee/Tea carousel.
+8. Café and Restaurant each provide a prominent, accessible web menu and their relevant primary actions.
+9. Restaurant booking uses only the client-confirmed method and is prominent on the Restaurant page and available through Visit.
+10. Visit distinguishes confirmed Café and Restaurant hours and provides the confirmed address, contact routes and Open in Google Maps link.
+11. About and Vietnamese highlights use only Phillip-approved facts and items, with the approved treatment.
+12. No unresolved client fact or design placeholder is published as production truth.
+13. All five pages meet the final Ross-approved mobile navigation and responsive-behaviour requirements without horizontal overflow.
+14. The complete production experience meets WCAG 2.2 AA through automated and manual verification.
+15. Production pages have accurate, unique metadata and factually safe local-business structured data appropriate to the confirmed offering status.
+16. Production assets and dependencies meet the performance budgets established before implementation, with no unnecessary carousel, embed or third-party script.
+17. All internal routes, assets and external action links pass automated checks and browser review.
+18. Hosting/domain ownership, deployment/recovery and ongoing maintenance responsibilities are documented before release.
+19. `netlify.toml` publishes only `site/`; internal repository documentation is not reachable from deployed previews or production.
+20. The temporary page remains unchanged until the deliberate final-site release step.
 
 ### Specification review focus
 
 - **Resolved:** The rendered-site/browser journey is the primary behavioural seam, supplemented by narrow contract checks where browser journeys diagnose poorly.
 - **Resolved:** Static HTML/CSS/minimal JavaScript is the approved planning default. Hosting/maintenance research does not block ticket creation, but gates architecture or CMS changes, production hosting/ownership selection and final release.
-- **Resolved:** Concept design, selected-direction refinement and production implementation remain phase-gated parts of this single specification.
+- **Resolved:** Home-only concept design, Ross curation, selected-direction refinement and production implementation remain phase-gated parts of this single specification.
 - **Resolved:** Clearly labelled representative placeholders are permitted for concept review; only dependencies that materially affect the information architecture or concept block Phase A. Confirmed production facts and assets remain mandatory before they are published.

@@ -4,7 +4,9 @@
 
 **Blocked by:** 24: Complete the Ross production-review gate.
 
-**Status:** ready-for-agent
+**Owner:** Ross + Phillip/client
+
+**Status:** needs-human
 
 - [ ] Phillip reviews the complete release candidate and confirms the customer-facing content and imagery.
 - [ ] Any remaining corrections are completed and rechecked before approval is recorded.

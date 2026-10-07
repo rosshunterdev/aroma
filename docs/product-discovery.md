@@ -1,9 +1,9 @@
 # Final-site product discovery
 
-**Status:** Approved by Ben and broadly approved by Ross; specification drafted for review
+**Status:** Approved planning baseline with individual product choices marked approved or proposed
 **Started:** 2026-10-03
 **Last reconciled:** 2026-10-07
-**Objective:** Define what the finished Aroma Coffee Works website should enable and communicate before architecture, specification or implementation begins.
+**Objective:** Define what the finished Aroma Coffee website should enable and communicate before architecture or implementation begins. “Aroma Coffee” is provisional until Phillip confirms the trading name.
 
 The temporary `index.html` page is complete and out of scope for redesign in this phase. The preserved full-site draft, `NEW-DESIGN.png`, design handoff, CSS and earlier decisions are evidence, not approved final requirements.
 
@@ -17,46 +17,40 @@ Resolved product vocabulary is defined in [`GLOSSARY.md`](../GLOSSARY.md).
 - Business facts not directly confirmed by Aroma must remain visibly unresolved rather than being inferred.
 - No implementation begins during product discovery.
 
-## Product/design decisions
+## Approved direction and process
 
-- The early draft's brown/cream/sage visual language is historical, not the final-site direction.
-- The final direction must interpret Phillip's minimalist, Kiwi-oriented green/red/white brief.
-- “Kiwi” means an unpretentious, approachable local-neighbourhood atmosphere rather than literal New Zealand symbols or themed styling.
-- Vietnamese identity is a selective highlight for client-approved special items, not the site's dominant visual language.
-- Café and Restaurant belong to one recognisable Aroma brand. The Café should feel relatively casual and coffee-oriented; the Restaurant may feel more evening, refined, professional and considered without becoming a separate-looking business. A specifically romantic mood is not required.
-- The Restaurant mood should emerge through a restrained combination of evening photography/lighting, refined typography and spacing, deeper shared colours and slightly more formal service presentation.
-- The homepage should be Café-led with the Café only slightly primary. Restaurant visibility must be deliberate and prominent enough that visitors recognise it as a real Aroma offering.
-- Café journey priority: view the Café menu, then understand its atmosphere.
-- Restaurant journey priority: view the Restaurant menu, understand its dining experience, then make a booking. The booking method remains a client question.
-- The final homepage will not use the Food/Coffee/Tea carousel. It will open with a strong, mostly static Café-led hero and provide clear paths into both offerings.
-- The hero should be led by a strong photograph of the venue and people so visitors understand the Café atmosphere immediately.
-- Hero photography should feel candid, local, community-oriented, warm and intimate rather than polished advertising.
-- The minimalist homepage is limited to four core sections: Café-led hero; Café/Restaurant paths; a small set of selected highlights; and Visit information. Detailed menus, story and Restaurant content belong deeper in the site.
-- Final top-level destinations are Home, Café, Restaurant, About and Visit. Café and Restaurant each have a dedicated, simply navigable page containing their atmosphere, menu and relevant actions.
-- The main header uses the Aroma wordmark as Home plus Café, Restaurant, About and Visit. There is no generic Menu link; each offering exposes its own menu prominently.
-- About should lead with Aroma's people, place and local community. Vietnamese background and culinary influence belong authentically within that story, subject to Phillip's content and approval.
-- Approved Vietnamese highlights use a small red accent or label rather than ornamental themed decoration or a separate visual system.
-- Each offering page contains a readable, mobile-friendly web menu with clear categories and prices. Category jump links are used only for long menus; no filtering, carousel or PDF-only experience. A PDF may be secondary.
-- Visit is the practical information hub: separate Café/Restaurant hours, address and directions, contact details, useful client-supplied access information and the confirmed Restaurant booking method. Restaurant also repeats its booking action.
-- Mobile uses a compact, simple header; keeps all top-level destinations easy to reach; surfaces offering-specific actions early; and avoids a persistent bottom action bar unless testing supports it.
-- WCAG 2.2 AA is a launch requirement, including keyboard access, focus visibility, contrast, semantic structure, alternative text, reduced motion, non-colour cues and mobile zoom/reflow.
-- Local SEO prioritises accurate Miramar information, distinct offering metadata, consistent confirmed facts, direct menu/directions access and factually safe structured data. No keyword stuffing or premature Restaurant availability claims.
-- Launch scope is limited to the five core pages, web menus, confirmed visit/booking information, approved content and photography, and launch-quality accessibility, responsiveness, performance, local SEO and metadata.
-- Design-review options may use explicit content/photo slots or representative temporary imagery. Launch remains blocked on Phillip-approved facts, copy, menus and photography.
-- Phillip should receive three meaningfully different directions using the same product structure: Refined minimal, Warm neighbourhood and Day-to-night Aroma.
-- Existing Option A/B are reference evidence only; all three client options should be redesigned from the resolved structure and presented at comparable maturity.
-- Client review should select one overall direction first; later refinement may borrow limited elements from the alternatives without collapsing the concepts into a mixed design.
-- Intended outcome: Aroma feels like a warm local Miramar Café with an inviting atmosphere and a credible, slightly more refined Restaurant experience; finding the appropriate menu, planning a visit and booking dinner are effortless.
-- Audience priority is Miramar locals/regulars first, nearby discoverers second, prospective Restaurant diners third, and visitors drawn by particular items or Vietnamese highlights fourth.
-- Writing should be warm, concise, straightforward and locally grounded without forced Kiwi phrasing. Restaurant may be slightly more polished, but the voice remains welcoming, unexaggerated and recognisably Aroma.
-- Visit uses the confirmed address and an “Open in Google Maps” link, not an interactive map dependency. A colour-matched static Miramar illustration with an Aroma pin is a candidate visual enhancement subject to accuracy, accessibility and licensing research.
-- Phillip must review multiple meaningfully distinct design directions before the final visual direction is approved.
+- Phillip's confirmed brief is minimalist and Kiwi-oriented: green primary, red secondary, white background, and Vietnamese identity used selectively rather than as the dominant visual language.
+- “Kiwi” is treated as an unpretentious, approachable local-neighbourhood atmosphere rather than literal national motifs.
+- The final direction removes the Food/Coffee/Tea carousel.
+- Menus are real, accessible web content rather than PDF-only artifacts.
+- Review concepts may use explicit content/photo slots or representative imagery; production may never publish them as fact.
+- Codex will create three original, equally mature, responsive Home-only concepts: Refined minimal, Warm neighbourhood and Day-to-night Aroma.
+- Ross's Options A and C are quality benchmarks, not templates to copy.
+- Ross will curate the combined design pool and select the strongest 2–3 total concepts for Phillip's in-person review.
+- Visit uses the confirmed address and an “Open in Google Maps” link rather than an interactive-map dependency.
+
+## Proposed product/design direction
+
+The following remains the approved planning baseline but is not recorded as Ross-approved product detail until he explicitly confirms it:
+
+- One recognisable Aroma brand with a casual Café mood and a more evening, refined, professional and considered Restaurant mood.
+- A slightly Café-led homepage with Restaurant deliberately visible.
+- A strong, mostly static Home hero led by candid venue-and-people photography.
+- A concise Home information structure: hero, Café/Restaurant paths, selected highlights and Visit information.
+- Five top-level destinations: Home, Café, Restaurant, About and Visit.
+- Wordmark/Home plus Café, Restaurant, About and Visit in the main navigation, with no generic Menu item.
+- Dedicated, simply navigable Café and Restaurant pages with their own menus and relevant actions.
+- A people-, place- and community-led About page with Vietnamese heritage integrated authentically.
+- Small red labels/accents for Phillip-approved Vietnamese highlights.
+- One practical Visit page with distinct offering hours, directions, contact and the confirmed Restaurant booking method.
+- Compact mobile navigation, early contextual actions and no default sticky bottom bar.
+- WCAG 2.2 AA, accurate local SEO, restrained performance-conscious implementation and the focused launch scope described in the specification.
+- Local-first audiences, warm concise copy and the intended effortless menu/visit/booking outcome.
 
 ## Ross questions
 
-- What does Ross think makes Option A “decent”, and what does he want preserved or challenged in the next options?
-- What artistic guidance does Ross want applied to each of the three agreed concepts before they are presented to Phillip?
-- After the options are prepared, do Ross and Ben agree they are equally mature and genuinely distinct enough for a fair client choice?
+- Does Ross approve the proposed Café/Restaurant hierarchy and five-destination information architecture, including the absence of a generic Menu item?
+- Which proposed content, mobile, accessibility and launch-scope details does Ross want revised before selected-direction refinement?
 
 ## Client questions
 
@@ -87,52 +81,52 @@ See [`TODO.md`](../TODO.md) for the existing questions about trading name, conta
 
 - **Park Kitchen:** The live homepage uses an immersive venue photograph as the hero and places a compact, uppercase navigation over it. The page is structurally simple and lets hospitality photography provide most of the atmosphere. Its current information architecture includes menu, reservations, vouchers and events; those features are not automatically relevant to Aroma.
 - **Option A:** A close, restrained interpretation of the reference: centred wordmark/navigation, sans-serif typography, generous white space, square green actions and highly separated sections. Ross's “decent” assessment is provisional.
-- **Option B:** A warmer interpretation: green header/footer bands, serif display typography, rounded controls/cards and a split hero. It feels more branded and editorial than Option A, but is not client-approved.
-- Both options propose Café/Day and Restaurant/Evening panels plus highlighted Vietnamese items. Those detailed labels, layouts and item choices are exploration, not confirmed requirements.
+- **Option C:** A Swimsuit-inspired benchmark using strong sans-serif type, asymmetric information/image composition, dotted rules, red marked actions and a large footer wordmark. It is not client-approved.
+- Options A and C are Ross's quality benchmarks. Their detailed labels, layouts, markup and visual systems are exploration, not requirements or templates.
 - `origin/feature/redesign-options` is not merged into `main`. It also contains content provenance and implementation notes that should not be mistaken for approval of the comps.
 
 ## Contradictions and cautions
 
 - Earlier records treat Aroma primarily as a café; the new direction introduces a future Restaurant offering without operational facts.
 - Earlier decisions assumed phone/email booking. The Restaurant booking journey has not been confirmed and must not inherit that assumption automatically.
-- Option A/B display provisional phone, email, café hours, booking copy and particular Vietnamese items. Their presence in a comp does not upgrade their provenance.
+- Options A/C display provisional phone, email, café hours, booking copy and particular Vietnamese items. Their presence in a comp does not upgrade their provenance.
 - Earlier navigation/carousel decisions were made for the old product framing. They remain historical evidence and must be reassessed against the two-offering customer journeys.
 
 ## Interview log
 
 Questions and answers will be recorded here as decisions or explicitly classified open matters, not as a verbatim transcript.
 
-- **2026-10-07 — Brand relationship:** Resolved as one Aroma brand with two related moods. Restaurant receives a restrained tonal shift rather than a fully distinct identity. Recorded in decision 011.
+- **2026-10-07 — Brand relationship:** Proposed as one Aroma brand with two related moods. Restaurant receives a restrained tonal shift rather than a fully distinct identity. Recorded in decision 015.
 - **2026-10-07 — Homepage offering hierarchy:** Resolved as Café-led, with Restaurant clearly visible rather than equally weighted or hidden.
 - **2026-10-07 — Primary journeys:** Café prioritises menu and atmosphere. Restaurant prioritises menu, experience and booking.
-- **2026-10-07 — Carousel:** Removed from the final-site direction in favour of a static Café-led opening and explicit Café/Restaurant paths. Recorded in decision 012.
+- **2026-10-07 — Carousel:** Removed from the final-site direction in favour of a static Café-led opening and explicit Café/Restaurant paths. Recorded in decision 016.
 - **2026-10-07 — Hero medium:** Venue-and-people photography should carry the opening atmosphere; product photography and typography are supporting elements.
 - **2026-10-07 — Photography mood:** Candid neighbourhood warmth and community, with an intimate rather than glossy/editorial feel.
 - **2026-10-07 — Meaning of “Kiwi”:** Resolved as a local, approachable and unpretentious vibe, not New Zealand-specific motifs.
 - **2026-10-07 — Restaurant mood:** Use several subtle tonal changes together rather than a separate identity or one dramatic stylistic device.
-- **2026-10-07 — Homepage composition:** Accepted the four-section minimalist structure; no additional homepage section is currently required.
-- **2026-10-07 — Information architecture:** Dedicated Café and Restaurant pages replace the earlier shared Menu structure. Both must keep menus and primary actions easy to find. Recorded in decision 013.
-- **2026-10-07 — Header:** Accepted offering-led navigation without a separate Menu item.
-- **2026-10-07 — About strategy:** Community and people first, with Vietnamese heritage integrated authentically. Phillip controls the factual story and may revise the emphasis after review. Recorded in decision 014.
-- **2026-10-07 — Vietnamese highlights:** Use a small red accent or label only; Phillip decides which items qualify. Recorded in decision 015.
-- **2026-10-07 — Menu experience:** Offering-specific HTML menus, simple category navigation when needed and optional secondary PDFs. Recorded in decision 016.
-- **2026-10-07 — Visit/booking:** One shared utility page, separate offering hours and a repeated Restaurant booking action. Recorded in decision 017.
-- **2026-10-07 — Mobile:** Compact navigation, early contextual actions, readable menus and no default sticky action bar. Recorded in decision 018.
-- **2026-10-07 — Accessibility:** WCAG 2.2 AA accepted as a launch requirement with mechanical and manual verification. Recorded in decision 019.
-- **2026-10-07 — Local SEO:** Accuracy-led Miramar optimisation with offering-specific metadata and confirmed-fact structured data. Recorded in decision 020.
-- **2026-10-07 — Launch scope:** Accepted the focused five-page experience and deferred unvalidated promotional/integration features. Recorded in decision 021.
+- **2026-10-07 — Homepage composition:** Proposed the four-section minimalist structure; no additional homepage section is currently required.
+- **2026-10-07 — Information architecture:** Proposed dedicated Café and Restaurant pages with obvious menus and actions. Recorded in decision 017.
+- **2026-10-07 — Header:** Proposed offering-led navigation without a separate Menu item; explicit Ross approval remains required.
+- **2026-10-07 — About strategy:** Proposed community and people first, with Vietnamese heritage integrated authentically. Recorded in decision 018.
+- **2026-10-07 — Vietnamese highlights:** Proposed a small red accent or label only; Phillip decides which items qualify. Recorded in decision 019.
+- **2026-10-07 — Menu experience:** Approved offering-specific HTML menus, simple category navigation when needed and optional secondary PDFs. Recorded in decision 020.
+- **2026-10-07 — Visit/booking:** Proposed one shared utility page, separate offering hours and a repeated Restaurant booking action. Recorded in decision 021.
+- **2026-10-07 — Mobile:** Proposed compact navigation, early contextual actions, readable menus and no default sticky action bar. Recorded in decision 022.
+- **2026-10-07 — Accessibility:** Proposed WCAG 2.2 AA as a launch requirement with mechanical and manual verification. Recorded in decision 023.
+- **2026-10-07 — Local SEO:** Proposed accuracy-led Miramar optimisation with offering-specific metadata and confirmed-fact structured data. Recorded in decision 024.
+- **2026-10-07 — Launch scope:** Proposed the focused five-page experience and deferral of unvalidated promotional/integration features. Recorded in decision 025.
 - **2026-10-07 — Hosting ownership:** Classified as technical/operational research; recommend a low-maintenance model covering ownership, cost, handover and recovery.
 - **2026-10-07 — Maintenance model:** Classified as technical/operational research; compare developer-managed, client-editable and hybrid approaches after update needs are better understood.
-- **2026-10-07 — Design placeholders:** Allowed only when clearly marked for review; they cannot become production content without client approval. Recorded in decision 022.
-- **2026-10-07 — Client options:** Explore all three proposed directions, differentiated by atmosphere rather than colour alone. Recorded in decision 023.
-- **2026-10-07 — Existing comps:** Use Option A/B as learning material, not direct templates; redesign all three options for a fair comparison.
-- **2026-10-07 — Option selection:** Phillip chooses an overall direction before selective cross-option refinement.
-- **2026-10-07 — Audiences:** Accepted the local-first audience order, with discovery, Restaurant and item-specific audiences following. Recorded in decision 024.
-- **2026-10-07 — Voice:** Warm, concise, local and welcoming; slightly more polished for Restaurant without luxury clichés. Recorded in decision 025.
-- **2026-10-07 — Directions:** Use a Maps link; investigate a branded static Miramar illustration as optional support. Recorded in decision 026.
+- **2026-10-07 — Design placeholders:** Approved only when clearly marked for review; they cannot become production content without client approval. Recorded in decision 026.
+- **2026-10-07 — Codex concepts:** Approved three original Home-only directions, differentiated by atmosphere rather than colour alone. Recorded in decision 027.
+- **2026-10-07 — Existing comps:** Use Ross's Options A and C as benchmarks, not templates.
+- **2026-10-07 — Option selection:** Ross curates 2–3 concepts from the combined pool before Phillip responds to or selects a direction.
+- **2026-10-07 — Audiences:** Proposed the local-first audience order, with discovery, Restaurant and item-specific audiences following. Recorded in decision 028.
+- **2026-10-07 — Voice:** Proposed warm, concise, local and welcoming copy. Recorded in decision 029.
+- **2026-10-07 — Directions:** Approved a Maps link/no embed; the branded static illustration remains proposed. Recorded in decision 030.
 - **2026-10-07 — Illustrated-map timing:** Reserve space if useful, but design it only after a visual direction is selected.
-- **2026-10-07 — Product outcome:** Confirmed the intended final impression and effortless menu/visit/booking journeys. Recorded in decision 027.
+- **2026-10-07 — Product outcome:** Proposed the intended final impression and effortless menu/visit/booking journeys. Recorded in decision 031.
 
 ## Readiness assessment
 
-Ross has reviewed the resolved direction and is broadly happy with it. The product direction is approved to proceed to `$to-spec`. The specification must preserve unresolved client facts as explicit content dependencies and must not invent Restaurant operations, booking, menus or launch timing. Hosting, maintenance and optional-map research may continue as specification tasks or pre-implementation decisions; they do not require reopening the core experience unless the research reveals a material constraint.
+Ross has approved the planning approach, content-provenance rules, three-phase programme and Codex's three Home-concept exercise. Individual product choices remain proposed where `decisions.md` says so. The specification must preserve unresolved client facts as explicit dependencies and must not invent Restaurant operations, booking, menus or launch timing.

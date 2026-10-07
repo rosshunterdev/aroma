@@ -4,7 +4,9 @@
 
 **Blocked by:** 07: Refine the selected system and Home experience.
 
-**Status:** ready-for-agent
+**Owner:** Ben/Codex
+
+**Status:** blocked
 
 - [ ] Restaurant remains unmistakably Aroma and does not become a separate brand skin.
 - [ ] Menu, experience and booking hierarchy are resolved using labelled placeholders where production facts remain unknown.
