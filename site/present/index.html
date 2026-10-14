@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Aroma Coffee | Home page designs</title>
+  <style>
+    :root {
+      --green: #123f31;
+      --ink: #17211d;
+      --ink-soft: #53605a;
+      --line: #ccd4cf;
+      --paper: #ffffff;
+      --bar: 52px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    }
+    .bar {
+      flex: 0 0 var(--bar);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 16px;
+      border-bottom: 1px solid var(--line);
+    }
+    .bar p { margin: 0; font-size: 14px; color: var(--ink-soft); }
+    .tabs { display: flex; gap: 4px; margin: 0; padding: 0; list-style: none; }
+    .tabs button {
+      font: inherit;
+      font-size: 15px;
+      padding: 8px 14px;
+      border: 0;
+      border-bottom: 2px solid transparent;
+      background: none;
+      color: var(--ink-soft);
+      cursor: pointer;
+    }
+    .tabs button:hover { color: var(--ink); }
+    .tabs button[aria-current="true"] { color: var(--green); border-bottom-color: var(--green); font-weight: 600; }
+    .tabs button:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+    kbd { font: inherit; font-size: 12px; color: var(--ink-soft); margin-right: 6px; }
+    iframe { flex: 1 1 auto; width: 100%; border: 0; display: block; }
+    @media (max-width: 640px) {
+      .bar p { display: none; }
+      .bar { justify-content: center; }
+      kbd { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="bar">
+    <p>Aroma Coffee home page designs</p>
+    <ul class="tabs" id="tabs"></ul>
+  </header>
+  <iframe id="view" title="Design 1"></iframe>
+
+  <script>
+    // Presentation order. Paths are relative so this works opened from disk.
+    var designs = [
+      '../concepts/refined-minimal/index.html',
+      '../redesign/option-a.html',
+      '../concepts/warm-neighbourhood/index.html'
+    ];
+
+    var tabs = document.getElementById('tabs');
+    var view = document.getElementById('view');
+    var current = -1;
+
+    designs.forEach(function (src, i) {
+      var li = document.createElement('li');
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.innerHTML = '<kbd>' + (i + 1) + '</kbd>Design ' + (i + 1);
+      btn.addEventListener('click', function () { show(i); });
+      li.appendChild(btn);
+      tabs.appendChild(li);
+    });
+
+    function show(i) {
+      if (i < 0 || i >= designs.length || i === current) return;
+      current = i;
+      view.src = designs[i];
+      view.title = 'Design ' + (i + 1);
+      tabs.querySelectorAll('button').forEach(function (b, n) {
+        b.setAttribute('aria-current', n === i ? 'true' : 'false');
+      });
+      history.replaceState(null, '', '#' + (i + 1));
+    }
+
+    function onKey(e) {
+      if (e.altKey || e.ctrlKey || e.metaKey) return;
+      var n = parseInt(e.key, 10);
+      if (n >= 1 && n <= designs.length) show(n - 1);
+    }
+    document.addEventListener('keydown', onKey);
+
+    // Keys still work after clicking into a design, where the browser allows it
+    // (served over http). Opened from disk, click the bar first.
+    view.addEventListener('load', function () {
+      try { view.contentWindow.document.addEventListener('keydown', onKey); } catch (err) {}
+    });
+
+    show(Math.max(0, (parseInt(location.hash.slice(1), 10) || 1) - 1));
+  </script>
+</body>
+</html>
