@@ -1,6 +1,6 @@
 # Handover — Aroma Coffee Rebuild
 
-As of the client-selection reconciliation on 2026-10-27.
+As of the Ticket 07 selected-Home refinement on 2026-10-27.
 
 ## Current state
 
@@ -8,11 +8,14 @@ Phase A concept comparison is complete. Phillip selected the meeting presenter's
 
 Decision 033 remains the current information architecture: **Aroma · Menu · Visit**. Menu is one page with specials first, a Café/Restaurant switch and Café first. Phillip has now confirmed that the Café and Restaurant sides contain different menu content. About remains deferred.
 
+Ticket 07 is review-ready at `site/selected-home/`. It preserves Option A's direct structure and tests only bounded Warm Neighbourhood influence: serif display typography, restrained red/index details and a deep-green Visit band. It remains a noindex review artifact with explicit copy, fact and photography questions; the temporary public homepage is unchanged.
+
 The exact mapping, branch/PR archaeology and concept-PR disposition are in `docs/client-selection-reconciliation.md`.
 
 | Item | Status |
 | --- | --- |
 | `site/index.html` | Temporary public landing page; unchanged by reconciliation. |
+| `site/selected-home/` | Ticket 07 selected Home refinement; review-ready, noindex and not linked from the temporary homepage. |
 | `site/redesign/option-a.html` | Selected overall direction; already on `main`. |
 | `origin/meeting/phillip-concepts` | Durable meeting presenter: Design 1 Refined Minimal, Design 2 Option A, Design 3 Warm Neighbourhood. |
 | PR #8 | Merged Warm Neighbourhood / Design 3 into `main`; secondary design evidence, not selected baseline. |
@@ -21,11 +24,11 @@ The exact mapping, branch/PR archaeology and concept-PR disposition are in `docs
 | PR #11 | Merged a provisional counter reference photo into selected Option A; not final photography. |
 | `.scratch/final-site/` | Specification and ticket graph reconciled to Decisions 033–035. |
 
-## Next executable work
+## Current review gate
 
-After the reconciliation PR merges, Ticket 07 is `ready-for-agent`: refine the selected Option A system and Home. It is unblocked because the exact selected artifact and clarity-first criterion are known. Use labelled placeholders for unresolved facts/assets; do not begin from a blend of concepts.
+Ross and Phillip should review Ticket 07 before the selected system expands. Ticket 08 must not start from this branch or before the Ticket 07 review outcome is recorded.
 
-Phase B then proceeds through:
+After Ticket 07 approval, Phase B proceeds through:
 
 1. Ticket 08 — refine the shared Menu experience;
 2. Ticket 09 — refine Visit and the Restaurant booking journey;
@@ -43,9 +46,9 @@ Ticket 10 records About as deferred and is not on the current Phase B critical p
 
 ## Git and publication boundaries
 
-- Reconciliation branch: `codex/client-selection-phase-b`, rebased onto `origin/main` at `21ef694` after PRs #8–#11 merged.
+- Ticket 07 branch: `codex/refine-selected-home`, based on `origin/main` at merged PR #12 (`6f8e2b6`).
 - Netlify publishes only `site/`; repository documentation remains outside the published output.
-- No client-facing HTML, CSS, JavaScript, assets or temporary homepage source changed in this reconciliation.
+- Ticket 07 adds only the review path `site/selected-home/`; `site/index.html`, Ross Option A and Phase A concept artifacts remain unchanged.
 - All Phase A concept PRs are now merged. Treat their `site/concepts/` artifacts as historical review evidence; only Option A is the selected Phase B baseline.
 
 ## Key records

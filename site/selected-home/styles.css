@@ -345,23 +345,14 @@ a:focus-visible {
 }
 
 .future-action {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 16px;
-  align-items: baseline;
+  width: fit-content;
   margin: auto 0 0;
   padding-top: 26px;
+  border-bottom: 2px solid var(--green);
   color: var(--green-dark);
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.04em;
-}
-
-.future-action span {
-  color: var(--ink-soft);
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 .offering-card .question--compact {
