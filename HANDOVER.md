@@ -1,6 +1,6 @@
 # Handover — Aroma Coffee Rebuild
 
-As of the Ticket 07 selected-Home refinement on 2026-10-27.
+As of the Ticket 07 review outcome on 2026-10-28.
 
 ## Current state
 
@@ -8,15 +8,17 @@ Phase A concept comparison is complete. Phillip selected the meeting presenter's
 
 Decision 033 remains the current information architecture: **Aroma · Menu · Visit**. Menu is one page with specials first, a Café/Restaurant switch and Café first. Phillip has now confirmed that the Café and Restaurant sides contain different menu content. About remains deferred.
 
-Ticket 07 is review-ready at `site/selected-home/`. It preserves Option A's direct structure and tests only bounded Warm Neighbourhood influence: serif display typography, restrained red/index details and a deep-green Visit band. It remains a noindex review artifact with explicit copy, fact and photography questions; the temporary public homepage is unchanged.
+Ticket 07 is complete and merged (PR #13) at `site/selected-home/`. It preserves Option A's direct structure with bounded Warm Neighbourhood influence: restrained red/index details and a deep-green Visit band. Ross switched its typography to Figtree throughout to match Option A; serif display type can be revisited later. It remains a noindex review artifact with explicit copy, fact and photography questions; the temporary public homepage is unchanged.
+
+A "Compare designs" switcher (PR #14) links Option A and `site/selected-home/` so Phillip can compare them. His preference is pending and does not block Ticket 08. The switcher is review scaffolding: remove it before either page becomes the live homepage.
 
 The exact mapping, branch/PR archaeology and concept-PR disposition are in `docs/client-selection-reconciliation.md`.
 
 | Item | Status |
 | --- | --- |
 | `site/index.html` | Temporary public landing page; unchanged by reconciliation. |
-| `site/selected-home/` | Ticket 07 selected Home refinement; review-ready, noindex and not linked from the temporary homepage. |
-| `site/redesign/option-a.html` | Selected overall direction; already on `main`. |
+| `site/selected-home/` | Ticket 07 selected Home refinement; merged, noindex and not linked from the temporary homepage. |
+| `site/redesign/option-a.html` | Selected overall direction; already on `main`. Its old A/B bar is now the compare switcher. |
 | `origin/meeting/phillip-concepts` | Durable meeting presenter: Design 1 Refined Minimal, Design 2 Option A, Design 3 Warm Neighbourhood. |
 | PR #8 | Merged Warm Neighbourhood / Design 3 into `main`; secondary design evidence, not selected baseline. |
 | PR #9 | Merged Refined Minimal / Design 1 into `main`; unselected Phase A evidence. |
@@ -24,11 +26,11 @@ The exact mapping, branch/PR archaeology and concept-PR disposition are in `docs
 | PR #11 | Merged a provisional counter reference photo into selected Option A; not final photography. |
 | `.scratch/final-site/` | Specification and ticket graph reconciled to Decisions 033–035. |
 
-## Current review gate
+## Next executable work
 
-Ross and Phillip should review Ticket 07 before the selected system expands. Ticket 08 must not start from this branch or before the Ticket 07 review outcome is recorded.
+Ross reviewed and approved Ticket 07 on 2026-10-28 (outcome recorded in the ticket). **Ticket 08 is ready to start from `main`.** Phillip's Option A vs refined comparison happens in parallel.
 
-After Ticket 07 approval, Phase B proceeds through:
+Phase B proceeds through:
 
 1. Ticket 08 — refine the shared Menu experience;
 2. Ticket 09 — refine Visit and the Restaurant booking journey;
@@ -40,15 +42,15 @@ Ticket 10 records About as deferred and is not on the current Phase B critical p
 ## Human dependencies
 
 - **Photography:** Phillip wants Ross to take new photography. Ross owns the shoot; Phillip approves the final assets. No final approved photography exists yet.
-- **Menu source:** Phillip is reviewing existing menu photographs and may send suitable/current material. Exact Café and Restaurant menus remain unconfirmed.
+- **Menu source:** Phillip is reviewing existing menu photographs and may send suitable/current material. Exact Café and Restaurant menus remain unconfirmed. An Uber Eats listing (7 delivery items) and public Google/DoorDash photos are reference only until Phillip confirms them; see `content-status.md`.
 - **Domain:** credentials are unavailable because the former holder lost them. The agency is recovering access; Ross should receive access afterward. This blocks ownership verification and final cutover, not design refinement.
 - **Other client facts:** Restaurant name/status/hours/booking, Café hours, contact details, story, Vietnamese highlights, trading name and socials remain unresolved in `phillip.md` and `TODO.md`.
 
 ## Git and publication boundaries
 
-- Ticket 07 branch: `codex/refine-selected-home`, based on `origin/main` at merged PR #12 (`6f8e2b6`).
+- Ticket 07 merged via PR #13 (`7a5770d`); compare switcher merged via PR #14 (`3933a28`).
 - Netlify publishes only `site/`; repository documentation remains outside the published output.
-- Ticket 07 adds only the review path `site/selected-home/`; `site/index.html`, Ross Option A and Phase A concept artifacts remain unchanged.
+- `site/index.html` and Phase A concept artifacts remain unchanged.
 - All Phase A concept PRs are now merged. Treat their `site/concepts/` artifacts as historical review evidence; only Option A is the selected Phase B baseline.
 
 ## Key records
