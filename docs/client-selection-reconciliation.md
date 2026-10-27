@@ -1,7 +1,9 @@
 # Client selection and Phase B reconciliation
 
-**Reconciled:** 2026-10-27  
-**Baseline:** `origin/main` at `03948b2` after `git fetch --prune origin`  
+**Reconciled:** 2026-10-27
+
+**Baseline:** `origin/main` at `03948b2` after `git fetch --prune origin`
+
 **Purpose:** Preserve the evidence for Phillip's concept selection and align the planning baseline before any selected-direction implementation.
 
 ## Repository state found
