@@ -15,10 +15,10 @@ The exact mapping, branch/PR archaeology and concept-PR disposition are in `docs
 | `site/index.html` | Temporary public landing page; unchanged by reconciliation. |
 | `site/redesign/option-a.html` | Selected overall direction; already on `main`. |
 | `origin/meeting/phillip-concepts` | Durable meeting presenter: Design 1 Refined Minimal, Design 2 Option A, Design 3 Warm Neighbourhood. |
-| PR #8 | Warm Neighbourhood / Design 3; open historical evidence, not selected baseline. |
-| PR #9 | Refined Minimal / Design 1; open historical evidence, not selected. |
-| PR #10 | Day-to-night; open historical evidence, not included in meeting presenter. |
-| PR #11 | Selected Option A with a provisional counter reference photo; not final photography. |
+| PR #8 | Merged Warm Neighbourhood / Design 3 into `main`; secondary design evidence, not selected baseline. |
+| PR #9 | Merged Refined Minimal / Design 1 into `main`; unselected Phase A evidence. |
+| PR #10 | Merged Day-to-night into `main`; Phase A evidence not included in the meeting presenter. |
+| PR #11 | Merged a provisional counter reference photo into selected Option A; not final photography. |
 | `.scratch/final-site/` | Specification and ticket graph reconciled to Decisions 033–035. |
 
 ## Next executable work
@@ -43,10 +43,10 @@ Ticket 10 records About as deferred and is not on the current Phase B critical p
 
 ## Git and publication boundaries
 
-- Reconciliation branch: `codex/client-selection-phase-b`, created from fetched `origin/main` at `03948b2`.
+- Reconciliation branch: `codex/client-selection-phase-b`, rebased onto `origin/main` at `21ef694` after PRs #8–#11 merged.
 - Netlify publishes only `site/`; repository documentation remains outside the published output.
 - No client-facing HTML, CSS, JavaScript, assets or temporary homepage source changed in this reconciliation.
-- Do not merge every concept PR merely to preserve the experiments. Keep branches/previews as review history and close unselected PRs after Ross/Claude verifies the reconciliation.
+- All Phase A concept PRs are now merged. Treat their `site/concepts/` artifacts as historical review evidence; only Option A is the selected Phase B baseline.
 
 ## Key records
 

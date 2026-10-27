@@ -95,8 +95,9 @@ Note: Codex/Ben work on 2026-09-30 (PR #1 onboarding, PR #2 temporary page) was 
 
 ## Session 9 — 2026-10-27 — Client selection reconciliation
 
-- **Did:** Fetched current refs and reconciled `origin/main`, open PRs #8–#11, the meeting presenter, Decisions 033–035, client provenance, the final-site specification and the 26-ticket plan. No client-facing source changed.
+- **Did:** Initially reconciled `origin/main` while PRs #8–#11 were open, then rebased PR #12 after all four merged. Preserved their concept implementation/validation history while updating the meeting presenter, Decisions 033–035, client provenance, specification and 26-ticket plan. PR #12 changes no client-facing source relative to its current base.
 - **Mapped:** Meeting presenter Design 1 = Refined Minimal, Design 2 = Ross Option A, Design 3 = Warm Neighbourhood. PR #11 independently records Phillip's selection of “Option A (Design 2)”.
 - **Decided:** Phillip selected Design 2 for clear information presentation; Design 3 is secondary inspiration only where clarity is preserved. Café and Restaurant have different menu content within Decision 033's one-Menu-page model.
 - **Dependencies:** Ross owns new photography; Phillip is reviewing existing menu photos; domain access is being recovered through the agency for Ross. These block the relevant production/release gates, not Ticket 07.
 - **Planned:** Phase A gates 05–06 are complete. Ticket 07 is the next executable ticket after the reconciliation PR merges; tickets 08–10 and 17–22 were aligned to Home/Menu/Visit with About deferred.
+- **Rebased:** PR #12 onto `origin/main` at `21ef694` after PRs #8–#11 merged. Tickets 02–04 retain their implementation and validation notes, remain complete and also record the later selection outcome.

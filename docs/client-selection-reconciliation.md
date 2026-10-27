@@ -2,17 +2,17 @@
 
 **Reconciled:** 2026-10-27
 
-**Baseline:** `origin/main` at `03948b2` after `git fetch --prune origin`
+**Baseline:** `origin/main` at `21ef694` after PRs #8–#11 merged and PR #12 was rebased
 
 **Purpose:** Preserve the evidence for Phillip's concept selection and align the planning baseline before any selected-direction implementation.
 
 ## Repository state found
 
-- `origin/main` still ends at PR #7. It contains Ross/Claude Options A/B/C under `site/redesign/`, the shared concept content pack, Decision 033 and the original 26-ticket plan.
-- Three completed Codex concept implementations remain in open PRs rather than `main`: PR #8 Warm Neighbourhood, PR #9 Refined Minimal and PR #10 Day-to-night Aroma.
+- `origin/main` now includes PR #8 Warm Neighbourhood, PR #9 Refined Minimal, PR #10 Day-to-night Aroma and PR #11's Option A reference photograph, on top of the earlier Ross/Claude Options A/B/C, shared concept content pack, Decision 033 and original 26-ticket plan.
+- All three Codex concept implementations now live under `site/concepts/` on `main`. They remain Phase A review artifacts, not production direction.
 - `origin/meeting/phillip-concepts` combines Refined Minimal and Warm Neighbourhood with Ross Option A and adds the offline presenter used for the client meeting.
-- PR #11, based on `origin/feature/option-a-hero-photo`, adds a provisional counter photograph to Option A after selection. That photograph is reference material, not the final Ross photography requested by Phillip.
-- `site/index.html` remains the temporary public homepage. The current publication boundary remains `site/` only. This reconciliation changes no client-facing website source.
+- PR #11 merged a provisional counter photograph into Option A after selection. That photograph is reference material, not the final Ross photography requested by Phillip.
+- `site/index.html` remains the temporary public homepage. The publication boundary remains `site/` only. PR #12 changes no client-facing website source relative to this current baseline.
 
 ## Exact presentation mapping
 
@@ -20,9 +20,9 @@ The durable presenter at commit `c339cde` (`origin/meeting/phillip-concepts:site
 
 | Client presenter label | Exact artifact | Source branch / PR |
 | --- | --- | --- |
-| Design 1 | `site/concepts/refined-minimal/index.html` | `origin/codex/concept-refined-minimal`, PR #9 |
-| Design 2 | `site/redesign/option-a.html` | Already on `main`; meeting copy on `origin/meeting/phillip-concepts` |
-| Design 3 | `site/concepts/warm-neighbourhood/index.html` | `origin/codex/concept-warm-neighbourhood`, PR #8 |
+| Design 1 | `site/concepts/refined-minimal/index.html` | `main`, merged through PR #9 |
+| Design 2 | `site/redesign/option-a.html` | `main`; meeting copy on `origin/meeting/phillip-concepts`; reference photo merged through PR #11 |
+| Design 3 | `site/concepts/warm-neighbourhood/index.html` | `main`, merged through PR #8 |
 
 PR #11 independently says: “Phillip chose Option A (Design 2) at the 2026-10-20 meeting.” Together, these sources establish that the newly relayed “Option 2” is presenter Design 2 / Ross Option A, and “Option 3” is Warm Neighbourhood. Ticket numbers and PR numbers are not client option numbers.
 
@@ -53,15 +53,15 @@ Phase B therefore starts from Design 2's structure and clarity. It may explore b
 - Phillip wants Ross to take new photography. Ross owns that action; final approved assets do not yet exist.
 - Domain-login access is unavailable because the former credential holder lost it. The agency has been asked to recover access, which should then be given to Ross. This blocks domain ownership verification and cutover, not Phase B design refinement.
 
-## Concept PR disposition
+## Merged concept history
 
-- **PR #11 (selected Option A reference photograph):** do not merge it merely to establish the selection; Option A itself is already on `main`. Keep the PR available as selected-direction/reference-photography evidence. Rebase or deliberately incorporate only the useful image evidence during Phase B, after Ross confirms how the selected artifact should be preserved.
-- **PR #8 (Warm Neighbourhood / Design 3):** keep open until this reconciliation is reviewed, then close without merging to production. Retain its branch/preview as secondary design evidence for bounded refinement exploration.
-- **PR #9 (Refined Minimal / Design 1):** close without merging after reconciliation review; retain the branch/preview as Phase A history.
-- **PR #10 (Day-to-night):** close without merging after reconciliation review; retain the branch/preview as Phase A history. It was not in the meeting presenter.
-- **`origin/meeting/phillip-concepts`:** retain as the durable mapping/presentation record. It should not become the production baseline because it combines multiple review concepts and presentation-only assets.
+- **PR #8:** merged Warm Neighbourhood / presenter Design 3. It remains secondary design evidence; it is not the selected production baseline.
+- **PR #9:** merged Refined Minimal / presenter Design 1. It remains unselected Phase A evidence.
+- **PR #10:** merged Day-to-night Aroma. It remains Phase A evidence and was not part of the meeting presenter.
+- **PR #11:** merged the provisional counter reference photograph into selected Option A / presenter Design 2. The image is not the final Ross photography requested by Phillip.
+- **`origin/meeting/phillip-concepts`:** remains the durable mapping/presentation record. Its presentation-only shell is not the production baseline.
 
-No concept PR should be merged simply to collect every experiment on `main`.
+The presence of all concepts on `main` preserves design history; it does not change Phillip's selection or authorize unselected concepts as production direction.
 
 ## Phase gates and next work
 

@@ -127,7 +127,7 @@ Ross has an artistic structure in mind that may take a different approach. This 
 ## 011 — Kiwi redesign: two homepage comps for Phillip to choose
 
 **Date:** 2026-10-05
-**Status:** BUILT — merged to `main` through PR #4. `site/redesign/option-a.html` and `option-b.html` remain design evidence awaiting Ross's curation and Phillip's response.
+**Status:** BUILT — merged to `main` through PR #4. Option A was later selected by Phillip under Decision 034; Option B remains unselected historical design evidence.
 **Decision:** Follow Phillip's 2026-10-05 brief (green primary `#1F5C3A`, red secondary `#C8372D`, white background, minimalist like Park Kitchen, Vietnamese styling only on highlighted items, Day/cafe and Evening/restaurant split). Present two self-contained homepage comps: A "Park Kitchen close" (Figtree, uppercase nav, red outline + tag on Vietnamese cards) and B "Warmer Kiwi" (Fraunces headings, green header/footer bands, red-edged featured card). Photos and restaurant details are copy slots.
 **Why:** Ross promised Phillip a couple of options; standalone comps let the options differ properly without touching live or draft pages.
 **Supersedes:** 010's visual direction only. Spec: `.scratch/redesign/spec.md`; plan: `.scratch/redesign/plan.md`.
@@ -147,7 +147,7 @@ Ross has an artistic structure in mind that may take a different approach. This 
 ## 013 — Option C: Swimsuit-inspired homepage comp
 
 **Date:** 2026-10-07
-**Status:** VERIFIED — merged to `main` through PR #4 at `site/redesign/option-c.html`. Ross's deeper review remains pending.
+**Status:** VERIFIED HISTORICAL EVIDENCE — merged to `main` through PR #4 at `site/redesign/option-c.html`; it was not part of Phillip's recorded selection.
 **Decision:** Add a third homepage comp inspired by swimsuitcoffee.com (shown to Phillip, who liked it). Kiwi palette from 011 with Swimsuit's layout: centred wordmark with split nav, info-left/photo-right hero, dotted rules, red highlight links in place of yellow, green footer holding Find us/Hours/Book a table with a giant AROMA wordmark. Schibsted Grotesk. Same copy and slots as Option A. Options A and B left untouched.
 **Why:** Ross wants designs he is happy with before showing Phillip in person; Phillip responded well to Swimsuit. Ross and Ben currently prefer Option A.
 
