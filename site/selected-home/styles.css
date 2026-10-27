@@ -70,6 +70,31 @@ a:focus-visible {
   text-align: center;
 }
 
+.review-notice p {
+  margin: 0;
+}
+
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 18px;
+  margin-top: 6px;
+}
+
+.switcher a {
+  color: var(--white);
+}
+
+.switcher a[aria-current="page"] {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.switcher a:focus-visible {
+  outline-color: var(--white);
+}
+
 .site-header {
   display: flex;
   align-items: center;
