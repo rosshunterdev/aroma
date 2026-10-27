@@ -13,3 +13,7 @@
 - [ ] Any analytics, forms or booking service receives the required privacy/legal assessment.
 - [ ] Hosting/domain ownership, deployment, rollback/recovery, handover and maintenance responsibilities are approved and documented.
 - [ ] The deploy configuration publishes only `site/`; repository documentation, specifications and tickets are absent from the public output.
+
+## Comments
+
+- 2026-10-27 — Release-readiness intent remains valid; domain recovery is enforced by Ticket 26 before cutover.

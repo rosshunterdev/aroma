@@ -12,3 +12,7 @@
 - [ ] Any remaining corrections are completed and rechecked before approval is recorded.
 - [ ] Phillip confirms the Restaurant representation and booking journey are accurate for launch.
 - [ ] Explicit launch approval is recorded durably.
+
+## Comments
+
+- 2026-10-27 — Client production/launch approval remains required after Ross's production review and before cutover.
