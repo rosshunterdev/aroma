@@ -6,9 +6,13 @@
 
 **Owner:** Ben/Codex
 
-**Status:** blocked
+**Status:** ready-for-review
 
-- [ ] The concept covers Home only and is equally mature with concepts 02 and 03 at representative desktop and mobile sizes.
-- [ ] Café remains slightly primary and Restaurant feels more evening, refined, professional and considered without becoming a separate brand.
-- [ ] The concept is clearly labelled non-production, is not indexed and uses only approved facts or labelled placeholders.
-- [ ] Browser review confirms usable navigation, no horizontal overflow and a credible WCAG 2.2 AA path.
+- [x] The concept covers Home only and is equally mature with concepts 02 and 03 at representative desktop and mobile sizes.
+- [x] Café remains slightly primary and Restaurant feels more evening, refined, professional and considered without becoming a separate brand.
+- [x] The concept is clearly labelled non-production, is not indexed and uses only approved facts or labelled placeholders.
+- [x] Browser review confirms usable navigation, no horizontal overflow and a credible WCAG 2.2 AA path.
+
+## Implementation note
+
+Completed in `site/concepts/day-to-night/` as an isolated static HTML/CSS concept. Browser review covered 1440, 768, 390 and 320 CSS pixel widths. The first render was refined to keep the hero actions visible sooner and to move the dark tonal transition from the Café content to the Restaurant section, preserving contrast and the intended offering hierarchy.
