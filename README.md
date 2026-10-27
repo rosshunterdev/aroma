@@ -5,6 +5,9 @@ Static website rebuild for Aroma Coffee / Aroma Café at 128D Park Road, Miramar
 ## Current state
 
 - `index.html` is a standalone temporary landing page; it is not the approved final homepage.
+- Phase A concept comparison is complete: Phillip selected meeting presenter Design 2 / Ross Option A as the overall direction, with Design 3 / Warm Neighbourhood as secondary inspiration where clarity is preserved.
+- Phase B has not started. Ticket 07 becomes the next executable ticket after the reconciliation PR merges.
+- The current final-site structure is `Aroma · Menu · Visit`; Menu contains distinct Café and Restaurant content in one experience, and About is deferred.
 - The early website draft remains at `draft.html`, with `menu.html`, `contact.html`, `styles.css` and a small inline vanilla-JavaScript tabs script.
 - The temporary page uses `temporary.css`; there is no framework or build step.
 - `about.html` is blocked on client-supplied story content and is not linked from the draft navigation.
@@ -24,6 +27,7 @@ Open the localhost URL printed by the server. There is no project install, build
 ## Project map
 
 - `HANDOVER.md` — current implementation state, blockers and next work
+- `docs/client-selection-reconciliation.md` — exact presenter mapping, selection evidence and concept-PR disposition
 - `decisions.md` — accepted and proposed product/technical decisions; status labels matter
 - `content-status.md` — content provenance and confirmation state
 - `TODO.md` — outstanding work and client questions

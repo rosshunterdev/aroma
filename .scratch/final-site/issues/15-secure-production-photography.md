@@ -4,11 +4,12 @@
 
 **Blocked by:** 06: Obtain Phillip's concept selection (client input required).
 
-**Owner:** Phillip/client + Ross
+**Owner:** Ross (shoot and asset preparation) + Phillip/client (approval)
 
 **Status:** needs-human
 
 - [ ] Required shots and aspect/orientation needs are derived from the selected direction.
+- [ ] Ross takes the new photography requested by Phillip; PR #11's counter image remains reference material rather than the final asset set.
 - [ ] Phillip approves the final assets and their intended use; usage permission is recorded.
 - [ ] Assets have useful descriptions or alternative-text intent and are suitable for responsive optimization.
 - [ ] Missing nonessential imagery is handled intentionally without substituting unapproved production placeholders.

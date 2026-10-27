@@ -9,6 +9,7 @@
 **Status:** blocked
 
 - [ ] The approved release uses the documented production hosting, ownership and deployment workflow.
+- [ ] Domain access has been recovered, Ross has the intended access and ownership/recovery details have been verified before cutover.
 - [ ] The temporary page remains recoverable and is replaced only as part of the approved cutover.
 - [ ] Post-deployment checks cover all primary journeys, routes/assets, metadata, structured data and external actions.
 - [ ] Rollback/recovery and ongoing maintenance handoff are verified and recorded.

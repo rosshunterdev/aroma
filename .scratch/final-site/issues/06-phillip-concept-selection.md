@@ -6,9 +6,9 @@
 
 **Owner:** Ross + Phillip/client
 
-**Status:** needs-human
+**Status:** complete
 
-- [ ] Phillip is shown only Ross's curated two or three concepts with placeholders and non-production status explained.
-- [ ] One overall direction is selected or a clear revision request is captured.
-- [ ] Limited elements worth borrowing from other concepts are recorded without collapsing the directions into an incoherent hybrid.
-- [ ] The selection and client feedback are reconciled into the durable decision and content records.
+- [x] Phillip was shown Ross's three-item presenter: Refined Minimal, Option A and Warm Neighbourhood.
+- [x] Phillip selected presenter Design 2 / Ross Option A as the overall direction for its clear information presentation.
+- [x] Presenter Design 3 / Warm Neighbourhood is secondary inspiration for distinctive qualities; no individual element is pre-approved for borrowing.
+- [x] The selection and feedback are recorded in Decisions 034–035 and `docs/client-selection-reconciliation.md`.

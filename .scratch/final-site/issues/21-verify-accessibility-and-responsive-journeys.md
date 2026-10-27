@@ -1,8 +1,8 @@
 # 21: Verify accessibility and responsive journeys
 
-**What to build:** Cross-site WCAG 2.2 AA and responsive verification across the complete five-page experience, with defects corrected at their source.
+**What to build:** Cross-site WCAG 2.2 AA and responsive verification across the approved Home, Menu and Visit experience, with defects corrected at their source.
 
-**Blocked by:** 17: Build the Café experience and menu; 18: Build the Restaurant experience, menu and booking journey; 19: Build the About experience; 20: Build the Visit and directions experience.
+**Blocked by:** 18: Build the Restaurant menu state and booking journey; 20: Build the Visit and directions experience.
 
 **Owner:** Ben/Codex
 

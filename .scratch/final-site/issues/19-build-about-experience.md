@@ -2,7 +2,7 @@
 
 **What to build:** The complete About page under `site/` using Phillip-approved story content, presenting Aroma's people, place and community with Vietnamese background integrated authentically.
 
-**Blocked by:** 16: Build the production shell and Home journey; 14: Confirm production business facts and copy.
+**Blocked by:** 10: Resolve the deferred About scope; 14: Confirm production business facts and copy.
 
 **Owner:** Ben/Codex
 
@@ -12,3 +12,5 @@
 - [ ] The page is community-led and does not restore a site-wide Vietnamese visual theme.
 - [ ] Images, headings and reading order remain accessible and responsive.
 - [ ] Browser tests cover navigation, semantic structure, keyboard use and representative responsive widths.
+
+This ticket is not on the current launch critical path unless Ticket 10 produces an approved scope change.
