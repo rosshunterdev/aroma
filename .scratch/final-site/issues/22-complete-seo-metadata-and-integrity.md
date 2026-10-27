@@ -12,3 +12,7 @@
 - [ ] Local structured data uses only confirmed facts and does not overstate Restaurant availability.
 - [ ] Internal routes, local assets and external phone/email/map/booking actions pass automated checks.
 - [ ] Narrow tests cover metadata and provenance contracts that browser journeys diagnose poorly.
+
+## Comments
+
+- 2026-10-27 — Dependencies now follow the shared Menu and Visit builds; deferred About is excluded unless later approved.

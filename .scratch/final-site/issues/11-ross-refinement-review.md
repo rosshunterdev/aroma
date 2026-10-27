@@ -12,3 +12,7 @@
 - [ ] Option A's clarity, the Menu's Café/Restaurant distinction and any bounded Design 3 influence are explicitly assessed.
 - [ ] Accessibility, content-placeholder and implementation-feasibility concerns are resolved or recorded.
 - [ ] The gate records an explicit ready/not-ready outcome for Phillip approval.
+
+## Comments
+
+- 2026-10-27 — Gate narrowed from the stale five-page proposal to the approved Home/Menu/Visit direction.

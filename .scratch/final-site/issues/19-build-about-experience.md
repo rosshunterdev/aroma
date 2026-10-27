@@ -14,3 +14,7 @@
 - [ ] Browser tests cover navigation, semantic structure, keyboard use and representative responsive widths.
 
 This ticket is not on the current launch critical path unless Ticket 10 produces an approved scope change.
+
+## Comments
+
+- 2026-10-27 — Marked outside the current critical path because About is deferred under Decision 033.

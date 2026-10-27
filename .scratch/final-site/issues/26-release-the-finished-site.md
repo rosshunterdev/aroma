@@ -13,3 +13,7 @@
 - [ ] The temporary page remains recoverable and is replaced only as part of the approved cutover.
 - [ ] Post-deployment checks cover all primary journeys, routes/assets, metadata, structured data and external actions.
 - [ ] Rollback/recovery and ongoing maintenance handoff are verified and recorded.
+
+## Comments
+
+- 2026-10-27 — Domain access recovery is an explicit release/cutover gate, not a selected-direction refinement blocker.

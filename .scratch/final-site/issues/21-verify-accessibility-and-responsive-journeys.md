@@ -12,3 +12,7 @@
 - [ ] Manual keyboard, visible-focus, semantic landmark/heading and representative screen-reader journeys pass.
 - [ ] 200% zoom, reflow, reduced-motion and small/large mobile plus desktop checks pass without lost content or horizontal overflow.
 - [ ] Tests stay focused on user-observable behaviour rather than internal markup or CSS organization.
+
+## Comments
+
+- 2026-10-27 — Verification scope now follows the approved Home/Menu/Visit experience; deferred About no longer blocks it.

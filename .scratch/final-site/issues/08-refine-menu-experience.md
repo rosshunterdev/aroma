@@ -13,3 +13,7 @@
 - [ ] Switching is predictable, keyboard operable and does not hide the current context or imply that the menus are shared.
 - [ ] Menu hierarchy, categories, optional jump links and approved Vietnamese-highlight treatment remain readable and restrained.
 - [ ] The design is reviewed for keyboard flow, reflow, contrast and content-placeholder clarity.
+
+## Comments
+
+- 2026-10-27 — Supersedes the former dedicated Café-page refinement ticket while retaining ID 08; aligned to Decisions 033 and 035.

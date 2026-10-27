@@ -12,3 +12,7 @@
 - [ ] Separate Café and Restaurant menus, categories, descriptions, prices and availability are approved; Phillip's existing menu photographs are used only if he confirms they are current/suitable.
 - [ ] About/story content and qualifying Vietnamese highlights are approved.
 - [ ] `content-status.md` and the client-question backlog are reconciled with evidence for every resolved fact.
+
+## Comments
+
+- 2026-10-27 — Phillip confirmed that Café and Restaurant menu content differs, but exact content remains a client-owned dependency.

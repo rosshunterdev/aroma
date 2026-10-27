@@ -24,9 +24,9 @@ Resolved product vocabulary is defined in [`GLOSSARY.md`](../GLOSSARY.md).
 - The final direction removes the Food/Coffee/Tea carousel.
 - Menus are real, accessible web content rather than PDF-only artifacts.
 - Review concepts may use explicit content/photo slots or representative imagery; production may never publish them as fact.
-- Codex will create three original, equally mature, responsive Home-only concepts: Refined minimal, Warm neighbourhood and Day-to-night Aroma.
+- Codex completed three original responsive Home-only concepts: Refined Minimal, Warm Neighbourhood and Day-to-night Aroma.
 - Ross's Options A and C are quality benchmarks, not templates to copy.
-- Ross will curate the combined design pool and select the strongest 2–3 total concepts for Phillip's in-person review.
+- Ross curated Refined Minimal, Ross Option A and Warm Neighbourhood for Phillip's in-person review; Phillip selected Option A / presenter Design 2.
 - Visit uses the confirmed address and an “Open in Google Maps” link rather than an interactive-map dependency.
 - Phillip selected meeting presenter Design 2 / Ross Option A as the overall direction because its information presentation is basic and clear.
 - Meeting presenter Design 3 / Warm Neighbourhood is secondary inspiration for distinctive qualities only where they do not reduce clarity.

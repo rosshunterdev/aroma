@@ -199,7 +199,7 @@ Ross has an artistic structure in mind that may take a different approach. This 
 
 **Hero emphasis:** A strong photograph of the venue and people should carry the Café atmosphere. It should feel candid, local, community-oriented, warm and intimate rather than glossy or heavily staged. Food or coffee close-ups and typography may support it but should not dominate the opening.
 
-**Core homepage composition:** Keep the page deliberately concise: (1) Café-led photographic hero, (2) clear Café and Restaurant paths, (3) a small set of selected highlights including approved Vietnamese highlights, and (4) Visit information covering location, hours and the appropriate contact/booking routes. Fuller menus, story content and Restaurant detail belong on dedicated pages.
+**Core homepage composition:** Keep the page deliberately concise: (1) Café-led photographic hero, (2) obvious access to the shared Menu and its distinct Café/Restaurant content, (3) a small set of selected highlights including approved Vietnamese highlights, and (4) Visit information covering location, hours and the appropriate contact/booking routes. Fuller menu content belongs in Decision 033's single Menu destination; About remains deferred.
 
 **Why:** The offering architecture and primary journeys are better communicated directly than through rotating product categories. Café remains slightly primary while Restaurant stays deliberately visible.
 
@@ -346,7 +346,7 @@ Ross has an artistic structure in mind that may take a different approach. This 
 ## 027 — Three Codex Home concepts and Ross curation
 
 **Date:** 2026-10-07
-**Status:** APPROVED — Ross explicitly authorized Codex to create its own three Home concepts and will curate the client set.
+**Status:** COMPLETE — Ross authorized the three-concept exercise, curated the client set and presented it to Phillip.
 **Provenance:** Ben during final-site product discovery.
 
 **Decision:** Codex creates three genuinely distinct Home-page concepts using one shared information structure/content pack:
@@ -355,7 +355,7 @@ Ross has an artistic structure in mind that may take a different approach. This 
 2. **Warm neighbourhood:** More intimate, community-led and tactile while remaining minimalist.
 3. **Day-to-night Aroma:** The shared Café-to-Restaurant tonal transition is the defining visual idea.
 
-**Guardrail:** Options must differ meaningfully in atmosphere and brand expression, not merely colour. Phase A is Home-only; Café, Restaurant, About and Visit concepts follow after direction selection.
+**Outcome:** The completed Phase A artifacts remain review evidence. Selected-direction work follows the current Home/Menu/Visit structure; About is deferred under 033.
 
 **Relationship to existing comps:** Ross's Options A and C are quality/reference benchmarks only. Codex must produce original directions that are competitive with or stronger than those references without copying their markup, layout or exact visual system.
 

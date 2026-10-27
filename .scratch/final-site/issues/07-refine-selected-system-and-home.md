@@ -13,3 +13,7 @@
 - [ ] Any explored Design 3 influence is identified explicitly and rejected when it weakens hierarchy, legibility or customer journeys.
 - [ ] Mobile uses `Aroma · Menu · Visit`; Menu access and the Café/Restaurant distinction are obvious.
 - [ ] Review artifacts distinguish approved decisions from production content and photography placeholders; final photography is not invented.
+
+## Comments
+
+- 2026-10-27 — Unblocked by the evidence-backed selection. Start only after the reconciliation PR merges; final photography and exact menus are parallel human dependencies, not Ticket 07 blockers.

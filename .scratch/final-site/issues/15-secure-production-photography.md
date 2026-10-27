@@ -13,3 +13,7 @@
 - [ ] Phillip approves the final assets and their intended use; usage permission is recorded.
 - [ ] Assets have useful descriptions or alternative-text intent and are suitable for responsive optimization.
 - [ ] Missing nonessential imagery is handled intentionally without substituting unapproved production placeholders.
+
+## Comments
+
+- 2026-10-27 — Phillip assigned the new photography to Ross. The selected direction is known; final shot needs are completed through Ticket 07.

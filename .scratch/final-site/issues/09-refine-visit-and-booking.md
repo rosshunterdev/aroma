@@ -12,3 +12,7 @@
 - [ ] Address, external Maps action, contact and Restaurant booking areas have a predictable hierarchy.
 - [ ] The Restaurant booking action is easy to find from the Restaurant menu journey and Visit without assuming its mechanism.
 - [ ] Mobile and desktop designs remain readable, keyboard operable and consistent with Option A's clarity-first system.
+
+## Comments
+
+- 2026-10-27 — Supersedes the former dedicated Restaurant-page refinement ticket while retaining ID 09; the Restaurant content itself is handled inside Menu.

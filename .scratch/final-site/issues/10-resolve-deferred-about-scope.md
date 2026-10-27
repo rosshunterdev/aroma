@@ -12,3 +12,7 @@
 - [ ] Ross decides whether About is a launch destination or later enhancement and records its navigation placement.
 - [ ] If approved, a new implementation-ready design ticket is scoped from confirmed content rather than placeholder narrative.
 - [ ] Until then, About remains outside the Phase B refinement gate and production critical path.
+
+## Comments
+
+- 2026-10-27 — Replaces the former combined About/Visit design ticket. Visit moved to Ticket 09; About remains deferred under Decision 033.

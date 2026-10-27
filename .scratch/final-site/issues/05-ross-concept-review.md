@@ -12,3 +12,7 @@
 - [x] The presented artifacts were Refined Minimal, Ross Option A and Warm Neighbourhood.
 - [x] The exact presenter order is recorded in `docs/client-selection-reconciliation.md`.
 - [x] Non-presented concepts remain historical design evidence rather than production inputs.
+
+## Comments
+
+- 2026-10-27 — Closed from the durable three-item presenter on `origin/meeting/phillip-concepts`.

@@ -12,3 +12,7 @@
 - [ ] The confirmed Restaurant menu is semantic, readable and mobile-friendly.
 - [ ] Booking uses only the client-confirmed method and no premature availability claim.
 - [ ] Browser tests cover switching from Café to Restaurant, distinct content, booking action, keyboard use and representative responsive widths.
+
+## Comments
+
+- 2026-10-27 — Supersedes the dedicated Restaurant-page build while retaining ID 18. Restaurant content is a distinct state inside the shared Menu experience.
