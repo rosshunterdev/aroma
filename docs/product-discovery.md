@@ -1,8 +1,8 @@
 # Final-site product discovery
 
-**Status:** Approved planning baseline with individual product choices marked approved or proposed
+**Status:** Phase A complete; selected-direction planning baseline reconciled for Phase B
 **Started:** 2026-10-03
-**Last reconciled:** 2026-10-07
+**Last reconciled:** 2026-10-27
 **Objective:** Define what the finished Aroma Coffee website should enable and communicate before architecture or implementation begins. “Aroma Coffee” is provisional until Phillip confirms the trading name.
 
 The temporary `index.html` page is complete and out of scope for redesign in this phase. The preserved full-site draft, `NEW-DESIGN.png`, design handoff, CSS and earlier decisions are evidence, not approved final requirements.
@@ -24,12 +24,16 @@ Resolved product vocabulary is defined in [`GLOSSARY.md`](../GLOSSARY.md).
 - The final direction removes the Food/Coffee/Tea carousel.
 - Menus are real, accessible web content rather than PDF-only artifacts.
 - Review concepts may use explicit content/photo slots or representative imagery; production may never publish them as fact.
-- Codex will create three original, equally mature, responsive Home-only concepts: Refined minimal, Warm neighbourhood and Day-to-night Aroma.
+- Codex completed three original responsive Home-only concepts: Refined Minimal, Warm Neighbourhood and Day-to-night Aroma.
 - Ross's Options A and C are quality benchmarks, not templates to copy.
-- Ross will curate the combined design pool and select the strongest 2–3 total concepts for Phillip's in-person review.
+- Ross curated Refined Minimal, Ross Option A and Warm Neighbourhood for Phillip's in-person review; Phillip selected Option A / presenter Design 2.
 - Visit uses the confirmed address and an “Open in Google Maps” link rather than an interactive-map dependency.
+- Phillip selected meeting presenter Design 2 / Ross Option A as the overall direction because its information presentation is basic and clear.
+- Meeting presenter Design 3 / Warm Neighbourhood is secondary inspiration for distinctive qualities only where they do not reduce clarity.
+- Use `Aroma · Menu · Visit`; the single Menu destination shows specials first, then a Café/Restaurant switch with Café first. About is deferred.
+- Café and Restaurant have different menu content, but the exact menus remain unconfirmed.
 
-## Proposed product/design direction
+## Remaining proposed product/design direction
 
 The following remains the approved planning baseline but is not recorded as Ross-approved product detail until he explicitly confirms it:
 
@@ -37,10 +41,8 @@ The following remains the approved planning baseline but is not recorded as Ross
 - A slightly Café-led homepage with Restaurant deliberately visible.
 - A strong, mostly static Home hero led by candid venue-and-people photography.
 - A concise Home information structure: hero, Café/Restaurant paths, selected highlights and Visit information.
-- Five top-level destinations: Home, Café, Restaurant, About and Visit.
-- Wordmark/Home plus Café, Restaurant, About and Visit in the main navigation, with no generic Menu item.
-- Dedicated, simply navigable Café and Restaurant pages with their own menus and relevant actions.
-- A people-, place- and community-led About page with Vietnamese heritage integrated authentically.
+- One clear Menu experience containing distinct Café and Restaurant content, without implying that the content is shared.
+- A later people-, place- and community-led About experience with Vietnamese heritage integrated authentically, once its content and navigation place are approved.
 - Small red labels/accents for Phillip-approved Vietnamese highlights.
 - One practical Visit page with distinct offering hours, directions, contact and the confirmed Restaurant booking method.
 - Compact mobile navigation, early contextual actions and no default sticky bottom bar.
@@ -49,15 +51,15 @@ The following remains the approved planning baseline but is not recorded as Ross
 
 ## Ross questions
 
-- Does Ross approve the proposed Café/Restaurant hierarchy and five-destination information architecture, including the absence of a generic Menu item?
 - Which proposed content, mobile, accessibility and launch-scope details does Ross want revised before selected-direction refinement?
+- Which, if any, specific qualities from Design 3 should be explored during refinement without weakening Design 2's clarity?
 
 ## Client questions
 
 See [`TODO.md`](../TODO.md) for the existing questions about trading name, contact details, opening hours, menu accuracy, story, photography and social profiles.
 
-- Do Café and Restaurant share the Aroma name, one menu, one booking method and one physical experience, or do they differ?
-- What are the Restaurant menu, days, hours, start date and intended booking method? Should it appear publicly before launch?
+- Café and Restaurant are confirmed to have different menu content. What are the exact current menus, and do they share the Aroma name, booking method and physical experience?
+- What are the Restaurant days, hours, start date and intended booking method? Should it appear publicly before launch?
 - What does “Kiwi” mean to Phillip in feeling and behaviour, and which aspects of Park Kitchen prompted the reaction?
 - Are there existing brand greens/reds that must be used?
 - Which specific items should receive Vietnamese highlighting, and what language may describe them?
@@ -84,6 +86,7 @@ See [`TODO.md`](../TODO.md) for the existing questions about trading name, conta
 - **Option C:** A Swimsuit-inspired benchmark using strong sans-serif type, asymmetric information/image composition, dotted rules, red marked actions and a large footer wordmark. It is not client-approved.
 - Options A and C are Ross's quality benchmarks. Their detailed labels, layouts, markup and visual systems are exploration, not requirements or templates.
 - PR #4 merged the redesign evidence into `main`; Options A/B/C now live under `site/redesign/`. Their presence on the shared baseline does not imply product or client approval of the comps.
+- **Meeting presenter mapping:** Design 1 = Refined Minimal, Design 2 = Ross Option A and Design 3 = Warm Neighbourhood. Phillip selected Design 2 and praised Design 3's distinctive quality. See `docs/client-selection-reconciliation.md`.
 
 ## Contradictions and cautions
 
@@ -126,7 +129,10 @@ Questions and answers will be recorded here as decisions or explicitly classifie
 - **2026-10-07 — Directions:** Approved a Maps link/no embed; the branded static illustration remains proposed. Recorded in decision 030.
 - **2026-10-07 — Illustrated-map timing:** Reserve space if useful, but design it only after a visual direction is selected.
 - **2026-10-07 — Product outcome:** Proposed the intended final impression and effortless menu/visit/booking journeys. Recorded in decision 031.
+- **2026-10-20 / relayed 2026-10-27 — Concept selection:** Phillip selected presenter Design 2 / Ross Option A for clarity and liked presenter Design 3 / Warm Neighbourhood for its distinctive treatment. Recorded in decision 034.
+- **2026-10-20 / relayed 2026-10-27 — Menu relationship:** Café and Restaurant have different menu content while retaining Decision 033's one-Menu-page model. Recorded in decision 035.
+- **2026-10-27 — Operational dependencies:** Ross owns new photography; Phillip is reviewing existing menu photographs; the agency is recovering unavailable domain access for Ross.
 
 ## Readiness assessment
 
-Ross has approved the planning approach, content-provenance rules, three-phase programme and Codex's three Home-concept exercise. Individual product choices remain proposed where `decisions.md` says so. The specification must preserve unresolved client facts as explicit dependencies and must not invent Restaurant operations, booking, menus or launch timing.
+Ross has approved the planning approach, content-provenance rules, three-phase programme and Codex's Home-concept exercise. Phillip has now completed the Phase A selection gate. Individual product choices remain proposed where `decisions.md` says so. The specification must preserve unresolved client facts as explicit dependencies and must not invent Restaurant operations, booking, exact menus or launch timing.

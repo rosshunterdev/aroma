@@ -6,7 +6,7 @@
 
 **Owner:** Ben/Codex
 
-**Status:** ready-for-review
+**Status:** complete
 
 - [x] The concept covers Home only and is equally mature with concepts 02 and 03 at representative desktop and mobile sizes.
 - [x] Café remains slightly primary and Restaurant feels more evening, refined, professional and considered without becoming a separate brand.
@@ -16,3 +16,7 @@
 ## Implementation note
 
 Completed in `site/concepts/day-to-night/` as an isolated static HTML/CSS concept. Browser review covered 1440, 768, 390 and 320 CSS pixel widths. The first render was refined to keep the hero actions visible sooner and to move the dark tonal transition from the Café content to the Restaurant section, preserving contrast and the intended offering hierarchy.
+
+## Comments
+
+- 2026-10-27 — Merged through PR #10 and reconciled as complete. Ross did not include it in the three-item meeting presenter; it remains historical Phase A evidence on `main`.

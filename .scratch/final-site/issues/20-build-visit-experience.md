@@ -12,3 +12,7 @@
 - [ ] The confirmed address and Open in Google Maps link provide the primary directions journey without an interactive embed.
 - [ ] Contact, booking and any client-supplied parking/access information are accurate and usable on mobile.
 - [ ] Browser tests cover directions, contact/booking links, keyboard use and representative responsive widths.
+
+## Comments
+
+- 2026-10-27 — Intent remains valid under Decision 033; implementation waits for the production shell and confirmed operational facts.

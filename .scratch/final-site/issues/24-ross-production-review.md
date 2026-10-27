@@ -12,3 +12,7 @@
 - [ ] Product hierarchy, visual fidelity, content provenance and Restaurant/Café relationship are explicitly assessed.
 - [ ] Verification evidence for accessibility, SEO, performance and links is reviewed.
 - [ ] The gate records an explicit ready/not-ready outcome for Phillip's final review.
+
+## Comments
+
+- 2026-10-27 — Human review gate retained unchanged after the Home/Menu/Visit planning reconciliation.

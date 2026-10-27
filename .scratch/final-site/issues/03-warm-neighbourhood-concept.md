@@ -16,3 +16,4 @@
 ## Comments
 
 - 2026-10-07: Built the Home-only concept at `site/concepts/warm-neighbourhood/` with the Ticket 01 section order and canonical question deck. Visual checks covered the default desktop viewport, 820px tablet, 390px mobile and 320px reflow. Browser review confirmed in-page navigation, visible keyboard focus, 44px primary tap targets, no horizontal overflow, no console warnings or errors, and accessible photo-slot names matching their visible client questions. The palette's tested text combinations range from 6.39:1 to 12.84:1 contrast.
+- 2026-10-27 — Merged through PR #8. It became presenter Design 3; Phillip liked its distinctive treatment but selected Design 2 overall. It remains secondary design evidence on `main`.

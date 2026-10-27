@@ -127,7 +127,7 @@ Ross has an artistic structure in mind that may take a different approach. This 
 ## 011 — Kiwi redesign: two homepage comps for Phillip to choose
 
 **Date:** 2026-10-05
-**Status:** BUILT — merged to `main` through PR #4. `site/redesign/option-a.html` and `option-b.html` remain design evidence awaiting Ross's curation and Phillip's response.
+**Status:** BUILT — merged to `main` through PR #4. Option A was later selected by Phillip under Decision 034; Option B remains unselected historical design evidence.
 **Decision:** Follow Phillip's 2026-10-05 brief (green primary `#1F5C3A`, red secondary `#C8372D`, white background, minimalist like Park Kitchen, Vietnamese styling only on highlighted items, Day/cafe and Evening/restaurant split). Present two self-contained homepage comps: A "Park Kitchen close" (Figtree, uppercase nav, red outline + tag on Vietnamese cards) and B "Warmer Kiwi" (Fraunces headings, green header/footer bands, red-edged featured card). Photos and restaurant details are copy slots.
 **Why:** Ross promised Phillip a couple of options; standalone comps let the options differ properly without touching live or draft pages.
 **Supersedes:** 010's visual direction only. Spec: `.scratch/redesign/spec.md`; plan: `.scratch/redesign/plan.md`.
@@ -147,7 +147,7 @@ Ross has an artistic structure in mind that may take a different approach. This 
 ## 013 — Option C: Swimsuit-inspired homepage comp
 
 **Date:** 2026-10-07
-**Status:** VERIFIED — merged to `main` through PR #4 at `site/redesign/option-c.html`. Ross's deeper review remains pending.
+**Status:** VERIFIED HISTORICAL EVIDENCE — merged to `main` through PR #4 at `site/redesign/option-c.html`; it was not part of Phillip's recorded selection.
 **Decision:** Add a third homepage comp inspired by swimsuitcoffee.com (shown to Phillip, who liked it). Kiwi palette from 011 with Swimsuit's layout: centred wordmark with split nav, info-left/photo-right hero, dotted rules, red highlight links in place of yellow, green footer holding Find us/Hours/Book a table with a giant AROMA wordmark. Schibsted Grotesk. Same copy and slots as Option A. Options A and B left untouched.
 **Why:** Ross wants designs he is happy with before showing Phillip in person; Phillip responded well to Swimsuit. Ross and Ben currently prefer Option A.
 
@@ -199,7 +199,7 @@ Ross has an artistic structure in mind that may take a different approach. This 
 
 **Hero emphasis:** A strong photograph of the venue and people should carry the Café atmosphere. It should feel candid, local, community-oriented, warm and intimate rather than glossy or heavily staged. Food or coffee close-ups and typography may support it but should not dominate the opening.
 
-**Core homepage composition:** Keep the page deliberately concise: (1) Café-led photographic hero, (2) clear Café and Restaurant paths, (3) a small set of selected highlights including approved Vietnamese highlights, and (4) Visit information covering location, hours and the appropriate contact/booking routes. Fuller menus, story content and Restaurant detail belong on dedicated pages.
+**Core homepage composition:** Keep the page deliberately concise: (1) Café-led photographic hero, (2) obvious access to the shared Menu and its distinct Café/Restaurant content, (3) a small set of selected highlights including approved Vietnamese highlights, and (4) Visit information covering location, hours and the appropriate contact/booking routes. Fuller menu content belongs in Decision 033's single Menu destination; About remains deferred.
 
 **Why:** The offering architecture and primary journeys are better communicated directly than through rotating product categories. Café remains slightly primary while Restaurant stays deliberately visible.
 
@@ -212,7 +212,7 @@ Ross has an artistic structure in mind that may take a different approach. This 
 ## 017 — Offering-led final-site information architecture
 
 **Date:** 2026-10-07
-**Status:** PROPOSED — especially the removal of a generic Menu navigation item; requires explicit Ross confirmation. Header model SUPERSEDED by 033 (Session 8); rest still PROPOSED.
+**Status:** SUPERSEDED IN STRUCTURE by 033. The customer-journey intent remains useful, but the five-destination model and dedicated offering-page assumption are not current requirements.
 **Provenance:** Ben during final-site product discovery.
 
 **Decision:** Use five top-level destinations: Home, Café, Restaurant, About and Visit. Café and Restaurant each receive a dedicated page for their atmosphere, menu and relevant primary actions.
@@ -254,10 +254,10 @@ Ross has an artistic structure in mind that may take a different approach. This 
 ## 020 — Offering-specific web menus
 
 **Date:** 2026-10-07
-**Status:** APPROVED — Ben approved it and Ross explicitly supported menus as real web content.
+**Status:** APPROVED IN PART — semantic web menus remain approved; placement on dedicated offering pages is superseded by 033 and 035.
 **Provenance:** Ben during final-site product discovery.
 
-**Decision:** Café and Restaurant each present a real, mobile-friendly web menu on their dedicated offering page. Use clear category headings and prices, with short on-page jump links only when menu length warrants them. Do not use filtering, carousels or a PDF-only menu.
+**Decision:** Café and Restaurant each present real, mobile-friendly web-menu content. Under 033, both sets of content live within one Menu destination: specials first, then a Café/Restaurant switch, with Café first. Use clear category headings and prices, with short on-page jump links only when menu length warrants them. Do not use a PDF-only menu.
 
 **Secondary format:** A downloadable PDF may be offered as a convenience after the web menu, but it must not replace accessible page content.
 
@@ -273,7 +273,7 @@ Ross has an artistic structure in mind that may take a different approach. This 
 
 **Decision:** Visit is the shared practical-information page. It should show separately confirmed Café and Restaurant hours, the confirmed address with map/directions, confirmed phone and email, client-supplied transport or parking information when useful, and the confirmed Restaurant booking method.
 
-**Cross-page journey:** Repeat a prominent booking action on the Restaurant page so visitors do not have to leave the offering journey to act.
+**Cross-page journey:** Repeat a prominent booking action within the Restaurant journey on the shared Menu page and in Visit so visitors do not have to search for it.
 
 **Client boundary:** Restaurant hours, booking method, phone, email and any transport/parking claims remain unconfirmed. Do not publish placeholders as facts.
 
@@ -285,7 +285,7 @@ Ross has an artistic structure in mind that may take a different approach. This 
 **Status:** PROPOSED — subject to Ross review.
 **Provenance:** Ben during final-site product discovery.
 
-**Decision:** Use a compact mobile header with simple access to Café, Restaurant, About and Visit. Place the relevant primary action near the top of each offering page: menu access for Café, and menu plus booking for Restaurant. Menus must remain readable and touch targets comfortably sized.
+**Decision:** Use a compact mobile header with simple access to Menu and Visit. Menu must make the Café/Restaurant distinction obvious, keep Café first and preserve readable content and comfortably sized switch/navigation targets. The confirmed Restaurant booking action should be prominent wherever that journey is ultimately placed.
 
 **Restraint:** Do not add a persistent bottom action bar by default. Consider one only if later usability evidence demonstrates a clear benefit.
 
@@ -321,7 +321,9 @@ Ross has an artistic structure in mind that may take a different approach. This 
 **Status:** PROPOSED — approved by Ben; requires explicit Ross confirmation.
 **Provenance:** Ben during final-site product discovery.
 
-**In scope:** Home, Café, Restaurant, About and Visit; offering-specific web menus; confirmed contact, directions, hours and booking journey; approved photography and copy; responsive behaviour; WCAG 2.2 AA; performance; local SEO; essential metadata and favicon.
+**In scope:** Home, one Menu destination containing distinct Café and Restaurant menu content, and Visit; confirmed contact, directions, hours and booking journey; approved photography and copy; responsive behaviour; WCAG 2.2 AA; performance; local SEO; essential metadata and favicon.
+
+**Deferred:** About remains a later experience under 033 until its client story content and place in the navigation are approved.
 
 **Deferred unless Phillip makes them essential:** Social feeds, newsletter signup, events, vouchers, online ordering, elaborate animation, loyalty features and other third-party integrations.
 
@@ -344,7 +346,7 @@ Ross has an artistic structure in mind that may take a different approach. This 
 ## 027 — Three Codex Home concepts and Ross curation
 
 **Date:** 2026-10-07
-**Status:** APPROVED — Ross explicitly authorized Codex to create its own three Home concepts and will curate the client set.
+**Status:** COMPLETE — Ross authorized the three-concept exercise, curated the client set and presented it to Phillip.
 **Provenance:** Ben during final-site product discovery.
 
 **Decision:** Codex creates three genuinely distinct Home-page concepts using one shared information structure/content pack:
@@ -353,7 +355,7 @@ Ross has an artistic structure in mind that may take a different approach. This 
 2. **Warm neighbourhood:** More intimate, community-led and tactile while remaining minimalist.
 3. **Day-to-night Aroma:** The shared Café-to-Restaurant tonal transition is the defining visual idea.
 
-**Guardrail:** Options must differ meaningfully in atmosphere and brand expression, not merely colour. Phase A is Home-only; Café, Restaurant, About and Visit concepts follow after direction selection.
+**Outcome:** The completed Phase A artifacts remain review evidence. Selected-direction work follows the current Home/Menu/Visit structure; About is deferred under 033.
 
 **Relationship to existing comps:** Ross's Options A and C are quality/reference benchmarks only. Codex must produce original directions that are competitive with or stronger than those references without copying their markup, layout or exact visual system.
 
@@ -446,6 +448,34 @@ The future Menu destination will open one Menu page with:
 **Phase A scope:** Home concepts implement only the shared header/navigation structure. They do not design or build the Menu page, its specials presentation or its Café/Restaurant switch.
 
 **Supersedes:** Decision 017's proposed five-destination header and proposed omission of a generic Menu item. Other parts of Decision 017 are not approved by this decision.
+
+---
+
+## 034 — Phillip selects presenter Design 2 as the overall direction
+
+**Date:** 2026-10-27
+**Status:** APPROVED CLIENT DIRECTION
+**Provenance:** Direct client feedback from Phillip, relayed by Ross after the 2026-10-20 meeting. Repository evidence is recorded in `docs/client-selection-reconciliation.md`.
+
+**Exact mapping:** The meeting presenter on `origin/meeting/phillip-concepts` labels its second item “Design 2” and maps it to `site/redesign/option-a.html`. PR #11 independently records that Phillip chose “Option A (Design 2)”. The same presenter maps “Design 3” to `site/concepts/warm-neighbourhood/index.html`.
+
+**Decision:** Use presenter Design 2 / Ross Option A as the selected overall direction. Phillip preferred its basic, clear presentation of information. He also liked Design 3's more special/distinctive treatment.
+
+**Implementation principle:** Start from Design 2's information clarity and overall direction. Design 3 is secondary inspiration only: selectively borrow compatible ideas when they add personality without weakening hierarchy, predictability or customer understanding. When the directions conflict, clarity wins. No particular Design 3 element is approved for borrowing yet.
+
+**Clarity criteria:** Selected-direction refinement must make Aroma's offering immediately understandable; keep Menu access obvious; distinguish Café and Restaurant clearly within Menu; maintain readable typography, clear hierarchy, understandable actions and predictable navigation; and avoid decoration or interaction that obscures practical information.
+
+---
+
+## 035 — Café and Restaurant have different menu content
+
+**Date:** 2026-10-27
+**Status:** APPROVED CLIENT REQUIREMENT
+**Provenance:** Direct client feedback from Phillip, relayed by Ross after their latest meeting.
+
+**Decision:** Café and Restaurant have genuinely different menu content. This confirms a content distinction, not separate top-level Menu destinations. Decision 033 remains the approved interaction model: one Menu page, specials first, a Café/Restaurant switch and Café first.
+
+**Client boundary:** Exact menu content is still unconfirmed. Phillip is reviewing the existing menu photographs and may supply suitable/current material; no photographed or transcribed menu becomes production truth until he confirms it.
 
 ---
 

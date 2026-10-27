@@ -6,9 +6,13 @@
 
 **Owner:** Ross
 
-**Status:** needs-human
+**Status:** complete
 
-- [ ] Ross reviews the combined pool against the same product, content and viewport criteria.
-- [ ] Material gaps or accidental scope differences are corrected before client presentation.
-- [ ] Ross's artistic guidance and final presentation notes are recorded durably.
-- [ ] The gate records which two or three concepts are ready for Phillip review and why.
+- [x] Ross reviewed and curated a three-item meeting presenter.
+- [x] The presented artifacts were Refined Minimal, Ross Option A and Warm Neighbourhood.
+- [x] The exact presenter order is recorded in `docs/client-selection-reconciliation.md`.
+- [x] Non-presented concepts remain historical design evidence rather than production inputs.
+
+## Comments
+
+- 2026-10-27 — Closed from the durable three-item presenter on `origin/meeting/phillip-concepts`.

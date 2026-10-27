@@ -8,7 +8,11 @@
 
 **Status:** blocked
 
-- [ ] Shared navigation exposes the Ross-approved final destinations; the proposed wordmark/Home, Café, Restaurant, About and Visit structure and omission of a generic Menu item are not treated as settled without that approval.
-- [ ] Home delivers the approved hero, offering paths, selected highlights and Visit summary without a carousel.
+- [ ] Shared navigation implements Decision 033's approved `Aroma · Menu · Visit` destinations; About remains deferred.
+- [ ] Home delivers the approved clarity-first hero, obvious Menu access, selected highlights and Visit summary without a carousel.
 - [ ] Mobile and desktop browser journeys work with keyboard access, visible focus and no horizontal overflow.
 - [ ] Automated checks cover external behaviour, required metadata basics, routes/assets and absence of unapproved placeholder facts.
+
+## Comments
+
+- 2026-10-27 — Production navigation and Home acceptance now follow Decisions 033–035 rather than the superseded five-destination proposal.

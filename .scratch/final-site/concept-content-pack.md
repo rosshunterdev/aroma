@@ -1,6 +1,6 @@
 # Phase A shared Home concept content pack
 
-**Status:** Ticket 01 implementation baseline awaiting review; use for Tickets 02–04 only after approval
+**Status:** Completed historical Phase A comparison contract; Tickets 02–04 were implemented and merged through PRs #8–#10
 
 **Scope:** Home-page concept review only; not production copy
 

@@ -12,3 +12,8 @@
 - [ ] Developer-managed, client-editable and hybrid maintenance models are evaluated without assuming a CMS is required.
 - [ ] Any proposed architecture or CMS change is presented for explicit approval rather than introduced incidentally.
 - [ ] The recommendation is complete before production hosting is selected or the final site is released.
+- [ ] Domain access recovery is treated as a separate human/operational dependency: research may proceed, but ownership verification and cutover wait until the agency restores access and Ross receives it.
+
+## Comments
+
+- 2026-10-27 — Domain recovery is now a known external dependency rather than an unknown ownership question; it does not block this research.

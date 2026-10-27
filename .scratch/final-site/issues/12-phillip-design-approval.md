@@ -12,3 +12,7 @@
 - [ ] Approval or specific revision requests are recorded durably.
 - [ ] Any feedback that changes information architecture or product scope is escalated before production tickets proceed.
 - [ ] The approved visual direction and remaining production-content dependencies are clearly separated.
+
+## Comments
+
+- 2026-10-27 — Gate remains human-owned and follows Ross's reconciled Home/Menu/Visit refinement review.
