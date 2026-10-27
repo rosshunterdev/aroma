@@ -6,7 +6,7 @@
 
 **Owner:** Ben/Codex
 
-**Status:** ready-for-agent
+**Status:** in-progress
 
 - [ ] Shared colour, typography, spacing, interaction and responsive rules begin from Option A rather than indiscriminately merging concepts.
 - [ ] Home makes Aroma's offer immediately understandable, exposes Menu and Visit predictably and contains no Food/Coffee/Tea carousel.
@@ -17,3 +17,4 @@
 ## Comments
 
 - 2026-10-27 — Unblocked by the evidence-backed selection. Start only after the reconciliation PR merges; final photography and exact menus are parallel human dependencies, not Ticket 07 blockers.
+- 2026-10-27 — Implementation location: `site/selected-home/`. This review-only path preserves `site/index.html`, Ross Option A and every Phase A concept as historical evidence. The first pass keeps Option A's direct header, four-section order, square actions and linear hierarchy. It tests three bounded Warm Neighbourhood traits: serif display typography, restrained red/index details and a deep-green Visit band. Its asymmetric offering sequence and staggered highlight cards were rejected because they weaken predictable scanning.
