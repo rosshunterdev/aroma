@@ -378,6 +378,7 @@ a:focus-visible {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.04em;
+  text-decoration: none;
 }
 
 .offering-card .question--compact {
