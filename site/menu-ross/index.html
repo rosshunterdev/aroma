@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Menu page draft for Aroma Coffee design review only.">
+  <title>Menu draft | Aroma Coffee review</title>
+  <link rel="icon" href="../aroma-leaf-cluster.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="review-notice">
+    <p><strong>Menu draft for review (Ross's version).</strong> Café items are from Aroma's 2024 printed menu and are not confirmed. Questions are not final customer content.</p>
+  </div>
+
+  <header class="site-header">
+    <a class="wordmark" href="../selected-home/" aria-label="Aroma Coffee home">AROMA</a>
+    <nav aria-label="Primary navigation">
+      <div class="nav-menu">
+        <a href="#main" aria-current="page">Menu</a>
+        <button class="nav-menu__toggle" type="button" aria-expanded="false" aria-controls="nav-menu-list" hidden>
+          <span class="visually-hidden">Show menu sections</span>
+          <svg aria-hidden="true" width="12" height="8" viewBox="0 0 12 8"><path d="M1 1.5 6 6.5l5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </button>
+        <ul class="nav-menu__list" id="nav-menu-list" hidden>
+          <li><a href="#cafe">Café menu</a></li>
+          <li><a href="#restaurant">Restaurant menu</a></li>
+        </ul>
+      </div>
+      <a href="../selected-home/#visit">Visit</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="page-intro">
+      <h1>Menu</h1>
+      <p>Specials first, then choose the Café or Restaurant menu.</p>
+    </header>
+
+    <section class="specials" id="specials" aria-labelledby="specials-title">
+      <div class="specials__head">
+        <h2 id="specials-title">Specials</h2>
+        <p class="question question--compact">Are Specials for the Café, the Restaurant, or both?</p>
+      </div>
+
+      <ul class="special-grid">
+        <li class="special-card special-card--viet">
+          <div class="photo-slot" role="img" aria-label="Which photo belongs with this Special?">
+            <span class="photo-slot__label">Special photo</span>
+          </div>
+          <p class="viet-label">Vietnamese highlight</p>
+          <div class="question">
+            <p class="question__label">Special / 1 line</p>
+            <p>Should Egg Coffee be a Special, or stay on the everyday menu?</p>
+          </div>
+        </li>
+        <li class="special-card">
+          <div class="photo-slot" role="img" aria-label="Which photo belongs with this Special?">
+            <span class="photo-slot__label">Special photo</span>
+          </div>
+          <div class="question">
+            <p class="question__label">Special / 1 line</p>
+            <p>Should Chicken Pho appear here?</p>
+          </div>
+        </li>
+        <li class="special-card">
+          <div class="photo-slot photo-slot--evening" role="img" aria-label="Which photo belongs with this Special?">
+            <span class="photo-slot__label">Special photo</span>
+          </div>
+          <div class="question">
+            <p class="question__label">Special / 1 line</p>
+            <p>What changes weekly or seasonally that belongs here?</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="menus" aria-label="Café and Restaurant menus">
+      <div class="menu-switch" role="tablist" aria-label="Choose a menu" hidden>
+        <button class="menu-switch__tab menu-switch__tab--cafe" type="button" role="tab" id="tab-cafe" aria-controls="cafe" aria-selected="true">Café</button>
+        <button class="menu-switch__tab menu-switch__tab--restaurant" type="button" role="tab" id="tab-restaurant" aria-controls="restaurant" aria-selected="false" tabindex="-1">Restaurant</button>
+      </div>
+
+      <!-- CAFÉ -->
+      <div class="menu-panel menu-panel--cafe" id="cafe" role="tabpanel" aria-labelledby="cafe-title" tabindex="-1">
+        <header class="menu-panel__head">
+          <h2 id="cafe-title">Café menu</h2>
+          <div class="question question--compact">
+            <p class="question__label">From the 2024 printed menu</p>
+            <p>Which of these items, descriptions and prices are still current?</p>
+          </div>
+        </header>
+
+        <div class="menu-panel__body">
+          <nav class="category-nav" aria-label="Café menu categories">
+            <ul>
+              <li><a href="#cafe-food">Breakfast &amp; lunch</a></li>
+              <li><a href="#cafe-coffee">Coffee &amp; chocolate</a></li>
+              <li><a href="#cafe-tea">Tea</a></li>
+              <li><a href="#cafe-shakes">Milkshakes &amp; smoothies</a></li>
+              <li><a href="#cafe-bottled">Bottled drinks</a></li>
+            </ul>
+          </nav>
+
+          <div class="categories">
+            <p class="legend">GF gluten free, DF dairy free, V vegetarian</p>
+
+            <section class="category" id="cafe-food" aria-labelledby="cafe-food-title">
+              <h3 id="cafe-food-title">Breakfast &amp; lunch</h3>
+              <ul class="items">
+                <li class="item">
+                  <div class="item__head"><h4>Toast &amp; Eggs</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Free range eggs poached, fried or scrambled. Served on your choice of toasted sourdough, 5 grain or gluten free.</p>
+                  <p class="item__extras">Add: avocado, slow roast tomato, halloumi, house hangi hash, crispy hash, sack pudding, breakfast sausage, streaky bacon, half cold smoke salmon, creamed or sautéed garlic mushroom, eggs, bowl of slow herb vege roasted.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Pancakes</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Bacon or blueberries w house berries compote in banana, cream, almond &amp; maple syrup.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>French Toast</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Bacon or house berries compote in banana, cream, almond &amp; maple syrup.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Bacon Eggs</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Crispy hash/hangi hash, creamy garlic mushroom, bacon and two free range eggs poached/fried/scrambled on 2 toasted.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Big Brekkie <span class="tag">half/full</span></h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Bacon, creamy garlic mushroom/salted mushroom, slow roast tomato, crispy hash/house hangi hash, sausage, free range eggs, hollandaise.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Lady Breakfast <span class="tag">GF</span></h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Wilted baby spinach, slow roast tomato, fresh avocado, 2 poached eggs, toasted sourdough or 5 grain or gluten free bread.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Smashed Avocado <span class="tag">GF</span></h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Caramelised onion, feta, thyme, honey &amp; Italian balsamic dressing w. your choice of toasted bread or crispy hash (w. poached egg).</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Mushroom on Toast <span class="tag">GF</span></h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Creamy garlic mushroom w wilted baby spinach, caramelised onions.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Egg Benedict</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Poached free range eggs on English muffin w/ lemon hollandaise, hash and your choice of: bacon, salmon, spinach, mushroom, avocado.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Hash Stack <span class="tag">GF</span></h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Crispy or hangi hash w/ your choice bacon or salmon on wilted baby spinach, topped w/ 2 poached eggs.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Vege Hash Stack <span class="tag">GF, V</span></h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Crispy or hangi hash w/ creamy or salted mushroom, wilted baby spinach, avocado, crispy shallots, house lemon hollandaise.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Mish Mash Hash <span class="tag">GF, DF</span></h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>House slow-cooked beef with smashed gourmet fried potatoes, rocket/mesclun, capsicum, cherry tomato, feta, topped off with two poached eggs.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Omelette <span class="tag">GF</span></h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Your choice of 3 fillings (ham, cheese, tomato, spinach, salmon, bacon, mushroom, feta) w toasts/salad.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Crispy Chicken Burger</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Crispy chicken, avocado, cheese, onion, tomato, lettuce.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Balsamic Salad <span class="tag">GF, DF, V</span></h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Pan fried chicken or halloumi, cherry tomato, mint, house balsamic dressing on rocket/mesclun salad.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Salmon Salad <span class="tag">GF, DF, V</span></h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Hot smoked salmon, walnut, cherry tomato, mint, house salad dressing on rocket/mesclun salad.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Thai Beef Noodle <span class="tag">GF, DF</span></h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Beef, bok choy, bean sprouts, coriander, rice noodle &amp; beef broth.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Seafood Tom Yum <span class="tag">GF, DF</span></h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Spicy Tom Yum soup w prawn, octopus, mussels, fish ball, mushroom. Served w rice noodles or rice.</p>
+                </li>
+                <li class="item item--viet">
+                  <p class="viet-label">Vietnamese highlight</p>
+                  <div class="item__head"><h4>Chicken Pho <span class="tag">GF, DF</span></h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Rice broth with star anise, cinnamon, ginger, coriander, onion, cloves, fennel, pepper, chilli, simmered until the flavours combine.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Bowl of Fries</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>3 Spring Rolls w Salad</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Only for Children</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Your choice of 1: ham n' cheese toasted / nuggets &amp; fries / berries or bacon pancakes.</p>
+                </li>
+              </ul>
+            </section>
+
+            <section class="category" id="cafe-coffee" aria-labelledby="cafe-coffee-title">
+              <h3 id="cafe-coffee-title">Coffee &amp; chocolate</h3>
+              <ul class="items">
+                <li class="item">
+                  <div class="item__head"><h4>Black Coffee</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Espresso, Americano, Long Black, Short Black, Filter Coffee.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>White Coffee</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Small / Regular / Large / Bowl. Cappuccino, Flat White, Latte, Mocha, Macchiato, Caramel Macchiato, Affogato, Salt Coffee.</p>
+                </li>
+                <li class="item item--viet">
+                  <p class="viet-label">Vietnamese highlight</p>
+                  <div class="item__head"><h4>Egg Coffee</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p class="question question--compact">How would you describe Egg Coffee to someone trying it for the first time?</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Shaking Coffee</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Hot Chocolate, Matcha, Chai, Turmeric Latte</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Small / Regular / Large / Bowl.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Matcha Latte</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Ice Latte</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Iced Coffee, Mocha, Chai, Chocolate, Caramel, Matcha</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Fluffy</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                </li>
+              </ul>
+            </section>
+
+            <section class="category" id="cafe-tea" aria-labelledby="cafe-tea-title">
+              <h3 id="cafe-tea-title">Tea</h3>
+              <ul class="items">
+                <li class="item">
+                  <div class="item__head"><h4>Tea Pot</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>English Breakfast, Earl Grey, Green Tea, Peppermint.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>LHG</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Fresh LHG</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                </li>
+              </ul>
+              <p class="question question--compact">What does LHG stand for on the menu?</p>
+            </section>
+
+            <section class="category" id="cafe-shakes" aria-labelledby="cafe-shakes-title">
+              <h3 id="cafe-shakes-title">Milkshakes &amp; smoothies</h3>
+              <ul class="items">
+                <li class="item">
+                  <div class="item__head"><h4>Milkshake</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Vanilla, Banana, Chocolate, Caramel, Lime, Strawberries, Raspberries.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Smoothie</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                  <p>Banana, Tropical, Mango, Berries.</p>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Green Smoothie</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Yummy Ice Cream</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                </li>
+              </ul>
+            </section>
+
+            <section class="category" id="cafe-bottled" aria-labelledby="cafe-bottled-title">
+              <h3 id="cafe-bottled-title">Bottled drinks</h3>
+              <ul class="items">
+                <li class="item">
+                  <div class="item__head"><h4>Organic Bottle Juice</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                </li>
+                <li class="item">
+                  <div class="item__head"><h4>Pump Water</h4><span class="price"><span aria-hidden="true">$?</span><span class="visually-hidden">Price to confirm</span></span></div>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESTAURANT -->
+      <div class="menu-panel menu-panel--restaurant" id="restaurant" role="tabpanel" aria-labelledby="restaurant-title" tabindex="-1">
+        <header class="menu-panel__head">
+          <h2 id="restaurant-title">Restaurant menu</h2>
+          <div class="question question--compact">
+            <p class="question__label">Your words / 1 sentence</p>
+            <p>How is the Restaurant different from the Café?</p>
+          </div>
+        </header>
+
+        <div class="menu-panel__body">
+          <div class="restaurant-facts">
+            <div class="question">
+              <p class="question__label">Days and hours</p>
+              <p>When does the Restaurant open, and on which days?</p>
+            </div>
+            <div class="question">
+              <p class="question__label">Bookings</p>
+              <p>How should guests book a table?</p>
+            </div>
+          </div>
+
+          <div class="categories">
+            <div class="question">
+              <p class="question__label">Restaurant menu / photo or list</p>
+              <p>What's on the Restaurant menu? A photo of the printed menu is enough.</p>
+            </div>
+
+            <div class="ghost" aria-hidden="true">
+              <div class="ghost__category">
+                <p class="ghost__title">Category</p>
+                <span class="ghost__row"></span><span class="ghost__row"></span><span class="ghost__row"></span>
+              </div>
+              <div class="ghost__category">
+                <p class="ghost__title">Category</p>
+                <span class="ghost__row"></span><span class="ghost__row"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Menu draft by Ross, Ticket 08 review</p>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script>
+    (() => {
+      const tabs = [...document.querySelectorAll('[role="tab"]')];
+      const panels = tabs.map((tab) => document.getElementById(tab.getAttribute('aria-controls')));
+      const switchBar = document.querySelector('.menu-switch');
+
+      function select(index, { focus = false } = {}) {
+        tabs.forEach((tab, i) => {
+          const active = i === index;
+          tab.setAttribute('aria-selected', String(active));
+          tab.tabIndex = active ? 0 : -1;
+          panels[i].hidden = !active;
+        });
+        if (focus) tabs[index].focus();
+      }
+
+      // Opens the side that holds the target, then scrolls to it.
+      function go(id) {
+        const target = id && document.getElementById(id);
+        const index = target ? panels.findIndex((panel) => panel.contains(target)) : -1;
+        if (index === -1) return false;
+        select(index);
+        (target === panels[index] ? switchBar : target).scrollIntoView();
+        return true;
+      }
+
+      switchBar.hidden = false;
+      select(0);
+
+      tabs.forEach((tab, i) => {
+        tab.addEventListener('click', () => {
+          select(i);
+          history.replaceState(null, '', '#' + panels[i].id);
+        });
+        tab.addEventListener('keydown', (event) => {
+          const last = tabs.length - 1;
+          const next = { ArrowRight: i === last ? 0 : i + 1, ArrowLeft: i === 0 ? last : i - 1, Home: 0, End: last }[event.key];
+          if (next === undefined) return;
+          event.preventDefault();
+          select(next, { focus: true });
+          history.replaceState(null, '', '#' + panels[next].id);
+        });
+      });
+
+      window.addEventListener('hashchange', () => go(location.hash.slice(1)));
+      go(location.hash.slice(1));
+
+      // Header dropdown: Menu > Café / Restaurant
+      const toggle = document.querySelector('.nav-menu__toggle');
+      const list = document.getElementById('nav-menu-list');
+
+      function setOpen(open) {
+        toggle.setAttribute('aria-expanded', String(open));
+        list.hidden = !open;
+      }
+
+      toggle.hidden = false;
+      toggle.addEventListener('click', () => setOpen(list.hidden));
+      list.addEventListener('click', (event) => {
+        const link = event.target.closest('a');
+        if (!link) return;
+        event.preventDefault();
+        const id = link.hash.slice(1);
+        history.pushState(null, '', '#' + id);
+        go(id);
+        setOpen(false);
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !list.hidden) {
+          setOpen(false);
+          toggle.focus();
+        }
+      });
+      document.addEventListener('click', (event) => {
+        if (!event.target.closest('.nav-menu')) setOpen(false);
+      });
+    })();
+  </script>
+</body>
+</html>
