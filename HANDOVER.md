@@ -1,6 +1,6 @@
 # Handover — Aroma Coffee Rebuild
 
-As of the Ticket 08 implementation handoff on 2026-10-30.
+As of the Ticket 08 review outcome on 2026-10-31.
 
 ## Current state
 
@@ -12,9 +12,9 @@ Ticket 07 is complete and merged (PR #13) at `site/selected-home/`. It preserves
 
 A "Compare designs" switcher (PR #14) links Option A and `site/selected-home/` so Phillip can compare them. His preference is pending and does not block Ticket 08. The switcher is review scaffolding: remove it before either page becomes the live homepage.
 
-Ticket 08 is implemented and awaiting Ross review at `site/selected-menu/`. The review-only page presents specials first, then a persistent native-anchor choice between a Café-first section and a visually distinct Restaurant section. Both menus remain in the document, so deep links, browser Back and keyboard navigation work without JavaScript or hidden content. The header stays simple: the optional Café/Restaurant dropdown was not adopted because it would duplicate the clear on-page navigation and add touch/keyboard complexity. The selected Home review now links its Menu navigation and both offering cards to the relevant Menu anchors.
+Ticket 08 is merged (PR #17) at `site/selected-menu/`, and Ross accepted its direction with three refinements on 2026-10-31 (see the Ticket 08 record). Ross's parallel draft at `site/menu-ross/` (PR #16) is merged as comparison evidence only. The review-only page presents specials first, then a persistent native-anchor choice between a Café-first section and a visually distinct Restaurant section. Both menus remain in the document, so deep links, browser Back and keyboard navigation work without JavaScript or hidden content. The header stays simple: the optional Café/Restaurant dropdown was not adopted because it would duplicate the clear on-page navigation and add touch/keyboard complexity. The selected Home review now links its Menu navigation and both offering cards to the relevant Menu anchors.
 
-All Menu names, categories, items, descriptions, prices, specials, availability and photography remain explicit question/content slots. No provisional menu transcription, delivery listing or unapproved image has been promoted into the review design.
+All Menu names, categories, items, descriptions, prices, specials, availability and photography remain explicit question/content slots. No provisional menu transcription, delivery listing or unapproved image has been promoted into the review design yet. Ross's refinement 3 asks for the 2024 printed-menu Café items from `site/menu-ross/` to be brought in, still labelled as unconfirmed with prices to confirm.
 
 The exact mapping, branch/PR archaeology and concept-PR disposition are in `docs/client-selection-reconciliation.md`.
 
@@ -22,7 +22,8 @@ The exact mapping, branch/PR archaeology and concept-PR disposition are in `docs
 | --- | --- |
 | `site/index.html` | Temporary public landing page; unchanged by reconciliation. |
 | `site/selected-home/` | Ticket 07 selected Home refinement; merged, noindex and not linked from the temporary homepage. |
-| `site/selected-menu/` | Ticket 08 shared Menu refinement; awaiting review, noindex and linked only from selected Home. |
+| `site/selected-menu/` | Ticket 08 shared Menu refinement; direction accepted, three refinements pending. Noindex and linked only from selected Home. |
+| `site/menu-ross/` | Ross's parallel Menu draft (PR #16); comparison evidence only, not the base. |
 | `site/redesign/option-a.html` | Selected overall direction; already on `main`. Its old A/B bar is now the compare switcher. |
 | `origin/meeting/phillip-concepts` | Durable meeting presenter: Design 1 Refined Minimal, Design 2 Option A, Design 3 Warm Neighbourhood. |
 | PR #8 | Merged Warm Neighbourhood / Design 3 into `main`; secondary design evidence, not selected baseline. |
@@ -33,12 +34,12 @@ The exact mapping, branch/PR archaeology and concept-PR disposition are in `docs
 
 ## Current review gate
 
-Ross reviewed and approved Ticket 07 on 2026-10-28. **Ticket 08 now awaits Ross review.** Phillip's Option A vs refined comparison continues in parallel. Do not start Ticket 09 until the Ticket 08 outcome is recorded.
+Ross reviewed and approved Ticket 07 on 2026-10-28. Ross reviewed Ticket 08 on 2026-10-31: direction accepted, with three refinements for Codex (switch shows the current section, opaque sticky switch, Café items from the 2024 printed menu). **Ticket 09 is unblocked** and may run in parallel with those refinements. Phillip's Option A vs refined comparison continues in parallel.
 
 Phase B proceeds through:
 
-1. Ticket 08 — Ross review of the shared Menu refinement;
-2. Ticket 09 — refine Visit and the Restaurant booking journey after Ticket 08 is accepted;
+1. Ticket 08 — three refinements to the shared Menu, then mark complete;
+2. Ticket 09 — refine Visit and the Restaurant booking journey (ready);
 3. Ticket 11 — Ross refinement review;
 4. Ticket 12 — Phillip design approval.
 
@@ -54,7 +55,8 @@ Ticket 10 records About as deferred and is not on the current Phase B critical p
 ## Git and publication boundaries
 
 - Ticket 07 merged via PR #13 (`7a5770d`); compare switcher merged via PR #14 (`3933a28`).
-- Ticket 08 was built from `origin/main` at `5a8ef33` on branch `codex/refine-menu-experience`; its PR and review outcome remain to be recorded.
+- Ticket 08 merged via PR #17 (`8a300f7`); Ross's Menu draft merged via PR #16 (`c3461a2`). Review outcome recorded on `docs/ticket-08-outcome`.
+- Six untracked images in `assets/` (`Phillip cafe.jpg`, `aroma entrance.jpg`, `aroma pool.jpg`, `aroma-building.png`, `aroma-counter.png`, `aroma-entrance.png`) are uncommitted on purpose. Decide whether to commit them; none is approved final photography.
 - Netlify publishes only `site/`; repository documentation remains outside the published output.
 - `site/index.html` and Phase A concept artifacts remain unchanged.
 - All Phase A concept PRs are now merged. Treat their `site/concepts/` artifacts as historical review evidence; only Option A is the selected Phase B baseline.

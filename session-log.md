@@ -101,3 +101,10 @@ Note: Codex/Ben work on 2026-09-30 (PR #1 onboarding, PR #2 temporary page) was 
 - **Dependencies:** Ross owns new photography; Phillip is reviewing existing menu photos; domain access is being recovered through the agency for Ross. These block the relevant production/release gates, not Ticket 07.
 - **Planned:** Phase A gates 05–06 are complete. Ticket 07 is the next executable ticket after the reconciliation PR merges; tickets 08–10 and 17–22 were aligned to Home/Menu/Visit with About deferred.
 - **Rebased:** PR #12 onto `origin/main` at `21ef694` after PRs #8–#11 merged. Tickets 02–04 retain their implementation and validation notes, remain complete and also record the later selection outcome.
+
+## Session 10 — 2026-10-31 — Ticket 08 review
+
+- **Did:** Compared Ross's Menu draft (`site/menu-ross/`, PR #16) with Codex's (`site/selected-menu/`, PR #17); both already merged. Screenshots at 1440 and 390 CSS px from the production Netlify site.
+- **Decided:** Keep `site/selected-menu/` as the base (native anchors, no JS, no header dropdown). Requested three refinements: the sticky switch must show the current section (it always looks like Café is selected), make its background opaque, and bring in the 2024 printed-menu Café items from `site/menu-ross/` labelled as unconfirmed.
+- **Unblocked:** Ticket 09 (`ready-for-agent`), in parallel with the Ticket 08 refinements.
+- **Housekeeping:** Stale local `HANDOVER.md` edit from `feature/menu-design-ross` stashed (`stash@{0}`), not dropped. Six untracked `assets/` images still undecided.
