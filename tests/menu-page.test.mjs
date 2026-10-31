@@ -32,7 +32,56 @@ test("Café and Restaurant navigation uses native fragment links", async () => {
   assert.match(html, /href="#restaurant-menu"/);
   assert.match(html, /<section[^>]+id="cafe-menu"/);
   assert.match(html, /<section[^>]+id="restaurant-menu"/);
-  assert.doesNotMatch(html, /role="tab"|role="tabpanel"|<script/);
+  assert.doesNotMatch(html, /role="tab"|role="tabpanel"|aria-selected|<script/);
+});
+
+test("Menu navigation is neutral and its sticky background is opaque", async () => {
+  const css = await readFile(stylesheetUrl, "utf8");
+  const switchRule = css.match(/\.menu-switch\s*\{(?<body>[^}]*)\}/)?.groups?.body ?? "";
+  const cafeRule = css.match(/\.menu-switch__link--cafe\s*\{(?<body>[^}]*)\}/)?.groups?.body ?? "";
+  const restaurantRule = css.match(/\.menu-switch__link--restaurant\s*\{(?<body>[^}]*)\}/)?.groups?.body ?? "";
+  const cafeHoverRule = css.match(/\.menu-switch__link--cafe:hover\s*\{(?<body>[^}]*)\}/)?.groups?.body ?? "";
+  const restaurantHoverRule = css.match(/\.menu-switch__link--restaurant:hover\s*\{(?<body>[^}]*)\}/)?.groups?.body ?? "";
+
+  assert.match(switchRule, /background:\s*var\(--white\)/);
+  assert.doesNotMatch(switchRule, /background:\s*rgb\([^)]*\//, "Sticky background has no alpha channel");
+  assert.match(cafeRule, /background:\s*var\(--white\)/);
+  assert.match(restaurantRule, /background:\s*var\(--white\)/);
+  assert.match(cafeHoverRule, /background:\s*var\(--green-dark\)/);
+  assert.match(restaurantHoverRule, /background:\s*var\(--red\)/);
+});
+
+test("Café uses the provisional 2024 transcription without confirmed prices", async () => {
+  const html = await readPage();
+  const cafe = html.slice(html.indexOf('id="cafe-menu"'), html.indexOf('id="restaurant-menu"'));
+
+  assert.match(cafe, /From the 2024 printed menu · provisional/);
+  assert.match(cafe, /Which of these items, descriptions and prices are still current\?/);
+  for (const category of [
+    "Breakfast &amp; lunch",
+    "Coffee &amp; chocolate",
+    "Tea",
+    "Milkshakes &amp; smoothies",
+    "Bottled drinks",
+  ]) {
+    assert.match(cafe, new RegExp(category));
+  }
+  for (const item of ["Toast &amp; Eggs", "Chicken Pho", "Egg Coffee", "Fresh LHG", "Pump Water"]) {
+    assert.match(cafe, new RegExp(item));
+  }
+  assert.match(cafe, />\$\?</);
+  assert.doesNotMatch(cafe, /\$\d/);
+  assert.doesNotMatch(cafe, />Item name</);
+});
+
+test("Restaurant content remains explicitly unresolved", async () => {
+  const html = await readPage();
+  const restaurant = html.slice(html.indexOf('id="restaurant-menu"'));
+
+  assert.match(restaurant, /Restaurant content · question/);
+  assert.match(restaurant, /Item name/);
+  assert.match(restaurant, /Price —/);
+  assert.doesNotMatch(restaurant, /\$\d/);
 });
 
 test("The page preserves the selected Home navigation and review boundaries", async () => {

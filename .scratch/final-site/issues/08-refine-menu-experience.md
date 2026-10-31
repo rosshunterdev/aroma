@@ -6,11 +6,11 @@
 
 **Owner:** Ben/Codex
 
-**Status:** ready-for-agent
+**Status:** awaiting-review
 
 - [x] Specials, the Café-first state and the Café/Restaurant distinction are immediately understandable on mobile and desktop.
 - [x] Café and Restaurant use separate labelled placeholder content; no menu item, description or price is invented.
-- [ ] Switching is predictable, keyboard operable and does not hide the current context or imply that the menus are shared.
+- [x] Switching is predictable, keyboard operable and does not hide the current context or imply that the menus are shared.
 - [x] Menu hierarchy, categories, optional jump links and approved Vietnamese-highlight treatment remain readable and restrained.
 - [x] The design is reviewed for keyboard flow, reflow, contrast and content-placeholder clarity.
 
@@ -24,3 +24,4 @@
   2. **Sticky switch background.** `rgb(255 255 255 / 96%)` lets item text show faintly through the bar on mobile. Make it opaque.
   3. **Café content.** Bring the Café categories and items from `site/menu-ross/` (2024 printed menu transcription) into the Café section. Keep its "from the 2024 printed menu: still current?" question and `$?` price-to-confirm treatment. Add no prices or specials; the Restaurant side stays as content slots.
   These refinements do not block Ticket 09, which may proceed in parallel.
+- 2026-10-31 — Implemented all three requested refinements on `codex/ticket-08-menu-refinements` from `origin/main` baseline `664c90d`. The sticky Café and Restaurant links now use neutral white treatments with their existing green/red distinction, the sticky background is fully opaque, and the complete Café transcription from `site/menu-ross/` is rendered as 2024 provisional content with `$?` prices and visible confirmation questions. Restaurant content remains unresolved placeholders. Focused tests pass 9/9; a source-parity check matched all 40 Café item names and all 40 `$?` slots between the Ross reference and selected Menu. Real-browser review covered 320, 390, 480, 768, 1024 and 1440 CSS-pixel widths plus both direct anchors, browser Back, sticky behaviour, focus visibility, wrapping and overflow. A separate Standards review identified and corrected one CSS cascade-order issue that had made the Restaurant hover inherit Café green; the final pass found no remaining departure from repository instructions, the static/no-dependency architecture or provenance rules. A separate Spec review found all three requested refinements satisfied and no Ticket 09 scope added. PR #19 remains the source of its Visit/booking integration while open; this branch does not overwrite or claim those changes. Awaiting Ross review; this is not approval or merge confirmation.

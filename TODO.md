@@ -26,7 +26,7 @@
 - [x] **Information architecture:** Decision 033 approves `Aroma · Menu · Visit`, one Menu page with specials first and a Café/Restaurant switch (Café first), with About deferred.
 - [x] **Phase A concept curation and selection:** Ross presented Refined Minimal, Option A and Warm Neighbourhood. Phillip selected Option A / Design 2; mapping is recorded in `docs/client-selection-reconciliation.md`.
 - [x] **Selected-direction Home refinement:** Ticket 07 is merged at `site/selected-home/`, preserving Option A's clarity with bounded Warm Neighbourhood influence.
-- [ ] **Shared Menu refinement review:** Ticket 08 is implemented at `site/selected-menu/` and awaits Ross review. Confirm the native Café/Restaurant anchor navigation, distinct visual treatment and placeholder strategy before Ticket 09 begins.
+- [ ] **Shared Menu refinement follow-up:** Ross accepted Ticket 08's direction and requested three changes. Neutral/opaque sticky anchors and the provisional 2024 Café transcription are implemented at `site/selected-menu/`; Ross must confirm the refinements before Ticket 08 is marked complete. Ticket 09 is independently unblocked.
 - [ ] **Mobile testing:** Responsive breakpoints exist but haven't been tested on real devices.
 - [ ] **Final-site favicon:** The temporary page uses the existing leaf SVG; choose and validate the final-site favicon later.
 
