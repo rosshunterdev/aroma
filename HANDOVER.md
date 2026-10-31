@@ -1,6 +1,6 @@
 # Handover — Aroma Coffee Rebuild
 
-As of the Ticket 08 review outcome on 2026-10-31.
+As of the Ticket 09 implementation handoff on 2026-10-31.
 
 ## Current state
 
@@ -13,6 +13,8 @@ Ticket 07 is complete and merged (PR #13) at `site/selected-home/`. It preserves
 A "Compare designs" switcher (PR #14) links Option A and `site/selected-home/` so Phillip can compare them. His preference is pending and does not block Ticket 08. The switcher is review scaffolding: remove it before either page becomes the live homepage.
 
 Ticket 08 is merged (PR #17) at `site/selected-menu/`, and Ross accepted its direction with three refinements on 2026-10-31 (see the Ticket 08 record). Ross's parallel draft at `site/menu-ross/` (PR #16) is merged as comparison evidence only. The review-only page presents specials first, then a persistent native-anchor choice between a Café-first section and a visually distinct Restaurant section. Both menus remain in the document, so deep links, browser Back and keyboard navigation work without JavaScript or hidden content. The header stays simple: the optional Café/Restaurant dropdown was not adopted because it would duplicate the clear on-page navigation and add touch/keyboard complexity. The selected Home review now links its Menu navigation and both offering cards to the relevant Menu anchors.
+
+Ticket 09 is implemented on `codex/refine-visit-booking` at `site/selected-visit/` and awaits Ross review. The noindex Visit page continues Option A's clarity-first system with the confirmed address and a normal Google Maps link, visibly separate Café and Restaurant hours questions, an explicit Restaurant booking-method question, and compact contact/arrival question areas. It does not activate unconfirmed phone/email routes, imply Restaurant availability or provide a fake booking control. Selected Home now links to the Visit page, and the selected Menu's Restaurant section links directly to `#restaurant-booking`; native navigation preserves deep links and browser Back.
 
 All Menu names, categories, items, descriptions, prices, specials, availability and photography remain explicit question/content slots. No provisional menu transcription, delivery listing or unapproved image has been promoted into the review design yet. Ross's refinement 3 asks for the 2024 printed-menu Café items from `site/menu-ross/` to be brought in, still labelled as unconfirmed with prices to confirm.
 
@@ -34,12 +36,12 @@ The exact mapping, branch/PR archaeology and concept-PR disposition are in `docs
 
 ## Current review gate
 
-Ross reviewed and approved Ticket 07 on 2026-10-28. Ross reviewed Ticket 08 on 2026-10-31: direction accepted, with three refinements for Codex (switch shows the current section, opaque sticky switch, Café items from the 2024 printed menu). **Ticket 09 is unblocked** and may run in parallel with those refinements. Phillip's Option A vs refined comparison continues in parallel.
+Ross reviewed and approved Ticket 07 on 2026-10-28. Ross reviewed Ticket 08 on 2026-10-31: direction accepted, with three refinements for Codex (switch shows the current section, opaque sticky switch, Café items from the 2024 printed menu). **Ticket 09 now awaits Ross review.** Phillip's Option A vs refined comparison continues in parallel.
 
 Phase B proceeds through:
 
 1. Ticket 08 — three refinements to the shared Menu, then mark complete;
-2. Ticket 09 — refine Visit and the Restaurant booking journey (ready);
+2. Ticket 09 — refine Visit and the Restaurant booking journey (awaiting review);
 3. Ticket 11 — Ross refinement review;
 4. Ticket 12 — Phillip design approval.
 
@@ -48,8 +50,8 @@ Ticket 10 records About as deferred and is not on the current Phase B critical p
 ## Human dependencies
 
 - **Photography:** Phillip wants Ross to take new photography. Ross owns the shoot; Phillip approves the final assets. No final approved photography exists yet.
-- **Menu source:** Phillip is reviewing existing menu photographs and may send suitable/current material. Exact Café and Restaurant menus remain unconfirmed. An Uber Eats listing (7 delivery items) and public Google/DoorDash photos are reference only until Phillip confirms them; see `content-status.md`.
-- **Domain:** credentials are unavailable because the former holder lost them. The agency is recovering access; Ross should receive access afterward. This blocks ownership verification and final cutover, not design refinement.
+- **Menu source:** Phillip says he expects a new menu “next month” and plans to print it and photograph it. Those photographs have not been received or validated; exact Café and Restaurant menus remain unconfirmed. An Uber Eats listing (7 delivery items) and public Google/DoorDash photos are reference only until Phillip confirms them; see `content-status.md`.
+- **Domain:** Phillip reports “I got domain already.” Ross's credential access, ownership, registrar, DNS and recovery configuration remain unverified. This blocks cutover verification, not design refinement.
 - **Other client facts:** Restaurant name/status/hours/booking, Café hours, contact details, story, Vietnamese highlights, trading name and socials remain unresolved in `phillip.md` and `TODO.md`.
 
 ## Git and publication boundaries
@@ -66,6 +68,12 @@ Ticket 10 records About as deferred and is not on the current Phase B critical p
 - Automated structural tests cover information order, noindex boundaries, provenance-safe placeholders, native fragment links, selected Home entry points, one `h1`, unique IDs, fragment targets, focus styles and responsive/reduced-motion rules.
 - Real-browser visual review covered 320, 390, 480, 768, 1024 and 1440 CSS-pixel widths. A second pass covered the selected Home links, sticky switch, Café/Restaurant deep links, browser Back, visible keyboard focus, long-description wrapping and 160% text zoom/reflow at 390px.
 - The implementation uses no JavaScript, framework or new dependency. A later audit should still include NVDA/VoiceOver and automated accessibility tooling before launch; this review is not a WCAG certification.
+
+## Ticket 09 verification
+
+- Focused structural tests cover noindex boundaries, confirmed-address/Maps treatment, separate Café and Restaurant hours placeholders, inactive unconfirmed contact methods, the non-deceptive booking placeholder, one `h1`, unique IDs, fragment targets, Home/Menu entry points, focus styles and responsive/reduced-motion rules.
+- Browser review covered rendered pages at 320, 390, 480, 768, 1024 and 1440 CSS-pixel widths with no horizontal overflow, clipping or hierarchy problems. The 480px pass exposed a cramped footer, which was changed to stack at the mobile breakpoint. Home → Visit, Home → Restaurant Menu → booking, direct booking fragments, browser Back, the Google Maps URL and visible keyboard focus all worked.
+- Browser zoom could not be changed in the in-app review environment, so a true 200% zoom pass and screen-reader testing remain for later accessibility verification. The implementation uses no JavaScript, framework, form, embed or new dependency; this review is not a WCAG certification.
 
 ## Key records
 

@@ -39,7 +39,7 @@ test("The page preserves the selected Home navigation and review boundaries", as
   const html = await readPage();
 
   assert.match(html, /href="\.\.\/selected-home\/"[^>]+aria-label="Aroma Coffee home"/);
-  assert.match(html, /href="\.\.\/selected-home\/#visit"/);
+  assert.match(html, /href="\.\.\/selected-visit\/"/);
   assert.match(html, /href="#main"[^>]*>Skip to content/);
   assert.match(html, /Figtree/);
 });
@@ -78,4 +78,11 @@ test("Selected Home links each relevant Menu entry point to the Menu page", asyn
   assert.match(html, /href="\.\.\/selected-menu\/">Menu<\/a>/);
   assert.match(html, /href="\.\.\/selected-menu\/#cafe-menu">See the Café menu<\/a>/);
   assert.match(html, /href="\.\.\/selected-menu\/#restaurant-menu">See the Restaurant menu<\/a>/);
+});
+
+test("Restaurant Menu links to the Visit booking section", async () => {
+  const html = await readPage();
+
+  assert.match(html, /href="\.\.\/selected-visit\/#restaurant-booking"/);
+  assert.match(html, /See Restaurant booking details/);
 });

@@ -2,6 +2,11 @@
 
 Questions to clarify, confirm or follow up with Phillip (owner). Tick off and record the answer inline, then update `content-status.md`.
 
+## Latest update, relayed by Ross 2026-10-31
+
+- [ ] **Domain verification:** Phillip said, “I got domain already.” Confirm Ross has the required access, then verify ownership, registrar, DNS and recovery details before any cutover work.
+- [ ] **New menu photographs:** Phillip said, “I will have new menu next month. I will print out and take photo for you.” Await the photographs and confirm the menu is current before promoting any content.
+
 ## For the next meeting (prepared 2026-10-28)
 
 - [ ] **Compare designs:** Option A vs the refined version (use the "Compare designs" bar). Which does he prefer? Which parts of Design 3 felt special?
@@ -17,7 +22,7 @@ Questions to clarify, confirm or follow up with Phillip (owner). Tick off and re
 - [x] **Menu relationship:** Café and Restaurant have different menu content. Exact items, descriptions, prices and availability remain open.
 - [x] **Photography approach:** Phillip wants Ross to take new photography. Ross owns the shoot; final approved images do not yet exist.
 - [ ] **Existing menu photographs:** Phillip is reviewing what he has and will determine what is current/suitable to send Ross.
-- [ ] **Domain access:** The credentials are unavailable because the former credential holder lost them. Phillip/Aroma has contacted the agency for recovery and intends to give Ross access once recovered.
+- [ ] **Domain access:** Phillip now reports “I got domain already.” Ross's access and the ownership, registrar, DNS and recovery details still need verification.
 
 ## From meeting, 2026-10-05
 
@@ -48,4 +53,4 @@ What he said: a "Kiwi" style with green primary, red secondary and white backgro
 - [ ] Social media links
 - [ ] Menu accuracy check
 - [ ] Trading name: Aroma Coffee or Aroma Café?
-- [ ] Who controls aromacoffee.nz, and what does he pay for it now? **Access is being recovered through the agency; ownership, cost and configuration remain unverified.**
+- [ ] Who controls aromacoffee.nz, and what does he pay for it now? **Phillip reports domain access, but Ross's access, ownership, cost and configuration remain unverified.**
