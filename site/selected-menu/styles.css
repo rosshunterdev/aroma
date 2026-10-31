@@ -284,7 +284,7 @@ a:focus-visible {
   margin-top: 34px;
   padding: 10px 0;
   border-block: 1px solid var(--line);
-  background: rgb(255 255 255 / 96%);
+  background: var(--white);
   box-shadow: 0 8px 18px rgb(20 59 39 / 7%);
 }
 
@@ -319,22 +319,31 @@ a:focus-visible {
 }
 
 .menu-switch__link--cafe {
-  background: var(--green);
-  color: var(--white);
+  background: var(--white);
 }
 
 .menu-switch__link--cafe small {
-  color: var(--white);
+  color: var(--ink-soft);
 }
 
 .menu-switch__link--restaurant {
   border-color: var(--red);
+  background: var(--white);
+  color: var(--red);
 }
 
 .menu-switch__link:hover {
+  color: var(--white);
+}
+
+.menu-switch__link--cafe:hover {
   border-color: var(--green-dark);
   background: var(--green-dark);
-  color: var(--white);
+}
+
+.menu-switch__link--restaurant:hover {
+  border-color: var(--red);
+  background: var(--red);
 }
 
 .menu-switch__link:hover small {
@@ -419,6 +428,12 @@ a:focus-visible {
   border-top: 1px solid var(--line);
 }
 
+.menu-legend {
+  margin: 0 0 30px;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
 .menu-category + .menu-category {
   margin-top: clamp(62px, 8vw, 96px);
 }
@@ -477,6 +492,14 @@ a:focus-visible {
   line-height: 1.2;
 }
 
+.tag {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
 .menu-item .price-slot {
   flex: 0 0 auto;
   margin: 0;
@@ -486,6 +509,34 @@ a:focus-visible {
   margin: 16px 0 0;
   color: var(--ink-soft);
   font-size: 15px;
+}
+
+.menu-item .menu-item__extras {
+  font-size: 13px;
+}
+
+.menu-item .item-question {
+  padding: 10px 12px;
+  border: 1.5px dashed var(--slot-line);
+  color: var(--ink-soft);
+}
+
+.menu-item--viet {
+  border-color: var(--red);
+  border-left-width: 4px;
+  background: var(--red-soft);
+}
+
+.menu-item--viet .highlight-label {
+  width: fit-content;
+  margin: 0 0 14px;
+  padding: 5px 8px;
+  background: var(--red);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .menu-experience--restaurant .menu-heading {

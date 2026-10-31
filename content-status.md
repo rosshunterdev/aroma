@@ -6,10 +6,11 @@ Tracks what content is real, placeholder, or missing across the site.
 |---------|--------|--------|
 | "AROMA COFFEE" blurb | Old site homepage | **Live, approval unknown** — incorporated legacy copy; old-site presence is not direct client confirmation |
 | "AROMA MATCHA" blurb | Old site homepage | **Live, approval unknown** — incorporated legacy copy; old-site presence is not direct client confirmation |
-| Breakfast & lunch menu | Physical menu photo (W23.2024) | **Needs confirmation** — transcribed, may be outdated |
-| Drinks menu | Physical menu photo | **Needs confirmation** — transcribed, may be outdated |
+| Breakfast & lunch menu | Physical menu photo (W23.2024) | **Needs confirmation** — transcribed into `site/selected-menu/` as clearly labelled 2024 provisional content with `$?` prices; may be outdated |
+| Drinks menu | Physical menu photo | **Needs confirmation** — transcribed into `site/selected-menu/` as clearly labelled provisional content with `$?` prices; may be outdated |
 | Café and Restaurant menu relationship | Phillip via Ross, relayed 2026-10-27 | **Confirmed distinct content** — one shared Menu destination remains approved; exact content is pending |
 | Existing menu photographs | Phillip via Ross, relayed 2026-10-27 | **Under client review** — Phillip will determine what is current/suitable to send Ross; not approved production content yet |
+| Planned new printed menu photographs | Phillip via Ross, relayed 2026-10-31: “I will have new menu next month. I will print out and take photo for you.” | **Expected client input, not yet received** — preserve Phillip's relative timing rather than treating it as a guaranteed delivery date; no future menu content is confirmed |
 | Address (128D Park Rd) | Physical menu + old site | **Confirmed** |
 | Hours (Mon–Fri 7–3, Sat–Sun 9–3) | **Conflicting records:** `session-log.md` says client-provided; earlier status says Google Maps | **Needs confirmation** — provenance is unresolved and public listings disagree. Uber Eats (checked 2026-10-28) lists Mon–Fri 9–3 only; window signage in Ross's photo says "Open 7 days" |
 | Phone: (020) 456 7837 | Physical menu; building signage "Tel. 020 4567837" (Google profile photo, seen 2026-10-28) | **Needs confirmation** — signage supports this number; conflicts with old site |
