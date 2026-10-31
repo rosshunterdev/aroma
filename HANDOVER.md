@@ -58,6 +58,7 @@ Ticket 10 records About as deferred and is not on the current Phase B critical p
 
 - Ticket 07 merged via PR #13 (`7a5770d`); compare switcher merged via PR #14 (`3933a28`).
 - Ticket 08 merged via PR #17 (`8a300f7`); Ross's Menu draft merged via PR #16 (`c3461a2`). Review outcome recorded on `docs/ticket-08-outcome`.
+- Ticket 09 is awaiting review in PR #19 (`7932428`) on `codex/refine-visit-booking`; the verified deploy preview is `https://deploy-preview-19--aromacoffeemiramar.netlify.app/selected-visit/`.
 - Six untracked images in `assets/` (`Phillip cafe.jpg`, `aroma entrance.jpg`, `aroma pool.jpg`, `aroma-building.png`, `aroma-counter.png`, `aroma-entrance.png`) are uncommitted on purpose. Decide whether to commit them; none is approved final photography.
 - Netlify publishes only `site/`; repository documentation remains outside the published output.
 - `site/index.html` and Phase A concept artifacts remain unchanged.
