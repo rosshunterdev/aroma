@@ -6,7 +6,7 @@ Static website rebuild for Aroma Coffee / Aroma Café at 128D Park Road, Miramar
 
 - `index.html` is a standalone temporary landing page; it is not the approved final homepage.
 - Phase A concept comparison is complete: Phillip selected meeting presenter Design 2 / Ross Option A as the overall direction, with Design 3 / Warm Neighbourhood as secondary inspiration where clarity is preserved.
-- Phase B is in progress. Ticket 07's selected Home refinement is merged at `site/selected-home/`. Ticket 08's shared Menu refinement is awaiting review at `site/selected-menu/`; both are noindex review artifacts and neither replaces the temporary homepage.
+- Phase B is in progress. Ticket 07's selected Home refinement is merged at `site/selected-home/`. Ticket 08's shared Menu direction is accepted with three refinements pending at `site/selected-menu/`. Ticket 09's Visit and Restaurant booking journey awaits review at `site/selected-visit/`. All three are noindex review artifacts; none replaces the temporary homepage.
 - The current final-site structure is `Aroma · Menu · Visit`; Menu contains distinct Café and Restaurant content in one experience, and About is deferred.
 - The early website draft remains at `draft.html`, with `menu.html`, `contact.html`, `styles.css` and a small inline vanilla-JavaScript tabs script.
 - The temporary page uses `temporary.css`; there is no framework or build step.
@@ -27,7 +27,7 @@ Open the localhost URL printed by the server. There is no project install or bui
 Run the focused Menu review checks with:
 
 ```powershell
-node --test tests/menu-page.test.mjs
+node --test tests/menu-page.test.mjs tests/visit-page.test.mjs
 ```
 
 ## Project map
@@ -36,6 +36,7 @@ node --test tests/menu-page.test.mjs
 - `docs/client-selection-reconciliation.md` — exact presenter mapping, selection evidence and concept-PR disposition
 - `site/selected-home/` — review-only selected Home refinement for Ticket 07
 - `site/selected-menu/` — review-only shared Menu refinement for Ticket 08
+- `site/selected-visit/` — review-only Visit and Restaurant booking journey for Ticket 09
 - `decisions.md` — accepted and proposed product/technical decisions; status labels matter
 - `content-status.md` — content provenance and confirmation state
 - `TODO.md` — outstanding work and client questions

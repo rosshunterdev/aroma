@@ -10,7 +10,7 @@
 - [ ] **About page content:** The Vietnamese heritage story, how the cafe started, team info — none of this exists on the old site. Needs to come from the client.
 - [ ] **Early-draft photo/copy slots:** The historical `site/draft.html` still contains slots for its hero, Food/Coffee/Tea highlights, hero sentence and Egg Coffee description. Preserve these as draft evidence; do not treat them as the final-site brief.
 - [ ] **Photography — Ross:** Plan and take the new photography Phillip requested, based on the selected direction's shot needs; obtain Phillip's approval and record usage permission. Final approved images do not yet exist.
-- [ ] **Menu photographs — Phillip:** Review existing menu photos and send Ross only material that is current/suitable.
+- [ ] **Menu photographs — Phillip:** Phillip expects a new menu “next month” and plans to print it and photograph it (relayed 2026-10-31). Await the photographs and confirm they show the current menu; do not treat the relative timing as guaranteed.
 - [ ] **Menu accuracy:** Café and Restaurant content are confirmed to differ, but neither exact menu is approved. Confirm current items, descriptions, prices and availability before launch; the W23.2024 transcription remains provisional.
 - [ ] **Trading name:** Is it "Aroma Coffee", "Aroma Café" or "Aroma Coffee Works"? Using "Aroma Coffee" until confirmed.
 - [ ] **Email address:** Is `aroma128d@gmail.com` still the preferred contact email?
@@ -26,7 +26,7 @@
 - [x] **Information architecture:** Decision 033 approves `Aroma · Menu · Visit`, one Menu page with specials first and a Café/Restaurant switch (Café first), with About deferred.
 - [x] **Phase A concept curation and selection:** Ross presented Refined Minimal, Option A and Warm Neighbourhood. Phillip selected Option A / Design 2; mapping is recorded in `docs/client-selection-reconciliation.md`.
 - [x] **Selected-direction Home refinement:** Ticket 07 is merged at `site/selected-home/`, preserving Option A's clarity with bounded Warm Neighbourhood influence.
-- [ ] **Shared Menu refinement review:** Ticket 08 is implemented at `site/selected-menu/` and awaits Ross review. Confirm the native Café/Restaurant anchor navigation, distinct visual treatment and placeholder strategy before Ticket 09 begins.
+- [ ] **Shared Menu refinements:** Ross accepted Ticket 08's direction. Complete the three recorded refinements: neutral/current-section switch styling, an opaque sticky-switch background and provisional 2024 Café items with `$?` prices. Ticket 09 proceeded in parallel and now awaits review.
 - [ ] **Mobile testing:** Responsive breakpoints exist but haven't been tested on real devices.
 - [ ] **Final-site favicon:** The temporary page uses the existing leaf SVG; choose and validate the final-site favicon later.
 
@@ -35,7 +35,7 @@
 - [ ] **Final About experience:** Deferred under Decision 033. Revisit its navigation/place and design only after client story content and scope are approved.
 - [ ] **Legal/privacy assessment:** Decide based on the actual launch functionality (analytics, forms, embeds and tracking); obtain appropriate client/legal advice if documents are required.
 - [ ] **Self-host fonts:** Decide with Ben (privacy and performance); not started.
-- [ ] **Domain access recovery — Phillip/Ross:** The credentials are currently unavailable. Follow up with the agency, give Ross access once recovered, and verify ownership, registrar, DNS and recovery details before cutover.
+- [ ] **Domain access verification — Phillip/Ross:** Phillip reports “I got domain already” (relayed 2026-10-31). Confirm Ross has the required access and verify ownership, registrar, DNS and recovery details before cutover; do not infer DNS readiness from Phillip's report.
 - [ ] **Domain / hosting recommendation:** Research and recommend the lowest-maintenance production model, including account/domain ownership, deployment workflow, cost, handover and recovery. Recovery blocks final verification/cutover, not Phase B design refinement. Do not assume the Netlify design preview is the final arrangement.
 - [ ] **Maintenance model:** Research developer-managed, client-editable and hybrid options against the expected frequency of menu, price, hours and Restaurant updates before selecting technology.
 - [ ] **Final-site metadata:** The draft has basic description/Open Graph/favicon work, but final `og:image`, canonical/domain values and structured data depend on approved assets and confirmed phone/hours.

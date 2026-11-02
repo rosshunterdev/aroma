@@ -533,6 +533,45 @@ a:focus-visible {
   outline-color: #f1a098;
 }
 
+.booking-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: clamp(48px, 7vw, 82px);
+  padding: clamp(24px, 4vw, 40px);
+  border: 1.5px dashed #9bb0a0;
+}
+
+.booking-link h3 {
+  margin: 8px 0;
+  color: var(--white);
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.1;
+}
+
+.booking-link p:last-child {
+  max-width: 52ch;
+  margin: 0;
+  color: #d8e2da;
+}
+
+.booking-link a {
+  display: inline-flex;
+  min-height: 48px;
+  flex: 0 0 auto;
+  align-items: center;
+  padding: 10px 16px;
+  border: 2px solid var(--white);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.booking-link a:hover {
+  background: var(--white);
+  color: var(--green-dark);
+}
+
 .site-footer {
   display: flex;
   align-items: center;
@@ -572,6 +611,11 @@ a:focus-visible {
 
   .category-nav {
     position: static;
+  }
+
+  .booking-link {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .category-nav ul {
