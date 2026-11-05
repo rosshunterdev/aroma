@@ -6,7 +6,7 @@
 
 **Owner:** Ross/Claude (previously Ben/Codex)
 
-**Status:** ready-for-agent
+**Status:** complete
 
 - [x] Specials, the Café-first state and the Café/Restaurant distinction are immediately understandable on mobile and desktop.
 - [x] Café and Restaurant use separate labelled placeholder content; no menu item, description or price is invented.
@@ -29,3 +29,4 @@
   1. **Sticky switch treatment.** The switch is content-width with no side padding, so over the green Restaurant section it reads as a cramped floating white box. Four mockups were made in the PR #20 review (A full-width bar, B rounded floating box, C pill, E square floating box). Ross prefers E. Check the chosen option at 390px and 1440px.
   2. **Restaurant placeholder prices.** Replace the "Price —" em dash with a non-dash placeholder.
 - 2026-11-06 — Ben has left the project. Ownership of this follow-up moves to Ross/Claude.
+- 2026-11-06 — Both follow-ups implemented on `fix/menu-sticky-switch`: option E sticky switch (side padding and full border) and `Price to confirm` placeholders in Specials and Restaurant. Tests pass 16/16; browser check at 1440, 390 and 320 CSS px with no overflow. Ross merged PR #21 (`97d4b5e`). Complete.
