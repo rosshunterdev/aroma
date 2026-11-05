@@ -108,3 +108,17 @@ Note: Codex/Ben work on 2026-09-30 (PR #1 onboarding, PR #2 temporary page) was 
 - **Decided:** Keep `site/selected-menu/` as the base (native anchors, no JS, no header dropdown). Requested three refinements: the sticky switch must show the current section (it always looks like Café is selected), make its background opaque, and bring in the 2024 printed-menu Café items from `site/menu-ross/` labelled as unconfirmed.
 - **Unblocked:** Ticket 09 (`ready-for-agent`), in parallel with the Ticket 08 refinements.
 - **Housekeeping:** Stale local `HANDOVER.md` edit from `feature/menu-design-ross` stashed (`stash@{0}`), not dropped. Six untracked `assets/` images still undecided.
+
+## Session 11 — 2026-11-02 — Merge PRs #19 and #20
+
+- **Did:** Reviewed Ben's PR #19 (Ticket 09 Visit/booking); Ross approved and merged it. Rebased PR #20 (Ticket 08 refinements) onto `main`, resolved doc-only conflicts in HANDOVER/README/TODO (site code auto-merged), Ross force-pushed with lease, approved and merged. Mocked 4 sticky Menu switch treatments (A full-width, B rounded, C pill, E square floating) via injected CSS; nothing committed.
+- **Decided:** No decision. Ross prefers E; choice handed to Ben via the PR #20 review.
+- **Broke or found:** Sticky switch looks cramped over the green Restaurant section. Restaurant placeholder prices use "Price —". `node --test tests/` fails on Windows; run files explicitly.
+- **Verified:** `node --test tests/menu-page.test.mjs tests/visit-page.test.mjs` 16/16 on `main` at `635d600`. Mockup screenshots `.playwright-mcp/switch-{A,B,C,E}.png` at 1440px (git-ignored).
+
+## Session 12 — 2026-11-06 — Ben steps back; Ticket 08 closed
+
+- **Did:** Ben is out of the development loop for the meantime; Ross and Claude Code take over his tickets. Located the ticket process (`.scratch/final-site/`, `docs/agents/issue-tracker.md`). Marked Ticket 09 complete. Built sticky switch option E (side padding, full border) and changed six placeholder prices to "Price to confirm" (PR #21, merged `97d4b5e`), then closed Ticket 08. Updated HANDOVER for the team change.
+- **Decided:** Option E for the sticky Menu switch (Ross's pick from Session 11).
+- **Broke or found:** Open tickets 13 and 16–23 and `README.md` still name Ben/Codex as owner. Python is not installed on this machine; the Playwright MCP blocks `file://` URLs, so screenshots need a local server.
+- **Verified:** `node --test tests/menu-page.test.mjs tests/visit-page.test.mjs` 16/16. Browser check at 1440, 390 and 320 CSS px with no horizontal overflow.
