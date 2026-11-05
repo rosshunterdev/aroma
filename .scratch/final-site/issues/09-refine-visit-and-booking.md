@@ -6,7 +6,7 @@
 
 **Owner:** Ben/Codex
 
-**Status:** awaiting-review
+**Status:** complete
 
 - [x] Visit clearly separates Café and Restaurant hours using labelled placeholders until the values are confirmed.
 - [x] Address, external Maps action, contact and Restaurant booking areas have a predictable hierarchy.
@@ -19,3 +19,4 @@
 - 2026-10-31 — Unblocked: Ticket 08 review outcome recorded (direction accepted; three refinements requested in Ticket 08 may proceed in parallel). The Restaurant booking action should be reachable from the Restaurant section of `site/selected-menu/`.
 - 2026-10-31 — Implemented on `codex/refine-visit-booking` from baseline `664c90d` at `site/selected-visit/`, with narrow selected-Home and selected-Menu links into the Visit and booking journey. The review page uses the confirmed address and external Maps action; Café hours, Restaurant hours, contact, arrival information, Restaurant status and booking method remain explicit questions with no fake form, contact link or confirmation behaviour. Focused structural and local link/asset tests pass. Rendered browser review covered 320, 390, 480, 768, 1024 and 1440 CSS-pixel widths, Home/Menu/fragment/Back journeys, the external Maps URL and visible keyboard focus. Awaiting Ross review; this is not client approval or production release.
 - 2026-10-31 — PR #19 opened against `main`. Netlify reported the deploy ready and the Visit path was verified at `https://deploy-preview-19--aromacoffeemiramar.netlify.app/selected-visit/` with the expected title, `h1` and `noindex, nofollow` boundary.
+- 2026-11-02 — Ross reviewed and approved; PR #19 merged to `main` (`7004179`). Complete.

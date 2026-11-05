@@ -4,9 +4,9 @@
 
 **Blocked by:** 07: Refine the selected system and Home experience.
 
-**Owner:** Ben/Codex
+**Owner:** Ross/Claude (previously Ben/Codex)
 
-**Status:** awaiting-review
+**Status:** ready-for-agent
 
 - [x] Specials, the Café-first state and the Café/Restaurant distinction are immediately understandable on mobile and desktop.
 - [x] Café and Restaurant use separate labelled placeholder content; no menu item, description or price is invented.
@@ -25,3 +25,7 @@
   3. **Café content.** Bring the Café categories and items from `site/menu-ross/` (2024 printed menu transcription) into the Café section. Keep its "from the 2024 printed menu: still current?" question and `$?` price-to-confirm treatment. Add no prices or specials; the Restaurant side stays as content slots.
   These refinements do not block Ticket 09, which may proceed in parallel.
 - 2026-10-31 — Implemented all three requested refinements on `codex/ticket-08-menu-refinements` from `origin/main` baseline `664c90d`. The sticky Café and Restaurant links now use neutral white treatments with their existing green/red distinction, the sticky background is fully opaque, and the complete Café transcription from `site/menu-ross/` is rendered as 2024 provisional content with `$?` prices and visible confirmation questions. Restaurant content remains unresolved placeholders. Focused tests pass 9/9; a source-parity check matched all 40 Café item names and all 40 `$?` slots between the Ross reference and selected Menu. Real-browser review covered 320, 390, 480, 768, 1024 and 1440 CSS-pixel widths plus both direct anchors, browser Back, sticky behaviour, focus visibility, wrapping and overflow. A separate Standards review identified and corrected one CSS cascade-order issue that had made the Restaurant hover inherit Café green; the final pass found no remaining departure from repository instructions, the static/no-dependency architecture or provenance rules. A separate Spec review found all three requested refinements satisfied and no Ticket 09 scope added. PR #19 remains the source of its Visit/booking integration while open; this branch does not overwrite or claim those changes. Awaiting Ross review; this is not approval or merge confirmation.
+- 2026-11-02 — Ross approved the three refinements; PR #20 merged to `main` (`635d600`). One follow-up remains before this ticket is complete:
+  1. **Sticky switch treatment.** The switch is content-width with no side padding, so over the green Restaurant section it reads as a cramped floating white box. Four mockups were made in the PR #20 review (A full-width bar, B rounded floating box, C pill, E square floating box). Ross prefers E. Check the chosen option at 390px and 1440px.
+  2. **Restaurant placeholder prices.** Replace the "Price —" em dash with a non-dash placeholder.
+- 2026-11-06 — Ben has left the project. Ownership of this follow-up moves to Ross/Claude.
