@@ -45,14 +45,14 @@ Phase B proceeds through:
 
 1. Ticket 08: complete (PRs #20 and #21);
 2. Ticket 09: complete (PR #19);
-3. Ticket 11 — Ross refinement review;
-4. Ticket 12 — Phillip design approval.
+3. Ticket 11: complete, ready for Phillip (2026-11-06);
+4. Ticket 12: Phillip design approval, in progress. He reviews via `/preview` (302 to `/selected-home/`), including the pending Option A vs refined choice through the compare bar.
 
 Ticket 10 records About as deferred and is not on the current Phase B critical path.
 
 ## Next steps
 
-1. Ross + Claude: Ticket 11, Ross refinement review of Home, Menu and Visit (now unblocked).
+1. Ross: send Phillip the `/preview` link (Ticket 12) and record his approval, revision requests and Option A vs refined preference.
 2. Claude: Ticket 13, hosting and maintenance research (`ready-for-agent`, no blockers).
 3. Ross: decide whether to commit the six untracked `assets/` photos.
 4. Later: update `Owner: Ben/Codex` on open tickets (13, 16–23) and the joint-maintenance line in `README.md`.
