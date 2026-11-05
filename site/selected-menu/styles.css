@@ -282,8 +282,8 @@ a:focus-visible {
   justify-content: space-between;
   gap: 18px;
   margin-top: 34px;
-  padding: 10px 0;
-  border-block: 1px solid var(--line);
+  padding: 10px 20px;
+  border: 1px solid var(--line);
   background: var(--white);
   box-shadow: 0 8px 18px rgb(20 59 39 / 7%);
 }
@@ -741,6 +741,7 @@ a:focus-visible {
   .menu-switch {
     align-items: stretch;
     margin-top: 20px;
+    padding-inline: 10px;
   }
 
   .menu-switch > p {

@@ -80,7 +80,8 @@ test("Restaurant content remains explicitly unresolved", async () => {
 
   assert.match(restaurant, /Restaurant content · question/);
   assert.match(restaurant, /Item name/);
-  assert.match(restaurant, /Price —/);
+  assert.match(restaurant, />Price to confirm</);
+  assert.doesNotMatch(html, /Price —/);
   assert.doesNotMatch(restaurant, /\$\d/);
 });
 
