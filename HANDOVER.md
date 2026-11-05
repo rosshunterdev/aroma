@@ -1,6 +1,8 @@
 # Handover — Aroma Coffee Rebuild
 
-As of the Ticket 09 merge (PR #19) and Ticket 08 refinement rebase on 2026-11-02.
+As of Session 12 (2026-11-06): PR #21 merged to `main` (`97d4b5e`); Tickets 08 and 09 complete.
+
+**Team change:** Ben (Codex) is out of the development loop for the meantime. Ross and Claude Code now own all implementation tickets, including those still marked `Owner: Ben/Codex` in `.scratch/final-site/issues/`. The ticket process itself (spec, numbered tickets, `Status:`, `Blocked by:`, `## Comments`) carries on unchanged; see `docs/agents/issue-tracker.md`.
 
 ## Current state
 
@@ -12,7 +14,7 @@ Ticket 07 is complete and merged (PR #13) at `site/selected-home/`. It preserves
 
 A "Compare designs" switcher (PR #14) links Option A and `site/selected-home/` so Phillip can compare them. His preference is pending and does not block Ticket 08. The switcher is review scaffolding: remove it before either page becomes the live homepage.
 
-Ticket 08 is merged (PR #17) at `site/selected-menu/`, and Ross accepted its direction with three refinements on 2026-10-31 (see the Ticket 08 record). Those refinements are now implemented on `codex/ticket-08-menu-refinements` and await Ross's follow-up review. Ross's parallel draft at `site/menu-ross/` (PR #16) remains comparison and transcription evidence, not the design base. The review-only page presents specials first, then a persistent native-anchor choice between a Café-first section and a visually distinct Restaurant section. Both links now have neutral white treatments, so neither falsely reads as selected while the other section is in view, and the sticky bar is fully opaque. Both menus remain in the document, so deep links, browser Back and keyboard navigation work without JavaScript or hidden content. The header stays simple: the optional Café/Restaurant dropdown was not adopted because it would duplicate the clear on-page navigation and add touch/keyboard complexity. The selected Home review links its Menu navigation and both offering cards to the relevant Menu anchors.
+Ticket 08 is merged (PR #17) at `site/selected-menu/`, and Ross accepted its direction with three refinements on 2026-10-31 (see the Ticket 08 record). Those refinements were implemented in PR #20, rebased onto `main` after #19, approved by Ross and merged on 2026-11-02. Ross's parallel draft at `site/menu-ross/` (PR #16) remains comparison and transcription evidence, not the design base. The review-only page presents specials first, then a persistent native-anchor choice between a Café-first section and a visually distinct Restaurant section. Both links now have neutral white treatments, so neither falsely reads as selected while the other section is in view, and the sticky bar is fully opaque. Both menus remain in the document, so deep links, browser Back and keyboard navigation work without JavaScript or hidden content. The header stays simple: the optional Café/Restaurant dropdown was not adopted because it would duplicate the clear on-page navigation and add touch/keyboard complexity. The selected Home review links its Menu navigation and both offering cards to the relevant Menu anchors.
 
 Ticket 09 is merged to `main` via PR #19 (Ross reviewed and merged 2026-11-02) at `site/selected-visit/`. The noindex Visit page continues Option A's clarity-first system with the confirmed address and a normal Google Maps link, visibly separate Café and Restaurant hours questions, an explicit Restaurant booking-method question, and compact contact/arrival question areas. It does not activate unconfirmed phone/email routes, imply Restaurant availability or provide a fake booking control. Selected Home now links to the Visit page, and the selected Menu's Restaurant section links directly to `#restaurant-booking`; native navigation preserves deep links and browser Back.
 
@@ -24,7 +26,8 @@ The exact mapping, branch/PR archaeology and concept-PR disposition are in `docs
 | --- | --- |
 | `site/index.html` | Temporary public landing page; unchanged by reconciliation. |
 | `site/selected-home/` | Ticket 07 selected Home refinement; merged, noindex and not linked from the temporary homepage. |
-| `site/selected-menu/` | Ticket 08 shared Menu refinement; direction accepted and three requested refinements implemented, awaiting Ross follow-up review. Noindex and linked only from selected Home. |
+| `site/selected-menu/` | Ticket 08 shared Menu refinement; complete. Refinements merged via PR #20; sticky switch option E and `Price to confirm` placeholders merged via PR #21. Noindex and linked only from selected Home and Visit. |
+| `site/selected-visit/` | Ticket 09 Visit and Restaurant booking journey; merged via PR #19. Noindex. |
 | `site/menu-ross/` | Ross's parallel Menu draft (PR #16); comparison evidence only, not the base. |
 | `site/redesign/option-a.html` | Selected overall direction; already on `main`. Its old A/B bar is now the compare switcher. |
 | `origin/meeting/phillip-concepts` | Durable meeting presenter: Design 1 Refined Minimal, Design 2 Option A, Design 3 Warm Neighbourhood. |
@@ -36,16 +39,28 @@ The exact mapping, branch/PR archaeology and concept-PR disposition are in `docs
 
 ## Current review gate
 
-Ross reviewed and approved Ticket 07 on 2026-10-28. Ross reviewed Ticket 08 on 2026-10-31: direction accepted, with three refinements for Codex (neutral switch treatment that does not misstate current context, opaque sticky switch, Café items from the 2024 printed menu). All three are implemented in PR #20 and Ticket 08 is back at `awaiting-review`. Ticket 09 is reviewed and merged. Phillip's Option A vs refined comparison continues in parallel.
+Ross reviewed and approved Ticket 07 on 2026-10-28. Ross reviewed Ticket 08 on 2026-10-31: direction accepted, with three refinements for Codex (neutral switch treatment that does not misstate current context, opaque sticky switch, Café items from the 2024 printed menu). All three were implemented in PR #20, which Ross approved and merged on 2026-11-02. Ticket 09 was reviewed and merged the same day (PR #19). On 2026-11-06 the sticky-switch follow-up (option E, square floating box with side padding) and placeholder price wording were merged via PR #21, closing Ticket 08. Phillip's Option A vs refined comparison continues in parallel.
 
 Phase B proceeds through:
 
-1. Ticket 08 — Ross follow-up review of the three implemented Menu refinements (PR #20), then mark complete if accepted;
-2. Ticket 09 — refine Visit and the Restaurant booking journey (merged via PR #19);
+1. Ticket 08: complete (PRs #20 and #21);
+2. Ticket 09: complete (PR #19);
 3. Ticket 11 — Ross refinement review;
 4. Ticket 12 — Phillip design approval.
 
 Ticket 10 records About as deferred and is not on the current Phase B critical path.
+
+## Next steps
+
+1. Ross + Claude: Ticket 11, Ross refinement review of Home, Menu and Visit (now unblocked).
+2. Claude: Ticket 13, hosting and maintenance research (`ready-for-agent`, no blockers).
+3. Ross: decide whether to commit the six untracked `assets/` photos.
+4. Later: update `Owner: Ben/Codex` on open tickets (13, 16–23) and the joint-maintenance line in `README.md`.
+
+## Concerns
+
+- `node --test tests/` fails on Windows (directory treated as a file); run the test files explicitly: `node --test tests/menu-page.test.mjs tests/visit-page.test.mjs`.
+- The two Phillip quotes added in PR #19 ("I got domain already", new menu "next month") are recorded as relayed by Ross; Ross has not yet confirmed their wording.
 
 ## Human dependencies
 
@@ -58,7 +73,8 @@ Ticket 10 records About as deferred and is not on the current Phase B critical p
 
 - Ticket 07 merged via PR #13 (`7a5770d`); compare switcher merged via PR #14 (`3933a28`).
 - Ticket 08 merged via PR #17 (`8a300f7`); Ross's Menu draft merged via PR #16 (`c3461a2`). Review outcome recorded on `docs/ticket-08-outcome`.
-- Ticket 09 is merged to `main` via PR #19. Its Menu-to-Visit booking link is preserved in the selected Menu alongside the Ticket 08 refinements after PR #20 was rebased onto `main`.
+- Ticket 09 merged via PR #19 (`7004179`); Ticket 08 refinements merged via PR #20 (`635d600`) after a rebase onto `main` and a force-push with lease. The Menu-to-Visit booking link survived the rebase.
+- Sticky-switch follow-up merged via PR #21 (`97d4b5e`). Old `codex/*` branches are historical; new work branches fresh from `main`.
 - Six untracked images in `assets/` (`Phillip cafe.jpg`, `aroma entrance.jpg`, `aroma pool.jpg`, `aroma-building.png`, `aroma-counter.png`, `aroma-entrance.png`) are uncommitted on purpose. Decide whether to commit them; none is approved final photography.
 - Netlify publishes only `site/`; repository documentation remains outside the published output.
 - `site/index.html` and Phase A concept artifacts remain unchanged.
