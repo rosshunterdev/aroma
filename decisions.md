@@ -479,6 +479,16 @@ The future Menu destination will open one Menu page with:
 
 ---
 
+## 036 — Ross and Claude own implementation while Ben is out
+
+**Date:** 2026-11-06
+**Status:** DECIDED — Session 12
+**Provenance:** Ross reported that Ben is out of the development process for the meantime.
+
+**Decision:** Ross and Claude Code own all implementation tickets, including those still labelled `Owner: Ben/Codex`. The `.scratch/final-site/` ticket process (`docs/agents/issue-tracker.md`) continues unchanged. Ross reviews and merges; Claude asks before every push.
+
+---
+
 ## Open — Phone number discrepancy
 
 **Status:** UNRESOLVED — needs client confirmation

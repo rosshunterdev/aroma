@@ -2,3 +2,10 @@
 # the repo for the team but are never served.
 [build]
   publish = "site"
+
+# Short review link for Phillip. Temporary (302) so it can be repointed or
+# removed once the production site replaces the review pages.
+[[redirects]]
+  from = "/preview"
+  to = "/selected-home/"
+  status = 302

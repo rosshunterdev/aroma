@@ -16,3 +16,4 @@
 ## Comments
 
 - 2026-10-27 — Gate remains human-owned and follows Ross's reconciled Home/Menu/Visit refinement review.
+- 2026-11-06 — Unblocked: Ticket 11 recorded ready for Phillip approval. Review pages: `/selected-home/`, `/selected-menu/`, `/selected-visit/` on the Netlify site.
